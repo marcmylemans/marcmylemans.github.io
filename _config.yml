@@ -19,7 +19,7 @@ timezone: Europe/Brussels
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Mylemans.online                          # the main title
+title: Mylemans Online                          # the main title
 
 tagline: Tech tips, blogs and video documentation  # it will display as the sub-title
 
