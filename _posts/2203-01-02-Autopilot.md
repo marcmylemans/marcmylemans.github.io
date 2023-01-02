@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Server 2022 - Windows 11 - AutoPilot - Hybrid Azure AD
+title: AutoPilot - Hybrid Azure AD
 date: 2023-01-02 09:00:00
 categories: Azure Intune
 tags: server 2022 azure hybrid autopilot
