@@ -17,31 +17,34 @@ Adding the Users to the Local Administrators group:
 ![Assign users](/assets/primaryuserlocaladmin/primaryuserlocaladmin_assign.jpg)
 
 Item Level targeting:
+
 ![Item Level targeting](/assets/primaryuserlocaladmin/primaryuserlocaladmin_itemlvltargeting.jpg)
 
 LDAP Query:
 
 ![LDAP Query](/assets/primaryuserlocaladmin/primaryuserlocaladmin_itemlvltargeting.jpg)
 
-1st LDAP Query
-```Filter
+1st LDAP Query:
+
+```
 (&(objectCategory=computer)(objectClass=computer)(name=%COMPUTERNAME%))
 ```
-```Attribute
+```
 managedby
 ```
-```Environment variable name
+```
 PrimaryUser
 ```
 
-2nd LDAP Query
-```Filter
+2nd LDAP Query:
+
+```
 (&(|(objectClass=group)(objectClass=user))(distinguishedName=%PrimaryUser%))
 ```
-```Attribute
+```
 sAMAccountName
 ```
-```Environment variable name
+```
 PrimaryUser
 ```
 
