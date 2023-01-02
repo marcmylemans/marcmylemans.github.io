@@ -5,7 +5,6 @@ categories: [Windows, Server 2022]
 tags: [server 2022] [hyper-v] [virtualisation]
 image:
   path: https://i9.ytimg.com/vi_webp/Y-Sadkf3Ims/maxresdefault.webp?v=639d897c&sqp=CJDvyZ0G&rs=AOn4CLAlIR2VBaUL6xXLGTsEFpNFvYOANg
-  alt: image alternative text
 ---
 
 {% include embed/{youtube}.html id='{Y-Sadkf3Ims}' %}
