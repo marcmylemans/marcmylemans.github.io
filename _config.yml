@@ -27,7 +27,7 @@ description: >-                        # used by seo meta and the atom feed
   A minimal website for tech tips, blogs and video documentation.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: 'http://marcmylemans.github.io'
+url: 'https://marcmylemans.github.io'
 
 github:
   username: marcmylemans             # change to your github username
