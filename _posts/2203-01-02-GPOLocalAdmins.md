@@ -12,15 +12,12 @@ In the second part we will be using the Managed By field in Active directory to 
 
 {% youtube "https://youtu.be/FrRasK5DQiY" %}
 
-Adding the Users to the Local Administrators group:
+
+Screenshots + Ldap Query's
 
 ![Assign users](/assets/primaryuserlocaladmin/primaryuserlocaladmin_assign.jpg)
 
-Item Level targeting:
-
 ![Item Level targeting](/assets/primaryuserlocaladmin/primaryuserlocaladmin_itemlvltargeting.jpg)
-
-LDAP Query:
 
 ![LDAP Query](/assets/primaryuserlocaladmin/primaryuserlocaladmin_itemlvltargeting.jpg)
 
