@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 
+title: Windows 11 Domain Join
 date: 2022-12-23 09:00:00
 categories: Windows 11
 tags: windows 11
