@@ -1,19 +1,15 @@
 ---
 layout: post
-title: Server 2022 - Remote Desktop Services - Part 3 - FSLogix
-date: 2023-01-03 09:00:00
+title: Server 2022 - Remote Desktop Services - Part 5 - Remote Desktop Web Client
+date: 2023-01-05 09:00:00
 categories: Windows Server
-tags: server 2022 rdp part3
+tags: server 2022 rdp part5
 ---
 
-In this video we will install and configure FSLogix.
-With FSLogix we are moving the User Data away from the Remote Desktop Host and store it on a dedicated fileshare.
-With this we can expand our Remote Desktop Hosts and User Data roaming will be more flexible.
+In this video we will configure the Remote Desktop Web Client. This way our users can use any device/browser (For Example a Smartphone/Tablet/...) that supports HTML5 to open a connection to the Remote Desktop host.
 
 
-[Source](https://learn.microsoft.com/en-us/fslogix/overview)
-
-[Download Link](https://aka.ms/fslogix-latest)
+[Source](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-web-client-admin)
 
 Be sure to check out the previous video where we configured Remote Desktop Services:
 
@@ -21,4 +17,8 @@ Be sure to check out the previous video where we configured Remote Desktop Servi
 
 [Server 2022 - Remote Desktop Services - Part 2]({% link _posts/2202-12-31-RemoteDesktopPart2.md %})
 
-{% youtube "https://youtu.be/dRf8k7loXQ0" %}
+[Server 2022 - Remote Desktop Services - Part 3]({% link _posts/2202-01-03-RemoteDesktopPart3.md %})
+
+[Server 2022 - Remote Desktop Services - Part 4]({% link _posts/2202-01-04-RemoteDesktopPart4.md %})
+
+{% youtube "https://youtu.be/i87spvTzR6w" %}
