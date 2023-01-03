@@ -6,7 +6,7 @@ categories: Windows Server 2022
 tags: server 2022 hyper-v virtualisation
 ---
 
-[![123](https://i9.ytimg.com/vi/14-tJsdW7LU/maxresdefault.jpg?v=639dacb5&sqp=CNypyp0G&rs=AOn4CLDcgK3zXDT8wRb3-hGu7G_mHRtUWQ)](https://youtu.be/14-tJsdW7LU)
+{% youtube "https://youtu.be/14-tJsdW7LU" %}
 
 In this video we are going to create a virtual machine template.
 With this template we can create as many virtual machines as we like within minutes.

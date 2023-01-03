@@ -18,12 +18,12 @@ After our 'testing phase' we will disconnect the security group so everybody wit
 
 
 Try O365:
-https://learn.microsoft.com/en-us/microsoft-365/commerce/try-or-buy-microsoft-365?view=o365-worldwide
+{% link https://learn.microsoft.com/en-us/microsoft-365/commerce/try-or-buy-microsoft-365?view=o365-worldwide %}
 
 Download Link Azure AD Connect
-https://www.microsoft.com/en-us/download/details.aspx?id=47594
+{% link https://www.microsoft.com/en-us/download/details.aspx?id=47594 %}
 
 Deploy Single Sign On:
-https://learn.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-sso-quick-start#deploy-seamless-single-sign-on
+{% link https://learn.microsoft.com/en-us/azure/active-directory/hybrid/ %}how-to-connect-sso-quick-start#deploy-seamless-single-sign-on
 
 {% youtube "https://youtu.be/2XeRcNKzuUM" %}

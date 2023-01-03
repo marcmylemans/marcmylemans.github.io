@@ -9,7 +9,6 @@ tags: server 2022 rdp part2
 In this video we will create some Group Policy's to improve the user experience when connecting to the Remote Desktop Service. 
 
 Be sure to check out the previous video where we configured Remote Desktop Services:
-Server 2022 - Remote Desktop Services - Part 1
-https://youtu.be/bkTFagCdycc
+[Server 2022 - Remote Desktop Services - Part 1]({% link _posts/2022-12-27-RemoteDesktopPart1.md %})
 
 {% youtube "https://youtu.be/G-5se77LRyU" %}
