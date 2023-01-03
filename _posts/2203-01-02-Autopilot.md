@@ -19,6 +19,6 @@ Reset the new device so autopilot can automatilcy Hybrid join our new device int
 (*)You can enroll your devices into Auto Pilot in other (more automated ways). Please let me know in the comments of this is something you would like to see.
 
 Source:
-{% link https://learn.microsoft.com/en-us/mem/autopilot/windows-autopilot-hybrid %}
+(https://learn.microsoft.com/en-us/mem/autopilot/windows-autopilot-hybrid)
 
 {% youtube "https://youtu.be/Jp_kmppB_Fk" %}

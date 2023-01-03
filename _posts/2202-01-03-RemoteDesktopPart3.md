@@ -11,10 +11,10 @@ With FSLogix we are moving the User Data away from the Remote Desktop Host and s
 With this we can expand our Remote Desktop Hosts and User Data roaming will be more flexible.
 
 Source:
-{% link https://learn.microsoft.com/en-us/fslogix/overview %}
+(https://learn.microsoft.com/en-us/fslogix/overview)
 
 Download Link:
-{% link https://aka.ms/fslogix-latest %}
+(https://aka.ms/fslogix-latest)
 
 Be sure to check out the previous video where we configured Remote Desktop Services:
 [Server 2022 - Remote Desktop Services - Part 1]({% link _posts/2022-12-27-RemoteDesktopPart1.md %})
