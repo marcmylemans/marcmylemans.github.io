@@ -1,19 +1,16 @@
 ---
 layout: post
-title: Server 2022 - Remote Desktop Services - Part 3
-date: 2023-01-03 09:00:00
+title: Server 2022 - Remote Desktop Services - Part 4
+date: 2023-01-04 09:30:00
 categories: Windows Server
-tags: server 2022 rdp part3
+tags: server 2022 rdp part4
 ---
 
-In this video we will install and configure FSLogix.
-With FSLogix we are moving the User Data away from the Remote Desktop Host and store it on a dedicated fileshare.
-With this we can expand our Remote Desktop Hosts and User Data roaming will be more flexible.
+In this video we will install the Office 365 Suite on a Remote Desktop Host with Shared Licensing. This way our users can use the Office Suite and activate it with their own O365 license.
 
+[Office Configurator](https://config.office.com/)
 
-[Source](https://learn.microsoft.com/en-us/fslogix/overview)
-
-[Download Link](https://aka.ms/fslogix-latest)
+[Office Download Link](https://www.microsoft.com/en-us/download/details.aspx?id=49117)
 
 Be sure to check out the previous video where we configured Remote Desktop Services:
 
@@ -21,4 +18,6 @@ Be sure to check out the previous video where we configured Remote Desktop Servi
 
 [Server 2022 - Remote Desktop Services - Part 2]({% link _posts/2202-12-31-RemoteDesktopPart2.md %})
 
-{% youtube "https://youtu.be/dRf8k7loXQ0" %}
+[Server 2022 - Remote Desktop Services - Part 3]({% link _posts/2202-01-03-RemoteDesktopPart3.md %})
+
+{% youtube "https://youtu.be/4wO82is6y40" %}
