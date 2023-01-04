@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Server 2022 - Remote Desktop Services - Part 4
-date: 2023-01-04 09:30:00
 categories: Windows Server
 tags: server 2022 rdp part4
 ---
