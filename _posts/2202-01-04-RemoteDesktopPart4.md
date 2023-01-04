@@ -8,6 +8,7 @@ tags: server 2022 rdp part4
 
 In this video we will install the Office 365 Suite on a Remote Desktop Host with Shared Licensing. This way our users can use the Office Suite and activate it with their own O365 license.
 
+
 [Office Configurator](https://config.office.com/)
 
 [Office Download Link](https://www.microsoft.com/en-us/download/details.aspx?id=49117)
