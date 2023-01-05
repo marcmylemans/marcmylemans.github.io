@@ -19,6 +19,6 @@ Be sure to check out the previous video where we configured Remote Desktop Servi
 
 [Server 2022 - Remote Desktop Services - Part 1]({% link _posts/2022-12-27-RemoteDesktopPart1.md %})
 
-[Server 2022 - Remote Desktop Services - Part 2]({% link _posts/2202-12-31-RemoteDesktopPart2.md %})
+[Server 2022 - Remote Desktop Services - Part 2]({% link _posts/2022-12-31-RemoteDesktopPart2.md %})
 
 {% youtube "https://youtu.be/dRf8k7loXQ0" %}

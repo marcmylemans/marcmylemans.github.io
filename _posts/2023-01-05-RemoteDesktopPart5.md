@@ -33,9 +33,9 @@ Be sure to check out the previous video where we configured Remote Desktop Servi
 
 [Server 2022 - Remote Desktop Services - Part 1]({% link _posts/2022-12-27-RemoteDesktopPart1.md %})
 
-[Server 2022 - Remote Desktop Services - Part 2]({% link _posts/2202-12-31-RemoteDesktopPart2.md %})
+[Server 2022 - Remote Desktop Services - Part 2]({% link _posts/2022-12-31-RemoteDesktopPart2.md %})
 
-[Server 2022 - Remote Desktop Services - Part 3]({% link _posts/2202-01-03-RemoteDesktopPart3.md %})
+[Server 2022 - Remote Desktop Services - Part 3]({% link _posts/2023-01-03-RemoteDesktopPart3.md %})
 
 [Installing Office 365 on a Remote Desktop Host!]({% link _posts/2023-01-04-RemoteDesktopPart4.md %})
 
