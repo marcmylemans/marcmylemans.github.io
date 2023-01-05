@@ -23,4 +23,4 @@ Be sure to check out the previous video where we configured Remote Desktop Servi
 
 [Installing Office 365 on a Remote Desktop Host!]({% link _posts/2023-01-04-RemoteDesktopPart4.md %})
 
-{% youtube "https://youtu.be/4wO82is6y40" %}
+{% youtube "https://youtu.be/i87spvTzR6w" %}
