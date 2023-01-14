@@ -9,6 +9,7 @@ In this video we will be using our Group Policy to deploy the UrBackup client to
 
 {% youtube "https://youtu.be/OPYVI60i54w" %}
 
+
 [Sources - UrBackup](https://www.urbackup.org/index.html)
 
 [Sources - UrBackup Administration Manual](https://www.urbackup.org/administration_manual.html)
