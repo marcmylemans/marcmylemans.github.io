@@ -18,5 +18,5 @@ In this video we will be using our Group Policy to deploy the UrBackup client to
 
 Be sure to watch the previous video:
 
-[UrBackup - Installing the Backup Server!]({% link _posts/2023-01-10-UrBackupServer.md %})
+[UrBackup - Installing the Backup Server!]({% link _posts/2023-01-11-UrBackupServer.md %})
 
