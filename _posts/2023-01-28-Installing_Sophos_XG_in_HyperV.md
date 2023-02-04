@@ -8,4 +8,4 @@ If you like to see more about Sophos please leave a like and a comment on what y
 Source:
 https://docs.sophos.com/nsg/sophos-firewall/19.0/Help/en-us/webhelp/onlinehelp/VirtualAndSoftwareAppliancesHelp/MicrosoftHyperV/HyperVInstall/index.html
 
-[Link to video](https://www.youtube.com/watch?v=f7zkhO7FJJA)
+{% youtube https://www.youtube.com/watch?v=f7zkhO7FJJA %}
