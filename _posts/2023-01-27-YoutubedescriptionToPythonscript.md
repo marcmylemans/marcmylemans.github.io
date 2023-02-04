@@ -8,65 +8,60 @@ tags: python scripts youtube
 Here is an example of Python code that uses the YouTube Data API to retrieve the description of a video and then write it to a .md file:
 
 ```python
+import requests
 import os
-import google.auth
-from googleapiclient.discovery import build
-from datetime import datetime
+import re
 
-# Set up the YouTube Data API
-scopes = ["https://www.googleapis.com/auth/youtube.force-ssl"]
-os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
-api_service_name = "youtube"
-api_version = "v3"
-client_secrets_file = "client_secret.json"
+def create_file(video_id, title, description, date):
+    folder_path = "md_files"
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
+    title2 = re.sub(r'[^\w\s]', '', title)
+    title2 = title2.replace(" ", "_")
+    filename = f"{folder_path}/{date}-{title2}.md"
+    with open(filename, "w") as f:
+        f.write(f"---\n")
+        f.write(f"layout: post\n")
+        f.write(f"title: {title}\n")
+        f.write(f"---\n")
+        f.write(f"{description}\n\n")
+        f.write("{% youtube " + "https://www.youtube.com/watch?v=" + video_id + " %}\n")
 
-# Get credentials and create an API client
-creds = google.auth.default(scopes=scopes)
-youtube = build(api_service_name, api_version, credentials=creds)
+def get_channel_videos(channel_id, api_key):
+    url = f"https://www.googleapis.com/youtube/v3/search?key={api_key}&channelId={channel_id}&part=snippet,id&order=date&maxResults=50"
+    response = requests.get(url)
+    data = response.json()
+    items = data["items"]
 
-# Get the channel ID
-channel_name = "CHANNEL_NAME"
-request = youtube.channels().list(part="snippet,contentDetails,statistics", forUsername=channel_name)
-response = request.execute()
-channel_id = response["items"][0]["id"]
+    video_ids = [item["id"]["videoId"] for item in items if "videoId" in item["id"]]
+    return video_ids
 
-# Get the most recent video uploaded to the channel
-request = youtube.search().list(
-    part="id,snippet",
-    channelId=channel_id,
-    maxResults=1,
-    order='date'
-)
-response = request.execute()
-video_id = response["items"][0]["id"]["videoId"]
-title = response["items"][0]["snippet"]["title"]
-publishedAt = response["items"][0]["snippet"]["publishedAt"]
+def get_video_info(video_id, api_key):
+    url = f"https://www.googleapis.com/youtube/v3/videos?part=snippet&id={video_id}&key={api_key}"
+    response = requests.get(url)
+    data = response.json()
+    items = data["items"]
 
-# Get the video's description and tags
-request = youtube.videos().list(part="snippet", id=video_id)
-response = request.execute()
-description = response["items"][0]["snippet"]["description"]
-tags = response["items"][0]["snippet"]["tags"]
+    title = items[0]["snippet"]["title"]
+    description = items[0]["snippet"]["description"]
+    date = items[0]["snippet"]["publishedAt"].split("T")[0]
 
-# Replace special characters with _ in the title
-title = title.replace("\\", "_")
-title = title.replace("/", "_")
-title = title.replace(":", "_")
-title = title.replace("*", "_")
-title = title.replace("?", "_")
-title = title.replace("\"", "_")
-title = title.replace("<", "_")
-title = title.replace(">", "_")
-title = title.replace("|", "_")
+    return title, description, date
 
-# Write the description and tags to a .md file
-date_object = datetime.strptime(publishedAt[:10], '%Y-%m-%d')
-file_name = date_object.strftime('%Y-%m-%d') + '-' + title + '.md'
-with open(file_name, "w") as f:
-    f.write("---\nlayout: post\ntitle: " + title + "\ntags: " + str(tags) + "\n---\n" + '{% youtube "https://www.youtube.com/watch?v=' + video_id + '" %}\n' + description)
+def main(channel_id, api_key):
+    video_ids = get_channel_videos(channel_id, api_key)
+    for video_id in video_ids:
+        title, description, date = get_video_info(video_id, api_key)
+        create_file(video_id, title, description, date)
+
+if __name__ == "__main__":
+    channel_id = "channel_id"
+    api_key = "api_key"
+    main(channel_id, api_key)
+
 ```
 
-Also, you need to have a client_secret.json file that contains the credentials for the project that you created in Google developer console.
+Just replace channel_id and api_key with the appropriate values for your channel and API key, and run the script. Note that the API returns a maximum of 50 results per request, so if your channel has more than 50 videos, you'll need to modify the script to make multiple requests and retrieve all the videos.
 
 Please keep in mind that it requires YouTube Data API v3 library, if you don't have it installed please use this command !pip install --upgrade google-api-python-client
 
