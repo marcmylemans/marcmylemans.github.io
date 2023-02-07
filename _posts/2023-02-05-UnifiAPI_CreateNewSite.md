@@ -84,5 +84,5 @@ for ssid in ssid_list:
 
 ```
 
-You need to replace <unifi-controller-hostname>, <api-username>, <api-password>, and <new-site-name> with the appropriate values for your UniFi controller. 
+You need to replace "unifi-controller-hostname", "api-username", "api-password", and "new-site-name" with the appropriate values for your UniFi controller. 
 The new-site-name variable should be set to the name of the UniFi site where you want to create the VLANs. The vlan_list variable should be a list of dictionaries, where each dictionary contains the ssid_name and vlan_id.
