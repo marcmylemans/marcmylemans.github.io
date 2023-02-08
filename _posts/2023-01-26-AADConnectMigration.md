@@ -110,3 +110,65 @@ Compare-Object -ReferenceObject $Data_AD -DifferenceObject $Data_AAD -Property I
 Compare-Object -ReferenceObject $Data_AD -DifferenceObject $Data_AAD -Property ProxyAddresses -IncludeEqual -PassThru | Where-Object {$_.SideIndicator -Notlike "=="}
 
 ```
+
+After comparing everything you can use the following script to import all the proxyAddresses in Active Directory
+this is an important step, because Active Directory will overwrite everything in AAD.
+
+```powershell
+#Check for Existing c:\Temp folder and if needed create the c:\Temp folder
+$FolderName = "C:\Temp"
+
+if([System.IO.Directory]::Exists($FolderName))
+{
+    Write-Host "Folder Exists"
+    Get-ChildItem -Path $FolderName | Where-Object {$_.CreationTime -gt (Get-Date).Date}   
+}
+else
+{
+   Write-Host "Folder Doesn't Exists"
+    
+#PowerShell Create directory if not exists
+   New-Item $FolderName -ItemType Directory
+}
+
+
+$Data_AD = Import-CSV c:\temp\Users_AD_FR.csv -Delimiter ","
+foreach ($AD_User in $Data_AD) {
+$UPN = $AD_User.Userprincipalname
+$ProxyAddresses = $AD_User.Proxyaddresses
+Get-ADUser -Filter "userPrincipalName -like '*$UPN'" | Set-ADUser -replace @{ProxyAddresses=$ProxyAddresses -split ";"}
+}
+```
+
+To create a hardlink between an Active Directory User and an Azure Directory User we will be using the following script.
+This script will take the ObjectID from Active Directory and Write it to the corresponding user in Azure Directory. 
+
+```powershell
+#Check for Existing c:\Temp folder and if needed create the c:\Temp folder
+$FolderName = "C:\Temp"
+
+if([System.IO.Directory]::Exists($FolderName))
+{
+    Write-Host "Folder Exists"
+    Get-ChildItem -Path $FolderName | Where-Object {$_.CreationTime -gt (Get-Date).Date}   
+}
+else
+{
+    Write-Host "Folder Doesn't Exists"
+    
+    #PowerShell Create directory if not exists
+    New-Item $FolderName -ItemType Directory
+}
+
+
+Connect-MsolService
+
+$Data_AD = Import-CSV c:\temp\Users_AD.csv -Delimiter ","
+foreach ($User in $Data_AD) {
+$UPN = $User.UserPrincipalName
+$ImmutableID = $user.ImmutableId
+
+Echo -userprincipalname $UPN -ImmutableID $ImmutableID
+set-msoluser -userprincipalname $UPN -ImmutableID $ImmutableID
+}
+```
