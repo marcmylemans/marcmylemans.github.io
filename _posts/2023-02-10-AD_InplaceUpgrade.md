@@ -10,12 +10,16 @@ For an in-place upgrade of an existing DC, you must run adprep /forestprep and a
 
 So we need to run the following command to prepare the Forest:
 
-```Powershell
+```powershell
+
 adprep /forestprep
+
 ```
 
 And then for each Domain controller we want to upgrade:
 
-```Powershell
+```powershell
+
 Adprep /domainprep
+
 ```
