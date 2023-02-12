@@ -29,6 +29,6 @@ And then for each Domain controller we want to upgrade:
 
 ```powershell
 
-Adprep /domainprep
+Adprep /domainprep /gpprep
 
 ```
