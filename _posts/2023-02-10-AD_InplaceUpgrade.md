@@ -22,15 +22,11 @@ Windows Server 2019|-|-|-|-|-|Yes
 So we need to run the following command to prepare the Forest:
 
 ```powershell
-
 adprep /forestprep
-
 ```
 
 And then for each Domain controller we want to upgrade:
 
 ```powershell
-
 Adprep /domainprep /gpprep
-
 ```
