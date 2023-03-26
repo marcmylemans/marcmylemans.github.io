@@ -42,22 +42,22 @@ Set-AzureADKerberosServer -Domain $domain -UserPrincipalName $userPrincipalName 
 ```
 
 When Azure AD Kerberos is enabled in an Active Directory domain, an Azure AD Kerberos server object is created in the domain. This object:
-https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/images/azuread-kerberos-object.png
+<img src="https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/images/azuread-kerberos-object.png">
 
 
 Configure Windows Hello for Business policy 
 source:
-(https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/hello-hybrid-cloud-kerberos-trust-provision?tabs=intune#configure-windows-hello-for-business-policy)
+https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/hello-hybrid-cloud-kerberos-trust-provision?tabs=intune#configure-windows-hello-for-business-policy
 
 Verify the tenant-wide policy
 To check the Windows Hello for Business policy applied at enrollment time:
 
-Sign in to the Microsoft Intune admin center.
-Select Devices > Windows > Windows Enrollment.
-Select Windows Hello for Business.
-Verify the status of Configure Windows Hello for Business and any settings that may be configured.
+1) Sign in to the Microsoft Intune admin center.
+2) Select Devices > Windows > Windows Enrollment.
+3) Select Windows Hello for Business.
+4) Verify the status of Configure Windows Hello for Business and any settings that may be configured.
 
-(https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/images/whfb-intune-disable.png)
+<img src="https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/images/whfb-intune-disable.png">
 
 
 If the tenant-wide policy is enabled and configured to your needs, you can skip to Configure cloud Kerberos trust policy. Otherwise, follow the instructions below to create a policy using an account protection policy.
@@ -65,25 +65,27 @@ If the tenant-wide policy is enabled and configured to your needs, you can skip 
 Enable Windows Hello for Business
 To configure Windows Hello for Business using an account protection policy:
 
-Sign in to the Microsoft Intune admin center.
-Select Endpoint security > Account protection.
-Select + Create Policy.
-For Platform, select Windows 10 and later and for Profile select Account protection.
-Select Create.
-Specify a Name and, optionally, a Description > Next.
-Under Block Windows Hello for Business, select Disabled and multiple policies become available.
+1) Sign in to the Microsoft Intune admin center.
+2) Select Endpoint security > Account protection.
+3) Select + Create Policy.
+4) For Platform, select Windows 10 and later and for Profile select Account protection.
+5) Select Create.
+6) Specify a Name and, optionally, a Description > Next.
+7) Under Block Windows Hello for Business, select Disabled and multiple policies become available.
+
 These policies are optional to configure, but it's recommended to configure Enable to use a Trusted Platform Module (TPM) to Yes.
 For more information about these policies, see MDM policy settings for Windows Hello for Business.
-Under Enable to certificate for on-premises resources, select Disabled and multiple policies become available.
-Select Next.
-Optionally, add scope tags and select Next.
-Assign the policy to a security group that contains as members the devices or users that you want to configure > Next.
+
+8) Under Enable to certificate for on-premises resources, select Disabled and multiple policies become available.
+9) Select Next.
+10) Optionally, add scope tags and select Next.
+11) Assign the policy to a security group that contains as members the devices or users that you want to configure > Next.
 Review the policy configuration and select Create.
  Tip
 
 If you want to enforce the use of digits for your Windows Hello for Business PIN, use the settings catalog and choose Digits or Digits (User) instead of using the Account protection template.
 
-(https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/images/whfb-intune-account-protection-enable.png)
+<img src="https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/images/whfb-intune-account-protection-enable.png">
 
 Assign the policy to a security group that contains as members the devices or users that you want to configure.
 
@@ -92,15 +94,11 @@ The cloud Kerberos trust policy can be configured using a custom template, and i
 
 To configure the cloud Kerberos trust policy:
 
-Sign in to the Microsoft Intune admin center.
-
-Select Devices > Windows > Configuration Profiles > Create profile.
-
-For Profile Type, select Templates and select the Custom Template.
-
-Name the profile with a familiar name, for example, "Windows Hello for Business cloud Kerberos trust".
-
-In Configuration Settings, add a new configuration with the following settings:
+1) Sign in to the Microsoft Intune admin center.
+2) Select Devices > Windows > Configuration Profiles > Create profile.
+3) For Profile Type, select Templates and select the Custom Template.
+4) Name the profile with a familiar name, for example, "Windows Hello for Business cloud Kerberos trust".
+5) In Configuration Settings, add a new configuration with the following settings:
 
 Name: Windows Hello for Business cloud Kerberos trust or another familiar name
 Description (optional): Enable Windows Hello for Business cloud Kerberos trust for sign-in and on-premises SSO
@@ -111,6 +109,6 @@ Value: True
 
 Tenant ID in the OMA-URI must be replaced with the tenant ID for your Azure AD tenant. See How to find your Azure AD tenant ID for instructions on looking up your tenant ID.
 
-(https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/images/hello-cloud-trust-intune-large.png)
+<img src="https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/images/hello-cloud-trust-intune-large.png">
 
-Assign the policy to a security group that contains as members the devices or users that you want to configure.
+6) Assign the policy to a security group that contains as members the devices or users that you want to configure.
