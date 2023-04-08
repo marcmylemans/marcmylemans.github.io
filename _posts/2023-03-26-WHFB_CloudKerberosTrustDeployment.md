@@ -12,8 +12,7 @@ We can use Windows hello and Kerberos tokens to access our on-premise resources 
 {% youtube "https://youtu.be/FW3TF0zFWd0" %}
 
 
-Source:
-(https://learn.microsoft.com/en-us/azure/active-directory/authentication/howto-authentication-passwordless-security-key-on-premises?WT.mc_id=ES-MVP-5004117#install-the-azure-ad-kerberos-powershell-module)
+[Source](https://learn.microsoft.com/en-us/azure/active-directory/authentication/howto-authentication-passwordless-security-key-on-premises?WT.mc_id=ES-MVP-5004117#install-the-azure-ad-kerberos-powershell-module)
 
 ```powershell
 # First, ensure TLS 1.2 for PowerShell gallery access.
@@ -46,8 +45,7 @@ When Azure AD Kerberos is enabled in an Active Directory domain, an Azure AD Ker
 
 
 Configure Windows Hello for Business policy 
-source:
-https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/hello-hybrid-cloud-kerberos-trust-provision?tabs=intune#configure-windows-hello-for-business-policy
+[source](https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/hello-hybrid-cloud-kerberos-trust-provision?tabs=intune#configure-windows-hello-for-business-policy)
 
 Verify the tenant-wide policy
 To check the Windows Hello for Business policy applied at enrollment time:

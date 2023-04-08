@@ -38,4 +38,6 @@ Or if you want to place it directly into you clipboard
 
 Enabling this policy sets the following registry key, using the entire URL from the library you copied:
 
+```
 [HKCU\Software\Policies\Microsoft\OneDrive\TenantAutoMount]"LibraryName"="LibraryID"
+```

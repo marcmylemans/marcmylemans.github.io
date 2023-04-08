@@ -12,16 +12,12 @@ In the second part of the video we will be installing third party software with 
 
 Download links for all the ADMX/Installer files used:
 
-Foxit Enterprise .MSI + ADMX:
-https://kb.foxit.com/hc/en-us/articles/360040658811-Where-to-download-Foxit-PDF-Reader-with-Enterprise-Packaging-MSI-
+[Foxit Enterprise .MSI + ADMX](https://kb.foxit.com/hc/en-us/articles/360040658811-Where-to-download-Foxit-PDF-Reader-with-Enterprise-Packaging-MSI-)
 
-Google Chrome Enterprise + ADMX
-https://chromeenterprise.google/browser/download
+[Google Chrome Enterprise + ADMX](https://chromeenterprise.google/browser/download)
 
-Office 365/2019/2016 ADMX:
-https://www.microsoft.com/en-us/download/details.aspx?id=49030
+[Office 365/2019/2016 ADMX](https://www.microsoft.com/en-us/download/details.aspx?id=49030)
 
-Microsoft Edge Browser + ADMX:
-https://www.microsoft.com/en-us/edge/business/download?form=MA13FJ
+[Microsoft Edge Browser + ADMX](https://www.microsoft.com/en-us/edge/business/download?form=MA13FJ)
 
 {% youtube "https://youtu.be/xbX_n8ysGrI" %}
