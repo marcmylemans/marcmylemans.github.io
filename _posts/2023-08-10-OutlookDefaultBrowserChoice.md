@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change Outlook Default Browser
+title: Outlook and Teams open links on Microsoft Edge
 categories: office outlook
 tags: office office365 outlook regkey
 ---
