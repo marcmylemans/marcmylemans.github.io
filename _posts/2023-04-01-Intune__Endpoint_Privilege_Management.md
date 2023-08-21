@@ -8,4 +8,4 @@ tags: intune azure epm
 In this video, we will enable Endpoint Privilege Management within Intune.
 Endpoint Privilege Management (EPM) allows IT to run everyone as a standard user while elevating privileges only when needed.
 
-{% youtube https://youtu.be/GI8HQE9ZOGk %}
+{% youtube "https://youtu.be/GI8HQE9ZOGk" %}
