@@ -15,6 +15,9 @@ In this video we will install the Azure MFA NPS Extension, with this extension w
 
 ```powershell
 cd 'c:\Program Files\Microsoft\AzureMfa\Config'
+```
+
+```powershell
 .\AzureMfaNpsExtnConfigSetup.ps1
 ```
 
