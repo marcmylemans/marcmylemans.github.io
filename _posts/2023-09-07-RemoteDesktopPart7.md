@@ -7,9 +7,17 @@ tags: server 2022 rdp part4 office o365
 
 In this video we will install the Azure MFA NPS Extension, with this extension we can use the Multifactor Authentication from Azure AD and securing the Remote Desktop Gateway connection for Remote Desktop.
 
-[Download NPS Extension](https://www.microsoft.com/en-us/download/details.aspx?id=54688)
 
 {% youtube "https://youtu.be/b5WL7PgEmaY" %}
+
+
+[Download NPS Extension](https://www.microsoft.com/en-us/download/details.aspx?id=54688)
+
+```powershell
+cd 'c:\Program Files\Microsoft\AzureMfa\Config'
+.\AzureMfaNpsExtnConfigSetup.ps1
+```
+
 
 Be sure to check out the previous video where we configured Remote Desktop Services:
 
