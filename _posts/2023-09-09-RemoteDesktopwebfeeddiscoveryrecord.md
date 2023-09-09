@@ -22,14 +22,10 @@ _msradc
 Text value:
 
 ```
-https://webserver.contoso.com/RDWeb/Feed
+https://webserver.contoso.com/RDWeb/Feed/webfeed.aspx
 ```
 
-If you have done everything correctly you should be able to resolve this record with nslookup:
 
-```
-nslookup _msradc.contoso.com
-```
 
 
 Be sure to check out the previous video where we configured Remote Desktop Services:
