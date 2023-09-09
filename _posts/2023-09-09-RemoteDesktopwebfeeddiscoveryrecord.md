@@ -22,7 +22,7 @@ _msradc
 Text value:
 
 ```
-https://gatewayserver.contoso.com/RDWeb/FeedLogin/WebFeedLogin.aspx
+https://webserver.contoso.com/RDWeb/Feed
 ```
 
 If you have done everything correctly you should be able to resolve this record with nslookup:
