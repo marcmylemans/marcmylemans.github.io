@@ -2,7 +2,7 @@
 layout: post
 title: Remote Desktop Services, Securing it with Azure MFA!
 categories: Windows Server
-tags: server 2022 rdp part4 office o365
+tags: server 2022 rdp part7 mfa
 ---
 
 In this video we will install the Azure MFA NPS Extension, with this extension we can use the Multifactor Authentication from Azure AD and securing the Remote Desktop Gateway connection for Remote Desktop.
@@ -21,6 +21,13 @@ cd 'c:\Program Files\Microsoft\AzureMfa\Config'
 .\AzureMfaNpsExtnConfigSetup.ps1
 ```
 
+In order for Non MFA enabled users to continue to connect to the Remote Gateway server you can add the following Regkey in the registy of the NPS installed server under the following registery path, open an elevated cmd prompt and run the following command
+
+```
+reg add HKLM\Software\Microsoft\AzureMFA /v REQUIRE_USER_MATCH /t REG_SZ /d FALSE
+```
+
+Reboot the server for it to take effect.
 
 Be sure to check out the previous video where we configured Remote Desktop Services:
 
