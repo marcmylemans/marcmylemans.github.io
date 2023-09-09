@@ -13,16 +13,20 @@ i'm going to use contoso.com as our example here and your users get an e-mail in
 
 For this to work you need to create a new TXT record on your public nameservers that points to your Remote desktop Webfeed.
 
-The value for the new TXT record
+The value for the new TXT record:
+
 ```
 _msradc
 ```
+
 Text value:
+
 ```
 https://gatewayserver.contoso.com/RDWeb/FeedLogin/WebFeedLogin.aspx
 ```
 
-if you have done everything correctly you should be able to resolve this record with nslookup:
+If you have done everything correctly you should be able to resolve this record with nslookup:
+
 ```
 nslookup _msradc.contoso.com
 ```
