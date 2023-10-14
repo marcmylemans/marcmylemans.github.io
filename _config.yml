@@ -188,6 +188,8 @@ exclude:
   - gulpfile.js
   - node_modules
   - package*.json
+  - '*.back'
+  - '*.old'
 
 jekyll-archives:
   enabled: [categories, tags]
