@@ -5,7 +5,7 @@ categories: Windows Server
 tags: server 2022 rdp webfeed
 ---
 
-I am writing this small guile in extension of the Remote Desktop series.
+I am writing this small guide in extension of the Remote Desktop series.
 
 You can use your e-mail to 'autodiscover' your remote desktop webfeed. (like your exchange autodiscover record).
 
