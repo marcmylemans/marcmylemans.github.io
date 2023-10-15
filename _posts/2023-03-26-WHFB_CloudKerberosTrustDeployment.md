@@ -44,15 +44,18 @@ When Azure AD Kerberos is enabled in an Active Directory domain, an Azure AD Ker
 <img src="https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/images/azuread-kerberos-object.png">
 
 
-Configure Windows Hello for Business policy 
+# Configure Windows Hello for Business policy 
 [source](https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/hello-hybrid-cloud-kerberos-trust-provision?tabs=intune#configure-windows-hello-for-business-policy)
 
-Verify the tenant-wide policy
+## Verify the tenant-wide policy
 To check the Windows Hello for Business policy applied at enrollment time:
 
 1) Sign in to the Microsoft Intune admin center.
+
 2) Select Devices > Windows > Windows Enrollment.
+
 3) Select Windows Hello for Business.
+
 4) Verify the status of Configure Windows Hello for Business and any settings that may be configured.
 
 <img src="https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/images/whfb-intune-disable.png">
@@ -60,23 +63,32 @@ To check the Windows Hello for Business policy applied at enrollment time:
 
 If the tenant-wide policy is enabled and configured to your needs, you can skip to Configure cloud Kerberos trust policy. Otherwise, follow the instructions below to create a policy using an account protection policy.
 
-Enable Windows Hello for Business
+## Enable Windows Hello for Business
 To configure Windows Hello for Business using an account protection policy:
 
 1) Sign in to the Microsoft Intune admin center.
+
 2) Select Endpoint security > Account protection.
+
 3) Select + Create Policy.
+
 4) For Platform, select Windows 10 and later and for Profile select Account protection.
+
 5) Select Create.
+
 6) Specify a Name and, optionally, a Description > Next.
+
 7) Under Block Windows Hello for Business, select Disabled and multiple policies become available.
 
 These policies are optional to configure, but it's recommended to configure Enable to use a Trusted Platform Module (TPM) to Yes.
 For more information about these policies, see MDM policy settings for Windows Hello for Business.
 
 8) Under Enable to certificate for on-premises resources, select Disabled and multiple policies become available.
+
 9) Select Next.
+
 10) Optionally, add scope tags and select Next.
+
 11) Assign the policy to a security group that contains as members the devices or users that you want to configure > Next.
 Review the policy configuration and select Create.
  Tip
@@ -87,15 +99,19 @@ If you want to enforce the use of digits for your Windows Hello for Business PIN
 
 Assign the policy to a security group that contains as members the devices or users that you want to configure.
 
-Configure the cloud Kerberos trust policy
+## Configure the cloud Kerberos trust policy
 The cloud Kerberos trust policy can be configured using a custom template, and it's configured separately from enabling Windows Hello for Business.
 
 To configure the cloud Kerberos trust policy:
 
 1) Sign in to the Microsoft Intune admin center.
+
 2) Select Devices > Windows > Configuration Profiles > Create profile.
+
 3) For Profile Type, select Templates and select the Custom Template.
+
 4) Name the profile with a familiar name, for example, "Windows Hello for Business cloud Kerberos trust".
+
 5) In Configuration Settings, add a new configuration with the following settings:
 
 Name: Windows Hello for Business cloud Kerberos trust or another familiar name
