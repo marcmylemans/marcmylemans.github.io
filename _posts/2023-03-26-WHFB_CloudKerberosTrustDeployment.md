@@ -41,7 +41,7 @@ Set-AzureADKerberosServer -Domain $domain -UserPrincipalName $userPrincipalName 
 ```
 
 When Azure AD Kerberos is enabled in an Active Directory domain, an Azure AD Kerberos server object is created in the domain. This object:
-<img src="https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/images/azuread-kerberos-object.png">
+<img src="https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/images/azuread-kerberos-object.png" alt="azuread-kerberos-object">
 
 
 # Configure Windows Hello for Business policy 
@@ -58,7 +58,7 @@ To check the Windows Hello for Business policy applied at enrollment time:
 
 4) Verify the status of Configure Windows Hello for Business and any settings that may be configured.
 
-<img src="https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/images/whfb-intune-disable.png">
+<img src="https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/images/whfb-intune-disable.png" alt="whfb-intune-disable">
 
 
 If the tenant-wide policy is enabled and configured to your needs, you can skip to Configure cloud Kerberos trust policy. Otherwise, follow the instructions below to create a policy using an account protection policy.
@@ -95,7 +95,7 @@ Review the policy configuration and select Create.
 
 If you want to enforce the use of digits for your Windows Hello for Business PIN, use the settings catalog and choose Digits or Digits (User) instead of using the Account protection template.
 
-<img src="https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/images/whfb-intune-account-protection-enable.png">
+<img src="https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/images/whfb-intune-account-protection-enable.png" alt="whfb-intune-account-protection-enable">
 
 Assign the policy to a security group that contains as members the devices or users that you want to configure.
 
@@ -123,6 +123,6 @@ Value: True
 
 Tenant ID in the OMA-URI must be replaced with the tenant ID for your Azure AD tenant. See How to find your Azure AD tenant ID for instructions on looking up your tenant ID.
 
-<img src="https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/images/hello-cloud-trust-intune-large.png">
+<img src="https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/images/hello-cloud-trust-intune-large.png" alt="hello-cloud-trust-intune-large">
 
 6) Assign the policy to a security group that contains as members the devices or users that you want to configure.
