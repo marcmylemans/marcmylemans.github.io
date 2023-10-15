@@ -21,63 +21,63 @@ Before you begin, ensure that you have the following:
 
 ## Step 1: Configure Networking
 
-1. Log in to each Windows Server Core machine using remote management tools or directly at the console.
+1) Log in to each Windows Server Core machine using remote management tools or directly at the console.
 
-2. Configure static IP addresses and DNS settings for each machine. Make sure they can communicate over the dedicated network.
+2) Configure static IP addresses and DNS settings for each machine. Make sure they can communicate over the dedicated network.
 
 ## Step 2: Install Failover Clustering Feature
 
-1. Open PowerShell with elevated privileges.
+1) Open PowerShell with elevated privileges.
 
-2. Install the Failover Clustering feature on all nodes.
+2) Install the Failover Clustering feature on all nodes.
 
 ```powershell
    Install-WindowsFeature -Name Failover-Clustering -IncludeManagementTools
 ```
 
-3. Restart the nodes if prompted.
+3) Restart the nodes if prompted.
 
 ## Step 3: Validate the Cluster Configuration
 
-1. In PowerShell, run the cluster validation test on one of the nodes.
+1) In PowerShell, run the cluster validation test on one of the nodes.
 
 ```powershell
    Test-Cluster -Node Node1, Node2
 ```
 
-2. Review the validation report to ensure that all tests pass without errors.
+2) Review the validation report to ensure that all tests pass without errors.
 
 ## Step 4: Create the Cluster
 
-1. In PowerShell, create a new cluster using the New-Cluster cmdlet.
+1) In PowerShell, create a new cluster using the New-Cluster cmdlet.
 
 ```powershell
    New-Cluster -Name MyHyperVCluster -Node Node1, Node2 -NoStorage
 ```
 
-2. Configure cluster networks, ensuring that the dedicated network is set for cluster communication.
+2) Configure cluster networks, ensuring that the dedicated network is set for cluster communication.
 
 ## Step 5: Add Shared Storage
 
-1. Ensure that your shared storage or SAN is properly configured and accessible by all cluster nodes.
+1) Ensure that your shared storage or SAN is properly configured and accessible by all cluster nodes.
 
-2. In the Failover Cluster Manager, add the shared storage to the cluster by selecting "Add Storage" and following the wizard.
+2) In the Failover Cluster Manager, add the shared storage to the cluster by selecting "Add Storage" and following the wizard.
 
 ## Step 6: Configure Hyper-V
 
-1. Install the Hyper-V role on each cluster node.
+1) Install the Hyper-V role on each cluster node.
 
 ```powershell
    Install-WindowsFeature -Name Hyper-V
 ```
 
-2. Use Hyper-V Manager or PowerShell to create and manage virtual machines on the cluster.
+2) Use Hyper-V Manager or PowerShell to create and manage virtual machines on the cluster.
 
 ## Step 7: Test High Availability
 
-1. Create a test virtual machine and place it on the cluster.
+1) Create a test virtual machine and place it on the cluster.
 
-2. Safely shut down or migrate one of the cluster nodes to confirm that the virtual machine fails over to the remaining node.
+2) Safely shut down or migrate one of the cluster nodes to confirm that the virtual machine fails over to the remaining node.
 
 ## Conclusion
 
