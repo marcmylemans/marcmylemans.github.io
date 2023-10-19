@@ -200,4 +200,7 @@ jekyll-archives:
     tag: /tags/:name/
     category: /categories/:name/
 
-plugins: [jekyll-youtube, jekyll-include-cache]
+plugins: 
+  - jekyll-youtube
+  - jekyll-include-cache
+  - jekyll-seo-tag
