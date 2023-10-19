@@ -17,7 +17,7 @@ We will also go over the template relatively quick in this video, for more detai
 [How to create a Virtual Machine template]({% link _posts/2022-12-18-Server2022-Hyper-V-VirtualMachineTemplates.md %})
 
 For Microsoft recommendations regarding your VDI Virtual Machines configuration take a look at:
-https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations
+[Microsoft Learn, RDS/VDI recommendations](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations)
 
 To set up a Hyper-v server to host our Virtual Machines, please take a look at:
 https://youtu.be/Y-Sadkf3Ims
