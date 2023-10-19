@@ -4,10 +4,5 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-Hi! My name is Marc Mylemans. My interests are everything related to IT.
-
-Here you will find additional blog posts about tech tips and video documentation. I also create content on [Youtube](https://www.youtube.com/@marcmylemans).
-
-I hope you enjoy my videos and share this journey with me!
-
-If you like them then please leave a like, share and subscribe for more content.
+> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
+{: .prompt-tip }
