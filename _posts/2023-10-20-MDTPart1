@@ -74,6 +74,9 @@ $ErrorActionPreference = 'Stop'
     Write-Output 'Adding Windows feature Windows Deployment System'
     Add-WindowsFeature WDS -IncludeManagementTools
 
+	Write-Output 'Downloading Chocolatey Wrapper'
+	Invoke-WebRequest 'https://raw.githubusercontent.com/keithga/DeployShared/master/Templates/Distribution/Scripts/Extras/Install-Chocolatey.ps1' -Outfile 'c:\temp\Install-Chocolatey.ps1'
+
   	Write-Output 'Creating MDT Service Account' 
 	New-LocalUser "SVC_MDT" -Password "7tILC281eKeU" -FullName "MDT Service Account" -Description "MDT Service Account voor Windows Deployment"  
 
@@ -163,4 +166,10 @@ Catch
 
 ```
 Priority=Serialnumber,DefaultGateway,MacAddress,TaskSequenceID,Model,ByLaptopType,ByDesktopType
+```
+
+## Import the Chocolatey Wrapper for MDT into the scripts folder
+
+```
+D:\DeploymentShare\
 ```
