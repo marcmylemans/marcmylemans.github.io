@@ -1,0 +1,166 @@
+---
+layout: post
+title: Setting Up a Microsoft Deployment Server!
+categories: Windows Server
+tags: server mdt part1
+---
+
+# Setting up a Microsoft Deployment Server!
+
+## Introduction
+
+In this guide, we will walk you through the process of setting up a Microsoft Deployment Server. Microsoft Deployment Server (MDT) is designed to simplify the deployment of Windows operating systems and applications in an enterprise environment. Whether you need to deploy Windows to multiple computers or customize your installations for specific needs, MDT provides the tools and processes to make it all possible.
+
+## Prerequisites
+
+Before you begin, ensure that you have the following:
+
+* [ADK for Windows 11 21H1](https://go.microsoft.com/fwlink/?linkid=2165884)
+
+* [Windows PE add-on for ADK](https://go.microsoft.com/fwlink/?linkid=2166133)
+
+* [Microsoft Deployment Toolkit](https://www.microsoft.com/en-us/download/details.aspx?id=54259)
+
+* [MDT 8456 Hotfix](https://support.microsoft.com/en-us/topic/windows-10-deployments-fail-with-microsoft-deployment-toolkit-on-computers-with-bios-type-firmware-70557b0b-6be3-81d2-556f-b313e29e2cb7)
+
+* [Chocolatey Wrapper for MDT](https://keithga.wordpress.com/2014/11/25/new-tool-chocolatey-wrapper-for-mdt/)
+
+## Step 1: Install Windows ADK for Windows 11, and MDT 8456
+
+Follow the video guide to see a step by step installation.
+
+## Step 2: Create the MDT Deployment Share
+
+You can do this manually, but bellow is a script to speed this proces up.
+
+```powershell
+#Requires -Version 3
+#Requires -RunAsAdministrator
+
+###
+### Variables
+###
+
+$MDTDeploymentShareFolder = 'D:\DeploymentShare'
+$MDTDeploymentShareName = 'DeploymentShare$'
+$MDTChocolateyApplications = @('7zip','adobereader','googlechrome','firefox','javaruntime','dotnet3.5','dotnet4.5') # You need a chocolatey wrapper in order for this to work https://keithga.wordpress.com/2014/11/25/new-tool-chocolatey-wrapper-for-mdt/
+
+$WDSRemoteInstallFolder = 'D:\RemoteInstall'
+
+$ErrorActionPreference = 'Stop'
+
+###
+### Script
+###
+
+	Write-Host "Please check if the D partition is ready and press any key to continue..."
+	$x = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+
+	Write-Output 'Seting up Scratch Folder'
+	mkdir "c:\temp"
+	mkdir "c:\temp\Drivers\x64_winpe10"
+	mkdir "c:\temp\Drivers\Laptop"
+	mkdir "c:\temp\Drivers\Desktop"
+	mkdir "c:\temp\software\Windows Kits\10\ADK"
+	ii c:\temp\
+	Write-Host "Please populate the c:\temp Folder and press any key to continue..."
+	$x = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+
+   Try
+{
+   Write-Output 'Adding Windows feature NET-Framework-Core'
+    Add-WindowsFeature NET-Framework-Core
+
+    Write-Output 'Adding Windows feature Windows Deployment System'
+    Add-WindowsFeature WDS -IncludeManagementTools
+
+  	Write-Output 'Creating MDT Service Account' 
+	New-LocalUser "SVC_MDT" -Password "nakuzateR6hu" -FullName "MDT Service Account" -Description "MDT Service Account voor Windows Deployment"  
+
+   Write-Output 'Setting up MDT'
+    mkdir $MDTDeploymentShareFolder
+    $Share = [wmiClass]'Win32_share'
+    $Share.create($MDTDeploymentShareFolder,$MDTDeploymentShareName,0)
+
+       Import-Module 'C:\Program Files\Microsoft Deployment Toolkit\Bin\MicrosoftDeploymentToolkit.psd1' -Force    
+    New-PSDrive -Name 'DS001' -PSProvider 'MDTProvider' -Root $MDTDeploymentShareFolder -NetworkPath "\\$env:COMPUTERNAME\$MDTDeploymentShareName" -Description 'DeploymentShare' -Verbose | Add-MDTPersistentDrive -Verbose
+    New-Item -path 'DS001:\Operating Systems' -enable 'True' -Name 'WIN7X64' -Comments '' -ItemType folder -Verbose
+    New-Item -path 'DS001:\Operating Systems' -enable 'True' -Name 'WIN10X64' -Comments '' -ItemType folder -Verbose
+    New-Item -path 'DS001:\Operating Systems' -enable 'True' -Name 'SRV2012R2X64' -Comments '' -ItemType folder -Verbose
+    New-Item -path 'DS001:\Operating Systems' -enable 'True' -Name 'SRV2016X64' -Comments '' -ItemType folder -Verbose
+    New-Item -path 'DS001:\Task Sequences' -enable 'True' -Name 'WIN7X64' -Comments '' -ItemType folder -Verbose
+    New-Item -path 'DS001:\Task Sequences' -enable 'True' -Name 'WIN10X64' -Comments '' -ItemType folder -Verbose
+    New-Item -path 'DS001:\Task Sequences' -enable 'True' -Name 'SRV2012R2X64' -Comments '' -ItemType folder -Verbose
+    New-Item -path 'DS001:\Task Sequences' -enable 'True' -Name 'SRV2016X64' -Comments '' -ItemType folder -Verbose
+    New-Item -path 'DS001:\Out-of-Box Drivers' -enable 'True' -Name 'WINPE' -Comments '' -ItemType folder -Verbose
+    New-Item -path 'DS001:\Out-of-Box Drivers' -enable 'True' -Name 'DESKTOP' -Comments '' -ItemType folder -Verbose
+    New-Item -path 'DS001:\Out-of-Box Drivers' -enable 'True' -Name 'LAPTOP' -Comments '' -ItemType folder -Verbose
+    New-Item -path 'DS001:\Packages' -enable 'True' -Name 'WIN7X64' -Comments '' -ItemType folder -Verbose
+    New-Item -path 'DS001:\Packages' -enable 'True' -Name 'WIN10X64' -Comments '' -ItemType folder -Verbose
+    New-Item -path 'DS001:\Packages' -enable 'True' -Name 'SRV2012R2X64' -Comments '' -ItemType folder -Verbose
+    New-Item -path 'DS001:\Packages' -enable 'True' -Name 'SRV2016X64' -Comments '' -ItemType folder -Verbose
+    new-item -path "DS001:\Selection Profiles" -enable "True" -Name "WINPE" -Comments "" -Definition "<SelectionProfile><Include path=`"Out-of-Box Drivers\WINPE`" /></SelectionProfile>" -ReadOnly "False" -Verbose
+    new-item -path "DS001:\Selection Profiles" -enable "True" -Name "WIN7X64" -Comments "" -Definition "<SelectionProfile><Include path=`"Packages\WIN7X64`" /></SelectionProfile>" -ReadOnly "False" -Verbose
+    new-item -path "DS001:\Selection Profiles" -enable "True" -Name "WIN10X64" -Comments "" -Definition "<SelectionProfile><Include path=`"Packages\WIN10X64`" /></SelectionProfile>" -ReadOnly "False" -Verbose
+    new-item -path "DS001:\Selection Profiles" -enable "True" -Name "SRV2012R2X64" -Comments "" -Definition "<SelectionProfile><Include path=`"Packages\SRV2012R2X64`" /></SelectionProfile>" -ReadOnly "False" -Verbose
+    new-item -path "DS001:\Selection Profiles" -enable "True" -Name "SRV2016X64" -Comments "" -Definition "<SelectionProfile><Include path=`"Packages\SRV2016X64`" /></SelectionProfile>" -ReadOnly "False" -Verbose
+    $MDTChocolateyApplications | % {
+        $Package = $_
+        $Path = "powershell.exe -NoProfile -ExecutionPolicy unrestricted `"%ScriptRoot%\Install-Chocolatey.ps1`" -verbose -Packages `"$Package`""
+        Import-MDTApplication -path "DS001:\Applications" -Name $Package -ShortName $Package -NoSource -CommandLine $Path -Enable $true
+     }
+    Copy-Item -Path 'c:\temp\Install-Chocolatey.ps1' -Destination $MDTDeploymentShareFolder\Scripts
+	
+	#Bootstrap Rules
+	Add-Content $MDTDeploymentShareFolder\control\Bootstrap.ini "DeployRoot=\\$env:computername\DeploymentShare$"
+	Add-Content $MDTDeploymentShareFolder\control\Bootstrap.ini "UserID=$env:computername\SVC_MDT" #Change $env:computername to domain name if needed.
+	Add-Content $MDTDeploymentShareFolder\control\Bootstrap.ini "UserPassword=nakuzateR6hu"
+    Add-Content $MDTDeploymentShareFolder\control\Bootstrap.ini "KeyboardLocalePE=0813:00000813"
+    Add-Content $MDTDeploymentShareFolder\control\Bootstrap.ini "KeyboardLocale=0813:00000813"
+    Add-Content $MDTDeploymentShareFolder\control\Bootstrap.ini "KeyboardLocalePE=nl-BE"
+    Add-Content $MDTDeploymentShareFolder\control\Bootstrap.ini "KeyboardLocale=nl-BE"
+    Add-Content $MDTDeploymentShareFolder\control\Bootstrap.ini "SkipBDDWelcome=YES"
+	
+	#CustomSettings Rules
+	#Change Priority to  => Priority=Serialnumber,DefaultGateway,MacAddress,TaskSequenceID,Model,ByLaptopType,ByDesktopType
+	Add-Content $MDTDeploymentShareFolder\control\CustomSettings.ini "[ByLaptopType]"
+	Add-Content $MDTDeploymentShareFolder\control\CustomSettings.ini "Subsection=Laptop-%IsLaptop%"
+	Add-Content $MDTDeploymentShareFolder\control\CustomSettings.ini "[ByDesktopType]"
+	Add-Content $MDTDeploymentShareFolder\control\CustomSettings.ini "Subsection=Desktop-%IsDesktop%"
+	Add-Content $MDTDeploymentShareFolder\control\CustomSettings.ini "[Laptop-True]"
+	Add-Content $MDTDeploymentShareFolder\control\CustomSettings.ini "DriverGroup001=LAPTOP\%Model%"
+	Add-Content $MDTDeploymentShareFolder\control\CustomSettings.ini "DriverSelectionProfile=nothing"
+	Add-Content $MDTDeploymentShareFolder\control\CustomSettings.ini "[Desktop-True]"
+	Add-Content $MDTDeploymentShareFolder\control\CustomSettings.ini "DriverGroup001=DESKTOP\%Model%"
+	Add-Content $MDTDeploymentShareFolder\control\CustomSettings.ini "DriverSelectionProfile=nothing"
+	Add-Content $MDTDeploymentShareFolder\control\CustomSettings.ini "[Virtual Machine]"
+	Add-Content $MDTDeploymentShareFolder\control\CustomSettings.ini "DriverSelectionProfile=nothing"
+	
+	
+	
+	#Importing Drivers
+	#WINPE Drivers Windows 10
+	import-mdtdriver -path "DS001:\Out-of-Box Drivers\WINPE" -SourcePath "c:\temp\Drivers\x64_winpe10" -ImportDuplicates -Verbose
+		
+	#Update MDT Share	
+    Update-MDTDeploymentShare -path 'DS001:' -Verbose
+
+    Write-Output 'Setting up WDS'
+    Start-Process -FilePath WDSUTIL -ArgumentList "/Initialize-Server /RemInst:`"$WDSRemoteInstallFolder`"" -Wait
+    Stop-Service WDSServer -ErrorAction SilentlyContinue
+    Start-Service WDSServer
+    Import-WdsBootImage -NewImageName 'Windows Deployment (x64)' -path $(Join-Path $MDTDeploymentShareFolder 'Boot\LiteTouchPE_x64.wim')
+    Import-WdsBootImage -NewImageName 'Windows Deployment (x86)' -path $(Join-Path $MDTDeploymentShareFolder 'Boot\LiteTouchPE_x86.wim')
+
+}
+Catch
+{
+    Throw $_
+} 
+```
+
+
+Change the custom.ini priority to
+```
+Priority=Serialnumber,DefaultGateway,MacAddress,TaskSequenceID,Model,ByLaptopType,ByDesktopType
+```
