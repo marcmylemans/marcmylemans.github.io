@@ -34,6 +34,9 @@ Follow the video guide to see a step by step installation.
 ## Step 2: Create the MDT Deployment Share
 
 You can do this manually, but bellow is a script to speed this proces up.
+This will also create a local user with a password, feel free to change the password in the script
+
+[Lastpass password generator](https://www.lastpass.com/nl/features/password-generator)
 
 ```powershell
 #Requires -Version 3
@@ -72,7 +75,7 @@ $ErrorActionPreference = 'Stop'
     Add-WindowsFeature WDS -IncludeManagementTools
 
   	Write-Output 'Creating MDT Service Account' 
-	New-LocalUser "SVC_MDT" -Password "nakuzateR6hu" -FullName "MDT Service Account" -Description "MDT Service Account voor Windows Deployment"  
+	New-LocalUser "SVC_MDT" -Password "7tILC281eKeU" -FullName "MDT Service Account" -Description "MDT Service Account voor Windows Deployment"  
 
    Write-Output 'Setting up MDT'
     mkdir $MDTDeploymentShareFolder
@@ -111,7 +114,7 @@ $ErrorActionPreference = 'Stop'
 	#Bootstrap Rules
 	Add-Content $MDTDeploymentShareFolder\control\Bootstrap.ini "DeployRoot=\\$env:computername\DeploymentShare$"
 	Add-Content $MDTDeploymentShareFolder\control\Bootstrap.ini "UserID=$env:computername\SVC_MDT" #Change $env:computername to domain name if needed.
-	Add-Content $MDTDeploymentShareFolder\control\Bootstrap.ini "UserPassword=nakuzateR6hu"
+	Add-Content $MDTDeploymentShareFolder\control\Bootstrap.ini "UserPassword=7tILC281eKeU"
     Add-Content $MDTDeploymentShareFolder\control\Bootstrap.ini "KeyboardLocalePE=0813:00000813"
     Add-Content $MDTDeploymentShareFolder\control\Bootstrap.ini "KeyboardLocale=0813:00000813"
     Add-Content $MDTDeploymentShareFolder\control\Bootstrap.ini "KeyboardLocalePE=nl-BE"
