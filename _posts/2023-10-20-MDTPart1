@@ -29,6 +29,8 @@ Before you begin, ensure that you have the following:
 
 Follow the video guide to see a step by step installation.
 
+[Video will be available soon!]
+
 ## Step 2: Create the MDT Deployment Share
 
 You can do this manually, but bellow is a script to speed this proces up.
@@ -53,19 +55,14 @@ $ErrorActionPreference = 'Stop'
 ### Script
 ###
 
-	Write-Host "Please check if the D partition is ready and press any key to continue..."
-	$x = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
-
+	
 	Write-Output 'Seting up Scratch Folder'
 	mkdir "c:\temp"
 	mkdir "c:\temp\Drivers\x64_winpe10"
 	mkdir "c:\temp\Drivers\Laptop"
 	mkdir "c:\temp\Drivers\Desktop"
 	mkdir "c:\temp\software\Windows Kits\10\ADK"
-	ii c:\temp\
-	Write-Host "Please populate the c:\temp Folder and press any key to continue..."
-	$x = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
-
+	
    Try
 {
    Write-Output 'Adding Windows feature NET-Framework-Core'
@@ -84,26 +81,26 @@ $ErrorActionPreference = 'Stop'
 
        Import-Module 'C:\Program Files\Microsoft Deployment Toolkit\Bin\MicrosoftDeploymentToolkit.psd1' -Force    
     New-PSDrive -Name 'DS001' -PSProvider 'MDTProvider' -Root $MDTDeploymentShareFolder -NetworkPath "\\$env:COMPUTERNAME\$MDTDeploymentShareName" -Description 'DeploymentShare' -Verbose | Add-MDTPersistentDrive -Verbose
-    New-Item -path 'DS001:\Operating Systems' -enable 'True' -Name 'WIN7X64' -Comments '' -ItemType folder -Verbose
-    New-Item -path 'DS001:\Operating Systems' -enable 'True' -Name 'WIN10X64' -Comments '' -ItemType folder -Verbose
+    #New-Item -path 'DS001:\Operating Systems' -enable 'True' -Name 'WIN7X64' -Comments '' -ItemType folder -Verbose
+    New-Item -path 'DS001:\Operating Systems' -enable 'True' -Name 'WIN11X64' -Comments '' -ItemType folder -Verbose
     New-Item -path 'DS001:\Operating Systems' -enable 'True' -Name 'SRV2012R2X64' -Comments '' -ItemType folder -Verbose
     New-Item -path 'DS001:\Operating Systems' -enable 'True' -Name 'SRV2016X64' -Comments '' -ItemType folder -Verbose
-    New-Item -path 'DS001:\Task Sequences' -enable 'True' -Name 'WIN7X64' -Comments '' -ItemType folder -Verbose
-    New-Item -path 'DS001:\Task Sequences' -enable 'True' -Name 'WIN10X64' -Comments '' -ItemType folder -Verbose
-    New-Item -path 'DS001:\Task Sequences' -enable 'True' -Name 'SRV2012R2X64' -Comments '' -ItemType folder -Verbose
-    New-Item -path 'DS001:\Task Sequences' -enable 'True' -Name 'SRV2016X64' -Comments '' -ItemType folder -Verbose
+    #New-Item -path 'DS001:\Task Sequences' -enable 'True' -Name 'WIN7X64' -Comments '' -ItemType folder -Verbose
+    New-Item -path 'DS001:\Task Sequences' -enable 'True' -Name 'WIN11X64' -Comments '' -ItemType folder -Verbose
+    #New-Item -path 'DS001:\Task Sequences' -enable 'True' -Name 'SRV2012R2X64' -Comments '' -ItemType folder -Verbose
+    #New-Item -path 'DS001:\Task Sequences' -enable 'True' -Name 'SRV2016X64' -Comments '' -ItemType folder -Verbose
     New-Item -path 'DS001:\Out-of-Box Drivers' -enable 'True' -Name 'WINPE' -Comments '' -ItemType folder -Verbose
     New-Item -path 'DS001:\Out-of-Box Drivers' -enable 'True' -Name 'DESKTOP' -Comments '' -ItemType folder -Verbose
     New-Item -path 'DS001:\Out-of-Box Drivers' -enable 'True' -Name 'LAPTOP' -Comments '' -ItemType folder -Verbose
-    New-Item -path 'DS001:\Packages' -enable 'True' -Name 'WIN7X64' -Comments '' -ItemType folder -Verbose
-    New-Item -path 'DS001:\Packages' -enable 'True' -Name 'WIN10X64' -Comments '' -ItemType folder -Verbose
-    New-Item -path 'DS001:\Packages' -enable 'True' -Name 'SRV2012R2X64' -Comments '' -ItemType folder -Verbose
-    New-Item -path 'DS001:\Packages' -enable 'True' -Name 'SRV2016X64' -Comments '' -ItemType folder -Verbose
+    #New-Item -path 'DS001:\Packages' -enable 'True' -Name 'WIN7X64' -Comments '' -ItemType folder -Verbose
+    New-Item -path 'DS001:\Packages' -enable 'True' -Name 'WIN11X64' -Comments '' -ItemType folder -Verbose
+    #New-Item -path 'DS001:\Packages' -enable 'True' -Name 'SRV2012R2X64' -Comments '' -ItemType folder -Verbose
+    #New-Item -path 'DS001:\Packages' -enable 'True' -Name 'SRV2016X64' -Comments '' -ItemType folder -Verbose
     new-item -path "DS001:\Selection Profiles" -enable "True" -Name "WINPE" -Comments "" -Definition "<SelectionProfile><Include path=`"Out-of-Box Drivers\WINPE`" /></SelectionProfile>" -ReadOnly "False" -Verbose
-    new-item -path "DS001:\Selection Profiles" -enable "True" -Name "WIN7X64" -Comments "" -Definition "<SelectionProfile><Include path=`"Packages\WIN7X64`" /></SelectionProfile>" -ReadOnly "False" -Verbose
-    new-item -path "DS001:\Selection Profiles" -enable "True" -Name "WIN10X64" -Comments "" -Definition "<SelectionProfile><Include path=`"Packages\WIN10X64`" /></SelectionProfile>" -ReadOnly "False" -Verbose
-    new-item -path "DS001:\Selection Profiles" -enable "True" -Name "SRV2012R2X64" -Comments "" -Definition "<SelectionProfile><Include path=`"Packages\SRV2012R2X64`" /></SelectionProfile>" -ReadOnly "False" -Verbose
-    new-item -path "DS001:\Selection Profiles" -enable "True" -Name "SRV2016X64" -Comments "" -Definition "<SelectionProfile><Include path=`"Packages\SRV2016X64`" /></SelectionProfile>" -ReadOnly "False" -Verbose
+    #new-item -path "DS001:\Selection Profiles" -enable "True" -Name "WIN7X64" -Comments "" -Definition "<SelectionProfile><Include path=`"Packages\WIN7X64`" /></SelectionProfile>" -ReadOnly "False" -Verbose
+    new-item -path "DS001:\Selection Profiles" -enable "True" -Name "WIN10X64" -Comments "" -Definition "<SelectionProfile><Include path=`"Packages\WIN11X64`" /></SelectionProfile>" -ReadOnly "False" -Verbose
+    #new-item -path "DS001:\Selection Profiles" -enable "True" -Name "SRV2012R2X64" -Comments "" -Definition "<SelectionProfile><Include path=`"Packages\SRV2012R2X64`" /></SelectionProfile>" -ReadOnly "False" -Verbose
+    #new-item -path "DS001:\Selection Profiles" -enable "True" -Name "SRV2016X64" -Comments "" -Definition "<SelectionProfile><Include path=`"Packages\SRV2016X64`" /></SelectionProfile>" -ReadOnly "False" -Verbose
     $MDTChocolateyApplications | % {
         $Package = $_
         $Path = "powershell.exe -NoProfile -ExecutionPolicy unrestricted `"%ScriptRoot%\Install-Chocolatey.ps1`" -verbose -Packages `"$Package`""
@@ -159,8 +156,8 @@ Catch
 } 
 ```
 
+## Step 3 Change the custom.ini priority:
 
-Change the custom.ini priority to
 ```
 Priority=Serialnumber,DefaultGateway,MacAddress,TaskSequenceID,Model,ByLaptopType,ByDesktopType
 ```
