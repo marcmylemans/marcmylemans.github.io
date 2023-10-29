@@ -27,7 +27,17 @@ Before you begin, ensure that you have the following:
 
 ## Step 1: Install Windows ADK for Windows 11, and MDT 8456
 
-Follow the video guide to see a step by step installation.
+Follow the video guide to see a more detailed step by step installation.
+
+1) Install ADK for Windows 11
+
+2) Install Windows PE add-on for ADK
+
+3) Install Microsoft Deployment Toolkit
+
+4) Download and apply the MDT 8456 Hotfix
+
+5) Download the Chocolatey Wrapper for MDT (The script below should normally take care of this, but if the download link ever changes you have the original blogpost to go to)
 
 {% youtube "https://youtu.be/251Y8jIq4vY" %}
 
