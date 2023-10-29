@@ -16,6 +16,9 @@ And guess what? I'm not just typing away on this blog; I'm also sharing my tech 
 
 You can catch all the tech tutorials there. So, if you're up for some visual tech thrills, head over to [my Youtube Channel](https://www.youtube.com/@marcmylemans) and hit that subscribe button. Together, we'll unlock the secrets of the tech universe in both written and video form.
 
+{% include LiveSubsCount.html %}
+
+
 ## Referral Links to Sponsors:
 
 Ready to embark on your digital adventure? Unlock $200 in credit at DigitalOcean by clicking the button below!
@@ -24,4 +27,4 @@ Ready to embark on your digital adventure? Unlock $200 in credit at DigitalOcean
 
 With this generous credit, you can explore the vast possibilities of cloud computing, launch your projects, and scale your online presence without breaking the bank. Don't miss out on this fantastic opportunity to supercharge your digital endeavors! 
 
-{% include LiveSubsCount.html %}
+
