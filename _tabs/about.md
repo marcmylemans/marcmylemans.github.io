@@ -23,3 +23,5 @@ Ready to embark on your digital adventure? Unlock $200 in credit at DigitalOcean
 [![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=e03b740d65fb&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
 
 With this generous credit, you can explore the vast possibilities of cloud computing, launch your projects, and scale your online presence without breaking the bank. Don't miss out on this fantastic opportunity to supercharge your digital endeavors! 
+
+{% include LiveSubsCount.html %}
