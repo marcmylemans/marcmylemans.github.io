@@ -61,7 +61,8 @@ To check the Windows Hello for Business policy applied at enrollment time:
 <img src="https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/images/whfb-intune-disable.png" alt="whfb-intune-disable">
 
 
-If the tenant-wide policy is enabled and configured to your needs, you can skip to Configure cloud Kerberos trust policy. Otherwise, follow the instructions below to create a policy using an account protection policy.
+> If the tenant-wide policy is enabled and configured to your needs, you can skip to Configure cloud Kerberos trust policy. Otherwise, follow the instructions below to create a policy using an account protection policy.
+{: .prompt-tip }
 
 ## Enable Windows Hello for Business
 To configure Windows Hello for Business using an account protection policy:
