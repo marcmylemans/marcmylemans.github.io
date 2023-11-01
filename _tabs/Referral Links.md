@@ -48,6 +48,16 @@ Hetzner Online is a trusted hosting provider known for its:
 Choose Hetzner Online for reliable and affordable hosting.
 
 
+**Amazon**
+
+[Amazon](https://www.amazon.com.be/b?_encoding=UTF8&tag=mylemansonlin-21&linkCode=ur2&linkId=f955fcfec8081ca9499b900731540004&camp=247&creative=1211&node=27156257031)
+
+Amazon is the world's largest online marketplace, offering a vast array of products and services. By shopping through our Amazon referral link, you can access an unparalleled selection of items, from electronics and books to fashion and home goods.
+
+When you make a purchase through our Amazon referral link, you not only enjoy the convenience of Amazon's shopping experience but also support our website. Your support allows us to continue providing valuable content and resources.
+
+So, why not explore Amazon's extensive offerings while helping our website thrive? Click our referral link and start shopping today! Your support is greatly appreciated.
+
 
 ### How Referral Links Work
 
