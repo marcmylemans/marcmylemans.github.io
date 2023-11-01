@@ -20,6 +20,7 @@ YouTube is a fantastic platform for content creators, and you can support us by 
 By doing these simple actions, you can show your support and help our channel grow. We appreciate your engagement!
 
 
+
 **DigitalOcean**
 
 [DigitalOcean](https://www.digitalocean.com/?refcode=e03b740d65fb&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
@@ -32,6 +33,7 @@ DigitalOcean is a leading cloud infrastructure provider with:
 - Dedicated support team
 
 Opt for DigitalOcean for accessible and dependable cloud services.
+
 
 
 **Hetzner Online**
@@ -48,6 +50,7 @@ Hetzner Online is a trusted hosting provider known for its:
 Choose Hetzner Online for reliable and affordable hosting.
 
 
+
 **Amazon**
 
 [Amazon](https://www.amazon.com.be/b?_encoding=UTF8&tag=mylemansonlin-21&linkCode=ur2&linkId=f955fcfec8081ca9499b900731540004&camp=247&creative=1211&node=27156257031)
@@ -57,6 +60,7 @@ Amazon is the world's largest online marketplace, offering a vast array of produ
 When you make a purchase through our Amazon referral link, you not only enjoy the convenience of Amazon's shopping experience but also support our website. Your support allows us to continue providing valuable content and resources.
 
 So, why not explore Amazon's extensive offerings while helping our website thrive? Click our referral link and start shopping today! Your support is greatly appreciated.
+
 
 
 ### How Referral Links Work
