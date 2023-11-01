@@ -7,7 +7,8 @@ Welcome to our Referral Links page! We've partnered with the following companies
 
 ### Recommended Partners
 
-1. **YouTube**
+**YouTube**
+
 [Youtube Channel](https://www.youtube.com/@mylemansonline)
 
 YouTube is a fantastic platform for content creators, and you can support us by engaging with our channel. Here's how you can help:
@@ -18,7 +19,9 @@ YouTube is a fantastic platform for content creators, and you can support us by 
 
 By doing these simple actions, you can show your support and help our channel grow. We appreciate your engagement!
 
-2. **DigitalOcean**
+
+**DigitalOcean**
+
 [DigitalOcean](https://www.digitalocean.com/?refcode=e03b740d65fb&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
 
 DigitalOcean is a leading cloud infrastructure provider with:
@@ -30,7 +33,9 @@ DigitalOcean is a leading cloud infrastructure provider with:
 
 Opt for DigitalOcean for accessible and dependable cloud services.
 
-3. **Hetzner Online**
+
+**Hetzner Online**
+
 [Hetzner Online](https://hetzner.cloud/?ref=AVos7cZTU8pW)
 
 Hetzner Online is a trusted hosting provider known for its:
