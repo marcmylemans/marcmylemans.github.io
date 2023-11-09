@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python - Calculate start and end IPs for a subnet!
+title: Calculate a Network Subnet using Python!
 categories: Python Scripts
 tags: script python automation
 ---
