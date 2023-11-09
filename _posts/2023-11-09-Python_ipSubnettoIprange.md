@@ -10,7 +10,7 @@ tags: script python automation
 ## Introduction
 Today I had to calculate a 100 different subnets, to make my life easier i used this Python script to automate the process.
 
-Save the code snippet for example as **subnetcalculate.py**
+Save the code snippet for example as **subnetcalculate.py** under **c:\temp**
 
 ## The Code
 
@@ -86,3 +86,11 @@ To install python you just have to go trough the installation wizard, for a writ
 
 >Make sure to select "Add Python to PATH", this way you can run **python** from the commandline without adding the full path.
 {: .prompt-warning }
+
+## Running the script
+
+After you saved the script you can run the script with the following command:
+
+```
+python c:\temp\subnetcalculate.py
+```
