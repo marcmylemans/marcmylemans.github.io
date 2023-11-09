@@ -10,7 +10,7 @@ tags: script python automation
 ## Introduction
 Today I had to calculate a 100 different subnets, to make my life easier i used this Python script to automate the process.
 
-Save the code snippet for example as **subnetcalculate.py** under **c:\temp**
+Save the code snippet for example as **subnetcalculate.py** to **c:\temp**
 
 ## The Code
 
