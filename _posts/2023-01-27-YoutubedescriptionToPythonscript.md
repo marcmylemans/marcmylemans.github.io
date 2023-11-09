@@ -5,7 +5,14 @@ categories: Python Script
 tags: python scripts youtube
 ---
 
-Here is an example of Python code that uses the YouTube Data API to retrieve the description of a video and then write it to a .md file:
+
+# Automate Youtube uploads to Posts!
+
+## Introduction
+To help me streamline the process of uploading a Youtube video and creating a new blogpost i'm using the power of Python.
+You can save this for example as **c:\temp\convertyoutube_to_md.py**
+
+## The Code
 
 ```python
 import requests
@@ -66,3 +73,20 @@ Just replace channel_id and api_key with the appropriate values for your channel
 Please keep in mind that it requires YouTube Data API v3 library, if you don't have it installed please use this command !pip install --upgrade google-api-python-client
 
 Also, you'll need to enable the YouTube Data API on your Google Cloud Platform project and create credentials to use the API.
+
+## Installing Python
+
+You can download python on the official website. [Download Python](https://www.python.org/downloads/)
+
+To install python you just have to go trough the installation wizard, for a written guide go to: [Using Python on Windows](https://docs.python.org/3/using/windows.html)
+
+>Make sure to select "Add Python to PATH", this way you can run **python** from the commandline without adding the full path.
+{: .prompt-warning }
+
+## Running the script
+
+After you saved the script you can run the script with the following command:
+
+```
+python c:\temp\convertyoutube_to_md.py
+```
