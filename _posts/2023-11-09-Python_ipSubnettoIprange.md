@@ -51,20 +51,20 @@ print("Conversion complete. Results saved to", output_file)
 
 For my use case I needed the ip ranges without the network and broadcast address, if you needed to calculate this including the network and broadcast address you can change the following code from:
 
-```code
+```
         start_ip = str(network.network_address + 1)
         end_ip = str(network.broadcast_address - 1)
 ```
 to:
 
-```code
+```
         start_ip = str(network.network_address)
         end_ip = str(network.broadcast_address)
 ```
 
 The input.csv was as simple as this:
 
-```csv
+```
 10.33.62.129/255.255.255.192
 10.33.3.1/255.255.255.0
 10.33.62.65/255.255.255.224
@@ -72,7 +72,7 @@ The input.csv was as simple as this:
 
 With this as the output:
 
-```csv
+```
 10.33.62.129/255.255.255.192,10.33.62.129,10.33.62.190
 10.33.3.1/255.255.255.0,10.33.3.1,10.33.3.254
 10.33.62.65/255.255.255.224,10.33.62.65,10.33.62.94
