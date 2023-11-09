@@ -7,12 +7,17 @@ tags: script python automation
 
 # Calculate a Network Subnet using Python!
 
-## Introduction
-Today I had to calculate a 100 different subnets, to make my life easier i used this Python script to automate the process.
+Subnetting is an essential skill for network administrators and engineers. It involves dividing a larger IP address space into smaller, more manageable subnetworks. Recently, I had to calculate 100 different subnets, and to make my life easier, I turned to Python for automation. In this blog post, I'll share the Python script I used to simplify this task.
 
-Save the code snippet for example as **subnetcalculate.py** to **c:\temp**
+## The Challenge
 
-## The Code
+Calculating subnets manually can be time-consuming and error-prone, especially when dealing with a large number of subnets. To streamline the process, I wrote a Python script that would generate the subnet details for me.
+
+## Python to the Rescue
+
+I used Python due to its simplicity and the availability of libraries that can handle IP address manipulation. In this script, we'll make use of the `ipaddress` module, which is part of the Python standard library and provides robust support for working with IP addresses and networks.
+
+Save the code for example as **subnetcalculate.py** to **c:\temp**
 
 ```python
 import csv
@@ -48,8 +53,7 @@ print("Conversion complete. Results saved to", output_file)
 
 ```
 
-
-For my use case I needed the ip ranges without the network and broadcast address, if you needed to calculate this including the network and broadcast address you can change the following code from:
+In this script, we first specify the base network and subnet mask. By default, it calculates subnets excluding the network and broadcast addresses. However, if you need to include the network and broadcast addresses in your calculations, you can modify the script as follows:
 
 ```
         start_ip = str(network.network_address + 1)
@@ -62,7 +66,7 @@ to:
         end_ip = str(network.broadcast_address)
 ```
 
-The input.csv was as simple as this:
+The contents of the input.csv file were as follows:
 
 ```
 10.33.62.129/255.255.255.192
@@ -70,7 +74,7 @@ The input.csv was as simple as this:
 10.33.62.65/255.255.255.224
 ```
 
-With this as the output:
+The expected output was in the following format:
 
 ```
 10.33.62.129/255.255.255.192,10.33.62.129,10.33.62.190
@@ -78,18 +82,18 @@ With this as the output:
 10.33.62.65/255.255.255.224,10.33.62.65,10.33.62.94
 ```
 
-## Installing Python
+This is an example of how the data in the input.csv file was transformed into the desired output format.
 
-You can download python on the official website. [Download Python](https://www.python.org/downloads/)
 
-To install python you just have to go trough the installation wizard, for a written guide go to: [Using Python on Windows](https://docs.python.org/3/using/windows.html)
+## Running the Script
 
->Make sure to select "Add Python to PATH", this way you can run **python** from the commandline without adding the full path.
-{: .prompt-warning }
+Downloading Python is a straightforward process. You can obtain the latest version from the official [Python Downloads](https://www.python.org/downloads/) page.
 
-## Running the script
+Once you've downloaded the Python installer, the installation process is made easy with a user-friendly wizard. If you prefer step-by-step guidance, you can refer to the official documentation on using Python on Windows: [Using Python on Windows](https://docs.python.org/3/using/windows.html).
 
-After you saved the script you can run the script with the following command:
+> **Important:** Make sure to select "Add Python to PATH" during the installation. This option allows you to run Python from the command line without specifying the full path each time.
+
+After you've saved your Python script, you can run it using the following command:
 
 ```
 python c:\temp\subnetcalculate.py
