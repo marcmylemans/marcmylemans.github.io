@@ -1,3 +1,10 @@
+---
+layout: post
+title: Wi-Fi QR Code Generator
+categories: Python Script
+tags: python scripts
+---
+
 # Wi-Fi QR Code Generator
 
 ## Overview
