@@ -11,7 +11,7 @@ tags: python scripts
 
 This script generates a QR code for Wi-Fi credentials, including SSID and password, making it easy to share Wi-Fi access information. The generated QR code can be scanned by a mobile device to quickly connect to the Wi-Fi network.
 
-[Source:](https://github.com/marcmylemans/Wifi-QR-Code-Generator/tree/main)
+[Source:](https://github.com/marcmylemans/Wifi-QR-Code-Generator)
 
 ## Requirements
 
