@@ -2,8 +2,6 @@
 
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
-
 gem "jekyll-theme-chirpy", "~> 6.3", ">= 6.3.1"
 
 group :test do
@@ -18,7 +16,7 @@ platforms :mingw, :x64_mingw, :mswin, :jruby do
 end
 
 group :jekyll_plugins do
-  gem "jekyll-youtube"
+  #gem "jekyll-youtube"
   gem "jekyll-include-cache"
   gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap'
