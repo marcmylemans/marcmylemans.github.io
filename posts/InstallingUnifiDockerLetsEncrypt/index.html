@@ -744,7 +744,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="253 words"
+  title="261 words"
 >
   <em>1 min</em> read</span>
 
@@ -787,18 +787,31 @@
 
 <p>4) Add the Docker repository to APT sources:</p>
 
-<p>sudo add-apt-repository “deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable”</p>
-
-<p>5) Finally, install Docker:</p>
 <div class="language-plaintext highlighter-rouge"><div class="code-header">
         <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>sudo apt install docker-ce
+</pre></td><td class="rouge-code"><pre>sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>5) Finally, install Docker:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>sudo apt install docker.io
 </pre></td></tr></tbody></table></code></div></div>
 
 <h2 id="running-a-docker-compose-file"><span class="me-2">Running a Docker Compose File</span><a href="#running-a-docker-compose-file" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<p>1) Create a <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> file in your desired directory.</p>
+<p>1) Install docker Compose</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>apt-install docker-compose
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>2) Create a <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> file in your desired directory.</p>
 
 <div class="language-yaml highlighter-rouge"><div class="code-header">
         <span data-label-text="YAML"><i class="fas fa-code fa-fw small"></i></span>
