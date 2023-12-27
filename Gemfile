@@ -16,7 +16,7 @@ platforms :mingw, :x64_mingw, :mswin, :jruby do
 end
 
 group :jekyll_plugins do
-  #gem "jekyll-youtube"
+  gem "jekyll-youtube"
   gem "jekyll-include-cache"
   gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap'
