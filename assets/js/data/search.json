@@ -1,0 +1,1126 @@
+[
+  
+  {
+    "title": "installing a Unifi Controller with Docker and Lets Encrypt!",
+    "url": "/posts/InstallingUnifiDockerLetsEncrypt/",
+    "categories": "Docker, Unifi",
+    "tags": "docker, unifi",
+    "date": "2023-12-27 10:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "Docker and Docker Compose Installation and Usage GuideInstalling DockerFor Ubuntu/Linux:1) Update your existing list of packages:sudo apt update2) Next, install a few prerequisite packages which le...",
+    "content": "Docker and Docker Compose Installation and Usage GuideInstalling DockerFor Ubuntu/Linux:1) Update your existing list of packages:sudo apt update2) Next, install a few prerequisite packages which let apt use packages over HTTPS:sudo apt install apt-transport-https ca-certificates curl software-properties-common3) Then add the GPG key for the official Docker repository to your system:curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -4) Add the Docker repository to APT sources:sudo add-apt-repository “deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable”5) Finally, install Docker:sudo apt install docker-ceRunning a Docker Compose File1) Create a docker-compose.yml file in your desired directory.version: '3'services:  nginx-proxy:    image: jwilder/nginx-proxy:alpine    container_name: nginx-proxy    restart: unless-stopped    volumes:      - /var/run/docker.sock:/tmp/docker.sock:ro      - /var/docker/nginx-proxy/certs:/etc/nginx/certs:ro      - /var/docker/nginx-proxy/conf.d:/etc/nginx/conf.d      - /var/docker/nginx-proxy/vhost.d:/etc/nginx/vhost.d      - /usr/share/nginx/html:/usr/share/nginx/html    ports:      - \"80:80\"      - \"443:443\"    labels:      - \"com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy\"  unifi:    image: linuxserver/unifi-controller    container_name: unifi    restart: unless-stopped    environment:      - VIRTUAL_HOST={subdomain}      - VIRTUAL_PORT=8443      - VIRTUAL_PROTO=https      - LETSENCRYPT_HOST={subdomain}      - LETSENCRYPT_EMAIL=your@email.com    volumes:      - /var/docker/unifi:/config    ports:      - \"3478:3478/udp\"      - \"8080:8080\"  nginx-letsencrypt:    image: jrcs/letsencrypt-nginx-proxy-companion    container_name: nginx-letsencrypt    restart: unless-stopped    volumes_from:      - nginx-proxy    volumes:      - /var/docker/nginx-proxy/certs:/etc/nginx/certs:rw      - /var/run/docker.sock:/var/run/docker.sock:ro2) Run the following command in the directory containing your docker-compose.yml:docker-compose up -dStopping ContainersTo stop and remove all containers defined in the docker-compose.yml file, use:docker-compose down"
+  },
+  
+  {
+    "title": "Wi-Fi QR Code Generator",
+    "url": "/posts/Python_WifiQRCodeGenerator/",
+    "categories": "Python, Script",
+    "tags": "python, scripts",
+    "date": "2023-12-04 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "Wi-Fi QR Code GeneratorOverviewThis script generates a QR code for Wi-Fi credentials, including SSID and password, making it easy to share Wi-Fi access information. The generated QR code can be sca...",
+    "content": "Wi-Fi QR Code GeneratorOverviewThis script generates a QR code for Wi-Fi credentials, including SSID and password, making it easy to share Wi-Fi access information. The generated QR code can be scanned by a mobile device to quickly connect to the Wi-Fi network.Source:Requirements  Python  qrcode libraryUsage      Run the Script:    Execute the script by running the following command in the terminal:    python generate_wifi_qrcode.py            Follow the Prompts:The script will prompt you to enter the Wi-Fi SSID, password (optional), and the path to save the generated QR code. Press Enter if you want to skip providing a password.        QR Code Generation:  The script will generate a QR code based on the entered information and save it as a PNG file in the specified directory.Source CodeThe source code for this script can be found in the file named generate_wifi_qrcode.py. Feel free to explore and modify the script according to your needs.Compiled ExecutableAn executable version of the script is available in the ‘dist’ folder. You can run it directly without requiring a Python interpreter.Feel free to contribute, report issues, or suggest improvements!"
+  },
+  
+  {
+    "title": "URL QR Code Generator",
+    "url": "/posts/Python_URLQRCodeGenerator/",
+    "categories": "Python, Script",
+    "tags": "python, scripts",
+    "date": "2023-12-04 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "QR Code Generator ScriptThis script allows you to generate QR codes from either a single URL or a CSV file containing multiple URLs.Source:UsageRun the script and follow the prompts to provide inpu...",
+    "content": "QR Code Generator ScriptThis script allows you to generate QR codes from either a single URL or a CSV file containing multiple URLs.Source:UsageRun the script and follow the prompts to provide input and output information:python script_name.pyOptionsSingle URL:Provide a single URL to generate a QR code.CSV File:Provide the location of a CSV file containing URLs.Output Directory:Enter the output directory for QR code images. Defaults to qrcodes.OutputFor a single URL, the generated QR code will be saved in the output directory with a filename containing the URL and a timestamp.For a CSV file, each URL will have a corresponding QR code saved in the output directory with filenames based on the URL and timestamp.Examplepython script_name.pyFollow the prompts to enter the input (URL or CSV file) and the output directory.Source CodeThe source code for this script can be found in the file named url_to_qr.py. Feel free to explore and modify the script according to your needs.Compiled ExecutableAn executable version of the script is available in the ‘dist’ folder. You can run it directly without requiring a Python interpreter.LicenseThis script is licensed under the MIT License - see the LICENSE.md file for details."
+  },
+  
+  {
+    "title": "Converting Python Scripts to Executables",
+    "url": "/posts/PythonToExecutable/",
+    "categories": "Python, Script",
+    "tags": "python, scripts",
+    "date": "2023-12-04 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "IntroductionPython is a powerful and versatile programming language, widely used for scripting and automation. However, when you want to share your Python scripts with others who may not have Pytho...",
+    "content": "IntroductionPython is a powerful and versatile programming language, widely used for scripting and automation. However, when you want to share your Python scripts with others who may not have Python installed, converting them into executable files becomes crucial. In this guide, we’ll explore various tools and techniques to turn your Python scripts into standalone executables for different operating systems.PyInstallerPyInstaller is a popular tool for converting Python scripts into standalone executables. It works on Windows, Linux, and macOS, making it a versatile choice. To use PyInstaller, follow these steps:pip install pyinstallerConversionThis command will generate a ‘dist’ folder containing the executable file. You can customize the build process further with various options.pyinstaller your_script.pyIf you want to create a single-file executable that does not require any additional files or folders, you can use the –onefile option:pyinstaller  --onefile your_script.pyIf you want to hide the console window when running the executable file, you can use the –noconsole option:pyinstaller --noconsole --onefile your_script.pyConclusionConverting Python scripts into executables allows you to share your work without requiring others to install Python and empower others to run your Python scripts effortlessly."
+  },
+  
+  {
+    "title": "Drivemapping with Registery key's",
+    "url": "/posts/DrivemapRegistery/",
+    "categories": "windows, registery",
+    "tags": "windows, register, drivemapping, networkdrive",
+    "date": "2023-11-28 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "Configuring Drivemapping with Registeryg Keys!Save the following as Drivemap.reg, make sure you replace HKEY_CURRENT_USER\\Network\\Z with the Driveletter you want to use, for example Z. take note th...",
+    "content": "Configuring Drivemapping with Registeryg Keys!Save the following as Drivemap.reg, make sure you replace HKEY_CURRENT_USER\\Network\\Z with the Driveletter you want to use, for example Z. take note that these settings are for the Current User that is logged on to the system.Windows Registry Editor Version 5.00[HKEY_CURRENT_USER\\Network\\Z]\"ConnectFlags\"=dword:00000000\"ConnectionType\"=dword:00000001\"DeferFlags\"=dword:00000004\"ProviderName\"=\"Microsoft Windows Network\"\"ProviderType\"=dword:00020000\"RemotePath\"=\"\\\\\\\\servername\\\\folder\"\"UserName\"=dword:00000000Run the Drivemap.reg as the userYou can create a .reg file for each Driveletter and push these to your clients.To import multiple .reg files all at once you can use the following cmd:for /f \"tokens=*\" %%a in ('dir /b *.reg') do (\techo  Importing Settings: %%a\tregedit /S \"%%a\")"
+  },
+  
+  {
+    "title": "Remote Desktop - OneDrive Single Sign On",
+    "url": "/posts/Remote_Desktop_OneDrive_Single_Sign_On/",
+    "categories": "Windows, Server",
+    "tags": "server, 2022, rdp, onedrive, sso",
+    "date": "2023-11-13 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "Configure OneDrive Single Sign On!In this video, we will Install OneDrive and configure Single Sign On with a Group Policy.Let me know in the comments if you like to see a follow-up video on this b...",
+    "content": "Configure OneDrive Single Sign On!In this video, we will Install OneDrive and configure Single Sign On with a Group Policy.Let me know in the comments if you like to see a follow-up video on this because in this setup you have to download/install Onedrive the first time per user account. In the next video we can automate this process.    Installation:Download OneDriveHow to install the OneDrive Policy’s please visit manage-onedrive-using-group-policy.Follow the per-machine instructions if you want to install OneDrive for All Users.Configure the group policy for All Users:You will find the new Policy under Computer Configuration\\Policies\\Administrative Templates\\OneDriveI enabled the following:      Use OneDrive Files On-Demand        Silently move Windows known folders to OneDrive        Silently sign in users to the OneDrive sync app with their Windows credentials  "
+  },
+  
+  {
+    "title": "Calculate a Network Subnet using Python!",
+    "url": "/posts/Python_ipSubnettoIprange/",
+    "categories": "Python, Scripts",
+    "tags": "script, python, automation",
+    "date": "2023-11-09 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "Calculate a Network Subnet using Python!Subnetting is an essential skill for network administrators and engineers. It involves dividing a larger IP address space into smaller, more manageable subne...",
+    "content": "Calculate a Network Subnet using Python!Subnetting is an essential skill for network administrators and engineers. It involves dividing a larger IP address space into smaller, more manageable subnetworks. Recently, I had to calculate 100 different subnets, and to make my life easier, I turned to Python for automation. In this blog post, I’ll share the Python script I used to simplify this task.The ChallengeCalculating subnets manually can be time-consuming and error-prone, especially when dealing with a large number of subnets. To streamline the process, I wrote a Python script that would generate the subnet details for me.Python to the RescueI used Python due to its simplicity and the availability of libraries that can handle IP address manipulation. In this script, we’ll make use of the ipaddress module, which is part of the Python standard library and provides robust support for working with IP addresses and networks.Save the code for example as subnetcalculate.py to c:\\tempimport csvimport ipaddress# Function to calculate start and end IPs for a subnetdef calculate_start_end_ips(ip_subnet):    try:        network = ipaddress.ip_network(ip_subnet, strict=False)        start_ip = str(network.network_address + 1)        end_ip = str(network.broadcast_address - 1)        return start_ip, end_ip    except ValueError:        return \"Invalid Subnet\", \"Invalid Subnet\"# Input and output file pathsinput_file = \"c:\\\\temp\\\\input.csv\"output_file = \"c:\\\\temp\\\\output.csv\"# Read the input CSV file and write the results to the output CSV filewith open(input_file, 'r') as infile, open(output_file, 'w', newline='') as outfile:    reader = csv.reader(infile)    writer = csv.writer(outfile)    for row in reader:        if len(row) &lt; 1:            continue        ip_subnet = row[0]        start_ip, end_ip = calculate_start_end_ips(ip_subnet)        writer.writerow([ip_subnet, start_ip, end_ip])print(\"Conversion complete. Results saved to\", output_file)In this script, we first specify the base network and subnet mask. By default, it calculates subnets excluding the network and broadcast addresses. However, if you need to include the network and broadcast addresses in your calculations, you can modify the script as follows:        start_ip = str(network.network_address + 1)        end_ip = str(network.broadcast_address - 1)to:        start_ip = str(network.network_address)        end_ip = str(network.broadcast_address)The contents of the input.csv file were as follows:10.33.62.129/255.255.255.19210.33.3.1/255.255.255.010.33.62.65/255.255.255.224The expected output was in the following format:10.33.62.129/255.255.255.192,10.33.62.129,10.33.62.19010.33.3.1/255.255.255.0,10.33.3.1,10.33.3.25410.33.62.65/255.255.255.224,10.33.62.65,10.33.62.94This is an example of how the data in the input.csv file was transformed into the desired output format.Running the ScriptDownloading Python is a straightforward process. You can obtain the latest version from the official Python Downloads page.Once you’ve downloaded the Python installer, the installation process is made easy with a user-friendly wizard. If you prefer step-by-step guidance, you can refer to the official documentation on using Python on Windows: Using Python on Windows.  Important: Make sure to select “Add Python to PATH” during the installation. This option allows you to run Python from the command line without specifying the full path each time.After you’ve saved your Python script, you can run it using the following command:python c:\\temp\\subnetcalculate.py"
+  },
+  
+  {
+    "title": "Automatic Domain Join with Microsoft Deployment Toolkit!",
+    "url": "/posts/MDTPart5/",
+    "categories": "Windows, Server",
+    "tags": "server, mdt, part4",
+    "date": "2023-11-05 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "Configuring Active Directory for MDT DeploymentIntroductionIn a typical Windows deployment scenario using Microsoft Deployment Toolkit (MDT), you may want to automate the process of domain joining ...",
+    "content": "Configuring Active Directory for MDT DeploymentIntroductionIn a typical Windows deployment scenario using Microsoft Deployment Toolkit (MDT), you may want to automate the process of domain joining for computers during the deployment process.To achieve this with non-admin users, you need to make adjustments to the ‘ms-DS-MachineAccountQuota’ attribute in Active Directory. By default, this attribute allows for only 10 domain joins.In this guide, we’ll walk you through the necessary steps to increase this limit, create a service account, and set up Organizational Units (OUs) for a more efficient MDT deployment.    Previous guides:Setting up a Microsoft Deployment Server!Customizing the Microsoft Deployment Server!Adding Drivers to the Microsoft Deployment Server!Adding Applications and Application Bundles in Microsoft Deployment Toolkit!Adjust ‘ms-DS-MachineAccountQuota’ ValueTo allow for an unlimited number of domain joins for normal domain users, you need to adjust the ‘ms-DS-MachineAccountQuota’ attribute. Follow these steps:1) Open Active Directory Service Interfaces Editor (ADSIEdit) on a Windows Server or a computer with Remote Server Administration Tools (RSAT) installed.2) Navigate to the following path:CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=contoso,DC=com3) Locate the ‘ms-DS-MachineAccountQuota’ attribute and double-click it.4) Change the value to a large number or set it to -1 to allow an unlimited number of domain joins.5) Click ‘OK’ to save the changes.Create a Service AccountTo use a non-admin user as a service account for domain joins during MDT deployment, create a new domain user account, not that we don’t use a domain admin. This account will be used to join computers to the domain.Configure CustomSettings.iniModify your CustomSettings.ini file to auto-populate the credentials and domain during MDT deployment. Add the following lines to your CustomSettings.ini under your [Default] section:[Default]JoinDomain=YourDomainName  ; Replace YourDomainName with the actual domain nameDomainAdmin=YourDomainAdmin  ; Replace YourDomainAdmin with the domain admin usernameDomainAdminDomain=YourDomainName  ; Replace YourDomainName with the actual domain nameDomainAdminPassword=YourDomainAdminPassword  ; Replace YourDomainAdminPassword with the domain admin password  If you have been following along with our previous guides, you may have set the ‘SkipDomainMembership=YES’ in your CustomSettings.ini file to skip the domain joining step. To make use of the changes made in this guide, it is essential to adjust the ‘SkipDomainMembership=NO’ in your CustomSettings.ini. This change will prevent skipping the domain joining step during the MDT deployment process. Make sure to verify and update your CustomSettings.ini file accordingly.Create Organizational Units (OUs)To create Organizational Units (OUs) for organizing your computers, follow these steps:1) Open Active Directory Users and Computers: On a Windows Server or a computer with Remote Server Administration Tools (RSAT) installed, open “Active Directory Users and Computers.”2) Connect to your Active Directory: In the left pane, right-click on “Active Directory Users and Computers” and choose “Change Domain Controller.” Select your domain controller.3) Create OUs: In the left pane, right-click on your domain name, and choose “New” &gt; “Organizational Unit.” Give your OU a meaningful name, such as “Laptops,” “Desktops,” or “Servers.”4) Get the ‘MachineObjectOU’ Value: To find the value for the MachineObjectOU attribute, right-click on the OU you’ve just created, select “Properties,” and navigate to the “Attribute Editor” tab. Look for the distinguishedName attribute, which contains the value you need.  For example, if you created an OU named “Laptops” within the “Contoso” domain, the MachineObjectOU value might be: OU=Laptops,OU=Contoso,DC=contoso,DC=com.5) Repeat for Other OUs: Create additional OUs as needed, and take note of their distinguishedName values.By following these steps, you’ll have organized your computers into the appropriate OUs and retrieved the necessary MachineObjectOU values for your CustomSettings.ini configuration.Create DomainOUList.xmlTo facilitate the selection of OUs during deployment, create a file named DomainOUList.xml in the scripts folder under your deploymentshare. This file will be used to create a dropdown list. Here’s a template for your DomainOUList.xml:&lt;DomainOUs&gt;  &lt;DomainOU&gt;    OU=Laptops,OU=Contoso,DC=contoso,DC=com  &lt;/DomainOU&gt;  &lt;DomainOU&gt;    OU=Desktops,OU=Contoso,DC=contoso,DC=com  &lt;/DomainOU&gt;  &lt;!-- Add more DomainOU entries as needed --&gt;&lt;/DomainOUs&gt;You’ll notice that the OU values in the DomainOUList.xml template match the MachineObjectOU values you retrieved in the previous step. Replace the OUs and distinguished names with the values you obtained in that step.By following these steps, you’ll have created a DomainOUList.xml file that aligns with your Active Directory structure and the MachineObjectOU values you gathered earlier. This file will be used to generate a dropdown list for selecting OUs during the MDT deployment.Configure ‘MachineObjectOU’ Based on Device TypeIn MDT, you can dynamically set the MachineObjectOU property based on the device type (laptop or desktop). This allows you to place devices in different OUs automatically. Follow these steps to achieve this:1) Open your CustomSettings.ini file.2) Modify the [Default] section to look like this:[Default]MachineObjectOU=OU=Workstations,OU=Contoso,DC=contoso,DC=comJoinDomain=YourDomainName  ; Replace YourDomainName with the actual domain nameDomainAdmin=YourDomainAdmin  ; Replace YourDomainAdmin with the domain admin usernameDomainAdminDomain=YourDomainName  ; Replace YourDomainName with the actual domain nameDomainAdminPassword=YourDomainAdminPassword  ; Replace YourDomainAdminPassword with the domain admin passwordSkipDomainMembership=NO3) Now, create two additional sections for ‘Laptop’ and ‘Desktop’ under [ByLaptopType] like this:[Laptop-True]MachineObjectOU=OU=Laptops,OU=Contoso,DC=contoso,DC=com[Desktop-True]MachineObjectOU=OU=Workstations,OU=Contoso,DC=contoso,DC=com4) Save your CustomSettings.ini file.ConclusionConfiguring your Active Directory and Microsoft Deployment Toolkit (MDT) for streamlined deployments can significantly improve the efficiency of your IT management tasks. In this guide, we walked you through several key steps to prepare your environment for MDT deployments, focusing on enabling non-admin users to join devices to the domain, creating Organizational Units (OUs) for organization, and setting up dynamic OU selection based on the device type.By adjusting the ‘ms-DS-MachineAccountQuota’ attribute in Active Directory, you’ve ensured that non-admin users can perform domain joins seamlessly during MDT deployments. Creating a dedicated service account and customizing the CustomSettings.ini file simplifies the process further. Additionally, you’ve organized your domain into OUs for better management and deployed a DomainOUList.xml file for user-friendly OU selection during deployment.To top it all off, we’ve shown you how to set up the MachineObjectOU value dynamically based on device type, allowing for automatic placement of devices in the correct OUs.With these steps in place, you’re now well-prepared to enhance the efficiency of your MDT deployment process, reduce administrative overhead, and ensure a smoother experience for your IT team and end users. By following these best practices, you’ll be better equipped to handle deployments at scale with confidence.Thank you for following along with this guide, and we hope it helps you streamline your MDT deployments and improve your overall IT management processes."
+  },
+  
+  {
+    "title": "Adding Applications and Application Bundles in Microsoft Deployment Toolkit!",
+    "url": "/posts/MDTPart4/",
+    "categories": "Windows, Server",
+    "tags": "server, mdt, part4",
+    "date": "2023-11-04 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "Creating and Adding Applications and Application Bundles in Microsoft Deployment Toolkit!IntroductionPrevious guides:Setting up a Microsoft Deployment Server!Customizing the Microsoft Deployment Se...",
+    "content": "Creating and Adding Applications and Application Bundles in Microsoft Deployment Toolkit!IntroductionPrevious guides:Setting up a Microsoft Deployment Server!Customizing the Microsoft Deployment Server!Adding Drivers to the Microsoft Deployment Server!Microsoft Deployment Toolkit (MDT) is a powerful tool for automating and streamlining the deployment of Windows operating systems and applications. In this blog post, we’ll explore how to create and add applications and application bundles in MDT to simplify the deployment process.    Why Use Applications and Application Bundles in MDT?Applications in MDT allow you to include third-party software, custom scripts, and other components in your deployment process. By organizing applications into bundles, you can manage and deploy multiple applications together, making the deployment process more efficient and consistent.Here’s how you can create and add applications and application bundles in MDT:Creating an Application in MDT1) Launch the Deployment Workbench: Open the MDT Deployment Workbench on your MDT server.2) Navigate to the Applications Node: In the Deployment Workbench, expand the “Deployment Shares” node, right-click on “Applications,” and choose “New Application.”3) Application Properties: Provide the necessary details for the application, including the name, version, manufacturer, and installation source. You can specify the installation command and working directory in the “Details” tab.4) Finish: Once you’ve entered all the information, click “Next” and “Finish” to create the application.Creating an Application Bundle in MDT1) Launch the Deployment Workbench: Open the MDT Deployment Workbench on your MDT server.2) Navigate to the Applications Node: In the Deployment Workbench, expand the “Deployment Shares” node, right-click on “Application Bundles,” and choose “New Application Bundle.”3) Finish: Click “Next” and then “Finish” to create the application bundle.4) Application Bundle Properties: Select the applications you want to include in it from the dependency tab.Note: Handling Dependencies in Application BundlesWhen you create an application bundle, it’s important to note that the dependencies included in the bundle will not be shown as selected during the client installation wizard. This is to prevent confusion and ensure that the installation of dependent applications is managed automatically.To prevent users from manually selecting dependencies during deployment and to maintain a seamless installation experience, we recommend setting all applications that are included in an application bundle as hidden. Here’s how you can do that:1) Open the Deployment Workbench.2) Navigate to the “Applications” node and locate the applications included in your bundle.3) Right-click on each application and select “Properties.”4) In the application properties window, go to the “General” tab and check the “Hidden” option.5) Click “OK” to save the changes.By setting the applications as hidden, users won’t see them listed during the installation wizard, reducing the chances of manual selection and potential conflicts.Adding Application Bundles to CustomSettings.ini RulesYou can further streamline your deployment process by adding application bundles directly into the CustomSettings rules. This allows you to automate the installation of application bundles based on specific criteria. Here’s how to do it:For example:[Laptop-True]DriverGroup001=LAPTOP\\%Model%DriverSelectionProfile=nothingMandatoryApplications001={ApplicationGUID}Replace {ApplicationGUID} with the actual GUID of the application bundle you want to install.Now, during deployment, the specified application bundles will be installed automatically based on the rules defined in the CustomSettings rules.ConclusionBy creating and adding applications and application bundles, you can streamline your deployment process and ensure that the necessary software is installed as part of the deployment. By setting applications as hidden within application bundles and adding bundles to CustomSettings.ini rules, you can further simplify the process and maintain a consistent and error-free deployment experience."
+  },
+  
+  {
+    "title": "Adding Drivers to the Microsoft Deployment Server!",
+    "url": "/posts/MDTPart3/",
+    "categories": "Windows, Server",
+    "tags": "server, mdt, part3",
+    "date": "2023-11-02 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "Adding Drivers to the Microsoft Deployment Server!IntroductionPrevious guides:Setting up a Microsoft Deployment Server!Customizing the Microsoft Deployment Server!In this tutorial, we will guide yo...",
+    "content": "Adding Drivers to the Microsoft Deployment Server!IntroductionPrevious guides:Setting up a Microsoft Deployment Server!Customizing the Microsoft Deployment Server!In this tutorial, we will guide you through the steps to integrate drivers into the Microsoft Deployment Server.    Customsettings.iniIf you’ve been following the steps outlined in parts 1 and 2 of this guide, your customsettings.ini file should now contain the following configuration:[Laptop-True]DriverGroup001=LAPTOP\\%Model%DriverSelectionProfile=nothing[Desktop-True]DriverGroup001=DESKTOP\\%Model%DriverSelectionProfile=nothingIn these configurations, you’ve defined Driver Groups, namely LAPTOP\\%Model% and DESKTOP\\%Model%, for both [Laptop-True] and [Desktop-True]. These Driver Groups serve a crucial purpose during the deployment process, as they instruct the system to search for drivers specific to the device model within the designated folders.Drivers:To determine the precise model name of your laptop or desktop, you can execute the following command in the command prompt (cmd):wmic computersystem get modelOnce you’ve obtained the exact model name, you should create a subfolder under either LAPTOP or DESKTOP with that precise model name and then import the corresponding drivers into that folder.Additionally, you’ll notice a WINPE folder. Within this folder, you can import any missing LAN, Storage, or other necessary drivers required to initiate your PXE image. If you’ve been following the previous guides and utilizing the provided script, this folder should already be included in your WINPE selection profile. You can then assign this profile to your boot image. This approach ensures that only the essential drivers are added to your boot image, keeping it compact and efficient for deployment.DriverpacksIf you’re managing a fleet of business devices from manufacturers like HP, Dell, and many others, you’re in luck! These companies often provide comprehensive driver packs to streamline the deployment and maintenance of their hardware. These driver packs are essential tools for IT professionals and system administrators, as they simplify the process of ensuring that all devices are up to date and functioning optimally.By using these driver packs, you can save time and reduce the complexity of managing drivers across your organization’s devices. Whether you’re setting up new devices or maintaining existing ones, having access to these resources will help ensure a smooth and efficient IT management experience.Make sure to check the respective links provided for the most up-to-date driver packs and resources for HP and Dell devices, for other manufacturers you can often find the driver packs with a quick google search for example ‘lenovo driver pack’.HP Driver Packs:HP, for instance, offers a dedicated website for downloading driver packs for their business-class devices. You can find these packs on the HP Client Management Solutions website. This resource includes driver packs for various operating systems and hardware models, making it a one-stop shop for your HP device management needs.Dell Driver Packs:Dell also provides driver packs for their business devices.You can access these packs through the Dell Command | Deploy Driver Packs page. Here, you’ll find driver packs tailored to different Dell hardware, enabling efficient deployment and maintenance within your organization.WinPE Driver Packs:In addition to standard driver packs, both HP and Dell offer WinPE (Windows Preinstallation Environment) driver packs. WinPE is often used for system deployment and recovery tasks. These WinPE driver packs ensure that your devices are compatible with this environment, simplifying your deployment processes."
+  },
+  
+  {
+    "title": "Customizing the Microsoft Deployment Server!",
+    "url": "/posts/MDTPart2/",
+    "categories": "Windows, Server",
+    "tags": "server, mdt, part2",
+    "date": "2023-11-01 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "Customizing the Microsoft Deployment Server!IntroductionIn this guide, we will walk you through the process of customizing the Microsoft Deployment Server. Make sure you have finished Setting up a ...",
+    "content": "Customizing the Microsoft Deployment Server!IntroductionIn this guide, we will walk you through the process of customizing the Microsoft Deployment Server. Make sure you have finished Setting up a Microsoft Deployment Server! We will be making some “Quality of Life changes” to automate the process.    Customsettings.iniIf you followed along with part 1 then your customsettings.ini should now look like:Priority=Serialnumber,DefaultGateway,MacAddress,TaskSequenceID,Model,ByLaptopType,ByDesktopTypeProperties=MyCustomProperty[ByLaptopType]Subsection=Laptop-%IsLaptop%[ByDesktopType]Subsection=Desktop-%IsDesktop%[Laptop-True]DriverGroup001=LAPTOP\\%Model%DriverSelectionProfile=nothing[Desktop-True]DriverGroup001=DESKTOP\\%Model%DriverSelectionProfile=nothing[Virtual Machine]DriverSelectionProfile=nothing[Default]OSInstall=YSkipCapture=YESSkipAdminPassword=NOSkipProductKey=YESPriority’s in the Customsettings.iniTo further explain what is happening here:Priority=Serialnumber,DefaultGateway,MacAddress,TaskSequenceID,Model,ByLaptopType,ByDesktopTypeThis section follows the priority of the underlying [Sections] that we determine.In this example the deployment will first check if there is a matching [Serialnumber] then a matching [DefaultGateway], etc. All the way down to our [Default] section.Sections in the Customsettings.iniThe [Default] section we will be using for everything that is ‘Default’ for all our deployments.We can go even further with SubSections, an example of a SubSection can be found with the [ByLaptopType] sectionExample of a Section[ByLaptopType]Subsection=Laptop-%IsLaptop%SubSections in the Customsettings.iniIf %IsLaptop% is True, then it will go to the SubSection.Example of a SubSection[Laptop-True]DriverGroup001=LAPTOP\\%Model%DriverSelectionProfile=nothingAutomating the Default settings:We can customize the selection wizard to skip certain selection and provide a default value. We can do this by providing all the information in the different Sections of our customsettings.ini.Default settings:This is what i use for my Default section, feel free to adjust what is needed:[Default]SkipBitLocker=YESOSInstall=YSkipAdminPassword=YESAdminPassword=SuperSecretpassword!!!SkipProductKey=YESSkipComputerBackup=YESSkipComputerName=NOSkipDomainMembership=YESSkipUserData=YESSkipCapture=YESDoCapture=NOBitsPerPel=32VRefresh=60XResolution=1YResolution=1SkipLocaleSelection=NOKeyboardLocale=nl-BEKeyboardLocalePE=nl-BEUserLocale=nl-BESkipTaskSequence=NOSkipTimeZone=YESSkipApplications=NOSkipRoles=YESSkipSummary=YESSkipBDDWelcome=YESTimeZone=105TimeZoneName=Romance Standard Time_SMSTSOrgName=Mylemans LAB_SMSTSPackageName=%TaskSequenceName% on %OSDComputerName% (%Model%)FinishAction=REBOOTSkipFinalSummary=YESSLSHARE=\\\\lab-wds01\\LOGSSLSHAREDynamicLogging=\\\\lab-wds01\\LOGS\\%OSDComputerName%EventService=http://lab-wds01:9800Also you need to add the Default section to your priority list to process these rules:Priority=Serialnumber,DefaultGateway,MacAddress,TaskSequenceID,Model,ByLaptopType,ByDesktopType,DefaultProperties=MyCustomPropertyLocal admin passwords:Change this section to SkipAdminPassword=NO and remove AdminPassword= if you don’t want your local admin password to be in clear text:SkipAdminPassword=NOBranding:Change this section to customize to your own branding:_SMSTSOrgName=Mylemans LAB_SMSTSPackageName=%TaskSequenceName% on %OSDComputerName% (%Model%)Computernames:I choose not to skip the computername, because i like to name the PC manually in my LAB environment but you can change this if you want.You can also automaticly name your devices based on the device type (Laptop,Dekstop and/or Virtual Machine).For example you can choose the prefix VM/DT/LT + the 5 characters of the serialnumber for automation. This is an example for the Virtual Machine section:[Virtual Machine]DriverSelectionProfile=nothingSkipComputerName=YESOSDComputername=VM-#Right(\"%SerialNumber%\",5)#Mandatory Applications:You can also add Mandatory Applications.For example if you want to have a specific VPN software on all laptops but not on you Desktops, then you can add the following to your Laptops-True section.You can find the Application GUID under the application properties, right click on the application. For your laptops it should look like this:[Laptop-True]DriverGroup001=LAPTOP\\%Model%DriverSelectionProfile=nothingMandatoryApplications001={ApplicationGUID}Finishing Action:As a finalisation you can choose to REBOOT or SHUTDOWN your deployed machines, change this to REBOOT or SHUTDOWN:FinishAction=REBOOT"
+  },
+  
+  {
+    "title": "Setting Up a Microsoft Deployment Server!",
+    "url": "/posts/MDTPart1/",
+    "categories": "Windows, Server",
+    "tags": "server, mdt, part1",
+    "date": "2023-10-29 00:00:00 +0200",
+    
+
+
+
+
+
+    
+    "snippet": "Setting up a Microsoft Deployment Server!IntroductionIn this guide, we will walk you through the process of setting up a Microsoft Deployment Server. Microsoft Deployment Server (MDT) is designed t...",
+    "content": "Setting up a Microsoft Deployment Server!IntroductionIn this guide, we will walk you through the process of setting up a Microsoft Deployment Server. Microsoft Deployment Server (MDT) is designed to simplify the deployment of Windows operating systems and applications in an enterprise environment. Whether you need to deploy Windows to multiple computers or customize your installations for specific needs, MDT provides the tools and processes to make it all possible.PrerequisitesBefore you begin, ensure that you have the following:      ADK for Windows 11 21H1        Windows PE add-on for ADK        Microsoft Deployment Toolkit        MDT 8456 Hotfix        Chocolatey Wrapper for MDT  Step 1: Install Windows ADK for Windows 11, and MDT 8456Follow the video guide to see a more detailed step by step installation.1) Install ADK for Windows 112) Install Windows PE add-on for ADK3) Install Microsoft Deployment Toolkit4) Download and apply the MDT 8456 Hotfix5) Download the Chocolatey Wrapper for MDT (The script below should normally take care of this, but if the download link ever changes you have the original blogpost to go to)    Step 2: Create the MDT Deployment ShareYou can do this manually, but below is a script to speed this proces up.This will also create a local user with a password, feel free to change the password in the scriptLastpass password generatorCreate a local useracccount:net user /add SVC_MDT P@SSw0Rd!#Requires -Version 3#Requires -RunAsAdministrator###### Variables###$MDTDeploymentShareFolder = 'D:\\DeploymentShare'$MDTDeploymentShareName = 'DeploymentShare$'$MDTChocolateyApplications = @('7zip','adobereader','googlechrome','firefox','javaruntime','dotnet3.5','dotnet4.5') # You need a chocolatey wrapper in order for this to work https://keithga.wordpress.com/2014/11/25/new-tool-chocolatey-wrapper-for-mdt/$WDSRemoteInstallFolder = 'D:\\RemoteInstall'$ErrorActionPreference = 'Stop'###### Script###\t\tWrite-Output 'Seting up Scratch Folder'    if(!(Test-Path -path c:\\temp))  {  \tmkdir \"c:\\temp\"    }    else { Write-Host \"The given folder path c:\\temp already exists\"; }\tmkdir \"c:\\temp\\Drivers\\x64_winpe10\"\tmkdir \"c:\\temp\\Drivers\\Laptop\"\tmkdir \"c:\\temp\\Drivers\\Desktop\"\tmkdir \"c:\\temp\\software\\Windows Kits\\10\\ADK\"\t   Try{   Write-Output 'Adding Windows feature NET-Framework-Core'    Add-WindowsFeature NET-Framework-Core    Write-Output 'Adding Windows feature Windows Deployment System'    Add-WindowsFeature WDS -IncludeManagementTools\tWrite-Output 'Downloading Chocolatey Wrapper'\tInvoke-WebRequest 'https://raw.githubusercontent.com/keithga/DeployShared/master/Templates/Distribution/Scripts/Extras/Install-Chocolatey.ps1' -Outfile 'c:\\temp\\Install-Chocolatey.ps1'     Write-Output 'Setting up MDT'    mkdir $MDTDeploymentShareFolder    $Share = [wmiClass]'Win32_share'    $Share.create($MDTDeploymentShareFolder,$MDTDeploymentShareName,0)       Import-Module 'C:\\Program Files\\Microsoft Deployment Toolkit\\Bin\\MicrosoftDeploymentToolkit.psd1' -Force        New-PSDrive -Name 'DS001' -PSProvider 'MDTProvider' -Root $MDTDeploymentShareFolder -NetworkPath \"\\\\$env:COMPUTERNAME\\$MDTDeploymentShareName\" -Description 'DeploymentShare' -Verbose | Add-MDTPersistentDrive -Verbose    #New-Item -path 'DS001:\\Operating Systems' -enable 'True' -Name 'WIN7X64' -Comments '' -ItemType folder -Verbose    New-Item -path 'DS001:\\Operating Systems' -enable 'True' -Name 'WIN11X64' -Comments '' -ItemType folder -Verbose    #New-Item -path 'DS001:\\Operating Systems' -enable 'True' -Name 'SRV2012R2X64' -Comments '' -ItemType folder -Verbose    #New-Item -path 'DS001:\\Operating Systems' -enable 'True' -Name 'SRV2016X64' -Comments '' -ItemType folder -Verbose    #New-Item -path 'DS001:\\Task Sequences' -enable 'True' -Name 'WIN7X64' -Comments '' -ItemType folder -Verbose    New-Item -path 'DS001:\\Task Sequences' -enable 'True' -Name 'WIN11X64' -Comments '' -ItemType folder -Verbose    #New-Item -path 'DS001:\\Task Sequences' -enable 'True' -Name 'SRV2012R2X64' -Comments '' -ItemType folder -Verbose    #New-Item -path 'DS001:\\Task Sequences' -enable 'True' -Name 'SRV2016X64' -Comments '' -ItemType folder -Verbose    New-Item -path 'DS001:\\Out-of-Box Drivers' -enable 'True' -Name 'WINPE' -Comments '' -ItemType folder -Verbose    New-Item -path 'DS001:\\Out-of-Box Drivers' -enable 'True' -Name 'DESKTOP' -Comments '' -ItemType folder -Verbose    New-Item -path 'DS001:\\Out-of-Box Drivers' -enable 'True' -Name 'LAPTOP' -Comments '' -ItemType folder -Verbose    #New-Item -path 'DS001:\\Packages' -enable 'True' -Name 'WIN7X64' -Comments '' -ItemType folder -Verbose    New-Item -path 'DS001:\\Packages' -enable 'True' -Name 'WIN11X64' -Comments '' -ItemType folder -Verbose    #New-Item -path 'DS001:\\Packages' -enable 'True' -Name 'SRV2012R2X64' -Comments '' -ItemType folder -Verbose    #New-Item -path 'DS001:\\Packages' -enable 'True' -Name 'SRV2016X64' -Comments '' -ItemType folder -Verbose    new-item -path \"DS001:\\Selection Profiles\" -enable \"True\" -Name \"WINPE\" -Comments \"\" -Definition \"&lt;SelectionProfile&gt;&lt;Include path=`\"Out-of-Box Drivers\\WINPE`\" /&gt;&lt;/SelectionProfile&gt;\" -ReadOnly \"False\" -Verbose    #new-item -path \"DS001:\\Selection Profiles\" -enable \"True\" -Name \"WIN7X64\" -Comments \"\" -Definition \"&lt;SelectionProfile&gt;&lt;Include path=`\"Packages\\WIN7X64`\" /&gt;&lt;/SelectionProfile&gt;\" -ReadOnly \"False\" -Verbose    new-item -path \"DS001:\\Selection Profiles\" -enable \"True\" -Name \"WIN11X64\" -Comments \"\" -Definition \"&lt;SelectionProfile&gt;&lt;Include path=`\"Packages\\WIN11X64`\" /&gt;&lt;/SelectionProfile&gt;\" -ReadOnly \"False\" -Verbose    #new-item -path \"DS001:\\Selection Profiles\" -enable \"True\" -Name \"SRV2012R2X64\" -Comments \"\" -Definition \"&lt;SelectionProfile&gt;&lt;Include path=`\"Packages\\SRV2012R2X64`\" /&gt;&lt;/SelectionProfile&gt;\" -ReadOnly \"False\" -Verbose    #new-item -path \"DS001:\\Selection Profiles\" -enable \"True\" -Name \"SRV2016X64\" -Comments \"\" -Definition \"&lt;SelectionProfile&gt;&lt;Include path=`\"Packages\\SRV2016X64`\" /&gt;&lt;/SelectionProfile&gt;\" -ReadOnly \"False\" -Verbose    $MDTChocolateyApplications | % {        $Package = $_        $Path = \"powershell.exe -NoProfile -ExecutionPolicy unrestricted `\"%ScriptRoot%\\Install-Chocolatey.ps1`\" -verbose -Packages `\"$Package`\"\"        Import-MDTApplication -path \"DS001:\\Applications\" -Name $Package -ShortName $Package -NoSource -CommandLine $Path -Enable $true     }    Copy-Item -Path 'c:\\temp\\Install-Chocolatey.ps1' -Destination $MDTDeploymentShareFolder\\Scripts\t\t#Bootstrap Rules\tAdd-Content $MDTDeploymentShareFolder\\control\\Bootstrap.ini \"DeployRoot=\\\\$env:computername\\DeploymentShare$\"\tAdd-Content $MDTDeploymentShareFolder\\control\\Bootstrap.ini \"UserID=$env:computername\\SVC_MDT\" #Change $env:computername to domain name if needed.\tAdd-Content $MDTDeploymentShareFolder\\control\\Bootstrap.ini \"UserPassword=P@SSw0Rd!\"    Add-Content $MDTDeploymentShareFolder\\control\\Bootstrap.ini \"KeyboardLocalePE=0813:00000813\"    Add-Content $MDTDeploymentShareFolder\\control\\Bootstrap.ini \"KeyboardLocale=0813:00000813\"    Add-Content $MDTDeploymentShareFolder\\control\\Bootstrap.ini \"KeyboardLocalePE=nl-BE\"    Add-Content $MDTDeploymentShareFolder\\control\\Bootstrap.ini \"KeyboardLocale=nl-BE\"    Add-Content $MDTDeploymentShareFolder\\control\\Bootstrap.ini \"SkipBDDWelcome=YES\"\t\t#CustomSettings Rules\t#Change Priority to  =&gt; Priority=Serialnumber,DefaultGateway,MacAddress,TaskSequenceID,Model,ByLaptopType,ByDesktopType\tAdd-Content $MDTDeploymentShareFolder\\control\\CustomSettings.ini \"[ByLaptopType]\"\tAdd-Content $MDTDeploymentShareFolder\\control\\CustomSettings.ini \"Subsection=Laptop-%IsLaptop%\"\tAdd-Content $MDTDeploymentShareFolder\\control\\CustomSettings.ini \"[ByDesktopType]\"\tAdd-Content $MDTDeploymentShareFolder\\control\\CustomSettings.ini \"Subsection=Desktop-%IsDesktop%\"\tAdd-Content $MDTDeploymentShareFolder\\control\\CustomSettings.ini \"[Laptop-True]\"\tAdd-Content $MDTDeploymentShareFolder\\control\\CustomSettings.ini \"DriverGroup001=LAPTOP\\%Model%\"\tAdd-Content $MDTDeploymentShareFolder\\control\\CustomSettings.ini \"DriverSelectionProfile=nothing\"\tAdd-Content $MDTDeploymentShareFolder\\control\\CustomSettings.ini \"[Desktop-True]\"\tAdd-Content $MDTDeploymentShareFolder\\control\\CustomSettings.ini \"DriverGroup001=DESKTOP\\%Model%\"\tAdd-Content $MDTDeploymentShareFolder\\control\\CustomSettings.ini \"DriverSelectionProfile=nothing\"\tAdd-Content $MDTDeploymentShareFolder\\control\\CustomSettings.ini \"[Virtual Machine]\"\tAdd-Content $MDTDeploymentShareFolder\\control\\CustomSettings.ini \"DriverSelectionProfile=nothing\"\t\t\t\t#Importing Drivers\t#WINPE Drivers Windows 10\timport-mdtdriver -path \"DS001:\\Out-of-Box Drivers\\WINPE\" -SourcePath \"c:\\temp\\Drivers\\x64_winpe10\" -ImportDuplicates -Verbose\t\t\t#Update MDT Share\t    Update-MDTDeploymentShare -path 'DS001:' -Verbose}Catch{    Throw $_} Step 3 Change the custom.ini priority:Priority=Serialnumber,DefaultGateway,MacAddress,TaskSequenceID,Model,ByLaptopType,ByDesktopType,DefaultStep 4 Import the Chocolatey Wrapper for MDT into the scripts folderD:\\DeploymentShare\\Step 5 Add your Windows installation and create a Task SequenceAfter you have added your installation media and created a task Sequence you can finally test your deployment.PXE boot should work out of the box. In the video i show you a demonstration to a virtual machine.In some cases you have to add some DHCP options to your dhcp server, i would suggest to test your PXE first because it should work in this configuration. If it does not work to read the manual specific to your router.What is next?In a future episode we will be customizing the Deployment Server and try to automate as much as possible during the deployment steps.Special thanks to:Johan ArwidmarkKeith Garner"
+  },
+  
+  {
+    "title": "Remote Desktop Services, Virtual Desktop Infrastructure!",
+    "url": "/posts/RemoteDesktopPart8/",
+    "categories": "Windows, Server",
+    "tags": "server, 2022, rdp, part8, vdi",
+    "date": "2023-10-19 00:00:00 +0200",
+    
+
+
+
+
+
+    
+    "snippet": "In this video, we will configure a VDI (Virtual Desktop Infrastructure) solution.We will need a Hyper-v server to host our VDI Windows 10/11 template virtual machine and VDI pool (The Virtual machi...",
+    "content": "In this video, we will configure a VDI (Virtual Desktop Infrastructure) solution.We will need a Hyper-v server to host our VDI Windows 10/11 template virtual machine and VDI pool (The Virtual machines our clients connect to).The first few minutes of the video is going to be probably too quick because we have already done this wizard in the first part of this series, I’ll provide a link to it:Remote Desktop Services - Part 1We will also go over the template relatively quick in this video, for more details on how to create a Virtual Machine Template, please take a look at the previous video where we create a template:How to create a Virtual Machine templateFor Microsoft recommendations regarding your VDI Virtual Machines configuration take a look at:Microsoft Learn, RDS/VDI recommendationsTo set up a Hyper-v server to host our Virtual Machines, please take a look at:Installing the Hyper-V Role    Be sure to check out the previous video where we configured Remote Desktop Services:Server 2022 - Remote Desktop Services - Part 1Server 2022 - Remote Desktop Services - Part 2Server 2022 - Remote Desktop Services - Part 3Installing Office 365 on a Remote Desktop Host!Server 2022 - Remote Desktop Services - Part 5Server 2022 - Remote Desktop Services - Part 6Server 2022 - Remote Desktop Services - Part 7"
+  },
+  
+  {
+    "title": "Remote Desktop Services, Set up email discovery to subscribe to your RDS feed",
+    "url": "/posts/RemoteDesktopwebfeeddiscoveryrecord/",
+    "categories": "Windows, Server",
+    "tags": "server, 2022, rdp, webfeed",
+    "date": "2023-09-09 00:00:00 +0200",
+    
+
+
+
+
+
+    
+    "snippet": "I am writing this small guide in extension of the Remote Desktop series.You can use your e-mail to ‘autodiscover’ your remote desktop webfeed. (like your exchange autodiscover record).i’m going to ...",
+    "content": "I am writing this small guide in extension of the Remote Desktop series.You can use your e-mail to ‘autodiscover’ your remote desktop webfeed. (like your exchange autodiscover record).i’m going to use contoso.com as our example here and your users get an e-mail in the form of firstname.lastname@contoso.comFor this to work you need to create a new TXT record on your public nameservers that points to your Remote desktop Webfeed.The value for the new TXT record:_msradcText value:https://webserver.contoso.com/RDWeb/Feed/webfeed.aspxBe sure to check out the previous video where we configured Remote Desktop Services:Server 2022 - Remote Desktop Services - Part 1Server 2022 - Remote Desktop Services - Part 2Server 2022 - Remote Desktop Services - Part 3Installing Office 365 on a Remote Desktop Host!Server 2022 - Remote Desktop Services - Part 5Server 2022 - Remote Desktop Services - Part 6Server 2022 - Remote Desktop Services - Part 7"
+  },
+  
+  {
+    "title": "Remote Desktop Services, Securing it with Azure MFA!",
+    "url": "/posts/RemoteDesktopPart7/",
+    "categories": "Windows, Server",
+    "tags": "server, 2022, rdp, part7, mfa",
+    "date": "2023-09-07 00:00:00 +0200",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will install the Azure MFA NPS Extension, with this extension we can use the Multifactor Authentication from Azure AD and securing the Remote Desktop Gateway connection for Remote ...",
+    "content": "In this video we will install the Azure MFA NPS Extension, with this extension we can use the Multifactor Authentication from Azure AD and securing the Remote Desktop Gateway connection for Remote Desktop.    Download NPS Extensioncd 'c:\\Program Files\\Microsoft\\AzureMfa\\Config'.\\AzureMfaNpsExtnConfigSetup.ps1In order for Non MFA enabled users to continue to connect to the Remote Gateway server you can add the following Regkey in the registy of the NPS installed server under the following registery path, open an elevated cmd prompt and run the following commandreg add HKLM\\Software\\Microsoft\\AzureMFA /v REQUIRE_USER_MATCH /t REG_SZ /d FALSEReboot the server for it to take effect.Be sure to check out the previous video where we configured Remote Desktop Services:Server 2022 - Remote Desktop Services - Part 1Server 2022 - Remote Desktop Services - Part 2Server 2022 - Remote Desktop Services - Part 3Installing Office 365 on a Remote Desktop Host!Server 2022 - Remote Desktop Services - Part 5Server 2022 - Remote Desktop Services - Part 6"
+  },
+  
+  {
+    "title": "Outlook and Teams open links on Microsoft Edge",
+    "url": "/posts/OutlookDefaultBrowserChoice/",
+    "categories": "office, outlook",
+    "tags": "office, office365, outlook, regkey",
+    "date": "2023-08-10 00:00:00 +0200",
+    
+
+
+
+
+
+    
+    "snippet": "Microsoft decided to change the behavior of Outlook and Teams. From now Outlook and Teams will open hyperlinks with Edge despite if another browser has been selected as the default browser.To chang...",
+    "content": "Microsoft decided to change the behavior of Outlook and Teams. From now Outlook and Teams will open hyperlinks with Edge despite if another browser has been selected as the default browser.To change this behaviour you can download the newest Office 365 ADMX files. Or create the registry key below.To resolve this we need to run the following Powershell:Set-ItemProperty -Path “HKCU:\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\common\\links” -Name ‘BrowserChoice’ -Value 0 -Type DWORD –ForceTo revert back to Edge as the default browser in Outlook:Set-ItemProperty -Path “HKCU:\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\common\\links” -Name ‘BrowserChoice’ -Value 1 -Type DWORD –ForceAfter this you need to close Outlook and open it again."
+  },
+  
+  {
+    "title": "AD Connect - 2 AD Forests with 1 AD Connect server",
+    "url": "/posts/AD_Connect__2_AD_Forests_with_1_AD_Connect_server/",
+    "categories": "Windows, Server, 2022",
+    "tags": "server, 2022, activedirectory, adconnect, forests, dnsforwarder",
+    "date": "2023-07-06 00:00:00 +0200",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will be syncing 2 separate AD Forests with 1 AD Connect Server.You can use this technique to connect to multiple forest.    ",
+    "content": "In this video we will be syncing 2 separate AD Forests with 1 AD Connect Server.You can use this technique to connect to multiple forest.    "
+  },
+  
+  {
+    "title": "Server 2022  - Active Directory Domain - Setup an External Trust",
+    "url": "/posts/Server_2022_Active_Directory_Domain_Setup_an_External_Trust/",
+    "categories": "Windows, Server, 2022",
+    "tags": "server, 2022, activedirectory, trust",
+    "date": "2023-05-06 00:00:00 +0200",
+    
+
+
+
+
+
+    
+    "snippet": "In this video, we will set up an external trust between 2 different Active Directory servers. Users from both external organizations can authenticate to each other’s resources.    ",
+    "content": "In this video, we will set up an external trust between 2 different Active Directory servers. Users from both external organizations can authenticate to each other’s resources.    "
+  },
+  
+  {
+    "title": "Server 2022 - CodeTwo - Active Directory Photos",
+    "url": "/posts/Server_2022__CodeTwo__Active_Directory_Photos/",
+    "categories": "Windows, Server, 2022",
+    "tags": "server, 2022, activedirectory, codetwo",
+    "date": "2023-04-08 00:00:00 +0200",
+    
+
+
+
+
+
+    
+    "snippet": "In this video, we will add the functionality to manage user profile photos into Active Directory and sync them to Azure AD.You can download the CodeTwo software here:DownloadA well-written guide fr...",
+    "content": "In this video, we will add the functionality to manage user profile photos into Active Directory and sync them to Azure AD.You can download the CodeTwo software here:DownloadA well-written guide from CodeTwo can be found here:Guide    "
+  },
+  
+  {
+    "title": "Intune - Endpoint Privilege Management",
+    "url": "/posts/Intune__Endpoint_Privilege_Management/",
+    "categories": "Azure, Intune",
+    "tags": "intune, azure, epm",
+    "date": "2023-04-01 11:00:00 +0200",
+    
+
+
+
+
+
+    
+    "snippet": "In this video, we will enable Endpoint Privilege Management within Intune.Endpoint Privilege Management (EPM) allows IT to run everyone as a standard user while elevating privileges only when neede...",
+    "content": "In this video, we will enable Endpoint Privilege Management within Intune.Endpoint Privilege Management (EPM) allows IT to run everyone as a standard user while elevating privileges only when needed.    "
+  },
+  
+  {
+    "title": "Windows hello for business - Cloud Kerberos trust deployment",
+    "url": "/posts/WHFB_CloudKerberosTrustDeployment/",
+    "categories": "Azure, Intune",
+    "tags": "server, 2022, azure, hybrid, WindowsHelloForBusiness",
+    "date": "2023-03-26 11:00:00 +0200",
+    
+
+
+
+
+
+    
+    "snippet": "In this video, we are going to deploy Cloud Kerberos Trust.We can use Windows hello and Kerberos tokens to access our on-premise resources like file shares.    Source# First, ensure TLS 1.2 for Pow...",
+    "content": "In this video, we are going to deploy Cloud Kerberos Trust.We can use Windows hello and Kerberos tokens to access our on-premise resources like file shares.    Source# First, ensure TLS 1.2 for PowerShell gallery access.[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12# Install the Azure AD Kerberos PowerShell Module.Install-Module -Name AzureADHybridAuthenticationManagement -AllowClobber# Specify the on-premises Active Directory domain. A new Azure AD# Kerberos Server object will be created in this Active Directory domain.$domain = $env:USERDNSDOMAIN# Enter a UPN of an Azure Active Directory global administrator$userPrincipalName = \"administrator@contoso.onmicrosoft.com\"# Enter a domain administrator username and password.$domainCred = Get-Credential# Create the new Azure AD Kerberos Server object in Active Directory# and then publish it to Azure Active Directory.# Open an interactive sign-in prompt with given username to access the Azure AD.Set-AzureADKerberosServer -Domain $domain -UserPrincipalName $userPrincipalName -DomainCredential $domainCredWhen Azure AD Kerberos is enabled in an Active Directory domain, an Azure AD Kerberos server object is created in the domain. This object:Configure Windows Hello for Business policysourceVerify the tenant-wide policyTo check the Windows Hello for Business policy applied at enrollment time:1) Sign in to the Microsoft Intune admin center.2) Select Devices &gt; Windows &gt; Windows Enrollment.3) Select Windows Hello for Business.4) Verify the status of Configure Windows Hello for Business and any settings that may be configured.  If the tenant-wide policy is enabled and configured to your needs, you can skip to Configure cloud Kerberos trust policy. Otherwise, follow the instructions below to create a policy using an account protection policy.Enable Windows Hello for BusinessTo configure Windows Hello for Business using an account protection policy:1) Sign in to the Microsoft Intune admin center.2) Select Endpoint security &gt; Account protection.3) Select + Create Policy.4) For Platform, select Windows 10 and later and for Profile select Account protection.5) Select Create.6) Specify a Name and, optionally, a Description &gt; Next.7) Under Block Windows Hello for Business, select Disabled and multiple policies become available.These policies are optional to configure, but it’s recommended to configure Enable to use a Trusted Platform Module (TPM) to Yes.For more information about these policies, see MDM policy settings for Windows Hello for Business.8) Under Enable to certificate for on-premises resources, select Disabled and multiple policies become available.9) Select Next.10) Optionally, add scope tags and select Next.11) Assign the policy to a security group that contains as members the devices or users that you want to configure &gt; Next.Review the policy configuration and select Create. TipIf you want to enforce the use of digits for your Windows Hello for Business PIN, use the settings catalog and choose Digits or Digits (User) instead of using the Account protection template.Assign the policy to a security group that contains as members the devices or users that you want to configure.Configure the cloud Kerberos trust policyThe cloud Kerberos trust policy can be configured using a custom template, and it’s configured separately from enabling Windows Hello for Business.To configure the cloud Kerberos trust policy:1) Sign in to the Microsoft Intune admin center.2) Select Devices &gt; Windows &gt; Configuration Profiles &gt; Create profile.3) For Profile Type, select Templates and select the Custom Template.4) Name the profile with a familiar name, for example, “Windows Hello for Business cloud Kerberos trust”.5) In Configuration Settings, add a new configuration with the following settings:Name: Windows Hello for Business cloud Kerberos trust or another familiar nameDescription (optional): Enable Windows Hello for Business cloud Kerberos trust for sign-in and on-premises SSOOMA-URI: ./Device/Vendor/MSFT/PassportForWork//Policies/UseCloudTrustForOnPremAuthData type: BooleanValue: True ImportantTenant ID in the OMA-URI must be replaced with the tenant ID for your Azure AD tenant. See How to find your Azure AD tenant ID for instructions on looking up your tenant ID.6) Assign the policy to a security group that contains as members the devices or users that you want to configure."
+  },
+  
+  {
+    "title": "Server 2022 - UrBackup - Backup Image Restore",
+    "url": "/posts/Server_2022__UrBackup__Backup_Image_Restore/",
+    "categories": "Server, UrBackup",
+    "tags": "server, 2022, gpo, windows, 11, urbackup, backup",
+    "date": "2023-03-11 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will be restoring a backup image.    ",
+    "content": "In this video we will be restoring a backup image.    "
+  },
+  
+  {
+    "title": "Upgrading A Server 2012 R2 Domain Controller To Server 2019!",
+    "url": "/posts/Upgrading_A_Server_2012_R2_Domain_Controller_To_Server_2019/",
+    "categories": "",
+    "tags": "",
+    "date": "2023-02-17 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will upgrade an old server 2012 R2 domain controller to Server 2019. In most cases you will install a new Domain controller and migrate the FSMO roles. But in some cases you just h...",
+    "content": "In this video we will upgrade an old server 2012 R2 domain controller to Server 2019. In most cases you will install a new Domain controller and migrate the FSMO roles. But in some cases you just have to upgrade the existing server.    For an in-place upgrade of an existing DC, you must run adprep /forestprep and adprep /domainprep manually. You need to run Adprep /forestprep only once in the forest for each newer version of Windows Server. Run Adprep /domainprep once in each domain in which you have DCs that you’re upgrading for each newer version of Windows Server.Adprep.exe is a command-line tool that is available on the Windows Server 2008 installation disc in the \\sources\\adprep folder, and it is available on the Windows Server 2008 R2, and newer, installation disk in the \\support\\adprep folder. You must run adprep from an elevated command prompt. To open an elevated command prompt, click Start, right-click Command Prompt, and then click Run as administrator.In this table you can see the supported upgrade paths, based on the version you’re currently on.            Upgrade from / to      Windows Server 2008 R2      Windows Server 2012      Windows Server 2012 R2      Windows Server 2016      Windows Server 2019      Windows Server 2022              Windows Server 2008      Yes      Yes      -      -      -      -              Windows Server 2008 R2      -      Yes      Yes      -      -      -              Windows Server 2012      -      -      Yes      Yes      -      -              Windows Server 2012 R2      -      -      -      Yes      Yes      -              Windows Server 2016      -      -      -      -      Yes      Yes              Windows Server 2019      -      -      -      -      -      Yes      So we need to run the following command to prepare the Forest:adprep /forestprepAnd then for each Domain controller we want to upgrade:Adprep /domainprep /gpprep"
+  },
+  
+  {
+    "title": "Uninstall Azure AD Connect",
+    "url": "/posts/AdConnect_Uninstall/",
+    "categories": "Windows, Server",
+    "tags": "azure, domaincontroller, adconnect, sync",
+    "date": "2023-02-17 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this article we are going to uninstall AD Connect because the customer is fully migrated to the cloud.On the server where AD Connect is installed run the following powershell commands:Import-Mod...",
+    "content": "In this article we are going to uninstall AD Connect because the customer is fully migrated to the cloud.On the server where AD Connect is installed run the following powershell commands:Import-Module ADSyncSet-ADSyncScheduler -SyncCycleEnabled $falseVerify that the sync is disabled:Get-ADSyncScheduler | ft SyncCycleEnabledThen connect to the Azure tenant:Connect-MsolServiceTurn off DirSync:Set-MsolDirSyncEnabled -EnableDirSync $falseVerify that the sync is disabled:(Get-MSOLCompanyInformation).DirectorySynchronizationEnabledNext:Uninstall Azure AD Connect from server  Click on Start &gt; Control Panel &gt; Programs and Features.  Click on Microsoft Azure AD Connect and press on Uninstall.  The Uninstall Azure AD Connect wizard shows up. Check the checkbox Also uninstall supporting components. Click Remove"
+  },
+  
+  {
+    "title": "Unexpected Autodiscover behavior when you have registry settings under the \\Autodiscover key",
+    "url": "/posts/ExcludeO365Endpoint/",
+    "categories": "Azure, Exchange",
+    "tags": "exchange, office365, migration, azure",
+    "date": "2023-02-16 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "During a migration from an Onpremise Exchange to O365 i encountered the issue that Outlook would ask for the credentials from O365.Because the mailbox was still on the Onpremise Exchange Outlook co...",
+    "content": "During a migration from an Onpremise Exchange to O365 i encountered the issue that Outlook would ask for the credentials from O365.Because the mailbox was still on the Onpremise Exchange Outlook could not find a mailbox.To resolve this we need to run the following Powershell:Set-ItemProperty -Path “HKCU:\\Software\\Microsoft\\Office\\16.0\\Outlook\\AutoDiscover” -Name ‘ExcludeExplicitO365Endpoint’ -Value 1 -Type DWORD –ForceSet-ItemProperty -Path “HKCU:\\Software\\Policies\\Microsoft\\Office\\16.0\\Outlook\\AutoDiscover” -Name ‘ExcludeExplicitO365Endpoint’ -Value 1 -Type DWORD –ForceAfter this you need to close Outlook and open it again, sometimes it can take a few minutes."
+  },
+  
+  {
+    "title": "Configure team site libraries to sync automatically",
+    "url": "/posts/AutoSyncTeamsSite/",
+    "categories": "Azure, Intune",
+    "tags": "sharepoint, teams, onedrive, azure, sync",
+    "date": "2023-02-16 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "This setting lets you specify SharePoint team site libraries to sync automatically the next time users sign in to the OneDrive sync app (OneDrive.exe), within an eight-hour window, to help distribu...",
+    "content": "This setting lets you specify SharePoint team site libraries to sync automatically the next time users sign in to the OneDrive sync app (OneDrive.exe), within an eight-hour window, to help distribute network load. To use this setting, the computer must be running Windows 10 Fall Creators Update (version 1709) or later, and you must enable OneDrive Files On-Demand. This feature is not enabled for on-premises SharePoint sites.If you enable this setting, the OneDrive sync app automatically syncs the contents of the libraries you specified as online-only files the next time the user signs in. The user isn’t able to stop syncing the libraries.If you disable this setting, team site libraries that you’ve specified aren’t automatically synced for new users. Existing users can choose to stop syncing the libraries, but the libraries won’t stop syncing automatically.To configure the setting, in the Options box, select Show, and then enter a friendly name to identify the library in the Value Name field, and the entire library ID (tenantId=xxx&amp;siteId=xxx&amp;webId=xxx&amp;listId=xxx&amp;webUrl=httpsxxx&amp;version=1) in the Value field.To find the library ID, sign in as a global or SharePoint admin in Microsoft 365, browse to the library, and select Sync. In the Starting sync dialog, select the Copy library ID link.The special characters in this copied string are in Unicode and must be converted to ASCII according to the following table.Find\tReplace%2D\t-%7B\t{%7D\t}%3A\t:%2F\t/%2E\t.Alternatively, you can run the following command in PowerShell, replacing “Copied String” with the library ID:[uri]::UnescapeDataString(\"Copied String\")Or if you want to place it directly into you clipboard[uri]::UnescapeDataString(\"Copied String\") | clip.exeEnabling this policy sets the following registry key, using the entire URL from the library you copied:[HKCU\\Software\\Policies\\Microsoft\\OneDrive\\TenantAutoMount]\"LibraryName\"=\"LibraryID\""
+  },
+  
+  {
+    "title": "Sophos XG   SSL VPN",
+    "url": "/posts/Sophos_XG___SSL_VPN/",
+    "categories": "Firewall, Sophos XG",
+    "tags": "",
+    "date": "2023-02-13 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we continue our Sophos XG series. In the previous video’s we have showed you how to create extra networks (vlan’s), firewall rules, etc.With all those firewall rules you can use Group...",
+    "content": "In this video we continue our Sophos XG series. In the previous video’s we have showed you how to create extra networks (vlan’s), firewall rules, etc.With all those firewall rules you can use Groups to keep everything more organized.    "
+  },
+  
+  {
+    "title": "Upgrade domain controllers to a newer version of Windows Server",
+    "url": "/posts/AD_InplaceUpgrade/",
+    "categories": "Windows, Server",
+    "tags": "upgrade, domaincontroller, AD",
+    "date": "2023-02-10 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "For an in-place upgrade of an existing DC, you must run adprep /forestprep and adprep /domainprep manually. You need to run Adprep /forestprep only once in the forest for each newer version of Wind...",
+    "content": "For an in-place upgrade of an existing DC, you must run adprep /forestprep and adprep /domainprep manually. You need to run Adprep /forestprep only once in the forest for each newer version of Windows Server. Run Adprep /domainprep once in each domain in which you have DCs that you’re upgrading for each newer version of Windows Server.Adprep.exe is a command-line tool that is available on the Windows Server 2008 installation disc in the \\sources\\adprep folder, and it is available on the Windows Server 2008 R2, and newer, installation disk in the \\support\\adprep folder. You must run adprep from an elevated command prompt. To open an elevated command prompt, click Start, right-click Command Prompt, and then click Run as administrator.In this table you can see the supported upgrade paths, based on the version you’re currently on.            Upgrade from / to      Windows Server 2008 R2      Windows Server 2012      Windows Server 2012 R2      Windows Server 2016      Windows Server 2019      Windows Server 2022              Windows Server 2008      Yes      Yes      -      -      -      -              Windows Server 2008 R2      -      Yes      Yes      -      -      -              Windows Server 2012      -      -      Yes      Yes      -      -              Windows Server 2012 R2      -      -      -      Yes      Yes      -              Windows Server 2016      -      -      -      -      Yes      Yes              Windows Server 2019      -      -      -      -      -      Yes      So we need to run the following command to prepare the Forest:adprep /forestprepAnd then for each Domain controller we want to upgrade:Adprep /domainprep /gpprep"
+  },
+  
+  {
+    "title": "Firewall Rule Groups with Sophos XG!",
+    "url": "/posts/Firewall_Rule_Groups_with_Sophos_XG/",
+    "categories": "Firewall, Sophos XG",
+    "tags": "",
+    "date": "2023-02-10 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we continue our Sophos XG series. In the previous video’s we have showed you how to create extra networks (vlan’s), firewall rules, etc.With all those firewall rules you can use Group...",
+    "content": "In this video we continue our Sophos XG series. In the previous video’s we have showed you how to create extra networks (vlan’s), firewall rules, etc.With all those firewall rules you can use Groups to keep everything more organized.    "
+  },
+  
+  {
+    "title": "Quality Of Service (QoS) With Sophos XG!",
+    "url": "/posts/Quality_Of_Service_QoS_With_Sophos_XG/",
+    "categories": "Firewall, Sophos XG",
+    "tags": "",
+    "date": "2023-02-06 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we continue our Sophos XG series. Now we are learning to limit the internet speed for certain firewall rules. This could be useful for certain applications or limiting the speed that ...",
+    "content": "In this video we continue our Sophos XG series. Now we are learning to limit the internet speed for certain firewall rules. This could be useful for certain applications or limiting the speed that a guest network could use.    "
+  },
+  
+  {
+    "title": "Creating Firewall Rules in Sophos XG!",
+    "url": "/posts/Creating_Firewall_Rules_in_Sophos_XG/",
+    "categories": "Firewall, Sophos XG",
+    "tags": "",
+    "date": "2023-02-03 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we continue our Sophos XG series. In the previous video’s we installed Sophos XG in Hyper-V as a virtual machine and learned to create vlan’s.Now we are creating firewall rules to all...",
+    "content": "In this video we continue our Sophos XG series. In the previous video’s we installed Sophos XG in Hyper-V as a virtual machine and learned to create vlan’s.Now we are creating firewall rules to allow outbound (web surfing), deny PING and allow inbound acces to a Webserver.    "
+  },
+  
+  {
+    "title": "Creating VLAN's with Sophos XG in Hyper-V!",
+    "url": "/posts/Creating_VLANs_with_Sophos_XG_in_HyperV/",
+    "categories": "Firewall, Sophos XG",
+    "tags": "",
+    "date": "2023-01-30 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we continue our Sophos XG series. In the previous video we installed Sophos XG in Hyper-V as a virtual machine.Now we are creating Vlan’s and allowing Hyper-v to ‘Trunk’ the vlan’s.  ...",
+    "content": "In this video we continue our Sophos XG series. In the previous video we installed Sophos XG in Hyper-V as a virtual machine.Now we are creating Vlan’s and allowing Hyper-v to ‘Trunk’ the vlan’s.    Below are the powershell commands used in this video.Lookup the Network Adapters for your Virtual Machine:Get-VMNetworkAdapter -vmname SophosXGRun the following to rename your Network Adapters, where 0 would be your LAN Network Adapter and 1 your WAN Network Adapter in this example:$VMNET = Get-VMNetworkAdapter -vmname SophosXGRename-VMNetworkAdapter -VMNetworkAdapter $VMNET[0] -NewName LANRename-VMNetworkAdapter -VMNetworkAdapter $VMNET[1] -NewName WANSet your LAN Network Adapter to a trunk port to allow Tagged VLAN 1 to 254 and set the Untagged interface to vlan 0:Set-VMNetworkAdapter -VMName \"SophosXG\" -VMNetworkAdapterName \"LAN\" -Trunk -Allowedvlanidlist 1-254 -nativevlanid 0"
+  },
+  
+  {
+    "title": "Installing Sophos XG in Hyper-V!",
+    "url": "/posts/Installing_Sophos_XG_in_HyperV/",
+    "categories": "Firewall, Sophos XG",
+    "tags": "",
+    "date": "2023-01-28 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we are installing Sophos XG in Hyper-V as a virtual machine.If you like to see more about Sophos please leave a like and a comment on what you want to see in the future.Source:https:/...",
+    "content": "In this video we are installing Sophos XG in Hyper-V as a virtual machine.If you like to see more about Sophos please leave a like and a comment on what you want to see in the future.Source:https://docs.sophos.com/nsg/sophos-firewall/19.0/Help/en-us/webhelp/onlinehelp/VirtualAndSoftwareAppliancesHelp/MicrosoftHyperV/HyperVInstall/index.html    "
+  },
+  
+  {
+    "title": "Introducing Automated Blog Post Creation from YouTube Uploads with Python!",
+    "url": "/posts/YoutubedescriptionToPythonscript/",
+    "categories": "Python, Script",
+    "tags": "python, scripts, youtube",
+    "date": "2023-01-27 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "Introducing Automated Blog Post Creation from YouTube Uploads with Python!IntroductionImagine having a tool at your disposal that effortlessly transforms your YouTube uploads into beautifully writt...",
+    "content": "Introducing Automated Blog Post Creation from YouTube Uploads with Python!IntroductionImagine having a tool at your disposal that effortlessly transforms your YouTube uploads into beautifully written and engaging blog posts. Thanks to the power of Python, I’ve developed an automated system that streamlines the entire process, saving you time and energy while enhancing your online presence.You can save this for example as c:\\temp\\convertyoutube_to_md.pyThe Codeimport requestsimport osimport redef create_file(video_id, title, description, date):    folder_path = \"md_files\"    if not os.path.exists(folder_path):        os.makedirs(folder_path)    title2 = re.sub(r'[^\\w\\s]', '', title)    title2 = title2.replace(\" \", \"_\")    filename = f\"{folder_path}/{date}-{title2}.md\"    with open(filename, \"w\") as f:        f.write(f\"---\\n\")        f.write(f\"layout: post\\n\")        f.write(f\"title: {title}\\n\")        f.write(f\"---\\n\")        f.write(f\"{description}\\n\\n\")        f.write(\"&lt;style&gt;.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }&lt;/style&gt;&lt;div class='embed-container'&gt;    &lt;iframe title=\"YouTube video player\" width=\"640\" height=\"390\" src=\"//www.youtube.com/embed/\" + video_id + \" frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;\\n\")def get_channel_videos(channel_id, api_key):    url = f\"https://www.googleapis.com/youtube/v3/search?key={api_key}&amp;channelId={channel_id}&amp;part=snippet,id&amp;order=date&amp;maxResults=50\"    response = requests.get(url)    data = response.json()    items = data[\"items\"]    video_ids = [item[\"id\"][\"videoId\"] for item in items if \"videoId\" in item[\"id\"]]    return video_idsdef get_video_info(video_id, api_key):    url = f\"https://www.googleapis.com/youtube/v3/videos?part=snippet&amp;id={video_id}&amp;key={api_key}\"    response = requests.get(url)    data = response.json()    items = data[\"items\"]    title = items[0][\"snippet\"][\"title\"]    description = items[0][\"snippet\"][\"description\"]    date = items[0][\"snippet\"][\"publishedAt\"].split(\"T\")[0]    return title, description, datedef main(channel_id, api_key):    video_ids = get_channel_videos(channel_id, api_key)    for video_id in video_ids:        title, description, date = get_video_info(video_id, api_key)        create_file(video_id, title, description, date)if __name__ == \"__main__\":    channel_id = \"channel_id\"    api_key = \"api_key\"    main(channel_id, api_key)Just replace channel_id and api_key with the appropriate values for your channel and API key, and run the script. Note that the API returns a maximum of 50 results per request, so if your channel has more than 50 videos, you’ll need to modify the script to make multiple requests and retrieve all the videos.Please keep in mind that it requires YouTube Data API v3 library, if you don’t have it installed please use this command !pip install –upgrade google-api-python-clientAlso, you’ll need to enable the YouTube Data API on your Google Cloud Platform project and create credentials to use the API.Installing PythonYou can download python on the official website. Download PythonTo install python you just have to go trough the installation wizard, for a written guide go to: Using Python on Windows  Make sure to select “Add Python to PATH”, this way you can run python from the commandline without adding the full path.Running the scriptAfter you saved the script you can run the script with the following command:python c:\\temp\\convertyoutube_to_md.py"
+  },
+  
+  {
+    "title": "AAD Connect / Cloud Sync with existing cloud users",
+    "url": "/posts/AADConnectMigration/",
+    "categories": "Azure, Connect",
+    "tags": "azuread, ad, sync",
+    "date": "2023-01-26 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "If you already have users in your Azure/Office 365 tenant and want to setup AD Connect or Cloud Sync, then you will notice that it can happen that you get duplicate users from your Active Directory...",
+    "content": "If you already have users in your Azure/Office 365 tenant and want to setup AD Connect or Cloud Sync, then you will notice that it can happen that you get duplicate users from your Active Directory environment.To prevent this from happening you can link the existing immutableid from Active Directory to the user in Azure Directory.it is also important that every proxyaddress (alias e-mail) in Office 365 is present in Active Directory.First we will have to get an Export from Office 365 for all the information and also as a backup.The following script will create an export of all the Users in Office 365.#Check for Existing c:\\Temp folder and if needed create the c:\\Temp folder$FolderName = \"C:\\Temp\"if([System.IO.Directory]::Exists($FolderName)){    Write-Host \"Folder Exists\"    Get-ChildItem -Path $FolderName | Where-Object {$_.CreationTime -gt (Get-Date).Date}   }else{    Write-Host \"Folder Doesn't Exists\"        #PowerShell Create directory if not exists    New-Item $FolderName -ItemType Directory}Connect-AzureAD$reportoutput=@()$users = Get-AzureADUser -All $true$users | Foreach-Object {     $user = $_    $SMTP_Addresses = $user.ProxyAddresses    $SMTP_List = $SMTP_Addresses -join \";\"    $report = New-Object -TypeName PSObject    $report | Add-Member -MemberType NoteProperty -Name 'UserPrincipalName' -Value $user.UserPrincipalName    $report | Add-Member -MemberType NoteProperty -Name 'SamAccountName' -Value $user.samaccountname    $report | Add-Member -MemberType NoteProperty -Name 'ImmutableID' -Value $user.immutableid    $report | Add-Member -MemberType NoteProperty -Name 'DisplayName' -Value $user.displayname    $report | Add-Member -MemberType NoteProperty -Name 'ProxyAddresses' -Value $SMTP_List    $reportoutput += $report} # Report$reportoutput | Export-Csv -Path c:\\temp\\Users_AAD.csv -NoTypeInformation -Encoding UTF8The following script will do the same from Active Directory.#Check for Existing c:\\Temp folder and if needed create the c:\\Temp folder$FolderName = \"C:\\Temp\"if([System.IO.Directory]::Exists($FolderName)){    Write-Host \"Folder Exists\"    Get-ChildItem -Path $FolderName | Where-Object {$_.CreationTime -gt (Get-Date).Date}   }else{    Write-Host \"Folder Doesn't Exists\"        #PowerShell Create directory if not exists    New-Item $FolderName -ItemType Directory}$reportoutput=@()$users = Get-ADUser -Filter * -Properties *$users | Foreach-Object {     $user = $_    $objectid = $user.ObjectGUID    $immutableid = [Convert]::ToBase64String([guid]::New($objectid).ToByteArray())    $SMTP_Addresses = $user.ProxyAddresses    $SMTP_List = $SMTP_Addresses -join \";\"     $report = New-Object -TypeName PSObject    $report | Add-Member -MemberType NoteProperty -Name 'UserPrincipalName' -Value $user.UserPrincipalName    $report | Add-Member -MemberType NoteProperty -Name 'SamAccountName' -Value $user.samaccountname    $report | Add-Member -MemberType NoteProperty -Name 'ImmutableID' -Value $immutableid    $report | Add-Member -MemberType NoteProperty -Name 'ProxyAddresses' -Value $SMTP_List    $reportoutput += $report} # Report$reportoutput | Export-Csv -Path c:\\temp\\Users_AD.csv -NoTypeInformation -Encoding UTF8With the following script you can do a compare to both the file to see the difference$Data_AD = Import-CSV c:\\temp\\Users_AD.csv -Delimiter \",\"$Data_AAD = Import-CSV c:\\temp\\Users_AAD.csv -Delimiter \",\"#Echo \"Not Matching ImmutableID's: (AD VS AAD)\"Compare-Object -ReferenceObject $Data_AD -DifferenceObject $Data_AAD -Property ImmutableID -IncludeEqual -PassThru | Where-Object {$_.SideIndicator -Notlike \"==\"}#Echo \"Not Matching ProxyAddresses:(AD VS AAD)\"Compare-Object -ReferenceObject $Data_AD -DifferenceObject $Data_AAD -Property ProxyAddresses -IncludeEqual -PassThru | Where-Object {$_.SideIndicator -Notlike \"==\"}After comparing everything you can use the following script to import all the proxyAddresses in Active Directorythis is an important step, because Active Directory will overwrite everything in AAD.#Check for Existing c:\\Temp folder and if needed create the c:\\Temp folder$FolderName = \"C:\\Temp\"if([System.IO.Directory]::Exists($FolderName)){    Write-Host \"Folder Exists\"    Get-ChildItem -Path $FolderName | Where-Object {$_.CreationTime -gt (Get-Date).Date}   }else{   Write-Host \"Folder Doesn't Exists\"    #PowerShell Create directory if not exists   New-Item $FolderName -ItemType Directory}$Data_AD = Import-CSV c:\\temp\\Users_AD_FR.csv -Delimiter \",\"foreach ($AD_User in $Data_AD) {$UPN = $AD_User.Userprincipalname$ProxyAddresses = $AD_User.ProxyaddressesGet-ADUser -Filter \"userPrincipalName -like '*$UPN'\" | Set-ADUser -replace @{ProxyAddresses=$ProxyAddresses -split \";\"}}To create a hardlink between an Active Directory User and an Azure Directory User we will be using the following script.This script will take the ObjectID from Active Directory and Write it to the corresponding user in Azure Directory.#Check for Existing c:\\Temp folder and if needed create the c:\\Temp folder$FolderName = \"C:\\Temp\"if([System.IO.Directory]::Exists($FolderName)){    Write-Host \"Folder Exists\"    Get-ChildItem -Path $FolderName | Where-Object {$_.CreationTime -gt (Get-Date).Date}   }else{    Write-Host \"Folder Doesn't Exists\"        #PowerShell Create directory if not exists    New-Item $FolderName -ItemType Directory}Connect-MsolService$Data_AD = Import-CSV c:\\temp\\Users_AD.csv -Delimiter \",\"foreach ($User in $Data_AD) {$UPN = $User.UserPrincipalName$ImmutableID = $user.ImmutableIdEcho -userprincipalname $UPN -ImmutableID $ImmutableIDset-msoluser -userprincipalname $UPN -ImmutableID $ImmutableID}"
+  },
+  
+  {
+    "title": "Server 2022 - Remote Desktop Services - Part 6  Remote App",
+    "url": "/posts/Remote_DesktopPart6/",
+    "categories": "",
+    "tags": "",
+    "date": "2023-01-23 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will add an extra Remote Desktop Host and configure it as a Remote App Server. With the power of Remote Applications we can deploy our Company Resources to our users without the ne...",
+    "content": "In this video we will add an extra Remote Desktop Host and configure it as a Remote App Server. With the power of Remote Applications we can deploy our Company Resources to our users without the need to install them locally.    SourceBe sure to check out the previous video where we configured Remote Desktop Services:Server 2022 - Remote Desktop Services - Part 1Server 2022 - Remote Desktop Services - Part 2Server 2022 - Remote Desktop Services - Part 3Installing Office 365 on a Remote Desktop Host!Server 2022 - Remote Desktop Services - Part 5"
+  },
+  
+  {
+    "title": "FSLogix - Service group policy client prevents login",
+    "url": "/posts/GrouppolicyClientServiceFailedTheSignIn/",
+    "categories": "Server",
+    "tags": "server, 2022, gpo, bug, error, fslogix, wvd",
+    "date": "2023-01-20 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "If you ever encounter the following error with FSLogix that a user can’t login because of the error Service group policy client prevents login.Here is how to fix it!Find the SID for the affected us...",
+    "content": "If you ever encounter the following error with FSLogix that a user can’t login because of the error Service group policy client prevents login.Here is how to fix it!Find the SID for the affected user ‘Local user’Get-LocalUser -Name 'johndoe' | Select-Object  sidFind the SID for the affected user ‘Active Directory’Import-Module ActiveDirectoryGet-AdUser -Identity toms | Select Name, SID, UserPrincipalNameOpen Regedit and navigate to the following regkey:HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\ProfileService\\References\\&lt;sid affected user&gt;Change the “RefCount” value to 0."
+  },
+  
+  {
+    "title": "UrBackup - Deploying Clients with GPO!",
+    "url": "/posts/UrBackupClient/",
+    "categories": "Server, UrBackup",
+    "tags": "server, 2022, gpo, windows, 11, urbackup, backup, client",
+    "date": "2023-01-12 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will be using our Group Policy to deploy the UrBackup client to all our Servers and Workstations.    Sources - UrBackupSources - UrBackup Administration ManualDownloadsBe sure to w...",
+    "content": "In this video we will be using our Group Policy to deploy the UrBackup client to all our Servers and Workstations.    Sources - UrBackupSources - UrBackup Administration ManualDownloadsBe sure to watch the previous video:UrBackup - Installing the Backup Server!"
+  },
+  
+  {
+    "title": "UrBackup - Installing the Backup Server!",
+    "url": "/posts/UrBackupServer/",
+    "categories": "Server, UrBackup",
+    "tags": "server, 2022, gpo, windows, 11, urbackup, backup",
+    "date": "2023-01-11 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will be installing a UrBackup backup server for our Lab!    SourcesBe sure to check out the previous video where we configured Intune.Windows 11 - Active Directory - Hybrid Join - ...",
+    "content": "In this video we will be installing a UrBackup backup server for our Lab!    SourcesBe sure to check out the previous video where we configured Intune.Windows 11 - Active Directory - Hybrid Join - Azure ADServer 2022 - Active Directory - Importing ADMX and Installing applications with Group Policy"
+  },
+  
+  {
+    "title": "Azure - Company Branding",
+    "url": "/posts/AzureCompanyBranding/",
+    "categories": "Azure, Intune",
+    "tags": "azure, intune, branding",
+    "date": "2023-01-10 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will be adding some Company Branding to our Azure Tenant.    SourcesBe sure to check out the previous video where we configured Intune.Windows 11 - Active Directory - Hybrid Join -...",
+    "content": "In this video we will be adding some Company Branding to our Azure Tenant.    SourcesBe sure to check out the previous video where we configured Intune.Windows 11 - Active Directory - Hybrid Join - Azure ADServer 2022 - Active Directory - Importing ADMX and Installing applications with Group Policy"
+  },
+  
+  {
+    "title": "Azure - Universal Print",
+    "url": "/posts/Azure-UniversalPrint/",
+    "categories": "Azure, Intune",
+    "tags": "azure, printer",
+    "date": "2023-01-09 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will be configuring Universal Print in Azure and install a Universal Print Connector on our printserver.    SourceDownload",
+    "content": "In this video we will be configuring Universal Print in Azure and install a Universal Print Connector on our printserver.    SourceDownload"
+  },
+  
+  {
+    "title": "Allow (Print) Driver installation (Non Admins)",
+    "url": "/posts/AllowNonAdminPrinterInstallation/",
+    "categories": "Windows, Server",
+    "tags": "server, 2022, printer, gpo",
+    "date": "2023-01-08 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will configure a Group Policy to allow our ‘Non Administrator’ users to install Printer Drivers to their workstations.    Sources - Driver Installation PreventionSources - Manage D...",
+    "content": "In this video we will configure a Group Policy to allow our ‘Non Administrator’ users to install Printer Drivers to their workstations.    Sources - Driver Installation PreventionSources - Manage Device Installation with Group PolicyClass = Printer{4658ee7e-f050-11d1-b6bd-00c04fa372a7};Class = PNPPrinters{4d36e979-e325-11ce-bfc1-08002be10318}"
+  },
+  
+  {
+    "title": "Server 2022 -  Configure Point and Print - Trusted Printserver",
+    "url": "/posts/ConfigurePointAndPrint/",
+    "categories": "Windows, Server",
+    "tags": "server, 2022, printer",
+    "date": "2023-01-07 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will configure a Group Policy to specify our trusted internal Printserver.    Sources",
+    "content": "In this video we will configure a Group Policy to specify our trusted internal Printserver.    Sources"
+  },
+  
+  {
+    "title": "Server 2022 - Installing PrintServer Role",
+    "url": "/posts/InstallingPrintServerRole/",
+    "categories": "Windows, Server",
+    "tags": "server, 2022, printer",
+    "date": "2023-01-06 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will install the Printserver role and deploy a Demo printer with a Group Policy.    Download Link - Demo Printer Software",
+    "content": "In this video we will install the Printserver role and deploy a Demo printer with a Group Policy.    Download Link - Demo Printer Software"
+  },
+  
+  {
+    "title": "Windows hello - Disable PIN",
+    "url": "/posts/WindowsHello-DisablePin/",
+    "categories": "Windows, 11",
+    "tags": "windows, 10, 11, powershell, hello",
+    "date": "2023-01-05 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "By default Windows 10/11 will enable Windows Hello and ask you to configure a PIN.If you want to remove the PIN after enabling run the following in Powershell as an Administrator.#Disable pin requi...",
+    "content": "By default Windows 10/11 will enable Windows Hello and ask you to configure a PIN.If you want to remove the PIN after enabling run the following in Powershell as an Administrator.#Disable pin requirement$path = \"HKLM:\\SOFTWARE\\Policies\\Microsoft\"$key = \"PassportForWork\"$name = \"Enabled\"$value = \"0\" New-Item -Path $path -Name $key –Force New-ItemProperty -Path $path\\$key -Name $name -Value $value -PropertyType DWORD -Force #Delete existing pins$passportFolder = \"C:\\Windows\\ServiceProfiles\\LocalService\\AppData\\Local\\Microsoft\\Ngc\" if(Test-Path -Path $passportFolder){Takeown /f $passportFolder /r /d \"Y\"ICACLS $passportFolder /reset /T /C /L /Q Remove-Item –path $passportFolder –recurse -force}"
+  },
+  
+  {
+    "title": "Installing the Remote Desktop Web Client!",
+    "url": "/posts/RemoteDesktopPart5/",
+    "categories": "Windows, Server",
+    "tags": "server, 2022, rdp, part5, html5, browser",
+    "date": "2023-01-05 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will configure the Remote Desktop Web Client. This way our users can use any device/browser (For Example a Smartphone/Tablet/…) that supports HTML5 to open a connection to the Remo...",
+    "content": "In this video we will configure the Remote Desktop Web Client. This way our users can use any device/browser (For Example a Smartphone/Tablet/…) that supports HTML5 to open a connection to the Remote Desktop host.    SourceRun powershell as an AdministratorInstall-Module -Name PowerShellGet -ForceClose Powershell!Run powershell as an AdministratorInstall-Module -Name RDWebClientManagementInstall-RDWebClientPackageImport-RDWebClientBrokerCert &lt;.cer file path&gt;Publish-RDWebClientPackage -Type Production -LatestBe sure to check out the previous video where we configured Remote Desktop Services:Server 2022 - Remote Desktop Services - Part 1Server 2022 - Remote Desktop Services - Part 2Server 2022 - Remote Desktop Services - Part 3Installing Office 365 on a Remote Desktop Host!"
+  },
+  
+  {
+    "title": "Find Your Hyper-V VM’s Host Name with PowerShell",
+    "url": "/posts/PowershellFindOutVMHost/",
+    "categories": "Windows, Server",
+    "tags": "windows, server, powershell, hyperv",
+    "date": "2023-01-05 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "use the powershell command below if you ever need to find out on wich Hyper-V server your vm is running.Run as admin:(get-item \"HKLM:\\SOFTWARE\\Microsoft\\Virtual Machine\\Guest\\Parameters\").GetValue(...",
+    "content": "use the powershell command below if you ever need to find out on wich Hyper-V server your vm is running.Run as admin:(get-item \"HKLM:\\SOFTWARE\\Microsoft\\Virtual Machine\\Guest\\Parameters\").GetValue(\"HostName\")"
+  },
+  
+  {
+    "title": "Azure AD join error code 8018000a – This device is already enrolled",
+    "url": "/posts/AzureADJoinError8018000a/",
+    "categories": "Azure, Intune",
+    "tags": "windows, 10, 11, powershell, error, azuread",
+    "date": "2023-01-05 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "if you ever encounter this error code then it means your device was already Azure AD joined in the past.To clear the registry execute the following in an elevated powershell.##This script checks fo...",
+    "content": "if you ever encounter this error code then it means your device was already Azure AD joined in the past.To clear the registry execute the following in an elevated powershell.##This script checks for devices registered to AzureAD and removes them so you can successfully perform an AzureAD join. # We recommend you backup your registry prior to running. We take no responisbility for the use of this script.$sids = Get-ChildItem 'HKLM:\\SOFTWARE\\Microsoft\\EnterpriseResourceManager\\Tracked' -name |where-object {$_.Length -gt 25}Foreach ($sid in $sids){Write-host \"Found a registered device. Would you like to remove the device registration settings for SID: $($sid)?\" -ForegroundColor Yellow     $Readhost = Read-Host \" ( y / n ) \"     Switch ($ReadHost)      {        Y {Write-host \"Yes, Remove registered device\"; $removedevice=$true}        N {Write-Host \"No, do not remove device registration\"; $removedevice=$false}        Default {Write-Host \"Default, Do not remove device registration\"; $removedevice=$false}      } if ($removedevice -eq $true) {$enrollmentpath = \"HKLM:\\SOFTWARE\\Microsoft\\Enrollments\\$($sid)\"$entresourcepath = \"HKLM:\\SOFTWARE\\Microsoft\\EnterpriseResourceManager\\Tracked\\$($sid)\"##Remove device from enrollments in registry$value1 = Test-Path $enrollmentpathIf ($value1 -eq $true) {write-host \"$($sid) exists and will be removed\"Remove-Item -Path $enrollmentpath -Recurse -confirm:$falseRemove-Item -Path $entresourcepath -Recurse -confirm:$false} Else {Write-Host \"The value does not exist, skipping\"}##Cleanup scheduled tasks related to device enrollment and the folder for this SIDGet-ScheduledTask -TaskPath \"\\Microsoft\\Windows\\EnterpriseMgmt\\$($sid)\\*\"| Unregister-ScheduledTask -Confirm:$false$scheduleObject = New-Object -ComObject Schedule.Service$scheduleObject.connect()$rootFolder = $scheduleObject.GetFolder(\"\\Microsoft\\Windows\\EnterpriseMgmt\")$rootFolder.DeleteFolder($sid,$null)Write-Host \"Device registration cleaned up for $($sid). If there is more than 1 device registration, we will continue to the next one.\"pause} else { Write-host \"Removal has been cancelled for $($sid)\"}}write-host \"Cleanup of device registration has been completed. Ensure you delete the device registration in AzureAD and you can now join your device.\""
+  },
+  
+  {
+    "title": "Installing Office 365 on a Remote Desktop Host!",
+    "url": "/posts/RemoteDesktopPart4/",
+    "categories": "Windows, Server",
+    "tags": "server, 2022, rdp, part4, office, o365",
+    "date": "2023-01-04 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will install the Office 365 Suite on a Remote Desktop Host with Shared Licensing. This way our users can use the Office Suite and activate it with their own O365 license.    Be sur...",
+    "content": "In this video we will install the Office 365 Suite on a Remote Desktop Host with Shared Licensing. This way our users can use the Office Suite and activate it with their own O365 license.    Be sure to check out the previous video where we configured Remote Desktop Services:Server 2022 - Remote Desktop Services - Part 1Server 2022 - Remote Desktop Services - Part 2Server 2022 - Remote Desktop Services - Part 3"
+  },
+  
+  {
+    "title": "Server 2022 - Remote Desktop Services - Part 3",
+    "url": "/posts/RemoteDesktopPart3/",
+    "categories": "Windows, Server",
+    "tags": "server, 2022, rdp, part3",
+    "date": "2023-01-03 10:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will install and configure FSLogix.With FSLogix we are moving the User Data away from the Remote Desktop Host and store it on a dedicated fileshare.With this we can expand our Remo...",
+    "content": "In this video we will install and configure FSLogix.With FSLogix we are moving the User Data away from the Remote Desktop Host and store it on a dedicated fileshare.With this we can expand our Remote Desktop Hosts and User Data roaming will be more flexible.SourceDownload LinkBe sure to check out the previous video where we configured Remote Desktop Services:Server 2022 - Remote Desktop Services - Part 1Server 2022 - Remote Desktop Services - Part 2    "
+  },
+  
+  {
+    "title": "Manage Local Admins with Group Policy on Workstations",
+    "url": "/posts/GPOLocalAdmins/",
+    "categories": "Windows, Server",
+    "tags": "server, 2022, ad, gpo, admin",
+    "date": "2023-01-02 11:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will be managing our Local Admins with Group Policy’s.In the first part i will show you how to delete all die local administrators and only leave the Domain Admins.In the second pa...",
+    "content": "In this video we will be managing our Local Admins with Group Policy’s.In the first part i will show you how to delete all die local administrators and only leave the Domain Admins.In the second part we will be using the Managed By field in Active directory to assign a ‘Primary User’ to the workstation. With this the ‘Primary User’ has local admin rights only on that assigned workstation.    Screenshots + Ldap Query’s1st LDAP Query:(&amp;(objectCategory=computer)(objectClass=computer)(name=%COMPUTERNAME%))managedbyPrimaryUser2nd LDAP Query:(&amp;(|(objectClass=group)(objectClass=user))(distinguishedName=%PrimaryUser%))sAMAccountNamePrimaryUser"
+  },
+  
+  {
+    "title": "AutoPilot - Hybrid Azure AD",
+    "url": "/posts/Autopilot/",
+    "categories": "Azure, Intune",
+    "tags": "server, 2022, azure, hybrid, autopilot",
+    "date": "2023-01-02 10:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will be using the power of Autopilot / Intune / Active Directory Group Policy’s to create a Hybrid Azure Joined Device.What will be included in this video:  Installing Intune conne...",
+    "content": "In this video we will be using the power of Autopilot / Intune / Active Directory Group Policy’s to create a Hybrid Azure Joined Device.What will be included in this video:  Installing Intune connector for Active Directory.  Create a specific Organisational Unit for our Autopilot Devices.  Create a Dynamic Security Group for our Autopilot Devices.  Create an Hybrid Azure AD joined Autopilot profile and Domain Join configuration in Intune. You can also change this to Azure AD Joined and skip the Domain Join Configuration if you only want to Azure AD Join your devices.  Azure AD join our new device to enroll(*) them into Intune. Reset the new device so autopilot can automatilcy Hybrid join our new device into Active Directory.(*)You can enroll your devices into Auto Pilot in other (more automated ways). Please let me know in the comments of this is something you would like to see.Source    "
+  },
+  
+  {
+    "title": "Server 2022 - Remote Desktop Services - Part 2",
+    "url": "/posts/RemoteDesktopPart2/",
+    "categories": "Windows, Server",
+    "tags": "server, 2022, rdp, part2",
+    "date": "2022-12-31 10:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will create some Group Policy’s to improve the user experience when connecting to the Remote Desktop Service.Be sure to check out the previous video where we configured Remote Desk...",
+    "content": "In this video we will create some Group Policy’s to improve the user experience when connecting to the Remote Desktop Service.Be sure to check out the previous video where we configured Remote Desktop Services:Server 2022 - Remote Desktop Services - Part 1    "
+  },
+  
+  {
+    "title": "Intune - Applications and Policy's",
+    "url": "/posts/IntuneAppsAndPolicy/",
+    "categories": "Azure, Intune",
+    "tags": "server, 2022, azure, intune, hybrid",
+    "date": "2022-12-30 10:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will be taking advantage of our Hybrid Active Directory / Azure Directory configuration.Be sure to check out the previous video where we configured the prerequisites:Windows 11 - A...",
+    "content": "In this video we will be taking advantage of our Hybrid Active Directory / Azure Directory configuration.Be sure to check out the previous video where we configured the prerequisites:Windows 11 - Active Directory - Hybrid Join - Azure ADServer 2022 - Active Directory - Importing ADMX and Installing applications with Group PolicyNow we will be deploying the Office Suite (Word/Outlook/…) and Administrative templates to our Hybrid AD joined devices with intune!    "
+  },
+  
+  {
+    "title": "Windows 11 - Active Directory - Hybrid Join - Azure AD",
+    "url": "/posts/Windows11HybridADJoin/",
+    "categories": "Windows, 11",
+    "tags": "server, 2022, azure, hybrid",
+    "date": "2022-12-29 10:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will be configuring Hybrid Azure Ad Join within our Active Directory. We will also enable MDM Enrollment with a Group Policy.With this we can use Intune AND our local Group Policy’...",
+    "content": "In this video we will be configuring Hybrid Azure Ad Join within our Active Directory. We will also enable MDM Enrollment with a Group Policy.With this we can use Intune AND our local Group Policy’s combined. More on this in a later video, so be sure to subscribe!    "
+  },
+  
+  {
+    "title": "Server 2022 - Azure AD Connect sync",
+    "url": "/posts/AzureADConnectSync/",
+    "categories": "Windows, Server",
+    "tags": "server, 2022, azure",
+    "date": "2022-12-28 10:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we are connecting our Server 2022 Active Directory with Azure AD.After this we will AD Sync our selected User and Security Group Ou’s.First step:We will create a security group for a ...",
+    "content": "In this video we are connecting our Server 2022 Active Directory with Azure AD.After this we will AD Sync our selected User and Security Group Ou’s.First step:We will create a security group for a controlled test Sync. To automate things further we will create a GPO for Seamless Sign On for our clients and create a Security Group to automate assigning licenses to our AAD Synced users.Second step:After our ‘testing phase’ we will disconnect the security group so everybody withing our OU structure will automticly sync.Try O365Download Link Azure AD ConnectDeploy Single Sign On    "
+  },
+  
+  {
+    "title": "Server 2022 - Remote Desktop Services - Part 1",
+    "url": "/posts/RemoteDesktopPart1/",
+    "categories": "Windows, Server",
+    "tags": "server, 2022, rdp, part1",
+    "date": "2022-12-27 10:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will deploying Remote Desktop Services.In Part 1 we deploy a Broker,Host, Web Access and a Gateway.You will be needing at least 2 Domain Joined (Virtual Machines) Servers. A public...",
+    "content": "In this video we will deploying Remote Desktop Services.In Part 1 we deploy a Broker,Host, Web Access and a Gateway.You will be needing at least 2 Domain Joined (Virtual Machines) Servers. A public domain name a Public certificate (For our lab environment we will be using a Lets Encrypt certificate, for production environments an paid Certificate is recommended).1 Server will be needed for our Broker/Web Acces and Gateway services. This server will have to be configured with a fixed ip and ports 80,433 will need to be port forwarded in your Router/firewall to this server.1 Server will be needed for our RDS Host.    "
+  },
+  
+  {
+    "title": "Server 2022 - Active Directory - Importing ADMX and Installing applications with Group Policy",
+    "url": "/posts/ActiveDirectoryADMX/",
+    "categories": "Windows, Server",
+    "tags": "server, 2022, gpo",
+    "date": "2022-12-26 10:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will show how to import Administrative templates from other vendors (Foxit/Google/…) and also Import extra Administrative templates for  Microsoft Edge/Onedrive/Office.In the secon...",
+    "content": "In this video we will show how to import Administrative templates from other vendors (Foxit/Google/…) and also Import extra Administrative templates for  Microsoft Edge/Onedrive/Office.In the second part of the video we will be installing third party software with the help of a Group Policy (GPO).Download links for all the ADMX/Installer files used:Foxit Enterprise .MSI + ADMXGoogle Chrome Enterprise + ADMXOffice 365/2019/2016 ADMXMicrosoft Edge Browser + ADMX    "
+  },
+  
+  {
+    "title": "Server 2022  - Create Organizational Unit's and Group Policy's",
+    "url": "/posts/CreateOUAndGPO/",
+    "categories": "Windows, Server",
+    "tags": "server, 2022, gpo",
+    "date": "2022-12-25 10:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we are setting up some basic Organizational Unit’s and showing how to start with Group Policy’s.    ",
+    "content": "In this video we are setting up some basic Organizational Unit’s and showing how to start with Group Policy’s.    "
+  },
+  
+  {
+    "title": "Windows 11 - Fix 22H2 Remote Desktop issues!",
+    "url": "/posts/Windows11-fixrdpbug/",
+    "categories": "Windows, 11",
+    "tags": "windows, 11, rdp, bugfix, register",
+    "date": "2022-12-24 10:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will create a specific Group Policy for Windows 11 22H2 clients. With this policy we will disable the usage of UDP with rdp clients and force them to use TCP.Because UDP is normall...",
+    "content": "In this video we will create a specific Group Policy for Windows 11 22H2 clients. With this policy we will disable the usage of UDP with rdp clients and force them to use TCP.Because UDP is normally faster then TCP we only want to apply this Policy to our affected Windows 11 22H2 Devices. We will be using WMI Filters for this.SourceTo disable UDP connections:In regedit go to:HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services\\ClientCreate a new DWORD entry named:fClientDisableUDPWith a value of 1, and restart the device.    "
+  },
+  
+  {
+    "title": "Windows 11 Domain Join",
+    "url": "/posts/Windows11DomainJoin/",
+    "categories": "Windows, 11",
+    "tags": "windows, 11",
+    "date": "2022-12-23 10:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we will join Windows 11 into the Active Directory.    ",
+    "content": "In this video we will join Windows 11 into the Active Directory.    "
+  },
+  
+  {
+    "title": "Server 2022 - Installing Active Directory and Setting up DNS",
+    "url": "/posts/InstallingAD/",
+    "categories": "Windows, Server",
+    "tags": "server, 2022, ad",
+    "date": "2022-12-22 10:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we are installing Active Directory and setting up our DNS server.    ",
+    "content": "In this video we are installing Active Directory and setting up our DNS server.    "
+  },
+  
+  {
+    "title": "Server 2022 - Hyper-V - Install Windows 11",
+    "url": "/posts/Server2022-Hyper-V-InstallWindows11/",
+    "categories": "Windows, Server, 2022, 11",
+    "tags": "11, server, 2022, hyper-v, virtualisation",
+    "date": "2022-12-19 09:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "    In this short video we will install Windows 11 within Server 2022 Hyper-v.We will show you how to enable TPM which is needed for Windows 11 to install.",
+    "content": "    In this short video we will install Windows 11 within Server 2022 Hyper-v.We will show you how to enable TPM which is needed for Windows 11 to install."
+  },
+  
+  {
+    "title": "Server 2022 - Hyper-V - Virtual Machine Templates",
+    "url": "/posts/Server2022-Hyper-V-VirtualMachineTemplates/",
+    "categories": "Windows, Server, 2022",
+    "tags": "server, 2022, hyper-v, virtualisation",
+    "date": "2022-12-18 09:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "    In this video we are going to create a virtual machine template.With this template we can create as many virtual machines as we like within minutes.Be sure to also watch the ‘Enable Deduplicati...",
+    "content": "    In this video we are going to create a virtual machine template.With this template we can create as many virtual machines as we like within minutes.Be sure to also watch the ‘Enable Deduplication’ video to see how we can reduce to disk space used with our template."
+  },
+  
+  {
+    "title": "Server 2022 - Hyper V - Enable Deduplication",
+    "url": "/posts/Server2022-HyperV-EnableDeduplication/",
+    "categories": "Windows, Server, 2022",
+    "tags": "server, 2022, hyper-v, virtualisation, deduplication",
+    "date": "2022-12-17 10:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "In this video we are enabling the power of deduplication withing Server 2022.Stay tuned for future video’s on how we can use this feature in combination with Virtual Machine templates!    ",
+    "content": "In this video we are enabling the power of deduplication withing Server 2022.Stay tuned for future video’s on how we can use this feature in combination with Virtual Machine templates!    "
+  },
+  
+  {
+    "title": "Server 2022 - Installing Hyper-v Role",
+    "url": "/posts/Server2022-Installing-Hyper-V-Role/",
+    "categories": "Windows, Server, 2022",
+    "tags": "server, 2022, hyper-v, virtualisation",
+    "date": "2022-12-17 09:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "    In this video we are going to install the Hyper-V Role within Server 2022.",
+    "content": "    In this video we are going to install the Hyper-V Role within Server 2022."
+  }
+  
+]
+
