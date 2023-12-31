@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Mylemans Online</title>
   <subtitle>A minimal website for tech tips, blogs and video documentation.</subtitle>
-  <updated>2023-12-27T13:31:45+01:00</updated>
+  <updated>2023-12-31T13:15:01+01:00</updated>
   <author>
     <name>Marc Mylemans</name>
     <uri>http://localhost:4000/</uri>
@@ -20,11 +20,95 @@
 
   
   <entry>
+    <title>Creating a Simple Flask Project - Simple Website</title>
+    <link href="http://localhost:4000/posts/SimpleFlaskWebsite/" rel="alternate" type="text/html" title="Creating a Simple Flask Project - Simple Website" />
+    <published>2023-12-27T10:30:00+01:00</published>
+  
+    <updated>2023-12-27T10:30:00+01:00</updated>
+  
+    <id>http://localhost:4000/posts/SimpleFlaskWebsite/</id>
+    <content src="http://localhost:4000/posts/SimpleFlaskWebsite/" />
+    <author>
+      <name>Marc Mylemans</name>
+    </author>
+
+  
+    
+    <category term="python" />
+    
+    <category term="flask" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Creating a Simple Flask Project - Hello  World!
+
+Requirements
+
+Downloading Python is a straightforward process. You can obtain the latest version from the official Python Downloads page.
+
+Once you’ve downloaded the Python installer, the installation process is made easy with a user-friendly wizard. If you prefer step-by-step guidance, you can refer to the official documentation on using Python ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Creating a Simple Flask Project - Hello  World!</title>
+    <link href="http://localhost:4000/posts/SimpleFlaskProject/" rel="alternate" type="text/html" title="Creating a Simple Flask Project - Hello  World!" />
+    <published>2023-12-27T10:00:00+01:00</published>
+  
+    <updated>2023-12-31T12:57:39+01:00</updated>
+  
+    <id>http://localhost:4000/posts/SimpleFlaskProject/</id>
+    <content src="http://localhost:4000/posts/SimpleFlaskProject/" />
+    <author>
+      <name>Marc Mylemans</name>
+    </author>
+
+  
+    
+    <category term="python" />
+    
+    <category term="flask" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Creating a Simple Flask Project - Hello  World!
+
+Requirements
+
+Downloading Python is a straightforward process. You can obtain the latest version from the official Python Downloads page.
+
+Once you’ve downloaded the Python installer, the installation process is made easy with a user-friendly wizard. If you prefer step-by-step guidance, you can refer to the official documentation on using Python ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
     <title>installing a Unifi Controller with Docker and Lets Encrypt!</title>
     <link href="http://localhost:4000/posts/InstallingUnifiDockerLetsEncrypt/" rel="alternate" type="text/html" title="installing a Unifi Controller with Docker and Lets Encrypt!" />
     <published>2023-12-27T10:00:00+01:00</published>
   
-    <updated>2023-12-27T12:42:27+01:00</updated>
+    <updated>2023-12-27T10:00:00+01:00</updated>
   
     <id>http://localhost:4000/posts/InstallingUnifiDockerLetsEncrypt/</id>
     <content src="http://localhost:4000/posts/InstallingUnifiDockerLetsEncrypt/" />
@@ -76,7 +160,7 @@ sudo apt install apt-transport-https ca-certificates curl software-properties-co
     <link href="http://localhost:4000/posts/Python_WifiQRCodeGenerator/" rel="alternate" type="text/html" title="Wi-Fi QR Code Generator" />
     <published>2023-12-04T00:00:00+01:00</published>
   
-    <updated>2023-12-27T13:07:35+01:00</updated>
+    <updated>2023-12-04T00:00:00+01:00</updated>
   
     <id>http://localhost:4000/posts/Python_WifiQRCodeGenerator/</id>
     <content src="http://localhost:4000/posts/Python_WifiQRCodeGenerator/" />
@@ -181,88 +265,6 @@ CSV File:
 Provide the location of a CSV file containing URLs.
 
 Output Dir...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Converting Python Scripts to Executables</title>
-    <link href="http://localhost:4000/posts/PythonToExecutable/" rel="alternate" type="text/html" title="Converting Python Scripts to Executables" />
-    <published>2023-12-04T00:00:00+01:00</published>
-  
-    <updated>2023-12-04T09:53:10+01:00</updated>
-  
-    <id>http://localhost:4000/posts/PythonToExecutable/</id>
-    <content src="http://localhost:4000/posts/PythonToExecutable/" />
-    <author>
-      <name>Marc Mylemans</name>
-    </author>
-
-  
-    
-    <category term="Python" />
-    
-    <category term="Script" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Introduction
-
-Python is a powerful and versatile programming language, widely used for scripting and automation. However, when you want to share your Python scripts with others who may not have Python installed, converting them into executable files becomes crucial. In this guide, we’ll explore various tools and techniques to turn your Python scripts into standalone executables for different op...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Drivemapping with Registery key's</title>
-    <link href="http://localhost:4000/posts/DrivemapRegistery/" rel="alternate" type="text/html" title="Drivemapping with Registery key&amp;apos;s" />
-    <published>2023-11-28T00:00:00+01:00</published>
-  
-    <updated>2023-11-28T15:00:57+01:00</updated>
-  
-    <id>http://localhost:4000/posts/DrivemapRegistery/</id>
-    <content src="http://localhost:4000/posts/DrivemapRegistery/" />
-    <author>
-      <name>Marc Mylemans</name>
-    </author>
-
-  
-    
-    <category term="windows" />
-    
-    <category term="registery" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Configuring Drivemapping with Registeryg Keys!
-
-Save the following as Drivemap.reg, make sure you replace HKEY_CURRENT_USER\Network\Z with the Driveletter you want to use, for example Z. take note that these settings are for the Current User that is logged on to the system.
-
-Windows Registry Editor Version 5.00
-
-[HKEY_CURRENT_USER\Network\Z]
-"ConnectFlags"=dword:00000000
-"ConnectionType"=dword:...
     </summary>
   
 
