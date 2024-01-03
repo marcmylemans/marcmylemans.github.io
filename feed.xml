@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Mylemans Online</title>
   <subtitle>A minimal website for tech tips, blogs and video documentation.</subtitle>
-  <updated>2024-01-03T20:10:50+01:00</updated>
+  <updated>2024-01-03T20:19:16+01:00</updated>
   <author>
     <name>Marc Mylemans</name>
     <uri>http://localhost:4000/</uri>
@@ -24,7 +24,7 @@
     <link href="http://localhost:4000/posts/AzureAD-EnableLAPS/" rel="alternate" type="text/html" title="Implementing LAPS in Microsoft Entra and Intune" />
     <published>2024-01-03T00:00:00+01:00</published>
   
-    <updated>2024-01-03T13:26:41+01:00</updated>
+    <updated>2024-01-03T20:19:10+01:00</updated>
   
     <id>http://localhost:4000/posts/AzureAD-EnableLAPS/</id>
     <content src="http://localhost:4000/posts/AzureAD-EnableLAPS/" />
@@ -50,6 +50,9 @@
 
       Implementing LAPS in Microsoft Entra and Intune
 
+
+    
+
 Essential Preparations
 
 Before integrating LAPS (Local Administrator Password Solution) with Intune, verify that your Windows platform is supported:
@@ -57,7 +60,7 @@ Before integrating LAPS (Local Administrator Password Solution) with Intune, ver
 
   Windows 10 version 20H2 or later, updated with the security patch from April 11, 2023
   Windows 11 version 21H2 or later, also updated as of April 11, 2023
-  Windows Server 2019 and subsequent ve...
+  Windows Server 2019 and subseq...
     </summary>
   
 
