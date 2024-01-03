@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Mylemans Online</title>
   <subtitle>A minimal website for tech tips, blogs and video documentation.</subtitle>
-  <updated>2023-12-31T13:29:40+01:00</updated>
+  <updated>2024-01-03T20:10:50+01:00</updated>
   <author>
     <name>Marc Mylemans</name>
     <uri>http://localhost:4000/</uri>
@@ -13,10 +13,55 @@
   <link rel="alternate" type="text/html" hreflang="en"
     href="http://localhost:4000/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
-  <rights> © 2023 Marc Mylemans </rights>
+  <rights> © 2024 Marc Mylemans </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Implementing LAPS in Microsoft Entra and Intune</title>
+    <link href="http://localhost:4000/posts/AzureAD-EnableLAPS/" rel="alternate" type="text/html" title="Implementing LAPS in Microsoft Entra and Intune" />
+    <published>2024-01-03T00:00:00+01:00</published>
+  
+    <updated>2024-01-03T13:26:41+01:00</updated>
+  
+    <id>http://localhost:4000/posts/AzureAD-EnableLAPS/</id>
+    <content src="http://localhost:4000/posts/AzureAD-EnableLAPS/" />
+    <author>
+      <name>Marc Mylemans</name>
+    </author>
+
+  
+    
+    <category term="EntraID" />
+    
+    <category term="Laps" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Implementing LAPS in Microsoft Entra and Intune
+
+Essential Preparations
+
+Before integrating LAPS (Local Administrator Password Solution) with Intune, verify that your Windows platform is supported:
+
+
+  Windows 10 version 20H2 or later, updated with the security patch from April 11, 2023
+  Windows 11 version 21H2 or later, also updated as of April 11, 2023
+  Windows Server 2019 and subsequent ve...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -24,7 +69,7 @@
     <link href="http://localhost:4000/posts/SimpleFlaskWebsite/" rel="alternate" type="text/html" title="Creating a Simple Flask Project - Simple Website" />
     <published>2023-12-27T10:30:00+01:00</published>
   
-    <updated>2023-12-27T10:30:00+01:00</updated>
+    <updated>2023-12-31T13:30:18+01:00</updated>
   
     <id>http://localhost:4000/posts/SimpleFlaskWebsite/</id>
     <content src="http://localhost:4000/posts/SimpleFlaskWebsite/" />
@@ -206,65 +251,6 @@ Usage
     Run the Script:
 
     Execute the script by running the followin...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>URL QR Code Generator</title>
-    <link href="http://localhost:4000/posts/Python_URLQRCodeGenerator/" rel="alternate" type="text/html" title="URL QR Code Generator" />
-    <published>2023-12-04T00:00:00+01:00</published>
-  
-    <updated>2023-12-04T00:00:00+01:00</updated>
-  
-    <id>http://localhost:4000/posts/Python_URLQRCodeGenerator/</id>
-    <content src="http://localhost:4000/posts/Python_URLQRCodeGenerator/" />
-    <author>
-      <name>Marc Mylemans</name>
-    </author>
-
-  
-    
-    <category term="Python" />
-    
-    <category term="Script" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      QR Code Generator Script
-
-This script allows you to generate QR codes from either a single URL or a CSV file containing multiple URLs.
-
-Source:
-
-Usage
-
-Run the script and follow the prompts to provide input and output information:
-
-python script_name.py
-
-
-Options
-
-Single URL:
-
-Provide a single URL to generate a QR code.
-
-CSV File:
-
-Provide the location of a CSV file containing URLs.
-
-Output Dir...
     </summary>
   
 
