@@ -569,6 +569,49 @@
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
 
   
   
@@ -657,9 +700,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="49 words"
+  title="2031 words"
 >
-  <em>1 min</em> read</span>
+  <em>11 min</em> read</span>
 
       </div>
       <!-- .d-flex -->
@@ -671,10 +714,618 @@
     <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
 <div class="embed-container">    <iframe title="YouTube video player" width="640" height="390" src="//www.youtube.com/embed/14-tJsdW7LU" frameborder="0" allowfullscreen=""></iframe></div>
 
-<p>In this video we are going to create a virtual machine template.
-With this template we can create as many virtual machines as we like within minutes.</p>
+<p>Welcome to a crucial part of managing and optimizing your virtual environment using Hyper-V on Windows Server 2022. In this video, we are going to delve into the process of creating a virtual machine template. This is a key step in maximizing efficiency and scalability in your virtualization strategy.</p>
 
-<p>Be sure to also watch the ‘Enable Deduplication’ video to see how we can reduce to disk space used with our template.</p>
+<p>A virtual machine template is essentially a master copy of a virtual machine that can be used repeatedly to create new instances. This ensures that each VM is configured consistently, with the same set of files, settings, and software. This process not only saves time but also greatly reduces the possibility of human error during the VM creation process.</p>
+
+<h3 id="why-use-vm-templates"><span class="me-2">Why Use VM Templates?</span><a href="#why-use-vm-templates" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ol>
+  <li><strong>Speed and Efficiency</strong>: Deploy new virtual machines within minutes, not hours, keeping your environment agile and responsive.</li>
+  <li><strong>Consistency and Standardization</strong>: Ensure that each VM is set up with the exact same configuration, which is crucial for testing environments and load balancing.</li>
+  <li><strong>Ease of Management</strong>: With templates, you can manage your base image in one place, ensuring that updates or changes are uniformly implemented.</li>
+</ol>
+
+<p>In the video, I will walk you through the step-by-step process of creating a VM template in Windows Server 2022’s Hyper-V. We’ll cover everything from selecting the right base image to configuring the VM settings for optimal use.</p>
+
+<h3 id="the-script-for-automation"><span class="me-2">The Script for Automation</span><a href="#the-script-for-automation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>To further streamline this process, I’ve included a PowerShell script that automates the creation and configuration of VMs from the template. This script allows for the specification of various parameters like the number of CPUs, amount of RAM, and network settings, making it highly customizable to your needs.</p>
+
+<h3 id="disclaimer-for-script-usage"><span class="me-2">Disclaimer for Script Usage</span><a href="#disclaimer-for-script-usage" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p><strong>Please read the following disclaimer carefully before proceeding with the script implementation:</strong></p>
+
+<p>Please note that the script provided in this blog post is intended for educational and professional use only. Before implementing the script, consider the following:</p>
+
+<p>Compatibility and Environment: Ensure that the script is compatible with your system’s configuration and Windows Server version. The script is designed for Windows Server 2022 and Hyper-V environments.</p>
+
+<p>Modification and Testing: You may need to modify the script to suit your specific environment or requirements. It is strongly recommended to test the script in a non-production environment before deploying it in a live setting.</p>
+
+<p>Data and System Integrity: While every effort has been made to ensure the reliability of the script, I am not responsible for any data loss or system disruptions that may occur from its use. Always back up your data and configuration settings before running any new scripts.</p>
+
+<p>Expertise Required: The implementation of this script should be conducted by individuals with an understanding of Windows Server administration, Hyper-V, and PowerShell scripting.</p>
+
+<p>Support and Updates: This script is provided ‘as is’, without warranty of any kind. As such, there is no ongoing support or guarantee of future updates.</p>
+
+<p>By using this script, you acknowledge and accept the risks associated with its deployment and agree to do so at your own discretion and liability.</p>
+
+<p>Here’s the script:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Powershell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+</pre></td><td class="rouge-code"><pre><span class="c">######################################################</span><span class="w">
+</span><span class="c">###              Template Definition               ###</span><span class="w">
+</span><span class="c">######################################################</span><span class="w">
+
+</span><span class="c"># Sysprep VHD path (The VHD will be copied to the VM folder)</span><span class="w">
+</span><span class="nv">$SysVHDPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"C:\Path\To\Your\Template\vTemplateServer2022.vhdx"</span><span class="w">
+
+
+</span><span class="bp">$_</span><span class="n">Customer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Read-host</span><span class="p">(</span><span class="s1">'Wich Customer?'</span><span class="p">)</span><span class="w">
+</span><span class="bp">$_</span><span class="n">VM_Role</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Read-host</span><span class="p">(</span><span class="s1">'Give the VM a Role. Ex. DC = Domain Controller, TS = Terminal Server, DB/SQL = Database/SQL Server'</span><span class="p">)</span><span class="w">
+</span><span class="bp">$_</span><span class="n">TotalVMS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Read-Host</span><span class="p">(</span><span class="s1">'Total number of this vm Ex. srv-dc-01 - srv-dc-02'</span><span class="p">)</span><span class="w">
+</span><span class="bp">$_</span><span class="n">CPU_Cores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Read-Host</span><span class="p">(</span><span class="s1">'How many Cores to assign? Ex. 2, 4, 6,...'</span><span class="p">)</span><span class="w">
+</span><span class="p">[</span><span class="n">int64</span><span class="p">]</span><span class="bp">$_</span><span class="n">RAM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="n">GB</span><span class="o">*</span><span class="p">(</span><span class="n">Read-Host</span><span class="w"> </span><span class="s2">"How many RAM to assign? Ex. 4, 6, 8,..."</span><span class="p">)</span><span class="w">
+</span><span class="bp">$_</span><span class="n">VlanID</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">Read-Host</span><span class="p">(</span><span class="s1">'Wich Vlan to Assign? Ex. 002'</span><span class="p">)</span><span class="w">
+
+</span><span class="nv">$VMName</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="s2">"v"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="bp">$_</span><span class="n">VlanID</span><span class="w"> </span><span class="o">+</span><span class="s2">"-"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="bp">$_</span><span class="nx">Customer</span><span class="w"> </span><span class="o">+</span><span class="s2">"-ADC"</span><span class="w"> </span><span class="o">+</span><span class="s2">"-"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="bp">$_</span><span class="nx">VM_Role</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="bp">$_</span><span class="w">
+
+</span><span class="n">ECHO</span><span class="w"> </span><span class="nx">Creating</span><span class="w"> </span><span class="nx">New</span><span class="w"> </span><span class="nx">VM:</span><span class="w">
+
+
+</span><span class="mi">1</span><span class="o">..</span><span class="bp">$_</span><span class="n">TotalVMS</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">{</span><span class="w">
+
+</span><span class="c"># VM Name</span><span class="w">
+</span><span class="nv">$VMName</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="s2">"v"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="bp">$_</span><span class="n">VlanID</span><span class="w"> </span><span class="o">+</span><span class="s2">"-"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="bp">$_</span><span class="nx">Customer</span><span class="w"> </span><span class="o">+</span><span class="s2">"-"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="bp">$_</span><span class="nx">VM_Role</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="bp">$_</span><span class="w">
+</span><span class="c"># Automatic Start Action (Nothing = 0, Start =1, StartifRunning = 2)</span><span class="w">
+</span><span class="nv">$AutoStartAction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w">
+</span><span class="c"># In second</span><span class="w">
+</span><span class="nv">$AutoStartDelay</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="w">
+</span><span class="c"># Automatic Start Action (TurnOff = 0, Save =1, Shutdown = 2)</span><span class="w">
+</span><span class="nv">$AutoStopAction</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w">
+
+
+</span><span class="c">###### Hardware Configuration ######</span><span class="w">
+</span><span class="c"># VM Path</span><span class="w">
+</span><span class="nv">$VMPath</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s2">"C:\Path\To\Your\Virtual Machines"</span><span class="w">
+</span><span class="nv">$VHDPath</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">"C:\Path\To\Your\Virtual Hard Disks"</span><span class="w">
+
+</span><span class="c"># VM Generation (1 or 2)</span><span class="w">
+</span><span class="nv">$Gen</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w">
+
+</span><span class="c"># Processor Number</span><span class="w">
+</span><span class="nv">$ProcessorCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">$_</span><span class="n">CPU_Cores</span><span class="w">
+
+</span><span class="c">## Memory (Static = 0 or Dynamic = 1)</span><span class="w">
+</span><span class="nv">$Memory</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="c"># StaticMemory</span><span class="w">
+</span><span class="nv">$StaticMemory</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="bp">$_</span><span class="n">RAM</span><span class="w">
+
+</span><span class="c"># DynamicMemory</span><span class="w">
+</span><span class="nv">$StartupMemory</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="bp">$_</span><span class="n">RAM</span><span class="w">
+</span><span class="nv">$MinMemory</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="bp">$_</span><span class="n">RAM</span><span class="w">
+</span><span class="nv">$MaxMemory</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="bp">$_</span><span class="n">RAM</span><span class="w">
+
+
+</span><span class="c"># Rename the VHD copied in VM folder to:</span><span class="w">
+</span><span class="nv">$OsDiskName</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="nv">$VMName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"-C"</span><span class="w">
+
+</span><span class="c">### Additional virtual drives</span><span class="w">
+</span><span class="c">#$ExtraDrive  = @()</span><span class="w">
+</span><span class="c"># Drive 1</span><span class="w">
+</span><span class="c">#$Drive       = New-Object System.Object</span><span class="w">
+</span><span class="c">#$Drive       | Add-Member -MemberType NoteProperty -Name Name -Value Data</span><span class="w">
+</span><span class="c">#$Drive       | Add-Member -MemberType NoteProperty -Name Path -Value $($VHDPath + "\" + $VMName)</span><span class="w">
+</span><span class="c">#$Drive       | Add-Member -MemberType NoteProperty -Name Size -Value 10GB</span><span class="w">
+</span><span class="c">#$Drive       | Add-Member -MemberType NoteProperty -Name Type -Value Dynamic</span><span class="w">
+</span><span class="c">#$ExtraDrive += $Drive</span><span class="w">
+
+</span><span class="c"># Drive 2</span><span class="w">
+</span><span class="c">#$Drive       = New-Object System.Object</span><span class="w">
+</span><span class="c">#$Drive       | Add-Member -MemberType NoteProperty -Name Name -Value Bin</span><span class="w">
+</span><span class="c">#$Drive       | Add-Member -MemberType NoteProperty -Name Path -Value $($VHDPath + "\" + $VMName)</span><span class="w">
+</span><span class="c">#$Drive       | Add-Member -MemberType NoteProperty -Name Size -Value 20GB</span><span class="w">
+</span><span class="c">#$Drive       | Add-Member -MemberType NoteProperty -Name Type -Value Fixed</span><span class="w">
+</span><span class="c">#$ExtraDrive += $Drive</span><span class="w">
+</span><span class="c"># You can copy/delete this below block as you wish to create (or not) and attach several VHDX</span><span class="w">
+
+</span><span class="c">### Network Adapters</span><span class="w">
+</span><span class="c"># Primary Network interface: VMSwitch </span><span class="w">
+</span><span class="nv">$VMSwitchName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"vSwitch_LAN"</span><span class="w">
+</span><span class="nv">$VlanId</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="bp">$_</span><span class="n">VlanID</span><span class="w">
+</span><span class="nv">$VMQ</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="nv">$False</span><span class="w">
+</span><span class="nv">$IPSecOffload</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$False</span><span class="w">
+</span><span class="nv">$SRIOV</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="nv">$False</span><span class="w">
+</span><span class="nv">$MacSpoofing</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nv">$False</span><span class="w">
+</span><span class="nv">$DHCPGuard</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="nv">$False</span><span class="w">
+</span><span class="nv">$RouterGuard</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nv">$False</span><span class="w">
+</span><span class="nv">$NicTeaming</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nv">$False</span><span class="w">
+
+</span><span class="c">## Additional NICs</span><span class="w">
+</span><span class="nv">$NICs</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="p">@()</span><span class="w">
+
+</span><span class="c"># NIC 1</span><span class="w">
+</span><span class="c">#$NIC   = New-Object System.Object</span><span class="w">
+</span><span class="c">#$NIC   | Add-Member -MemberType NoteProperty -Name VMSwitch -Value "vSwitch"</span><span class="w">
+</span><span class="c">#$NIC   | Add-Member -MemberType NoteProperty -Name VLAN -Value 20</span><span class="w">
+</span><span class="c">#$NIC   | Add-Member -MemberType NoteProperty -Name VMQ -Value $False</span><span class="w">
+</span><span class="c">#$NIC   | Add-Member -MemberType NoteProperty -Name IPsecOffload -Value $True</span><span class="w">
+</span><span class="c">#$NIC   | Add-Member -MemberType NoteProperty -Name SRIOV -Value $False</span><span class="w">
+</span><span class="c">#$NIC   | Add-Member -MemberType NoteProperty -Name MacSpoofing -Value $False</span><span class="w">
+</span><span class="c">#$NIC   | Add-Member -MemberType NoteProperty -Name DHCPGuard -Value $False</span><span class="w">
+</span><span class="c">#$NIC   | Add-Member -MemberType NoteProperty -Name RouterGuard -Value $False</span><span class="w">
+</span><span class="c">#$NIC   | Add-Member -MemberType NoteProperty -Name NICTeaming -Value $False</span><span class="w">
+</span><span class="c">#$NICs += $NIC</span><span class="w">
+
+</span><span class="c">#NIC 2</span><span class="w">
+</span><span class="c">#$NIC   = New-Object System.Object</span><span class="w">
+</span><span class="c">#$NIC   | Add-Member -MemberType NoteProperty -Name VMSwitch -Value "LS_VMWorkload"</span><span class="w">
+</span><span class="c">#$NIC   | Add-Member -MemberType NoteProperty -Name VLAN -Value 20</span><span class="w">
+</span><span class="c">#$NIC   | Add-Member -MemberType NoteProperty -Name VMQ -Value $False</span><span class="w">
+</span><span class="c">#$NIC   | Add-Member -MemberType NoteProperty -Name IPsecOffload -Value $True</span><span class="w">
+</span><span class="c">#$NIC   | Add-Member -MemberType NoteProperty -Name SRIOV -Value $False</span><span class="w">
+</span><span class="c">#$NIC   | Add-Member -MemberType NoteProperty -Name MacSpoofing -Value $False</span><span class="w">
+</span><span class="c">#$NIC   | Add-Member -MemberType NoteProperty -Name DHCPGuard -Value $False</span><span class="w">
+</span><span class="c">#$NIC   | Add-Member -MemberType NoteProperty -Name RouterGuard -Value $False</span><span class="w">
+</span><span class="c">#$NIC   | Add-Member -MemberType NoteProperty -Name NICTeaming -Value $False</span><span class="w">
+</span><span class="c">#$NICs += $NIC</span><span class="w">
+</span><span class="c"># You can copy/delete the above block and set it for additional NIC</span><span class="w">
+
+
+</span><span class="c">######################################################</span><span class="w">
+</span><span class="c">###           VM Creation and Configuration        ###</span><span class="w">
+</span><span class="c">######################################################</span><span class="w">
+
+</span><span class="c">## Creation of the VM</span><span class="w">
+</span><span class="c"># Creation without VHD and with a default memory value (will be changed after)</span><span class="w">
+</span><span class="n">New-VM</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nv">$VMName</span><span class="w"> </span><span class="se">`
+</span><span class="w">       </span><span class="nt">-Path</span><span class="w"> </span><span class="nv">$VMPath</span><span class="w"> </span><span class="se">`
+</span><span class="w">       </span><span class="nt">-NoVHD</span><span class="w"> </span><span class="se">`
+</span><span class="w">       </span><span class="nt">-Generation</span><span class="w"> </span><span class="nv">$Gen</span><span class="w"> </span><span class="se">`
+</span><span class="w">       </span><span class="nt">-Version</span><span class="w"> </span><span class="nx">9.0</span><span class="w"> </span><span class="se">`
+</span><span class="w">       </span><span class="nt">-MemoryStartupBytes</span><span class="w"> </span><span class="nx">1GB</span><span class="w"> </span><span class="se">`
+</span><span class="w">       </span><span class="nt">-SwitchName</span><span class="w"> </span><span class="nv">$VMSwitchName</span><span class="w">
+
+
+</span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nv">$AutoStartAction</span><span class="w"> </span><span class="o">-eq</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span><span class="nv">$StartAction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Nothing"</span><span class="p">}</span><span class="w">
+</span><span class="kr">Elseif</span><span class="w"> </span><span class="p">(</span><span class="nv">$AutoStartAction</span><span class="w"> </span><span class="o">-eq</span><span class="w"> </span><span class="mi">1</span><span class="p">){</span><span class="nv">$StartAction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Start"</span><span class="p">}</span><span class="w">
+</span><span class="kr">Else</span><span class="p">{</span><span class="nv">$StartAction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"StartIfRunning"</span><span class="p">}</span><span class="w">
+
+</span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nv">$AutoStopAction</span><span class="w"> </span><span class="o">-eq</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span><span class="nv">$StopAction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"TurnOff"</span><span class="p">}</span><span class="w">
+</span><span class="kr">Elseif</span><span class="w"> </span><span class="p">(</span><span class="nv">$AutoStopAction</span><span class="w"> </span><span class="o">-eq</span><span class="w"> </span><span class="mi">1</span><span class="p">){</span><span class="nv">$StopAction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Save"</span><span class="p">}</span><span class="w">
+</span><span class="kr">Else</span><span class="p">{</span><span class="nv">$StopAction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Shutdown"</span><span class="p">}</span><span class="w">
+
+</span><span class="c">## Changing the number of processor and the memory</span><span class="w">
+</span><span class="c"># If Static Memory</span><span class="w">
+</span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nv">$Memory</span><span class="p">){</span><span class="w">
+    
+    </span><span class="n">Set-VM</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nv">$VMName</span><span class="w"> </span><span class="se">`
+</span><span class="w">           </span><span class="nt">-ProcessorCount</span><span class="w"> </span><span class="nv">$ProcessorCount</span><span class="w"> </span><span class="se">`
+</span><span class="w">           </span><span class="nt">-StaticMemory</span><span class="w"> </span><span class="se">`
+</span><span class="w">           </span><span class="nt">-MemoryStartupBytes</span><span class="w"> </span><span class="nv">$StaticMemory</span><span class="w"> </span><span class="se">`
+</span><span class="w">           </span><span class="nt">-AutomaticStartAction</span><span class="w"> </span><span class="nv">$StartAction</span><span class="w"> </span><span class="se">`
+</span><span class="w">           </span><span class="nt">-AutomaticStartDelay</span><span class="w"> </span><span class="nv">$AutoStartDelay</span><span class="w"> </span><span class="se">`
+</span><span class="w">           </span><span class="nt">-AutomaticStopAction</span><span class="w"> </span><span class="nv">$StopAction</span><span class="w">
+
+
+</span><span class="p">}</span><span class="w">
+</span><span class="c"># If Dynamic Memory</span><span class="w">
+</span><span class="kr">Else</span><span class="p">{</span><span class="w">
+    </span><span class="n">Set-VM</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nv">$VMName</span><span class="w"> </span><span class="se">`
+</span><span class="w">           </span><span class="nt">-ProcessorCount</span><span class="w"> </span><span class="nv">$ProcessorCount</span><span class="w"> </span><span class="se">`
+</span><span class="w">           </span><span class="nt">-DynamicMemory</span><span class="w"> </span><span class="se">`
+</span><span class="w">           </span><span class="nt">-MemoryMinimumBytes</span><span class="w"> </span><span class="nv">$MinMemory</span><span class="w"> </span><span class="se">`
+</span><span class="w">           </span><span class="nt">-MemoryStartupBytes</span><span class="w"> </span><span class="nv">$StartupMemory</span><span class="w"> </span><span class="se">`
+</span><span class="w">           </span><span class="nt">-MemoryMaximumBytes</span><span class="w"> </span><span class="nv">$MaxMemory</span><span class="w"> </span><span class="se">`
+</span><span class="w">           </span><span class="nt">-AutomaticStartAction</span><span class="w"> </span><span class="nv">$StartAction</span><span class="w"> </span><span class="se">`
+</span><span class="w">           </span><span class="nt">-AutomaticStartDelay</span><span class="w"> </span><span class="nv">$AutoStartDelay</span><span class="w"> </span><span class="se">`
+</span><span class="w">           </span><span class="nt">-AutomaticStopAction</span><span class="w"> </span><span class="nv">$StopAction</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c">## Set the primary network adapters</span><span class="w">
+</span><span class="nv">$PrimaryNetAdapter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Get-VM</span><span class="w"> </span><span class="nv">$VMName</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Get-VMNetworkAdapter</span><span class="w">
+</span><span class="nx">if</span><span class="w"> </span><span class="p">(</span><span class="nv">$VlanId</span><span class="w"> </span><span class="o">-gt</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span><span class="nv">$PrimaryNetAdapter</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapterVLAN</span><span class="w"> </span><span class="nt">-Access</span><span class="w"> </span><span class="nt">-VlanId</span><span class="w"> </span><span class="nv">$VlanId</span><span class="p">}</span><span class="w">
+</span><span class="kr">else</span><span class="p">{</span><span class="nv">$PrimaryNetAdapter</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapterVLAN</span><span class="w"> </span><span class="nt">-untagged</span><span class="p">}</span><span class="w">
+
+</span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nv">$VMQ</span><span class="p">){</span><span class="nv">$PrimaryNetAdapter</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-VmqWeight</span><span class="w"> </span><span class="nx">100</span><span class="p">}</span><span class="w">
+</span><span class="kr">Else</span><span class="w"> </span><span class="p">{</span><span class="nv">$PrimaryNetAdapter</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-VmqWeight</span><span class="w"> </span><span class="nx">0</span><span class="p">}</span><span class="w">
+
+</span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nv">$IPSecOffload</span><span class="p">){</span><span class="nv">$PrimaryNetAdapter</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-IPsecOffloadMaximumSecurityAssociation</span><span class="w"> </span><span class="nx">512</span><span class="p">}</span><span class="w">
+</span><span class="kr">Else</span><span class="w"> </span><span class="p">{</span><span class="nv">$PrimaryNetAdapter</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-IPsecOffloadMaximumSecurityAssociation</span><span class="w"> </span><span class="nx">0</span><span class="p">}</span><span class="w">
+
+</span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nv">$SRIOV</span><span class="p">){</span><span class="nv">$PrimaryNetAdapter</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-IovQueuePairsRequested</span><span class="w"> </span><span class="nx">1</span><span class="w"> </span><span class="nt">-IovInterruptModeration</span><span class="w"> </span><span class="nx">Default</span><span class="w"> </span><span class="nt">-IovWeight</span><span class="w"> </span><span class="nx">100</span><span class="p">}</span><span class="w">
+</span><span class="kr">Else</span><span class="p">{</span><span class="nv">$PrimaryNetAdapter</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-IovWeight</span><span class="w"> </span><span class="nx">0</span><span class="p">}</span><span class="w">
+
+</span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nv">$MacSpoofing</span><span class="p">){</span><span class="nv">$PrimaryNetAdapter</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-MacAddressSpoofing</span><span class="w"> </span><span class="nx">on</span><span class="p">}</span><span class="w">
+</span><span class="kr">Else</span><span class="w"> </span><span class="p">{</span><span class="nv">$PrimaryNetAdapter</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-MacAddressSpoofing</span><span class="w"> </span><span class="nx">off</span><span class="p">}</span><span class="w">
+
+</span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nv">$DHCPGuard</span><span class="p">){</span><span class="nv">$PrimaryNetAdapter</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-DHCPGuard</span><span class="w"> </span><span class="nx">on</span><span class="p">}</span><span class="w">
+</span><span class="kr">Else</span><span class="w"> </span><span class="p">{</span><span class="nv">$PrimaryNetAdapter</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-DHCPGuard</span><span class="w"> </span><span class="nx">off</span><span class="p">}</span><span class="w">
+
+</span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nv">$RouterGuard</span><span class="p">){</span><span class="nv">$PrimaryNetAdapter</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-RouterGuard</span><span class="w"> </span><span class="nx">on</span><span class="p">}</span><span class="w">
+</span><span class="kr">Else</span><span class="w"> </span><span class="p">{</span><span class="nv">$PrimaryNetAdapter</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-RouterGuard</span><span class="w"> </span><span class="nx">off</span><span class="p">}</span><span class="w">
+
+</span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nv">$NicTeaming</span><span class="p">){</span><span class="nv">$PrimaryNetAdapter</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-AllowTeaming</span><span class="w"> </span><span class="nx">on</span><span class="p">}</span><span class="w">
+</span><span class="kr">Else</span><span class="w"> </span><span class="p">{</span><span class="nv">$PrimaryNetAdapter</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-AllowTeaming</span><span class="w"> </span><span class="nx">off</span><span class="p">}</span><span class="w">
+
+
+
+</span><span class="c">## VHD(X) OS disk copy</span><span class="w">
+</span><span class="nv">$OsDiskInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Get-Item</span><span class="w"> </span><span class="nv">$SysVHDPath</span><span class="w">
+</span><span class="n">Copy-Item</span><span class="w"> </span><span class="nt">-Path</span><span class="w"> </span><span class="nv">$SysVHDPath</span><span class="w"> </span><span class="nt">-Destination</span><span class="w"> </span><span class="err">$</span><span class="p">(</span><span class="nv">$VHDPath</span><span class="p">)</span><span class="w">
+</span><span class="n">Rename-Item</span><span class="w"> </span><span class="nt">-Path</span><span class="w"> </span><span class="err">$</span><span class="p">(</span><span class="nv">$VHDPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"\"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">$OsDiskInfo</span><span class="o">.</span><span class="nf">Name</span><span class="p">)</span><span class="w"> </span><span class="nt">-NewName</span><span class="w"> </span><span class="err">$</span><span class="p">(</span><span class="nv">$OsDiskName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">$OsDiskInfo</span><span class="o">.</span><span class="nf">Extension</span><span class="p">)</span><span class="w">
+
+</span><span class="c"># Attach the VHD(x) to the VM</span><span class="w">
+</span><span class="n">Add-VMHardDiskDrive</span><span class="w"> </span><span class="nt">-VMName</span><span class="w"> </span><span class="nv">$VMName</span><span class="w"> </span><span class="nt">-Path</span><span class="w"> </span><span class="err">$</span><span class="p">(</span><span class="nv">$VHDPath</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"\"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">$OsDiskName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">$OsDiskInfo</span><span class="o">.</span><span class="nf">Extension</span><span class="p">)</span><span class="w">
+
+</span><span class="nv">$OsVirtualDrive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Get-VMHardDiskDrive</span><span class="w"> </span><span class="nt">-VMName</span><span class="w"> </span><span class="nv">$VMName</span><span class="w"> </span><span class="nt">-ControllerNumber</span><span class="w"> </span><span class="nx">0</span><span class="w">
+     
+</span><span class="c"># Change the boot order to the VHDX first</span><span class="w">
+</span><span class="n">Set-VMFirmware</span><span class="w"> </span><span class="nt">-VMName</span><span class="w"> </span><span class="nv">$VMName</span><span class="w"> </span><span class="nt">-FirstBootDevice</span><span class="w"> </span><span class="nv">$OsVirtualDrive</span><span class="w">
+
+</span><span class="c"># For additional each Disk in the collection</span><span class="w">
+</span><span class="kr">Foreach</span><span class="w"> </span><span class="p">(</span><span class="nv">$Disk</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nv">$ExtraDrive</span><span class="p">){</span><span class="w">
+    </span><span class="c"># if it is dynamic</span><span class="w">
+    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nv">$Disk</span><span class="o">.</span><span class="nf">Type</span><span class="w"> </span><span class="o">-like</span><span class="w"> </span><span class="s2">"Dynamic"</span><span class="p">){</span><span class="w">
+        </span><span class="n">New-VHD</span><span class="w"> </span><span class="nt">-Path</span><span class="w"> </span><span class="err">$</span><span class="p">(</span><span class="nv">$Disk</span><span class="o">.</span><span class="nf">Path</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"\"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">$Disk</span><span class="o">.</span><span class="nf">Name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">".vhdx"</span><span class="p">)</span><span class="w"> </span><span class="se">`</span><span class="w">
+                </span><span class="nt">-SizeBytes</span><span class="w"> </span><span class="nv">$Disk</span><span class="o">.</span><span class="nf">Size</span><span class="w"> </span><span class="se">`</span><span class="w">
+                </span><span class="nt">-Dynamic</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="c"># if it is fixed</span><span class="w">
+    </span><span class="kr">Elseif</span><span class="w"> </span><span class="p">(</span><span class="nv">$Disk</span><span class="o">.</span><span class="nf">Type</span><span class="w"> </span><span class="o">-like</span><span class="w"> </span><span class="s2">"Fixed"</span><span class="p">){</span><span class="w">
+        </span><span class="n">New-VHD</span><span class="w"> </span><span class="nt">-Path</span><span class="w"> </span><span class="err">$</span><span class="p">(</span><span class="nv">$Disk</span><span class="o">.</span><span class="nf">Path</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"\"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">$Disk</span><span class="o">.</span><span class="nf">Name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">".vhdx"</span><span class="p">)</span><span class="w"> </span><span class="se">`</span><span class="w">
+                </span><span class="nt">-SizeBytes</span><span class="w"> </span><span class="nv">$Disk</span><span class="o">.</span><span class="nf">Size</span><span class="w"> </span><span class="se">`</span><span class="w">
+                </span><span class="nt">-Fixed</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+    </span><span class="c"># Attach the VHD(x) to the Vm</span><span class="w">
+    </span><span class="n">Add-VMHardDiskDrive</span><span class="w"> </span><span class="nt">-VMName</span><span class="w"> </span><span class="nv">$VMName</span><span class="w"> </span><span class="se">`
+</span><span class="w">                        </span><span class="nt">-Path</span><span class="w"> </span><span class="err">$</span><span class="p">(</span><span class="nv">$Disk</span><span class="o">.</span><span class="nf">Path</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"\"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">$Disk</span><span class="o">.</span><span class="nf">Name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">".vhdx"</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="nv">$i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w">
+</span><span class="c"># foreach additional network adapters</span><span class="w">
+</span><span class="kr">Foreach</span><span class="w"> </span><span class="p">(</span><span class="nv">$NetAdapter</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nv">$NICs</span><span class="p">){</span><span class="w">
+    </span><span class="c"># add the NIC</span><span class="w">
+    </span><span class="n">Add-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-VMName</span><span class="w"> </span><span class="nv">$VMName</span><span class="w"> </span><span class="nt">-SwitchName</span><span class="w"> </span><span class="nv">$NetAdapter</span><span class="o">.</span><span class="nf">VMSwitch</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"Network Adapter </span><span class="nv">$i</span><span class="s2">"</span><span class="w">
+    
+    </span><span class="nv">$ExtraNic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Get-VM</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nv">$VMName</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Get-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"Network Adapter </span><span class="nv">$i</span><span class="s2">"</span><span class="w"> 
+    </span><span class="c"># Configure the NIC regarding the option</span><span class="w">
+    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nv">$NetAdapter</span><span class="o">.</span><span class="nf">VLAN</span><span class="w"> </span><span class="o">-gt</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span><span class="nv">$ExtraNic</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapterVLAN</span><span class="w"> </span><span class="nt">-Access</span><span class="w"> </span><span class="nt">-VlanId</span><span class="w"> </span><span class="nv">$NetAdapter</span><span class="o">.</span><span class="nf">VLAN</span><span class="p">}</span><span class="w">
+    </span><span class="kr">else</span><span class="p">{</span><span class="nv">$ExtraNic</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapterVLAN</span><span class="w"> </span><span class="nt">-untagged</span><span class="p">}</span><span class="w">
+
+    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nv">$NetAdapter</span><span class="o">.</span><span class="nf">VMQ</span><span class="p">){</span><span class="nv">$ExtraNic</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-VmqWeight</span><span class="w"> </span><span class="nx">100</span><span class="p">}</span><span class="w">
+    </span><span class="kr">Else</span><span class="w"> </span><span class="p">{</span><span class="nv">$ExtraNic</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-VmqWeight</span><span class="w"> </span><span class="nx">0</span><span class="p">}</span><span class="w">
+
+    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nv">$NetAdapter</span><span class="o">.</span><span class="nf">IPSecOffload</span><span class="p">){</span><span class="nv">$ExtraNic</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-IPsecOffloadMaximumSecurityAssociation</span><span class="w"> </span><span class="nx">512</span><span class="p">}</span><span class="w">
+    </span><span class="kr">Else</span><span class="w"> </span><span class="p">{</span><span class="nv">$ExtraNic</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-IPsecOffloadMaximumSecurityAssociation</span><span class="w"> </span><span class="nx">0</span><span class="p">}</span><span class="w">
+
+    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nv">$NetAdapter</span><span class="o">.</span><span class="nf">SRIOV</span><span class="p">){</span><span class="nv">$ExtraNic</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-IovQueuePairsRequested</span><span class="w"> </span><span class="nx">1</span><span class="w"> </span><span class="nt">-IovInterruptModeration</span><span class="w"> </span><span class="nx">Default</span><span class="w"> </span><span class="nt">-IovWeight</span><span class="w"> </span><span class="nx">100</span><span class="p">}</span><span class="w">
+    </span><span class="kr">Else</span><span class="p">{</span><span class="nv">$ExtraNic</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-IovWeight</span><span class="w"> </span><span class="nx">0</span><span class="p">}</span><span class="w">
+
+    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nv">$NetAdapter</span><span class="o">.</span><span class="nf">MacSpoofing</span><span class="p">){</span><span class="nv">$ExtraNic</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-MacAddressSpoofing</span><span class="w"> </span><span class="nx">on</span><span class="p">}</span><span class="w">
+    </span><span class="kr">Else</span><span class="w"> </span><span class="p">{</span><span class="nv">$ExtraNic</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-MacAddressSpoofing</span><span class="w"> </span><span class="nx">off</span><span class="p">}</span><span class="w">
+
+    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nv">$NetAdapter</span><span class="o">.</span><span class="nf">DHCPGuard</span><span class="p">){</span><span class="nv">$ExtraNic</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-DHCPGuard</span><span class="w"> </span><span class="nx">on</span><span class="p">}</span><span class="w">
+    </span><span class="kr">Else</span><span class="w"> </span><span class="p">{</span><span class="nv">$ExtraNic</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-DHCPGuard</span><span class="w"> </span><span class="nx">off</span><span class="p">}</span><span class="w">
+
+    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nv">$NetAdapter</span><span class="o">.</span><span class="nf">RouterGuard</span><span class="p">){</span><span class="nv">$ExtraNic</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-RouterGuard</span><span class="w"> </span><span class="nx">on</span><span class="p">}</span><span class="w">
+    </span><span class="kr">Else</span><span class="w"> </span><span class="p">{</span><span class="nv">$ExtraNic</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-RouterGuard</span><span class="w"> </span><span class="nx">off</span><span class="p">}</span><span class="w">
+
+    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nv">$NetAdapter</span><span class="o">.</span><span class="nf">NicTeaming</span><span class="p">){</span><span class="nv">$ExtraNic</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-AllowTeaming</span><span class="w"> </span><span class="nx">on</span><span class="p">}</span><span class="w">
+    </span><span class="kr">Else</span><span class="w"> </span><span class="p">{</span><span class="nv">$ExtraNic</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Set-VMNetworkAdapter</span><span class="w"> </span><span class="nt">-AllowTeaming</span><span class="w"> </span><span class="nx">off</span><span class="p">}</span><span class="w">
+
+    </span><span class="nv">$i</span><span class="o">++</span><span class="w">
+
+    
+</span><span class="p">}</span><span class="w">
+</span><span class="c">#Remove # If cluster</span><span class="w">
+</span><span class="c">#Add-ClusterVirtualMachineRole -VirtualMachine $VMName</span><span class="w">
+</span><span class="n">Set-VMProcessor</span><span class="w"> </span><span class="nv">$VMName</span><span class="w"> </span><span class="nt">-CompatibilityForMigrationEnabled</span><span class="w"> </span><span class="bp">$true</span><span class="w">
+</span><span class="n">Set-VMProcessor</span><span class="w"> </span><span class="nv">$vmname</span><span class="w"> </span><span class="nt">-MaximumCountPerNumaNode</span><span class="w"> </span><span class="nx">28</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></pre></td></tr></tbody></table></code></div></div>
+
+<p>Remember to adjust the script’s paths and filenames according to your 
+environment’s setup, such as:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>$SysVHDPath = "C:\Path\To\Your\Template\vTemplateServer2022.vhdx"
+</pre></td></tr></tbody></table></code></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>$VMPath         = "C:\Path\To\Your\Virtual Machines"
+</pre></td></tr></tbody></table></code></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>$VHDPath     = "C:\Path\To\Your\Virtual Hard Disks"
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>Be sure to also watch the <a href="https://mylemans.online/posts/Server2022-HyperV-EnableDeduplication/">‘Enable Deduplication’</a> video, which complements this guide. Deduplication is a powerful tool that can significantly reduce the disk space used by our templates. This is especially beneficial in environments where storage costs are a concern or where storage capacity is limited.</p>
+
+<p>Together, these resources will equip you with the knowledge and skills to effectively manage and scale your virtualized environment, making your IT infrastructure more robust, flexible, and cost-effective.</p>
+
+<p>Happy Virtualizing!</p>
 
 
   </div>
@@ -2988,6 +3639,11 @@ With this template we can create as many virtual machines as we like within minu
 
 
 
+  <section id="toc-wrapper" class="ps-0 pe-4">
+    <h2 class="panel-heading ps-3 pt-2 mb-2">Contents</h2>
+    <nav id="toc"></nav>
+  </section>
+
 
             
           </aside>
@@ -3563,7 +4219,7 @@ With this template we can create as many virtual machines as we like within minu
   Dec 17, 2022
 </time>
 
-              <h4 class="pt-0 my-2">Server 2022 - Installing Hyper-v Role</h4>
+              <h4 class="pt-0 my-2">Server 2022 - Installing Hyper-V Role</h4>
               <div class="text-muted">
                 <p>
                   
@@ -3576,9 +4232,7 @@ With this template we can create as many virtual machines as we like within minu
 
     
 
-In this video we are going to install the Hyper-V Role within Server 2022.
-
-
+Hello and welcome to a key tutorial in our Windows Server 2022 series! Today, we’re diving into the installation of the Hyper-V Role on Server 2022 – a crucial step for anyone looking to le...
                 </p>
               </div>
             </div>
@@ -6067,9 +6721,16 @@ We will show you how to enable TPM which is needed for Windows 11 to install.
 
   
 
+  
+    
+
+    
+
+  
 
 
-  <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.7.1/dist/jquery.min.js,npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js,npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.10/dayjs.min.js,npm/dayjs@1.11.10/locale/en.min.js,npm/dayjs@1.11.10/plugin/relativeTime.min.js,npm/dayjs@1.11.10/plugin/localizedFormat.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.7.1/dist/jquery.min.js,npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js,npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.10/dayjs.min.js,npm/dayjs@1.11.10/locale/en.min.js,npm/dayjs@1.11.10/plugin/relativeTime.min.js,npm/dayjs@1.11.10/plugin/localizedFormat.min.js,npm/tocbot@4.21.3/dist/tocbot.min.js"></script>
 
 
 
