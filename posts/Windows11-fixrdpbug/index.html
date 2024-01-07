@@ -37,8 +37,8 @@
 <meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Windows 11 - Fix 22H2 Remote Desktop issues!" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="In this video we will create a specific Group Policy for Windows 11 22H2 clients. With this policy we will disable the usage of UDP with rdp clients and force them to use TCP." />
-<meta property="og:description" content="In this video we will create a specific Group Policy for Windows 11 22H2 clients. With this policy we will disable the usage of UDP with rdp clients and force them to use TCP." />
+<meta name="description" content="A minimal website for tech tips, blogs and video documentation." />
+<meta property="og:description" content="A minimal website for tech tips, blogs and video documentation." />
 <link rel="canonical" href="http://localhost:4000/posts/Windows11-fixrdpbug/" />
 <meta property="og:url" content="http://localhost:4000/posts/Windows11-fixrdpbug/" />
 <meta property="og:site_name" content="Mylemans Online" />
@@ -48,7 +48,7 @@
 <meta property="twitter:title" content="Windows 11 - Fix 22H2 Remote Desktop issues!" />
 <meta name="google-site-verification" content="google445ce971c729a3a8.html" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-24T10:00:00+01:00","datePublished":"2022-12-24T10:00:00+01:00","description":"In this video we will create a specific Group Policy for Windows 11 22H2 clients. With this policy we will disable the usage of UDP with rdp clients and force them to use TCP.","headline":"Windows 11 - Fix 22H2 Remote Desktop issues!","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Windows11-fixrdpbug/"},"url":"http://localhost:4000/posts/Windows11-fixrdpbug/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-07T15:28:44+01:00","datePublished":"2022-12-24T10:00:00+01:00","description":"A minimal website for tech tips, blogs and video documentation.","headline":"Windows 11 - Fix 22H2 Remote Desktop issues!","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Windows11-fixrdpbug/"},"url":"http://localhost:4000/posts/Windows11-fixrdpbug/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -569,6 +569,71 @@
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
 
   
   
@@ -619,6 +684,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          Updated
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1704637724"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Jan  7, 2024
+</time>
+
+        </span>
+      
 
       
 
@@ -657,7 +745,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="93 words"
+  title="326 words"
 >
   <em>1 min</em> read</span>
 
@@ -668,29 +756,57 @@
   </header>
 
   <div class="content">
-    <p>In this video we will create a specific Group Policy for Windows 11 22H2 clients. With this policy we will disable the usage of UDP with rdp clients and force them to use TCP.</p>
-
-<p>Because UDP is normally faster then TCP we only want to apply this Policy to our affected Windows 11 22H2 Devices. We will be using WMI Filters for this.</p>
-
-<p><a href="https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/create-wmi-filters-for-the-gpo">Source</a></p>
-
-<p>To disable UDP connections:
-In regedit go to:</p>
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services\Client
-</pre></td></tr></tbody></table></code></div></div>
-<p>Create a new DWORD entry named:</p>
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>fClientDisableUDP
-</pre></td></tr></tbody></table></code></div></div>
-<p>With a value of 1, and restart the device.</p>
-
-<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+    <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
 <div class="embed-container">    <iframe title="YouTube video player" width="640" height="390" src="//www.youtube.com/embed/FDcCoxioSp8" frameborder="0" allowfullscreen=""></iframe></div>
+
+<p>Welcome to a crucial troubleshooting guide for Windows 11 users. In this video, we tackle a specific issue faced by many using Windows 11 22H2: Remote Desktop Protocol (RDP) connectivity problems. We’ll guide you through creating a targeted Group Policy to resolve these issues effectively.</p>
+
+<h3 id="what-we-cover-in-this-tutorial"><span class="me-2">What We Cover in This Tutorial</span><a href="#what-we-cover-in-this-tutorial" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>This video is designed to provide a comprehensive solution to the RDP issues in Windows 11 22H2, focusing on:</p>
+
+<ol>
+  <li><strong>Creating a Specific Group Policy</strong>: We’ll show you how to set up a Group Policy that forces RDP clients to use TCP instead of UDP.</li>
+  <li><strong>Implementing WMI Filters</strong>: To ensure this policy only applies to affected Windows 11 22H2 devices, we use WMI Filters for precision targeting.</li>
+  <li><strong>Manual Registry Edit</strong>: Step-by-step instructions on how to disable UDP connections via the Windows Registry.</li>
+</ol>
+
+<h3 id="the-issue-at-hand"><span class="me-2">The Issue at Hand</span><a href="#the-issue-at-hand" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>The 22H2 update for Windows 11 introduced a bug affecting RDP performance. While UDP is typically faster than TCP for RDP connections, this bug necessitates a temporary shift to TCP to ensure stable and reliable remote desktop sessions.</p>
+
+<h3 id="implementing-the-fix"><span class="me-2">Implementing the Fix</span><a href="#implementing-the-fix" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>We will guide you through:</p>
+
+<ul>
+  <li><strong>Setting up the Group Policy</strong>: Utilizing WMI Filters to specifically target Windows 11 22H2 devices.</li>
+  <li><strong>Registry Modification</strong>:
+    <div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>  Path: HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services\Client
+  Entry: fClientDisableUDP (DWORD)
+  Value: 1
+</pre></td></tr></tbody></table></code></div>    </div>
+    <p>This registry edit disables UDP in RDP, reverting to TCP, and requires a device restart for changes to take effect.</p>
+  </li>
+</ul>
+
+<h3 id="additional-resources"><span class="me-2">Additional Resources</span><a href="#additional-resources" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>For more information on setting up WMI Filters for Group Policy, refer to Microsoft’s official documentation: <a href="https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/create-wmi-filters-for-the-gpo">Create WMI Filters for the GPO</a>.</p>
+
+<h3 id="concluding-thoughts"><span class="me-2">Concluding Thoughts</span><a href="#concluding-thoughts" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>Troubleshooting and adapting to software updates are key skills in IT management. This tutorial provides a specific solution to enhance your Windows 11 22H2 experience, ensuring your RDP connections remain stable and efficient.</p>
+
+<p>We look forward to your feedback and experiences after implementing this fix. Your insights contribute to a growing knowledge base for the Windows 11 community.</p>
+
+<p>Stay tuned for more tips, tricks, and solutions for Windows 11!</p>
+
 
   </div>
 
@@ -845,28 +961,35 @@ In regedit go to:</p>
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/NewHomeLab/">My New Home Lab Journey</a>
+          <a href="/posts/Server2022-HyperV-EnableDeduplication/">Server 2022 - Hyper-V - Enable Deduplication</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/AzureAD-EnableLAPS/">Implementing LAPS in Microsoft Entra and Intune</a>
+          <a href="/posts/Server2022-Hyper-V-InstallWindows11/">Server 2022 - Hyper-V - Install Windows 11</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/SimpleFlaskWebsite/">Creating a Simple Flask Project - Simple Website</a>
+          <a href="/posts/InstallingAD/">Server 2022 - Installing Active Directory and Setting up DNS</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/SimpleFlaskProject/">Creating a Simple Flask Project - Hello  World!</a>
+          <a href="/posts/Windows11DomainJoin/">Windows 11 Domain Join</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/Windows11-fixrdpbug/">Windows 11 - Fix 22H2 Remote Desktop issues!</a>
         </li>
       
     </ul>
@@ -3007,6 +3130,11 @@ In regedit go to:</p>
 
 
 
+  <section id="toc-wrapper" class="ps-0 pe-4">
+    <h2 class="panel-heading ps-3 pt-2 mb-2">Contents</h2>
+    <nav id="toc"></nav>
+  </section>
+
 
             
           </aside>
@@ -3567,12 +3695,11 @@ In regedit go to:</p>
 
 
 
-                  In this video we will join Windows 11 into the Active Directory.
-
-
+                  
 
     
 
+Join us in this practical guide as we demonstrate how to integrate Windows 11 into an Active Directory environment. This tutorial is particularly valuable for network administrators and IT ...
                 </p>
               </div>
             </div>
@@ -3702,7 +3829,7 @@ To clear the registry execute the following in an elevated powershell.
       class="btn btn-outline-primary"
       aria-label="Newer"
     >
-      <p>Server 2022  - Create Organizational Unit's and Group Policy's</p>
+      <p>Server 2022  - Create Organizational Units and Group Policies</p>
     </a>
   
 </nav>
@@ -6072,9 +6199,16 @@ To clear the registry execute the following in an elevated powershell.
 
   
 
+  
+    
+
+    
+
+  
 
 
-  <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.7.1/dist/jquery.min.js,npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js,npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.10/dayjs.min.js,npm/dayjs@1.11.10/locale/en.min.js,npm/dayjs@1.11.10/plugin/relativeTime.min.js,npm/dayjs@1.11.10/plugin/localizedFormat.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.7.1/dist/jquery.min.js,npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js,npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.10/dayjs.min.js,npm/dayjs@1.11.10/locale/en.min.js,npm/dayjs@1.11.10/plugin/relativeTime.min.js,npm/dayjs@1.11.10/plugin/localizedFormat.min.js,npm/tocbot@4.21.3/dist/tocbot.min.js"></script>
 
 
 
