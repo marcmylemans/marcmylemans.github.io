@@ -1,6 +1,40 @@
 [
   
   {
+    "title": "Newhomelab",
+    "url": "/posts/NewHomeLab/",
+    "categories": "",
+    "tags": "",
+    "date": "2024-01-07 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "My New Home Lab JourneyWelcome to my blog where I share my journey of setting up a new home lab. This setup is a dream come true for any tech enthusiast and I’m excited to document every step of th...",
+    "content": "My New Home Lab JourneyWelcome to my blog where I share my journey of setting up a new home lab. This setup is a dream come true for any tech enthusiast and I’m excited to document every step of this adventure.The Heart of the Lab: Hardware SpecificationsThe core of my home lab consists of three HP ProDesk 600 G4 Mini PCs. These compact powerhouses are equipped with impressive hardware and some notable features:  CPU: Intel® Core™ i3-8100T  RAM: 32 GB each  Storage: 2 TB NVMe SSD each  Graphics: Integrated Intel Graphics for efficient hardware transcodingOne of the most remarkable aspects of these Mini PCs is their low power consumption. This makes them not only environmentally friendly but also cost-effective to run, especially important for a lab that operates continuously.Setting Up: The Software InstallationSetting up the software was a crucial part of this journey. I followed a comprehensive guide to import the drivers into my Microsoft Deployment Toolkit (MDT) server. Here’s how I did it:  Step 1: Driver Import Guide Part 1  Step 2: Driver Import Guide Part 2  Step 3: Driver Import Guide Part 3Following these steps, I performed a clean installation using MDT, which streamlined the process and made it highly efficient.Network Configuration: The Backbone of ConnectivityCurrently, my entire lab network is connected via a 1 Gbit Ethernet to a USW-24 switch. This setup offers a robust and reliable network backbone, ensuring smooth communication between the devices. The 1 Gbit connection provides ample bandwidth for most of my current projects, which include software development, testing, and general experimentation.Future Expansion Plans: Embracing Higher SpeedsLooking ahead, I’m considering an upgrade to a 2.5 Gbit network. This would significantly enhance data transfer speeds, making my lab more suitable for higher-end tasks that require faster networking, such as large-scale simulations or intensive data processing.The transition to 2.5 Gbit would involve:  Upgrading Network Hardware: Including a new switch and network cards capable of supporting 2.5 Gbit speeds.  Revising Network Layout: To optimize for higher speeds, ensuring minimal bottlenecks.  Testing and Configuration: Rigorous testing will be essential to ensure the network is stable and performs at its best.This upgrade isn’t just about speed; it’s about future-proofing my lab and preparing it for more advanced projects.The Future of My Home LabThis new home lab is not just a setup; it’s a stepping stone towards many future projects. I plan to use this lab for:  Experimenting with new technologies: This lab will be my playground for testing and learning new tech.  Developing and testing software: A perfect environment for software development and testing.  Educational Purposes: I aim to use this lab as a learning tool for various IT and networking concepts.Stay tuned as I dive deeper into the world of technology with my new home lab. I’ll be sharing more updates, projects, and insights right here on this blog.Happy Labbing!"
+  },
+  
+  {
+    "title": "Deploying a Custom Application with IntuneWinAppUtil in Microsoft Intune",
+    "url": "/posts/IntuneWinAppUtil/",
+    "categories": "Azure, Intune",
+    "tags": "entraid, azuread, intune, intunewinapputil",
+    "date": "2024-01-03 00:00:00 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "Deploying a Custom Application with IntuneWinAppUtil in Microsoft IntuneDeploying custom applications in Microsoft Intune can be efficiently managed using the IntuneWinAppUtil tool. This guide prov...",
+    "content": "Deploying a Custom Application with IntuneWinAppUtil in Microsoft IntuneDeploying custom applications in Microsoft Intune can be efficiently managed using the IntuneWinAppUtil tool. This guide provides a step-by-step approach to packaging and deploying a custom application.Prerequisites  Windows-based application (.exe, .msi, .bat, etc.)  Microsoft Intune subscription  IntuneWinAppUtil tool (downloadable from Microsoft)Step 1: Prepare Your ApplicationEnsure your application is ready for deployment:  Compile your application: The application should be in a supported format (.exe, .msi, .bat, etc.).  Test the application: Ensure it functions as expected on your target OS.Step 2: Download and Run IntuneWinAppUtil  Download the IntuneWinAppUtil tool.  Run the tool and follow the prompts:          Source folder: The location of your application files.      Setup file: The executable or installer file for your application.      Output folder: Where the .intunewin file will be saved.      Step 3: Sign in to Microsoft Endpoint Manager Admin Center  Navigate to the admin center.  Sign in with your admin account.Step 4: Add Your Packaged Application  In the admin center, go to Apps &gt; All apps &gt; Add.  Under App type, select Windows app (Win32).  Click Select app package file and upload the .intunewin file.Step 5: Configure App Information  Fill in the details like Name, Description, Publisher.  Specify the Install command (e.g., setup.exe /silent or Powershell.exe -NoProfile -ExecutionPolicy ByPass -File '.\\script.ps1').  Set the Uninstall command if applicable.Step 6: Set Requirements and Detection Rules  Specify the Operating system architecture and Minimum operating system.  Configure the Detection rules to define how Intune recognizes the app is installed.Step 7: Assign and Deploy  Go to the Assignments tab and select your target user or device groups.  Choose the type of deployment (required, available, uninstall).  Click Create to deploy your application.ConclusionYour custom application is now packaged and deployed through Microsoft Intune. Users in the assigned groups will receive the application via the company portal or automatically, depending on your settings."
+  },
+  
+  {
     "title": "Implementing LAPS in Microsoft Entra and Intune",
     "url": "/posts/AzureAD-EnableLAPS/",
     "categories": "EntraID, Laps",

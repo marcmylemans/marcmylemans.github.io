@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Mylemans Online</title>
   <subtitle>A minimal website for tech tips, blogs and video documentation.</subtitle>
-  <updated>2024-01-03T20:19:16+01:00</updated>
+  <updated>2024-01-07T14:17:18+01:00</updated>
   <author>
     <name>Marc Mylemans</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,89 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Newhomelab</title>
+    <link href="http://localhost:4000/posts/NewHomeLab/" rel="alternate" type="text/html" title="Newhomelab" />
+    <published>2024-01-07T00:00:00+01:00</published>
+  
+    <updated>2024-01-07T00:00:00+01:00</updated>
+  
+    <id>http://localhost:4000/posts/NewHomeLab/</id>
+    <content src="http://localhost:4000/posts/NewHomeLab/" />
+    <author>
+      <name>Marc Mylemans</name>
+    </author>
+
+  
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      My New Home Lab Journey
+
+Welcome to my blog where I share my journey of setting up a new home lab. This setup is a dream come true for any tech enthusiast and I’m excited to document every step of this adventure.
+
+The Heart of the Lab: Hardware Specifications
+
+The core of my home lab consists of three HP ProDesk 600 G4 Mini PCs. These compact powerhouses are equipped with impressive hardware an...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Deploying a Custom Application with IntuneWinAppUtil in Microsoft Intune</title>
+    <link href="http://localhost:4000/posts/IntuneWinAppUtil/" rel="alternate" type="text/html" title="Deploying a Custom Application with IntuneWinAppUtil in Microsoft Intune" />
+    <published>2024-01-03T00:00:00+01:00</published>
+  
+    <updated>2024-01-03T00:00:00+01:00</updated>
+  
+    <id>http://localhost:4000/posts/IntuneWinAppUtil/</id>
+    <content src="http://localhost:4000/posts/IntuneWinAppUtil/" />
+    <author>
+      <name>Marc Mylemans</name>
+    </author>
+
+  
+    
+    <category term="Azure" />
+    
+    <category term="Intune" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Deploying a Custom Application with IntuneWinAppUtil in Microsoft Intune
+
+Deploying custom applications in Microsoft Intune can be efficiently managed using the IntuneWinAppUtil tool. This guide provides a step-by-step approach to packaging and deploying a custom application.
+
+Prerequisites
+
+
+  Windows-based application (.exe, .msi, .bat, etc.)
+  Microsoft Intune subscription
+  IntuneWinAppUtil...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -145,115 +228,6 @@ Requirements
 Downloading Python is a straightforward process. You can obtain the latest version from the official Python Downloads page.
 
 Once you’ve downloaded the Python installer, the installation process is made easy with a user-friendly wizard. If you prefer step-by-step guidance, you can refer to the official documentation on using Python ...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>installing a Unifi Controller with Docker and Lets Encrypt!</title>
-    <link href="http://localhost:4000/posts/InstallingUnifiDockerLetsEncrypt/" rel="alternate" type="text/html" title="installing a Unifi Controller with Docker and Lets Encrypt!" />
-    <published>2023-12-27T10:00:00+01:00</published>
-  
-    <updated>2023-12-27T10:00:00+01:00</updated>
-  
-    <id>http://localhost:4000/posts/InstallingUnifiDockerLetsEncrypt/</id>
-    <content src="http://localhost:4000/posts/InstallingUnifiDockerLetsEncrypt/" />
-    <author>
-      <name>Marc Mylemans</name>
-    </author>
-
-  
-    
-    <category term="Docker" />
-    
-    <category term="Unifi" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Docker and Docker Compose Installation and Usage Guide
-
-Installing Docker
-
-For Ubuntu/Linux:
-
-1) Update your existing list of packages:
-
-sudo apt update
-
-
-2) Next, install a few prerequisite packages which let apt use packages over HTTPS:
-
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
-
-
-3) Then add the GPG key for the official Docker repository to your sys...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Wi-Fi QR Code Generator</title>
-    <link href="http://localhost:4000/posts/Python_WifiQRCodeGenerator/" rel="alternate" type="text/html" title="Wi-Fi QR Code Generator" />
-    <published>2023-12-04T00:00:00+01:00</published>
-  
-    <updated>2023-12-04T00:00:00+01:00</updated>
-  
-    <id>http://localhost:4000/posts/Python_WifiQRCodeGenerator/</id>
-    <content src="http://localhost:4000/posts/Python_WifiQRCodeGenerator/" />
-    <author>
-      <name>Marc Mylemans</name>
-    </author>
-
-  
-    
-    <category term="Python" />
-    
-    <category term="Script" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Wi-Fi QR Code Generator
-
-Overview
-
-This script generates a QR code for Wi-Fi credentials, including SSID and password, making it easy to share Wi-Fi access information. The generated QR code can be scanned by a mobile device to quickly connect to the Wi-Fi network.
-
-Source:
-
-Requirements
-
-
-  Python
-  qrcode library
-
-
-Usage
-
-
-  
-    Run the Script:
-
-    Execute the script by running the followin...
     </summary>
   
 
