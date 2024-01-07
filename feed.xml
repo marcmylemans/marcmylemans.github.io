@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Mylemans Online</title>
   <subtitle>A minimal website for tech tips, blogs and video documentation.</subtitle>
-  <updated>2024-01-07T14:23:21+01:00</updated>
+  <updated>2024-01-07T14:27:38+01:00</updated>
   <author>
     <name>Marc Mylemans</name>
     <uri>http://localhost:4000/</uri>
@@ -24,7 +24,7 @@
     <link href="http://localhost:4000/posts/NewHomeLab/" rel="alternate" type="text/html" title="My New Home Lab Journey" />
     <published>2024-01-07T00:00:00+01:00</published>
   
-    <updated>2024-01-07T14:23:15+01:00</updated>
+    <updated>2024-01-07T14:27:30+01:00</updated>
   
     <id>http://localhost:4000/posts/NewHomeLab/</id>
     <content src="http://localhost:4000/posts/NewHomeLab/" />
@@ -54,7 +54,11 @@ Welcome to my blog where I share my journey of setting up a new home lab. This s
 
 The Heart of the Lab: Hardware Specifications
 
-The core of my home lab consists of three HP ProDesk 600 G4 Mini PCs. These compact powerhouses are equipped with impressive hardware an...
+The core of my home lab consists of three HP ProDesk 600 G4 Mini PCs.
+
+
+
+These compact powerhouses are equipped with impressive hardware...
     </summary>
   
 
