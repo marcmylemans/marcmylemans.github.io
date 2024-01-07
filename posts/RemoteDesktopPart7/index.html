@@ -37,8 +37,8 @@
 <meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Remote Desktop Services, Securing it with Azure MFA!" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="In this video we will install the Azure MFA NPS Extension, with this extension we can use the Multifactor Authentication from Azure AD and securing the Remote Desktop Gateway connection for Remote Desktop." />
-<meta property="og:description" content="In this video we will install the Azure MFA NPS Extension, with this extension we can use the Multifactor Authentication from Azure AD and securing the Remote Desktop Gateway connection for Remote Desktop." />
+<meta name="description" content="A minimal website for tech tips, blogs and video documentation." />
+<meta property="og:description" content="A minimal website for tech tips, blogs and video documentation." />
 <link rel="canonical" href="http://localhost:4000/posts/RemoteDesktopPart7/" />
 <meta property="og:url" content="http://localhost:4000/posts/RemoteDesktopPart7/" />
 <meta property="og:site_name" content="Mylemans Online" />
@@ -48,7 +48,7 @@
 <meta property="twitter:title" content="Remote Desktop Services, Securing it with Azure MFA!" />
 <meta name="google-site-verification" content="google445ce971c729a3a8.html" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-09-07T00:00:00+02:00","datePublished":"2023-09-07T00:00:00+02:00","description":"In this video we will install the Azure MFA NPS Extension, with this extension we can use the Multifactor Authentication from Azure AD and securing the Remote Desktop Gateway connection for Remote Desktop.","headline":"Remote Desktop Services, Securing it with Azure MFA!","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/RemoteDesktopPart7/"},"url":"http://localhost:4000/posts/RemoteDesktopPart7/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-07T15:59:31+01:00","datePublished":"2023-09-07T00:00:00+02:00","description":"A minimal website for tech tips, blogs and video documentation.","headline":"Remote Desktop Services, Securing it with Azure MFA!","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/RemoteDesktopPart7/"},"url":"http://localhost:4000/posts/RemoteDesktopPart7/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -569,6 +569,71 @@
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
 
   
   
@@ -619,6 +684,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          Updated
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1704639571"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Jan  7, 2024
+</time>
+
+        </span>
+      
 
       
 
@@ -657,7 +745,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="172 words"
+  title="353 words"
 >
   <em>1 min</em> read</span>
 
@@ -668,48 +756,67 @@
   </header>
 
   <div class="content">
-    <p>In this video we will install the Azure MFA NPS Extension, with this extension we can use the Multifactor Authentication from Azure AD and securing the Remote Desktop Gateway connection for Remote Desktop.</p>
-
-<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+    <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
 <div class="embed-container">    <iframe title="YouTube video player" width="640" height="390" src="//www.youtube.com/embed/b5WL7PgEmaY" frameborder="0" allowfullscreen=""></iframe></div>
 
-<p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54688">Download NPS Extension</a></p>
+<p>Part 7 of our Remote Desktop Services series for Windows Server 2022 dives into enhancing security with Azure Multi-Factor Authentication (MFA). In this tutorial, we’ll install the Azure MFA NPS Extension to secure the Remote Desktop Gateway connections.</p>
 
-<div class="language-powershell highlighter-rouge"><div class="code-header">
-        <span data-label-text="Powershell"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="n">cd</span><span class="w"> </span><span class="s1">'c:\Program Files\Microsoft\AzureMfa\Config'</span><span class="w">
-</span></pre></td></tr></tbody></table></code></div></div>
+<h3 id="implementing-azure-mfa-in-rds"><span class="me-2">Implementing Azure MFA in RDS</span><a href="#implementing-azure-mfa-in-rds" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<div class="language-powershell highlighter-rouge"><div class="code-header">
-        <span data-label-text="Powershell"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="o">.</span><span class="n">\AzureMfaNpsExtnConfigSetup.ps1</span><span class="w">
-</span></pre></td></tr></tbody></table></code></div></div>
+<p>We cover:</p>
 
-<p>In order for Non MFA enabled users to continue to connect to the Remote Gateway server you can add the following Regkey in the registy of the NPS installed server under the following registery path, open an elevated cmd prompt and run the following command</p>
+<ul>
+  <li><strong>Azure MFA NPS Extension Installation</strong>: Step-by-step guidance on integrating Azure MFA with your Remote Desktop Services.</li>
+  <li><strong>Configuring for Enhanced Security</strong>: How to use Azure AD’s multifactor authentication to secure RDS connections.</li>
+</ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>reg add HKLM\Software\Microsoft\AzureMFA /v REQUIRE_USER_MATCH /t REG_SZ /d FALSE
-</pre></td></tr></tbody></table></code></div></div>
+<h3 id="key-installation-steps"><span class="me-2">Key Installation Steps</span><a href="#key-installation-steps" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>Reboot the server for it to take effect.</p>
+<p>Here are the essential PowerShell commands and registry settings for setting up Azure MFA:</p>
 
-<p>Be sure to check out the previous video where we configured Remote Desktop Services:</p>
+<p>1) Download the NPS Extension: <a href="https://www.microsoft.com/en-us/download/details.aspx?id=54688">Download NPS Extension</a></p>
 
-<p><a href="/posts/RemoteDesktopPart1/">Server 2022 - Remote Desktop Services - Part 1</a></p>
+<p>2) Run these PowerShell commands:
+    <code class="language-plaintext highlighter-rouge">powershell
+    cd 'c:\Program Files\Microsoft\AzureMfa\Config'
+    .\AzureMfaNpsExtnConfigSetup.ps1
+   </code></p>
 
-<p><a href="/posts/RemoteDesktopPart2/">Server 2022 - Remote Desktop Services - Part 2</a></p>
+<p>3) To allow Non MFA users to connect, add this registry key:
+    <code class="language-plaintext highlighter-rouge">cmd
+    reg add HKLM\Software\Microsoft\AzureMFA /v REQUIRE_USER_MATCH /t REG_SZ /d FALSE
+   </code>
+    Then, reboot the server for the changes to take effect.</p>
 
-<p><a href="/posts/RemoteDesktopPart3/">Server 2022 - Remote Desktop Services - Part 3</a></p>
+<h3 id="why-azure-mfa"><span class="me-2">Why Azure MFA?</span><a href="#why-azure-mfa" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p><a href="/posts/RemoteDesktopPart4/">Installing Office 365 on a Remote Desktop Host!</a></p>
+<ul>
+  <li><strong>Enhanced Security</strong>: Adding an extra layer of authentication significantly reduces the risk of unauthorized access.</li>
+  <li><strong>Flexibility</strong>: Azure MFA offers various methods of verification, accommodating different user preferences and scenarios.</li>
+  <li><strong>Compliance</strong>: Meet security standards and compliance requirements for remote access.</li>
+</ul>
 
-<p><a href="/posts/RemoteDesktopPart5/">Server 2022 - Remote Desktop Services - Part 5</a></p>
+<h3 id="catching-up-on-the-series"><span class="me-2">Catching Up on the Series</span><a href="#catching-up-on-the-series" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p><a href="/posts/Remote_DesktopPart6/">Server 2022 - Remote Desktop Services - Part 6</a></p>
+<p>If you’ve missed any of the previous parts in this series, here are the links to catch up:</p>
+
+<ul>
+  <li><a href="/posts/RemoteDesktopPart1/">Server 2022 - Remote Desktop Services - Part 1</a></li>
+  <li><a href="/posts/RemoteDesktopPart2/">Server 2022 - Remote Desktop Services - Part 2</a></li>
+  <li><a href="/posts/RemoteDesktopPart3/">Server 2022 - Remote Desktop Services - Part 3</a></li>
+  <li><a href="/posts/RemoteDesktopPart4/">Installing Office 365 on a Remote Desktop Host!</a></li>
+  <li><a href="/posts/RemoteDesktopPart5/">Server 2022 - Remote Desktop Services - Part 5</a></li>
+  <li><a href="/posts/Remote_DesktopPart6/">Server 2022 - Remote Desktop Services - Part 6</a></li>
+</ul>
+
+<h3 id="concluding-thoughts"><span class="me-2">Concluding Thoughts</span><a href="#concluding-thoughts" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>Integrating Azure MFA into your RDS setup is a critical step in securing your remote desktop environment. This tutorial aims to guide you through a seamless setup process, ensuring your network’s security and integrity.</p>
+
+<p>We’re looking forward to hearing about your experiences with Azure MFA in your RDS environment. Your insights, questions, or challenges are invaluable for our community, so please share them in the comments below.</p>
+
+<p>Stay tuned for the next part in this series, where we’ll continue to explore advanced features and best practices in Remote Desktop Services!</p>
+
 
   </div>
 
@@ -864,35 +971,35 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Server2022-HyperV-EnableDeduplication/">Server 2022 - Hyper-V - Enable Deduplication</a>
+          <a href="/posts/Windows11HybridADJoin/">Windows 11 - Active Directory - Hybrid Join - Azure AD</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Server2022-Hyper-V-InstallWindows11/">Server 2022 - Hyper-V - Install Windows 11</a>
+          <a href="/posts/IntuneAppsAndPolicy/">Intune - Applications and Policies</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/InstallingAD/">Server 2022 - Installing Active Directory and Setting up DNS</a>
+          <a href="/posts/RemoteDesktopPart2/">Server 2022 - Remote Desktop Services - Part 2</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Windows11DomainJoin/">Windows 11 Domain Join</a>
+          <a href="/posts/RemoteDesktopPart3/">Server 2022 - Remote Desktop Services - Part 3</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Windows11-fixrdpbug/">Windows 11 - Fix 22H2 Remote Desktop issues!</a>
+          <a href="/posts/RemoteDesktopPart4/">Installing Office 365 on a Remote Desktop Host!</a>
         </li>
       
     </ul>
@@ -1256,74 +1363,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1353,251 +1392,10 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+      
+        
+        
+
   
     
     
@@ -1712,90 +1510,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -2076,6 +1791,425 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2246,6 +2380,11 @@
         
         
 
+  
+    
+    
+    
+    
   
     
     
@@ -3033,6 +3172,11 @@
 
 
 
+  <section id="toc-wrapper" class="ps-0 pe-4">
+    <h2 class="panel-heading ps-3 pt-2 mb-2">Contents</h2>
+    <nav id="toc"></nav>
+  </section>
+
 
             
           </aside>
@@ -3574,6 +3718,18 @@
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -3657,8 +3813,9 @@ i’m going...
 
 
 
-                  In this video, we will configure a VDI (Virtual Desktop Infrastructure) solution.
-We will need a Hyper-v server to host our VDI Windows 10/11 template virtual machine and VDI pool (The Virtual mach...
+                  {% youtube “https://youtu.be/RB4Z7Zrhsx4” %}
+
+In the final installment of our Remote Desktop Services series for Windows Server 2022, we explore the setup of a Virtual Desktop Infrastructure (VDI) ...
                 </p>
               </div>
             </div>
@@ -4189,74 +4346,6 @@ Join us in the first part of our comprehensive series on deploying Remote Deskto
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4286,251 +4375,10 @@ Join us in the first part of our comprehensive series on deploying Remote Deskto
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+      
+        
+        
+
   
     
     
@@ -4645,90 +4493,7 @@ Join us in the first part of our comprehensive series on deploying Remote Deskto
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -5009,6 +4774,425 @@ Join us in the first part of our comprehensive series on deploying Remote Deskto
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -5179,6 +5363,11 @@ Join us in the first part of our comprehensive series on deploying Remote Deskto
         
         
 
+  
+    
+    
+    
+    
   
     
     
@@ -6104,9 +6293,16 @@ Join us in the first part of our comprehensive series on deploying Remote Deskto
 
   
 
+  
+    
+
+    
+
+  
 
 
-  <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.7.1/dist/jquery.min.js,npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js,npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.10/dayjs.min.js,npm/dayjs@1.11.10/locale/en.min.js,npm/dayjs@1.11.10/plugin/relativeTime.min.js,npm/dayjs@1.11.10/plugin/localizedFormat.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.7.1/dist/jquery.min.js,npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js,npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.10/dayjs.min.js,npm/dayjs@1.11.10/locale/en.min.js,npm/dayjs@1.11.10/plugin/relativeTime.min.js,npm/dayjs@1.11.10/plugin/localizedFormat.min.js,npm/tocbot@4.21.3/dist/tocbot.min.js"></script>
 
 
 

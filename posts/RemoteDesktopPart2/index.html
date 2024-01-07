@@ -37,8 +37,8 @@
 <meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Server 2022 - Remote Desktop Services - Part 2" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="In this video we will create some Group Policy’s to improve the user experience when connecting to the Remote Desktop Service." />
-<meta property="og:description" content="In this video we will create some Group Policy’s to improve the user experience when connecting to the Remote Desktop Service." />
+<meta name="description" content="A minimal website for tech tips, blogs and video documentation." />
+<meta property="og:description" content="A minimal website for tech tips, blogs and video documentation." />
 <link rel="canonical" href="http://localhost:4000/posts/RemoteDesktopPart2/" />
 <meta property="og:url" content="http://localhost:4000/posts/RemoteDesktopPart2/" />
 <meta property="og:site_name" content="Mylemans Online" />
@@ -48,7 +48,7 @@
 <meta property="twitter:title" content="Server 2022 - Remote Desktop Services - Part 2" />
 <meta name="google-site-verification" content="google445ce971c729a3a8.html" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-31T10:00:00+01:00","datePublished":"2022-12-31T10:00:00+01:00","description":"In this video we will create some Group Policy’s to improve the user experience when connecting to the Remote Desktop Service.","headline":"Server 2022 - Remote Desktop Services - Part 2","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/RemoteDesktopPart2/"},"url":"http://localhost:4000/posts/RemoteDesktopPart2/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-07T15:59:31+01:00","datePublished":"2022-12-31T10:00:00+01:00","description":"A minimal website for tech tips, blogs and video documentation.","headline":"Server 2022 - Remote Desktop Services - Part 2","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/RemoteDesktopPart2/"},"url":"http://localhost:4000/posts/RemoteDesktopPart2/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -569,6 +569,60 @@
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
 
   
   
@@ -619,6 +673,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          Updated
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1704639571"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Jan  7, 2024
+</time>
+
+        </span>
+      
 
       
 
@@ -657,7 +734,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="44 words"
+  title="267 words"
 >
   <em>1 min</em> read</span>
 
@@ -668,13 +745,46 @@
   </header>
 
   <div class="content">
-    <p>In this video we will create some Group Policy’s to improve the user experience when connecting to the Remote Desktop Service.</p>
-
-<p>Be sure to check out the previous video where we configured Remote Desktop Services:
-<a href="/posts/RemoteDesktopPart1/">Server 2022 - Remote Desktop Services - Part 1</a></p>
-
-<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+    <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
 <div class="embed-container">    <iframe title="YouTube video player" width="640" height="390" src="//www.youtube.com/embed/G-5se77LRyU" frameborder="0" allowfullscreen=""></iframe></div>
+
+<p>Welcome back to our series on Remote Desktop Services (RDS) in Windows Server 2022. In Part 2, we’re focusing on enhancing the user experience with strategic Group Policy settings for RDS.</p>
+
+<h3 id="what-this-video-covers"><span class="me-2">What This Video Covers</span><a href="#what-this-video-covers" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li><strong>Creating Group Policies for RDS</strong>: Learn how to configure Group Policy settings specifically for RDS, ensuring a smooth and efficient remote desktop experience for users.</li>
+  <li><strong>Optimizing User Experience</strong>: We delve into policies that can improve session responsiveness, manage resource allocation, and more.</li>
+</ul>
+
+<h3 id="continuing-the-rds-journey"><span class="me-2">Continuing the RDS Journey</span><a href="#continuing-the-rds-journey" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>If you missed the initial setup of Remote Desktop Services, catch up with Part 1 of this series:</p>
+
+<ul>
+  <li><a href="/posts/RemoteDesktopPart1/">Server 2022 - Remote Desktop Services - Part 1</a></li>
+</ul>
+
+<p>This first part covers the setup of core RDS components such as the Broker, Host, Web Access, and Gateway.</p>
+
+<h3 id="why-group-policies-for-rds"><span class="me-2">Why Group Policies for RDS?</span><a href="#why-group-policies-for-rds" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>Implementing Group Policies for RDS allows for:</p>
+
+<ul>
+  <li><strong>Enhanced Security</strong>: Tighten security measures specific to remote desktop access.</li>
+  <li><strong>Improved Performance</strong>: Optimize settings to enhance the overall performance and responsiveness of RDS sessions.</li>
+  <li><strong>Customized User Experience</strong>: Tailor the remote desktop environment to suit organizational needs and user preferences.</li>
+</ul>
+
+<h3 id="concluding-thoughts"><span class="me-2">Concluding Thoughts</span><a href="#concluding-thoughts" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>As you advance in setting up and optimizing Remote Desktop Services, these group policy configurations play a crucial role in delivering a seamless and secure remote working environment.</p>
+
+<p>We’re eager to hear about your experiences with these configurations. Share your insights or any challenges you faced in the comments section below. Your feedback is invaluable in shaping our content and helping the wider community.</p>
+
+<p>Stay tuned for more parts in this series, where we’ll continue to explore advanced aspects of Remote Desktop Services in Windows Server 2022!</p>
+
 
   </div>
 
@@ -824,35 +934,35 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Server2022-HyperV-EnableDeduplication/">Server 2022 - Hyper-V - Enable Deduplication</a>
+          <a href="/posts/Windows11HybridADJoin/">Windows 11 - Active Directory - Hybrid Join - Azure AD</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Server2022-Hyper-V-InstallWindows11/">Server 2022 - Hyper-V - Install Windows 11</a>
+          <a href="/posts/IntuneAppsAndPolicy/">Intune - Applications and Policies</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/InstallingAD/">Server 2022 - Installing Active Directory and Setting up DNS</a>
+          <a href="/posts/RemoteDesktopPart2/">Server 2022 - Remote Desktop Services - Part 2</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Windows11DomainJoin/">Windows 11 Domain Join</a>
+          <a href="/posts/RemoteDesktopPart3/">Server 2022 - Remote Desktop Services - Part 3</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Windows11-fixrdpbug/">Windows 11 - Fix 22H2 Remote Desktop issues!</a>
+          <a href="/posts/RemoteDesktopPart4/">Installing Office 365 on a Remote Desktop Host!</a>
         </li>
       
     </ul>
@@ -1216,74 +1326,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1313,251 +1355,10 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+      
+        
+        
+
   
     
     
@@ -1672,90 +1473,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -2036,6 +1754,425 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2206,6 +2343,11 @@
         
         
 
+  
+    
+    
+    
+    
   
     
     
@@ -2993,6 +3135,11 @@
 
 
 
+  <section id="toc-wrapper" class="ps-0 pe-4">
+    <h2 class="panel-heading ps-3 pt-2 mb-2">Contents</h2>
+    <nav id="toc"></nav>
+  </section>
+
 
             
           </aside>
@@ -3025,6 +3172,18 @@
 
 
 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
@@ -3577,7 +3736,9 @@
 
 
 
-                  In this video we will install the Azure MFA NPS Extension, with this extension we can use the Multifactor Authentication from Azure AD and securing the Remote Desktop Gateway connection for Remote ...
+                  {% youtube “https://youtu.be/b5WL7PgEmaY” %}
+
+Part 7 of our Remote Desktop Services series for Windows Server 2022 dives into enhancing security with Azure Multi-Factor Authentication (MFA). In thi...
                 </p>
               </div>
             </div>
@@ -3653,8 +3814,9 @@ i’m going...
 
 
 
-                  In this video, we will configure a VDI (Virtual Desktop Infrastructure) solution.
-We will need a Hyper-v server to host our VDI Windows 10/11 template virtual machine and VDI pool (The Virtual mach...
+                  {% youtube “https://youtu.be/RB4Z7Zrhsx4” %}
+
+In the final installment of our Remote Desktop Services series for Windows Server 2022, we explore the setup of a Virtual Desktop Infrastructure (VDI) ...
                 </p>
               </div>
             </div>
@@ -3680,7 +3842,7 @@ We will need a Hyper-v server to host our VDI Windows 10/11 template virtual mac
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>Intune - Applications and Policy's</p>
+      <p>Intune - Applications and Policies</p>
     </a>
   
 
@@ -4145,74 +4307,6 @@ We will need a Hyper-v server to host our VDI Windows 10/11 template virtual mac
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4242,251 +4336,10 @@ We will need a Hyper-v server to host our VDI Windows 10/11 template virtual mac
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+      
+        
+        
+
   
     
     
@@ -4601,90 +4454,7 @@ We will need a Hyper-v server to host our VDI Windows 10/11 template virtual mac
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -4965,6 +4735,425 @@ We will need a Hyper-v server to host our VDI Windows 10/11 template virtual mac
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -5135,6 +5324,11 @@ We will need a Hyper-v server to host our VDI Windows 10/11 template virtual mac
         
         
 
+  
+    
+    
+    
+    
   
     
     
@@ -6060,9 +6254,16 @@ We will need a Hyper-v server to host our VDI Windows 10/11 template virtual mac
 
   
 
+  
+    
+
+    
+
+  
 
 
-  <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.7.1/dist/jquery.min.js,npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js,npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.10/dayjs.min.js,npm/dayjs@1.11.10/locale/en.min.js,npm/dayjs@1.11.10/plugin/relativeTime.min.js,npm/dayjs@1.11.10/plugin/localizedFormat.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.7.1/dist/jquery.min.js,npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js,npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.10/dayjs.min.js,npm/dayjs@1.11.10/locale/en.min.js,npm/dayjs@1.11.10/plugin/relativeTime.min.js,npm/dayjs@1.11.10/plugin/localizedFormat.min.js,npm/tocbot@4.21.3/dist/tocbot.min.js"></script>
 
 
 

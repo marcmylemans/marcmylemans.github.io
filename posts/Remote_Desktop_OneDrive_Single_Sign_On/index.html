@@ -48,7 +48,7 @@
 <meta property="twitter:title" content="Remote Desktop - OneDrive Single Sign On" />
 <meta name="google-site-verification" content="google445ce971c729a3a8.html" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-11-13T00:00:00+01:00","datePublished":"2023-11-13T00:00:00+01:00","description":"Configure OneDrive Single Sign On!","headline":"Remote Desktop - OneDrive Single Sign On","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Remote_Desktop_OneDrive_Single_Sign_On/"},"url":"http://localhost:4000/posts/Remote_Desktop_OneDrive_Single_Sign_On/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-07T15:59:31+01:00","datePublished":"2023-11-13T00:00:00+01:00","description":"Configure OneDrive Single Sign On!","headline":"Remote Desktop - OneDrive Single Sign On","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Remote_Desktop_OneDrive_Single_Sign_On/"},"url":"http://localhost:4000/posts/Remote_Desktop_OneDrive_Single_Sign_On/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -564,6 +564,11 @@
   
 
   
+
+  
+  
+
+  
     
     
 
@@ -593,13 +598,41 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
-  
-
-  
-  
-
   
 
   
@@ -651,6 +684,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          Updated
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1704639571"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Jan  7, 2024
+</time>
+
+        </span>
+      
 
       
 
@@ -689,7 +745,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="131 words"
+  title="312 words"
 >
   <em>1 min</em> read</span>
 
@@ -702,38 +758,50 @@
   <div class="content">
     <h1 id="configure-onedrive-single-sign-on">Configure OneDrive Single Sign On!</h1>
 
-<p>In this video, we will Install OneDrive and configure Single Sign On with a Group Policy.</p>
-
-<p>Let me know in the comments if you like to see a follow-up video on this because in this setup you have to download/install Onedrive the first time per user account. In the next video we can automate this process.</p>
-
 <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
 <div class="embed-container">    <iframe title="YouTube video player" width="640" height="390" src="//www.youtube.com/embed/GFqTZh6xxb4" frameborder="0" allowfullscreen=""></iframe></div>
 
-<h2 id="installation"><span class="me-2">Installation:</span><a href="#installation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>Following requests and discussions from our community members, this video focuses on a topic many of you have shown interest in: setting up and configuring OneDrive with Single Sign-On (SSO) in a Remote Desktop environment.</p>
 
-<p><a href="https://support.microsoft.com/en-us/office/onedrive-release-notes-845dcf18-f921-435e-bf28-4e24b95e5fc0?ui=en-us&amp;rs=en-us&amp;ad=us">Download OneDrive</a></p>
+<h3 id="implementing-onedrive-sso-in-rds"><span class="me-2">Implementing OneDrive SSO in RDS</span><a href="#implementing-onedrive-sso-in-rds" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>How to install the OneDrive Policy’s please visit <a href="https://learn.microsoft.com/en-us/sharepoint/use-group-policy#manage-onedrive-using-group-policy">manage-onedrive-using-group-policy</a>.</p>
-
-<p>Follow the <a href="https://learn.microsoft.com/en-us/sharepoint/per-machine-installation#deployment-instructions">per-machine</a> instructions if you want to install OneDrive for <strong>All Users</strong>.</p>
-
-<h2 id="configure-the-group-policy-for-all-users"><span class="me-2">Configure the group policy for <strong>All Users</strong>:</span><a href="#configure-the-group-policy-for-all-users" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<p>You will find the new Policy under <strong>Computer Configuration\Policies\Administrative Templates\OneDrive</strong></p>
-
-<p>I <strong>enabled</strong> the following:</p>
+<p>This tutorial provides a guide on:</p>
 
 <ul>
-  <li>
-    <p>Use OneDrive Files On-Demand</p>
-  </li>
-  <li>
-    <p>Silently move Windows known folders to OneDrive</p>
-  </li>
-  <li>
-    <p>Silently sign in users to the OneDrive sync app with their Windows credentials</p>
-  </li>
+  <li><strong>Installing OneDrive</strong>: Step-by-step instructions on setting up OneDrive in a Remote Desktop session.</li>
+  <li><strong>Configuring SSO via Group Policy</strong>: Ensuring a seamless login experience for users accessing OneDrive on their remote desktops.</li>
 </ul>
+
+<h3 id="getting-started"><span class="me-2">Getting Started</span><a href="#getting-started" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ul>
+  <li><strong>OneDrive Download</strong>: Get the latest version of OneDrive here. <a href="https://support.microsoft.com/en-us/office/onedrive-release-notes-845dcf18-f921-435e-bf28-4e24b95e5fc0?ui=en-us&amp;rs=en-us&amp;ad=us">Download OneDrive</a></li>
+  <li><strong>Installing OneDrive Policies</strong>: For guidance on OneDrive Group Policy management, visit <a href="https://learn.microsoft.com/en-us/sharepoint/use-group-policy#manage-onedrive-using-group-policy">Manage OneDrive using Group Policy</a>.</li>
+  <li><strong>Per-Machine Installation</strong>: Follow these instructions to install OneDrive for <strong>All Users</strong>: <a href="https://learn.microsoft.com/en-us/sharepoint/per-machine-installation#deployment-instructions">Per-Machine Installation Instructions</a>.</li>
+</ul>
+
+<h3 id="configuring-group-policy-for-all-users"><span class="me-2">Configuring Group Policy for All Users</span><a href="#configuring-group-policy-for-all-users" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>The new policy settings can be found under <strong>Computer Configuration\Policies\Administrative Templates\OneDrive</strong>. The following are recommended to be <strong>enabled</strong>:</p>
+
+<ul>
+  <li><strong>Use OneDrive Files On-Demand</strong>: Optimizes storage and accessibility of files.</li>
+  <li><strong>Silently move Windows known folders to OneDrive</strong>: Streamlines user data management.</li>
+  <li><strong>Silently sign in users to the OneDrive sync app with their Windows credentials</strong>: Facilitates SSO for a smoother user experience.</li>
+</ul>
+
+<h3 id="your-feedback-matters"><span class="me-2">Your Feedback Matters</span><a href="#your-feedback-matters" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>Let me know in the comments if you’re interested in a follow-up video. We could explore automating the OneDrive installation process for every user account, further streamlining the setup in Remote Desktop environments.</p>
+
+<h3 id="concluding-thoughts"><span class="me-2">Concluding Thoughts</span><a href="#concluding-thoughts" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>Configuring OneDrive with SSO in a Remote Desktop setting enhances the user experience by providing seamless access to files and syncing capabilities. This tutorial aims to guide you through this setup, making your RDS environment more user-friendly and efficient.</p>
+
+<p>We look forward to your feedback and suggestions. Share your experiences, questions, or the challenges you’ve encountered in the comments below. Your input is invaluable and helps shape our future content.</p>
+
+<p>Stay tuned for more insights and tutorials in Remote Desktop Services and cloud integration!</p>
+
 
   </div>
 
@@ -888,35 +956,35 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Server2022-HyperV-EnableDeduplication/">Server 2022 - Hyper-V - Enable Deduplication</a>
+          <a href="/posts/Windows11HybridADJoin/">Windows 11 - Active Directory - Hybrid Join - Azure AD</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Server2022-Hyper-V-InstallWindows11/">Server 2022 - Hyper-V - Install Windows 11</a>
+          <a href="/posts/IntuneAppsAndPolicy/">Intune - Applications and Policies</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/InstallingAD/">Server 2022 - Installing Active Directory and Setting up DNS</a>
+          <a href="/posts/RemoteDesktopPart2/">Server 2022 - Remote Desktop Services - Part 2</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Windows11DomainJoin/">Windows 11 Domain Join</a>
+          <a href="/posts/RemoteDesktopPart3/">Server 2022 - Remote Desktop Services - Part 3</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Windows11-fixrdpbug/">Windows 11 - Fix 22H2 Remote Desktop issues!</a>
+          <a href="/posts/RemoteDesktopPart4/">Installing Office 365 on a Remote Desktop Host!</a>
         </li>
       
     </ul>
@@ -1280,74 +1348,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1377,251 +1377,10 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+      
+        
+        
+
   
     
     
@@ -1736,90 +1495,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -2100,6 +1776,425 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2270,6 +2365,11 @@
         
         
 
+  
+    
+    
+    
+    
   
     
     
@@ -3615,6 +3715,18 @@
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -3658,7 +3770,11 @@
 
 
 
-                  In this video we will install the Azure MFA NPS Extension, with this extension we can use the Multifactor Authentication from Azure AD and securing the Remote Desktop Gateway connection for Remote ...
+                  
+
+    
+
+Part 7 of our Remote Desktop Services series for Windows Server 2022 dives into enhancing security with Azure Multi-Factor Authentication (MFA). In this tutorial, we’ll install the Azure MF...
                 </p>
               </div>
             </div>
@@ -3734,8 +3850,11 @@ i’m going...
 
 
 
-                  In this video, we will configure a VDI (Virtual Desktop Infrastructure) solution.
-We will need a Hyper-v server to host our VDI Windows 10/11 template virtual machine and VDI pool (The Virtual mach...
+                  
+
+    
+
+In the final installment of our Remote Desktop Services series for Windows Server 2022, we explore the setup of a Virtual Desktop Infrastructure (VDI) solution. This approach utilizes Hyper...
                 </p>
               </div>
             </div>
@@ -4226,74 +4345,6 @@ We will need a Hyper-v server to host our VDI Windows 10/11 template virtual mac
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4323,251 +4374,10 @@ We will need a Hyper-v server to host our VDI Windows 10/11 template virtual mac
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+      
+        
+        
+
   
     
     
@@ -4682,90 +4492,7 @@ We will need a Hyper-v server to host our VDI Windows 10/11 template virtual mac
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -5046,6 +4773,425 @@ We will need a Hyper-v server to host our VDI Windows 10/11 template virtual mac
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -5216,6 +5362,11 @@ We will need a Hyper-v server to host our VDI Windows 10/11 template virtual mac
         
         
 
+  
+    
+    
+    
+    
   
     
     

@@ -37,8 +37,8 @@
 <meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Upgrading A Server 2012 R2 Domain Controller To Server 2019!" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="In this video we will upgrade an old server 2012 R2 domain controller to Server 2019. In most cases you will install a new Domain controller and migrate the FSMO roles. But in some cases you just have to upgrade the existing server." />
-<meta property="og:description" content="In this video we will upgrade an old server 2012 R2 domain controller to Server 2019. In most cases you will install a new Domain controller and migrate the FSMO roles. But in some cases you just have to upgrade the existing server." />
+<meta name="description" content="A minimal website for tech tips, blogs and video documentation." />
+<meta property="og:description" content="A minimal website for tech tips, blogs and video documentation." />
 <link rel="canonical" href="http://localhost:4000/posts/Upgrading_A_Server_2012_R2_Domain_Controller_To_Server_2019/" />
 <meta property="og:url" content="http://localhost:4000/posts/Upgrading_A_Server_2012_R2_Domain_Controller_To_Server_2019/" />
 <meta property="og:site_name" content="Mylemans Online" />
@@ -48,7 +48,7 @@
 <meta property="twitter:title" content="Upgrading A Server 2012 R2 Domain Controller To Server 2019!" />
 <meta name="google-site-verification" content="google445ce971c729a3a8.html" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-02-17T00:00:00+01:00","datePublished":"2023-02-17T00:00:00+01:00","description":"In this video we will upgrade an old server 2012 R2 domain controller to Server 2019. In most cases you will install a new Domain controller and migrate the FSMO roles. But in some cases you just have to upgrade the existing server.","headline":"Upgrading A Server 2012 R2 Domain Controller To Server 2019!","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Upgrading_A_Server_2012_R2_Domain_Controller_To_Server_2019/"},"url":"http://localhost:4000/posts/Upgrading_A_Server_2012_R2_Domain_Controller_To_Server_2019/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-07T15:59:31+01:00","datePublished":"2023-02-17T00:00:00+01:00","description":"A minimal website for tech tips, blogs and video documentation.","headline":"Upgrading A Server 2012 R2 Domain Controller To Server 2019!","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Upgrading_A_Server_2012_R2_Domain_Controller_To_Server_2019/"},"url":"http://localhost:4000/posts/Upgrading_A_Server_2012_R2_Domain_Controller_To_Server_2019/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -569,6 +569,60 @@
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
 
   
   
@@ -619,6 +673,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          Updated
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1704639571"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Jan  7, 2024
+</time>
+
+        </span>
+      
 
       
 
@@ -657,7 +734,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="289 words"
+  title="320 words"
 >
   <em>1 min</em> read</span>
 
@@ -668,28 +745,39 @@
   </header>
 
   <div class="content">
-    <p>In this video we will upgrade an old server 2012 R2 domain controller to Server 2019. In most cases you will install a new Domain controller and migrate the FSMO roles. But in some cases you just have to upgrade the existing server.</p>
-
-<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+    <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
 <div class="embed-container">    <iframe title="YouTube video player" width="640" height="390" src="//www.youtube.com/embed/61H8PYeK0sw" frameborder="0" allowfullscreen=""></iframe></div>
 
-<p>For an in-place upgrade of an existing DC, you must run adprep /forestprep and adprep /domainprep manually. You need to run Adprep /forestprep only once in the forest for each newer version of Windows Server. Run Adprep /domainprep once in each domain in which you have DCs that you’re upgrading for each newer version of Windows Server.</p>
+<p>Welcome to our tutorial on upgrading an older Server 2012 R2 domain controller to Server 2019. While the typical approach involves installing a new domain controller and migrating FSMO roles, there are scenarios where an in-place upgrade is necessary. This video guides you through this process.</p>
 
-<p>Adprep.exe is a command-line tool that is available on the Windows Server 2008 installation disc in the \sources\adprep folder, and it is available on the Windows Server 2008 R2, and newer, installation disk in the \support\adprep folder. You must run adprep from an elevated command prompt. To open an elevated command prompt, click Start, right-click Command Prompt, and then click Run as administrator.</p>
+<h3 id="key-steps-for-in-place-domain-controller-upgrade"><span class="me-2">Key Steps for In-Place Domain Controller Upgrade</span><a href="#key-steps-for-in-place-domain-controller-upgrade" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p>In this table you can see the supported upgrade paths, based on the version you’re currently on.</p>
+<ul>
+  <li>
+    <p><strong>Preparing for Upgrade</strong>: Before initiating the upgrade, ensure you run <code class="language-plaintext highlighter-rouge">adprep /forestprep</code> and <code class="language-plaintext highlighter-rouge">adprep /domainprep</code> manually. These commands prepare your forest and domain for the new server version.</p>
+  </li>
+  <li>
+    <p><strong>Understanding Adprep</strong>: Adprep.exe is a crucial tool for this process. It’s found on the Windows Server installation disk in the \support\adprep folder. Remember to run adprep from an elevated command prompt: Click Start, right-click Command Prompt, and then click Run as administrator.</p>
+  </li>
+</ul>
+
+<h3 id="supported-upgrade-paths"><span class="me-2">Supported Upgrade Paths</span><a href="#supported-upgrade-paths" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>Here’s a quick reference table for supported upgrade paths:</p>
 
 <div class="table-wrapper"><table>
-  <tbody>
+  <thead>
     <tr>
-      <td>Upgrade from / to</td>
-      <td>Windows Server 2008 R2</td>
-      <td>Windows Server 2012</td>
-      <td>Windows Server 2012 R2</td>
-      <td>Windows Server 2016</td>
-      <td>Windows Server 2019</td>
-      <td>Windows Server 2022</td>
+      <th>Upgrade from / to</th>
+      <th>WS 2008 R2</th>
+      <th>WS 2012</th>
+      <th>WS 2012 R2</th>
+      <th>WS 2016</th>
+      <th>WS 2019</th>
+      <th>WS 2022</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>Windows Server 2008</td>
       <td>Yes</td>
@@ -747,7 +835,9 @@
   </tbody>
 </table></div>
 
-<p>So we need to run the following command to prepare the Forest:</p>
+<h3 id="running-the-necessary-commands"><span class="me-2">Running the Necessary Commands</span><a href="#running-the-necessary-commands" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>To prepare the Forest, run:</p>
 
 <div class="language-powershell highlighter-rouge"><div class="code-header">
         <span data-label-text="Powershell"><i class="fas fa-code fa-fw small"></i></span>
@@ -755,13 +845,21 @@
 </pre></td><td class="rouge-code"><pre><span class="n">adprep</span><span class="w"> </span><span class="nx">/forestprep</span><span class="w">
 </span></pre></td></tr></tbody></table></code></div></div>
 
-<p>And then for each Domain controller we want to upgrade:</p>
+<p>Then, for each domain controller you wish to upgrade, execute:</p>
 
 <div class="language-powershell highlighter-rouge"><div class="code-header">
         <span data-label-text="Powershell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre><span class="n">Adprep</span><span class="w"> </span><span class="nx">/domainprep</span><span class="w"> </span><span class="nx">/gpprep</span><span class="w">
 </span></pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="conclusion"><span class="me-2">Conclusion</span><a href="#conclusion" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>Upgrading your domain controller directly to Server 2019 can be a straightforward process if done correctly. This video aims to provide clear, step-by-step guidance to ensure a smooth transition.</p>
+
+<p>We’re keen to hear about your experiences with upgrading your domain controller. Share your stories or any questions you might have in the comments section below. Your input helps us improve our tutorials and assists others in the community with similar tasks.</p>
+
+<p>Stay tuned for more helpful guides and insights into server management and upgrades!</p>
 
   </div>
 
@@ -879,35 +977,35 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Server2022-HyperV-EnableDeduplication/">Server 2022 - Hyper-V - Enable Deduplication</a>
+          <a href="/posts/Windows11HybridADJoin/">Windows 11 - Active Directory - Hybrid Join - Azure AD</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Server2022-Hyper-V-InstallWindows11/">Server 2022 - Hyper-V - Install Windows 11</a>
+          <a href="/posts/IntuneAppsAndPolicy/">Intune - Applications and Policies</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/InstallingAD/">Server 2022 - Installing Active Directory and Setting up DNS</a>
+          <a href="/posts/RemoteDesktopPart2/">Server 2022 - Remote Desktop Services - Part 2</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Windows11DomainJoin/">Windows 11 Domain Join</a>
+          <a href="/posts/RemoteDesktopPart3/">Server 2022 - Remote Desktop Services - Part 3</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Windows11-fixrdpbug/">Windows 11 - Fix 22H2 Remote Desktop issues!</a>
+          <a href="/posts/RemoteDesktopPart4/">Installing Office 365 on a Remote Desktop Host!</a>
         </li>
       
     </ul>
@@ -1271,74 +1369,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1368,251 +1398,10 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+      
+        
+        
+
   
     
     
@@ -1727,90 +1516,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -2091,6 +1797,425 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2261,6 +2386,11 @@
         
         
 
+  
+    
+    
+    
+    
   
     
     
@@ -3048,6 +3178,11 @@
 
 
 
+  <section id="toc-wrapper" class="ps-0 pe-4">
+    <h2 class="panel-heading ps-3 pt-2 mb-2">Contents</h2>
+    <nav id="toc"></nav>
+  </section>
+
 
             
           </aside>
@@ -3571,74 +3706,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -3668,251 +3735,10 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+      
+        
+        
+
   
     
     
@@ -4027,90 +3853,7 @@
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -4391,6 +4134,425 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -4561,6 +4723,11 @@
         
         
 
+  
+    
+    
+    
+    
   
     
     
@@ -5486,9 +5653,16 @@
 
   
 
+  
+    
+
+    
+
+  
 
 
-  <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.7.1/dist/jquery.min.js,npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js,npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.10/dayjs.min.js,npm/dayjs@1.11.10/locale/en.min.js,npm/dayjs@1.11.10/plugin/relativeTime.min.js,npm/dayjs@1.11.10/plugin/localizedFormat.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.7.1/dist/jquery.min.js,npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js,npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.10/dayjs.min.js,npm/dayjs@1.11.10/locale/en.min.js,npm/dayjs@1.11.10/plugin/relativeTime.min.js,npm/dayjs@1.11.10/plugin/localizedFormat.min.js,npm/tocbot@4.21.3/dist/tocbot.min.js"></script>
 
 
 

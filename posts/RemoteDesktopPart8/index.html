@@ -37,8 +37,8 @@
 <meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Remote Desktop Services, Virtual Desktop Infrastructure!" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="In this video, we will configure a VDI (Virtual Desktop Infrastructure) solution. We will need a Hyper-v server to host our VDI Windows 10/11 template virtual machine and VDI pool (The Virtual machines our clients connect to)." />
-<meta property="og:description" content="In this video, we will configure a VDI (Virtual Desktop Infrastructure) solution. We will need a Hyper-v server to host our VDI Windows 10/11 template virtual machine and VDI pool (The Virtual machines our clients connect to)." />
+<meta name="description" content="A minimal website for tech tips, blogs and video documentation." />
+<meta property="og:description" content="A minimal website for tech tips, blogs and video documentation." />
 <link rel="canonical" href="http://localhost:4000/posts/RemoteDesktopPart8/" />
 <meta property="og:url" content="http://localhost:4000/posts/RemoteDesktopPart8/" />
 <meta property="og:site_name" content="Mylemans Online" />
@@ -48,7 +48,7 @@
 <meta property="twitter:title" content="Remote Desktop Services, Virtual Desktop Infrastructure!" />
 <meta name="google-site-verification" content="google445ce971c729a3a8.html" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-10-19T00:00:00+02:00","datePublished":"2023-10-19T00:00:00+02:00","description":"In this video, we will configure a VDI (Virtual Desktop Infrastructure) solution. We will need a Hyper-v server to host our VDI Windows 10/11 template virtual machine and VDI pool (The Virtual machines our clients connect to).","headline":"Remote Desktop Services, Virtual Desktop Infrastructure!","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/RemoteDesktopPart8/"},"url":"http://localhost:4000/posts/RemoteDesktopPart8/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-01-07T15:59:31+01:00","datePublished":"2023-10-19T00:00:00+02:00","description":"A minimal website for tech tips, blogs and video documentation.","headline":"Remote Desktop Services, Virtual Desktop Infrastructure!","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/RemoteDesktopPart8/"},"url":"http://localhost:4000/posts/RemoteDesktopPart8/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -569,6 +569,71 @@
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
 
   
   
@@ -619,6 +684,29 @@
 
       <!-- lastmod date -->
       
+        <span>
+          Updated
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1704639571"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Jan  7, 2024
+</time>
+
+        </span>
+      
 
       
 
@@ -657,9 +745,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="233 words"
+  title="412 words"
 >
-  <em>1 min</em> read</span>
+  <em>2 min</em> read</span>
 
       </div>
       <!-- .d-flex -->
@@ -668,43 +756,58 @@
   </header>
 
   <div class="content">
-    <p>In this video, we will configure a VDI (Virtual Desktop Infrastructure) solution.
-We will need a Hyper-v server to host our VDI Windows 10/11 template virtual machine and VDI pool (The Virtual machines our clients connect to).</p>
-
-<p>The first few minutes of the video is going to be probably too quick because we have already done this wizard in the first part of this series, I’ll provide a link to it:</p>
-
-<p><a href="/posts/RemoteDesktopPart1/">Remote Desktop Services - Part 1</a></p>
-
-<p>We will also go over the template relatively quick in this video, for more details on how to create a Virtual Machine Template, please take a look at the previous video where we create a template:</p>
-
-<p><a href="/posts/Server2022-Hyper-V-VirtualMachineTemplates/">How to create a Virtual Machine template</a></p>
-
-<p>For Microsoft recommendations regarding your VDI Virtual Machines configuration take a look at:</p>
-
-<p><a href="https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations">Microsoft Learn, RDS/VDI recommendations</a></p>
-
-<p>To set up a Hyper-v server to host our Virtual Machines, please take a look at:</p>
-
-<p><a href="/posts/Server2022-Installing-Hyper-V-Role/">Installing the Hyper-V Role</a></p>
-
-<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+    <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
 <div class="embed-container">    <iframe title="YouTube video player" width="640" height="390" src="//www.youtube.com/embed/RB4Z7Zrhsx4" frameborder="0" allowfullscreen=""></iframe></div>
 
-<p>Be sure to check out the previous video where we configured Remote Desktop Services:</p>
+<p>In the final installment of our Remote Desktop Services series for Windows Server 2022, we explore the setup of a Virtual Desktop Infrastructure (VDI) solution. This approach utilizes Hyper-V to host VDI templates and pools, providing a robust and flexible virtual desktop environment.</p>
 
-<p><a href="/posts/RemoteDesktopPart1/">Server 2022 - Remote Desktop Services - Part 1</a></p>
+<h3 id="setting-up-vdi-in-windows-server-2022"><span class="me-2">Setting Up VDI in Windows Server 2022</span><a href="#setting-up-vdi-in-windows-server-2022" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p><a href="/posts/RemoteDesktopPart2/">Server 2022 - Remote Desktop Services - Part 2</a></p>
+<p>This video covers:</p>
 
-<p><a href="/posts/RemoteDesktopPart3/">Server 2022 - Remote Desktop Services - Part 3</a></p>
+<ul>
+  <li><strong>VDI Configuration</strong>: Detailed instructions on configuring VDI, including setting up a Windows 10/11 template VM and VDI pool.</li>
+  <li><strong>Leveraging Hyper-V</strong>: Utilizing a Hyper-V server to host your VDI virtual machines.</li>
+</ul>
 
-<p><a href="/posts/RemoteDesktopPart4/">Installing Office 365 on a Remote Desktop Host!</a></p>
+<h3 id="essential-links-and-resources"><span class="me-2">Essential Links and Resources</span><a href="#essential-links-and-resources" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p><a href="/posts/RemoteDesktopPart5/">Server 2022 - Remote Desktop Services - Part 5</a></p>
+<ul>
+  <li><strong>Recap of Previous Steps</strong>: For those who might find the first part of the video quick, it revisits the wizard used in the first part of this series. <a href="/posts/RemoteDesktopPart1/">Remote Desktop Services - Part 1</a></li>
+  <li><strong>Creating a VM Template</strong>: A refresher on creating a Virtual Machine template. <a href="/posts/Server2022-Hyper-V-VirtualMachineTemplates/">How to create a Virtual Machine template</a></li>
+  <li><strong>Microsoft’s VDI Recommendations</strong>: For optimal configuration of your VDI VMs. <a href="https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations">Microsoft Learn, RDS/VDI recommendations</a></li>
+  <li><strong>Setting Up Hyper-V</strong>: In case you need to set up a Hyper-V server for hosting VMs. <a href="/posts/Server2022-Installing-Hyper-V-Role/">Installing the Hyper-V Role</a></li>
+</ul>
 
-<p><a href="/posts/Remote_DesktopPart6/">Server 2022 - Remote Desktop Services - Part 6</a></p>
+<h3 id="why-vdi"><span class="me-2">Why VDI?</span><a href="#why-vdi" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<p><a href="/posts/RemoteDesktopPart7/">Server 2022 - Remote Desktop Services - Part 7</a></p>
+<ul>
+  <li><strong>Flexibility and Scalability</strong>: VDI offers a dynamic way to manage and deploy virtual desktops across your organization.</li>
+  <li><strong>Enhanced Security and Control</strong>: Centralizes data and application management, offering improved security and compliance.</li>
+  <li><strong>Customizable User Experience</strong>: Tailor desktop environments to meet the specific needs of different user groups.</li>
+</ul>
+
+<h3 id="catching-up-on-the-series"><span class="me-2">Catching Up on the Series</span><a href="#catching-up-on-the-series" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>Here are the previous parts of the series for a comprehensive understanding of Remote Desktop Services:</p>
+
+<ul>
+  <li><a href="/posts/RemoteDesktopPart1/">Server 2022 - Remote Desktop Services - Part 1</a></li>
+  <li><a href="/posts/RemoteDesktopPart2/">Server 2022 - Remote Desktop Services - Part 2</a></li>
+  <li><a href="/posts/RemoteDesktopPart3/">Server 2022 - Remote Desktop Services - Part 3</a></li>
+  <li><a href="/posts/RemoteDesktopPart4/">Installing Office 365 on a Remote Desktop Host!</a></li>
+  <li><a href="/posts/RemoteDesktopPart5/">Server 2022 - Remote Desktop Services - Part 5</a></li>
+  <li><a href="/posts/Remote_DesktopPart6/">Server 2022 - Remote Desktop Services - Part 6</a></li>
+  <li><a href="/posts/RemoteDesktopPart7/">Server 2022 - Remote Desktop Services - Part 7</a></li>
+</ul>
+
+<h3 id="concluding-the-series"><span class="me-2">Concluding the Series</span><a href="#concluding-the-series" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>With the completion of this VDI setup tutorial, we wrap up our comprehensive series on Remote Desktop Services. We hope these tutorials have provided you with a wealth of knowledge and practical skills to enhance your RDS environment in Windows Server 2022.</p>
+
+<p>We’re keen to hear about your experiences with setting up and managing VDI. Share your stories, questions, or challenges in the comments below. Your feedback enriches our content and supports the wider community in their tech endeavors.</p>
+
+<p>Thank you for following this series, and stay tuned for more in-depth tutorials and insights in the world of Windows Server and remote desktop technologies!</p>
 
 
   </div>
@@ -860,35 +963,35 @@ We will need a Hyper-v server to host our VDI Windows 10/11 template virtual mac
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Server2022-HyperV-EnableDeduplication/">Server 2022 - Hyper-V - Enable Deduplication</a>
+          <a href="/posts/Windows11HybridADJoin/">Windows 11 - Active Directory - Hybrid Join - Azure AD</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Server2022-Hyper-V-InstallWindows11/">Server 2022 - Hyper-V - Install Windows 11</a>
+          <a href="/posts/IntuneAppsAndPolicy/">Intune - Applications and Policies</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/InstallingAD/">Server 2022 - Installing Active Directory and Setting up DNS</a>
+          <a href="/posts/RemoteDesktopPart2/">Server 2022 - Remote Desktop Services - Part 2</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Windows11DomainJoin/">Windows 11 Domain Join</a>
+          <a href="/posts/RemoteDesktopPart3/">Server 2022 - Remote Desktop Services - Part 3</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/Windows11-fixrdpbug/">Windows 11 - Fix 22H2 Remote Desktop issues!</a>
+          <a href="/posts/RemoteDesktopPart4/">Installing Office 365 on a Remote Desktop Host!</a>
         </li>
       
     </ul>
@@ -1252,74 +1355,6 @@ We will need a Hyper-v server to host our VDI Windows 10/11 template virtual mac
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1349,251 +1384,10 @@ We will need a Hyper-v server to host our VDI Windows 10/11 template virtual mac
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+      
+        
+        
+
   
     
     
@@ -1708,90 +1502,7 @@ We will need a Hyper-v server to host our VDI Windows 10/11 template virtual mac
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -2072,6 +1783,425 @@ We will need a Hyper-v server to host our VDI Windows 10/11 template virtual mac
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2242,6 +2372,11 @@ We will need a Hyper-v server to host our VDI Windows 10/11 template virtual mac
         
         
 
+  
+    
+    
+    
+    
   
     
     
@@ -3029,6 +3164,11 @@ We will need a Hyper-v server to host our VDI Windows 10/11 template virtual mac
 
 
 
+  <section id="toc-wrapper" class="ps-0 pe-4">
+    <h2 class="panel-heading ps-3 pt-2 mb-2">Contents</h2>
+    <nav id="toc"></nav>
+  </section>
+
 
             
           </aside>
@@ -3570,6 +3710,18 @@ We will need a Hyper-v server to host our VDI Windows 10/11 template virtual mac
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
 
@@ -3613,7 +3765,11 @@ We will need a Hyper-v server to host our VDI Windows 10/11 template virtual mac
 
 
 
-                  In this video we will install the Azure MFA NPS Extension, with this extension we can use the Multifactor Authentication from Azure AD and securing the Remote Desktop Gateway connection for Remote ...
+                  
+
+    
+
+Part 7 of our Remote Desktop Services series for Windows Server 2022 dives into enhancing security with Azure Multi-Factor Authentication (MFA). In this tutorial, we’ll install the Azure MF...
                 </p>
               </div>
             </div>
@@ -4184,74 +4340,6 @@ Join us in the first part of our comprehensive series on deploying Remote Deskto
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4281,251 +4369,10 @@ Join us in the first part of our comprehensive series on deploying Remote Deskto
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
+      
+        
+        
+
   
     
     
@@ -4640,90 +4487,7 @@ Join us in the first part of our comprehensive series on deploying Remote Deskto
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
+      
     
   
     
@@ -5004,6 +4768,425 @@ Join us in the first part of our comprehensive series on deploying Remote Deskto
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -5174,6 +5357,11 @@ Join us in the first part of our comprehensive series on deploying Remote Deskto
         
         
 
+  
+    
+    
+    
+    
   
     
     
@@ -6099,9 +6287,16 @@ Join us in the first part of our comprehensive series on deploying Remote Deskto
 
   
 
+  
+    
+
+    
+
+  
 
 
-  <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.7.1/dist/jquery.min.js,npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js,npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.10/dayjs.min.js,npm/dayjs@1.11.10/locale/en.min.js,npm/dayjs@1.11.10/plugin/relativeTime.min.js,npm/dayjs@1.11.10/plugin/localizedFormat.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.7.1/dist/jquery.min.js,npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js,npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.10/dayjs.min.js,npm/dayjs@1.11.10/locale/en.min.js,npm/dayjs@1.11.10/plugin/relativeTime.min.js,npm/dayjs@1.11.10/plugin/localizedFormat.min.js,npm/tocbot@4.21.3/dist/tocbot.min.js"></script>
 
 
 
