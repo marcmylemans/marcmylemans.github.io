@@ -51,4 +51,4 @@ This project is open-source, and contributions are welcome. It's a community-dri
 The Hyper-V Automation Project represents a significant step forward in managing Hyper-V environments. By automating routine tasks, it not only saves time but also enhances the reliability and consistency of your virtual machine setups. I invite you to try it out, contribute, and join us in making Hyper-V management easier and more efficient than ever.
 
 
-Check out the project on [GitHub] (https://github.com/marcmylemans/Powershell-Releases/tree/main/Hyper-V/HomeLab) and join our growing community of contributors and users! And don't forget to read my previous post on [My New Home Lab Journey](https://mylemans.online/posts/NewHomeLab/) to get started with the essential prerequisites for this project.
+Check out the project on [GitHub](https://github.com/marcmylemans/Powershell-Releases/tree/main/Hyper-V/HomeLab) and join our growing community of contributors and users! And don't forget to read my previous post on [My New Home Lab Journey](https://mylemans.online/posts/NewHomeLab/) to get started with the essential prerequisites for this project.
