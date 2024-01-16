@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My New Home Lab Journey
-categories: Hardware HomeLab
+categories: HomeLab Hardware
 tags: hardware network homelab
 ---
 
