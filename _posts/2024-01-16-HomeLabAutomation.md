@@ -13,7 +13,7 @@ Managing a Hyper-V environment efficiently can be a challenging task, especially
 
 # Understanding the Prerequisites:
 
-Before diving into the Hyper-V Automation Project, it's essential to understand the basics of creating and managing Hyper-V VM templates. For newcomers or those looking to refresh their knowledge, I recommend checking out my previous post: Creating Hyper-V VM Templates. This guide will give you a solid foundation and ensure you're well-prepared to make the most of the automation project.
+Before diving into the Hyper-V Automation Project, it's essential to understand the basics of creating and managing Hyper-V VM templates. For newcomers or those looking to refresh their knowledge, I recommend checking out my previous post: [My New Home Lab Journey](https://mylemans.online/posts/NewHomeLab/). This guide will give you a solid foundation and ensure you're well-prepared to make the most of the automation project.
 
 # Automate Your Hyper-V Environment:
 
