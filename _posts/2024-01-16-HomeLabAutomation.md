@@ -34,9 +34,7 @@ At the heart of the project is a JSON configuration file, which allows for easy 
 
 ## Easy to Use:
 
-Designed with simplicity in mind, the project
-
-'s scripts are easy to run and can be executed in any PowerShell environment. Whether you're a PowerShell expert or a beginner, you'll find the setup process straightforward.
+Designed with simplicity in mind, the project's scripts are easy to run and can be executed in any PowerShell environment. Whether you're a PowerShell expert or a beginner, you'll find the setup process straightforward.
 
 ## Testing:
 
