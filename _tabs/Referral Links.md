@@ -9,7 +9,7 @@ Welcome to our Referral Links page! We've partnered with the following companies
 
 **YouTube**
 
-[Youtube Channel](https://www.youtube.com/@mylemansonline)
+[Youtube Channel](https://www.youtube.com/@marcmylemans)
 
 YouTube is a fantastic platform for content creators, and you can support us by engaging with our channel. Here's how you can help:
 
