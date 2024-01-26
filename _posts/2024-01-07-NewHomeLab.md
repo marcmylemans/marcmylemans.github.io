@@ -58,7 +58,7 @@ The transition to 2.5 Gbit would involve:
 
 - **Upgrading Network Hardware**: Including a new switch and network cards capable of supporting 2.5 Gbit speeds. 
 
-![2.5 Gbit Network Hardware](https://bilder.tragant.de/produkte/orig/626a87155c3b87.32790446.jpg){:class="img-responsive"}
+![2.5 Gbit Network Hardware](https://m.media-amazon.com/images/I/41Dnc8dNuuL._AC_UF1000,1000_QL80_.jpg){:class="img-responsive"}
 
 
 This upgrade isn't just about speed; it's about future-proofing my lab and preparing it for more advanced projects.
