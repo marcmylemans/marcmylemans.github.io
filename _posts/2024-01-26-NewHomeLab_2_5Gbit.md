@@ -27,7 +27,7 @@ To facilitate the upgrade to a 2.5 Gbit network, I've made a significant change 
 
 This strategic replacement not only elevates the network's performance but also ensures multi-gigabit connectivity, crucial for the advanced tasks I plan to undertake in my home lab.
 
-![M.2 to E 2.5G Ethernet Adapter](https://ae01.alicdn.com/kf/Sece0e796f3c9472f99de755017bf8d21M/M-2-Een-E-2-5G-Ethernet-Adapter-2-5G-1G-100M-Multi-Gigabit-M-2.jpg_80x80.jpg_.webp){:class="img-responsive"}
+![M.2 to E 2.5G Ethernet Adapter](https://m.media-amazon.com/images/I/41Dnc8dNuuL._AC_UF1000,1000_QL80_.jpg){:class="img-responsive"}
 
 
 ## Next Steps: Network Configuration and Testing
