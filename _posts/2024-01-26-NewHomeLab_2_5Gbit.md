@@ -70,3 +70,25 @@ This network upgrade isn't just a technical enhancement; it's a gateway to new p
 Stay tuned as I delve into more complex projects and share my experiences and learnings. The journey of my home lab continues to be an exciting and educational one, and I'm eager to explore the new horizons this upgrade opens up.
 
 *Stay tuned for more updates as my high-speed networking adventure continues!*
+
+## Addendum: Driver Update for Full 2.5 Gbit Speed
+
+### Driver Limitation with Windows Update
+
+After integrating the new **M.2 to E 2.5G Ethernet Adapter**, I encountered a limitation with the built-in drivers provided by Windows Update. These drivers restricted the adapter's functionality to only 1 Gbit, which was not the full capability of the hardware.
+
+### Acquiring the Correct Drivers from Realtek
+
+To unleash the full potential of the 2.5 Gbit network, I needed to manually download and install the appropriate drivers from Realtek. Here's how I addressed this:
+
+1. **Realtek Website**: I visited the Realtek website to find the specific drivers for my network interface controller. The drivers are available at [Realtek Network Interface Controllers Drivers](https://www.realtek.com/en/component/zoo/category/network-interface-controllers-10-100-1000m-gigabit-ethernet-pci-express-software).
+
+2. **Specific Driver Download**: I downloaded the driver for Server 2019. The direct link to the driver is [Install_Win10_10069_12212023.zip](https://rtitwww.realtek.com/rtdrivers/cn/nic1/Install_Win10_10069_12212023.zip).
+
+3. **Installation**: After downloading, I installed the driver on my Server 2019 setup, which was a straightforward process.
+
+### Outcome
+
+Post driver installation, the network adapter operated at its full 2.5 Gbit capacity. This not only resolved the speed limitation but also ensured that my home lab network could handle more demanding tasks efficiently.
+
+*This driver update was a crucial step in achieving the desired performance from my upgraded network.*
