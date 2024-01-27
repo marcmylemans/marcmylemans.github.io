@@ -21,20 +21,29 @@ This video provides step-by-step guidance on:
 To install the Web Client, follow these PowerShell commands (run PowerShell as an Administrator):
 
 1) Install the PowerShellGet module:
+
     ```powershell
     Install-Module -Name PowerShellGet -Force
     ```
     Close PowerShell afterwards!
 
 2) Install the RDWebClientManagement module:
+
     ```powershell
     Install-Module -Name RDWebClientManagement
     ```
 
 3) Continue with the following commands:
+
     ```powershell
     Install-RDWebClientPackage
+    ```
+    
+    ```powershell
     Import-RDWebClientBrokerCert <.cer file path>
+    ```
+    
+    ```powershell
     Publish-RDWebClientPackage -Type Production -Latest
     ```
 
