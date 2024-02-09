@@ -13,4 +13,4 @@ This video marks the debut of my brand new microphone for voiceovers. I've aimed
 Your Feedback Matters:
 Your input is invaluable to me. If you have any questions, suggestions, or topics you want me to cover in future videos, please leave a comment. Don't forget to like, share, and subscribe for more tutorials on Proxmox, Ceph, and other network and infrastructure technologies.
 
-{% youtube "https://youtu.be/iF88CwweAko" %}
+{% youtube "https://youtu.be/oQHi8IYxY-0" %}
