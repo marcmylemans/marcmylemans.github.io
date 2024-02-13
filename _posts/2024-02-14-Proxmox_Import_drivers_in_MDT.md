@@ -2,7 +2,7 @@
 layout: post
 title: My Home Lab Adventure - Solving the BSOD Mystery with Proxmox and MDT
 categories: HomeLab Hardware
-tags: proxmox homeserversetup techguide virtualization 
+tags: proxmox homeserversetup techguide virtualization mdt
 ---
 
 # My Home Lab Adventure: Solving the BSOD Mystery with Proxmox and MDT
