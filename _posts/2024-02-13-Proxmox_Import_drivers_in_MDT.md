@@ -5,8 +5,6 @@ categories: HomeLab Hardware
 tags: proxmox homeserversetup techguide virtualization mdt
 ---
 
-# My Home Lab Adventure: Solving the BSOD Mystery with Proxmox and MDT
-
 Hey friends!
 
 I recently embarked on a thrilling journey to build my very own home lab, diving into the world of virtual machines with Proxmox. It's been quite the ride, full of learning and, well, a few unexpected bumps along the way. One of the challenges that had me scratching my head was a series of pesky Blue Screens of Death (BSODs) during installations. Talk about a tech enthusiast's nightmare, right? [Read about my journey here.](https://mylemans.online/posts/NewHomeLab/)
