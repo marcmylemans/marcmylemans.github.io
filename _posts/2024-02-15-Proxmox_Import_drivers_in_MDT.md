@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building a 3-Node Proxmox Cluster with Ceph Storage
+title: My Home Lab Adventure - Solving the BSOD Mystery with Proxmox and MDT
 categories: HomeLab Hardware
 tags: proxmox homeserversetup techguide virtualization 
 ---
