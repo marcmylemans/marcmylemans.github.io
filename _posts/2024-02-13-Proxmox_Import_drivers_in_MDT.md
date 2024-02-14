@@ -34,7 +34,7 @@ In the video, I show you how to:
 
 The script contents:
 
-```Powershell
+```
 $TSenv = New-Object -ComObject Microsoft.SMS.TSEnvironment
 
 # Check for existing drivers folder
