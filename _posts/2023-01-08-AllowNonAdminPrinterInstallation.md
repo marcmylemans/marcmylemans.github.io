@@ -15,7 +15,7 @@ In this video we will configure a Group Policy to allow our 'Non Administrator' 
 
 Class = Printer
 ```
-{4658ee7e-f050-11d1-b6bd-00c04fa372a7};
+{4658ee7e-f050-11d1-b6bd-00c04fa372a7}
 ```
 
 Class = PNPPrinters 
