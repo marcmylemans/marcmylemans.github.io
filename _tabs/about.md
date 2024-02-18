@@ -18,5 +18,5 @@ You can catch all the tech tutorials there. So, if you're up for some visual tec
 
 {% include LiveSubsCount.html %}
 
-
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/G2G0UMWZ8)
 
