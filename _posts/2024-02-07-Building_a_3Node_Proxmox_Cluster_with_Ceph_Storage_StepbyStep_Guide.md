@@ -3,6 +3,7 @@ layout: post
 title: Building a 3-Node Proxmox Cluster with Ceph Storage
 categories: HomeLab Hardware
 tags: proxmox homeserversetup techguide virtualization 
+image: https://i9.ytimg.com/vi/oQHi8IYxY-0/mqdefault.jpg?v=65c3c1b9&sqp=CMS3q68G&rs=AOn4CLASMq2GTOj3tlp9ZNaIzJGcg-CaDQ
 ---
 
 In today's video, we dive into the world of virtualization by setting up a robust 3-node Proxmox VE cluster integrated with Ceph storage. Whether you're a network enthusiast or diving into infrastructure management, this guide is designed to help you understand and implement a high-availability cluster from scratch.
