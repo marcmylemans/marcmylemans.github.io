@@ -3,6 +3,7 @@ layout: post
 title: Installing the Remote Desktop Web Client!
 categories: Windows Server
 tags: server 2022 rdp part5 html5 browser
+image: https://i9.ytimg.com/vi/i87spvTzR6w/mqdefault.jpg?v=63d00f16&sqp=CMS3q68G&rs=AOn4CLDxI2B1ZYztQXkyC13WLDcgPGqLiA
 ---
 
 {% youtube "https://youtu.be/i87spvTzR6w" %}
