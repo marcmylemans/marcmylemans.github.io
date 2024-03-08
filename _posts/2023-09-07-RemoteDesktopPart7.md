@@ -3,6 +3,7 @@ layout: post
 title: Remote Desktop Services, Securing it with Azure MFA!
 categories: Windows Server
 tags: server 2022 rdp part7 mfa
+image: https://i9.ytimg.com/vi/b5WL7PgEmaY/mqdefault.jpg?v=64fa0c74&sqp=CMS3q68G&rs=AOn4CLD24v-qeivbWqGsfeOwHc9r7I5xbg
 ---
 
 {% youtube "https://youtu.be/b5WL7PgEmaY" %}
