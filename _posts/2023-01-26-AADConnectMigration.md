@@ -3,6 +3,8 @@ categories: Azure Connect
 layout: post
 tags: azuread ad sync
 title: AAD Connect / Cloud Sync with Existing Cloud Users
+
+image: /asset/img/posts/Default.webp
 ---
 
 # Tackling Duplicate Users in AAD Connect / Cloud Sync

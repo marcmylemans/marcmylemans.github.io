@@ -3,6 +3,8 @@ categories: Python Script
 layout: post
 tags: python scripts youtube
 title: Introducing Automated Blog Post Creation from YouTube Uploads with Python!
+
+image: /asset/img/posts/Default.webp
 ---
 
 #  Introducing Automated Blog Post Creation from YouTube Uploads with Python!

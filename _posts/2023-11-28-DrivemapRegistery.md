@@ -3,6 +3,8 @@ categories: windows registery
 layout: post
 tags: windows register drivemapping networkdrive
 title: Drivemapping with Registery key's
+
+image: /asset/img/posts/Default.webp
 ---
 
 # Configuring Drivemapping with Registeryg Keys!

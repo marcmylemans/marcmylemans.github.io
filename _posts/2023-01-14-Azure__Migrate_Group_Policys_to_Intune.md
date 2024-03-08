@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Azure - Migrate Group Policy's to Intune!
+
+image: /asset/img/posts/Default.webp
 ---
 
 In this video we will be migrating our Group Policy's from Active Directory to Intune!

@@ -4,6 +4,8 @@ date: 2023-12-27 09:00:00
 layout: post
 tags: docker unifi
 title: installing a Unifi Controller with Docker and Lets Encrypt!
+
+image: /asset/img/posts/Default.webp
 ---
 
 # Docker and Docker Compose Installation and Usage Guide

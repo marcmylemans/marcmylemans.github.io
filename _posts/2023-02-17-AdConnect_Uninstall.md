@@ -3,6 +3,8 @@ categories: Windows Server
 layout: post
 tags: azure domaincontroller adconnect sync
 title: Uninstall Azure AD Connect
+
+image: /asset/img/posts/Default.webp
 ---
 
 In this article we are going to uninstall AD Connect because the customer is fully migrated to the cloud.

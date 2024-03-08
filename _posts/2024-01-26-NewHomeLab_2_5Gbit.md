@@ -3,6 +3,8 @@ categories: HomeLab Hardware
 layout: post
 tags: hardware network homelab
 title: My New Home Lab Journey - The 2.5 Gbit Network Upgrade
+
+image: /asset/img/posts/Default.webp
 ---
 
 # Enhancing Connectivity - The 2.5 Gbit Network Upgrade
