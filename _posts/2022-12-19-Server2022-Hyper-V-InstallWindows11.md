@@ -4,6 +4,7 @@ title: Server 2022 - Hyper-V - Install Windows 11
 date: 2022-12-19 08:00:00
 categories: Windows Server 2022 11
 tags: 11 server 2022 hyper-v virtualisation
+image: https://i9.ytimg.com/vi/Vzks9iqvNos/mqdefault.jpg?v=63d014e0&sqp=CJy8q68G&rs=AOn4CLCBF_1w3TQ-2D7LDYC-KaT6SaHeHg
 ---
 
 {% youtube "https://youtu.be/Vzks9iqvNos" %}
