@@ -4,6 +4,7 @@ title: Server 2022  - Create Organizational Units and Group Policies
 date: 2022-12-25 09:00:00
 categories: Windows Server
 tags: server 2022 gpo
+image: https://i9.ytimg.com/vi/fG_hd0G9wo8/mqdefault.jpg?v=63d01b55&sqp=CJy8q68G&rs=AOn4CLBHgaX6epYmZ4Ud_ZtBh1IgNs6UUA
 ---
 
 {% youtube "https://youtu.be/fG_hd0G9wo8" %}
