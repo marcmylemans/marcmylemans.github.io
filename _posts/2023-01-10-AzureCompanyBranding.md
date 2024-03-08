@@ -3,6 +3,7 @@ layout: post
 title: Azure - Company Branding
 categories: Azure Intune
 tags: azure intune branding
+image: https://i9.ytimg.com/vi/bJML_P-Ir_0/mqdefault.jpg?v=63b680c0&sqp=CJy8q68G&rs=AOn4CLAnzpiFx4dTZkWuUrDFMVb-EmymTQ
 ---
 
 In this video we will be adding some Company Branding to our Azure Tenant.
