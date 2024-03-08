@@ -4,6 +4,7 @@ title: "Effortless File Management with Remote Desktop Virtual Drive"
 date: 2024-01-27
 categories: Windows Server
 tags: server 2022 rdp webclient
+image: https://i9.ytimg.com/vi/9c4l5CIV6Qw/mqdefault.jpg?v=65b4defb&sqp=CPC5q68G&rs=AOn4CLBtI0h1yABnQMKDa6Rtmz3fMJo6gg
 ---
 
 Welcome to today's tech tutorial where we delve into the efficient world of file management using the Remote Desktop Virtual Drive. This method is a game-changer for those of us who frequently transfer files between our local machine and a remote server.
