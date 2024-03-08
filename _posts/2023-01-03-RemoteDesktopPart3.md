@@ -4,6 +4,7 @@ title: Remote Desktop Services - FSLogix
 date: 2023-01-03 09:00:00
 categories: Windows Server
 tags: server 2022 rdp part3 fslogix
+image: https://i9.ytimg.com/vi/dRf8k7loXQ0/mqdefault.jpg?v=63d00ef7&sqp=CMS3q68G&rs=AOn4CLCnce5O5t-doJBWRdQB0RmpYWRyYA
 ---
 
 {% youtube "https://youtu.be/dRf8k7loXQ0" %}
