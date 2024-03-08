@@ -4,6 +4,7 @@ title: Server 2022 - Installing Hyper-V Role
 date: 2022-12-17 08:00:00
 categories: Windows Server 2022
 tags: server 2022 hyper-v virtualisation
+image: https://i9.ytimg.com/vi_webp/Y-Sadkf3Ims/mqdefault.webp?v=63d0148f&sqp=CJy8q68G&rs=AOn4CLBR3oYBekURMLbSS3fNTvrIruLXnA
 ---
 
 {% youtube "https://youtu.be/Y-Sadkf3Ims" %}
