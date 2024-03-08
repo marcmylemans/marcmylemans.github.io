@@ -4,6 +4,7 @@ title: Windows 11 Domain Join
 date: 2022-12-23 09:00:00
 categories: Windows 11
 tags: windows 11
+image: https://i9.ytimg.com/vi/yFegSYXlCXE/mqdefault.jpg?v=63a0412a&sqp=CJy8q68G&rs=AOn4CLB4RO-1gqmzGWPmoa0icAgEq21uwA
 ---
 
 {% youtube "https://youtu.be/yFegSYXlCXE" %}
