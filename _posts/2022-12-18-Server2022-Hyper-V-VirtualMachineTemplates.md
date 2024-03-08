@@ -4,6 +4,7 @@ title: Server 2022 - Hyper-V - Virtual Machine Templates
 date: 2022-12-18 08:00:00
 categories: Windows Server 2022
 tags: server 2022 hyper-v virtualisation
+image: https://i9.ytimg.com/vi/14-tJsdW7LU/mqdefault.jpg?v=63d014ae&sqp=CJy8q68G&rs=AOn4CLC_lZRQDtZntLHZ5faZs-r5wwMJIQ
 ---
 
 {% youtube "https://youtu.be/14-tJsdW7LU" %}
