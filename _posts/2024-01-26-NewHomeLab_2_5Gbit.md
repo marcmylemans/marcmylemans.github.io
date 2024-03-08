@@ -11,7 +11,7 @@ As [My New Home Lab](https://mylemans.online/posts/NewHomeLab/) evolves, I'm thr
 
 ## The Need for Speed: Why 2.5 Gbit?
 
-In a tech environment where data transfer and processing speed are paramount, the upgrade to a **2.5 Gbit network** is more than a luxury—it's a necessity. The increased bandwidth will cater to:
+In a tech environment where data transfer and processing speed are paramount, the upgrade to a **2.5 Gbit network** is more than a luxuryâ€”it's a necessity. The increased bandwidth will cater to:
 
 - **Large-scale simulations**: Handling complex computational tasks seamlessly.
 - **Intensive data processing**: Ensuring quicker data throughput for analysis and storage.

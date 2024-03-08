@@ -43,6 +43,6 @@ If you've missed any of the previous parts in this series, be sure to check them
 
 The addition of a Remote App Server significantly expands the capabilities of your RDS environment, offering a more versatile and efficient approach to application management. This tutorial aims to guide you through this advanced feature, enhancing your network's functionality and user experience.
 
-We’re excited to hear about your journey in setting up and utilizing Remote App in your RDS setup. Feel free to share your experiences, questions, or challenges in the comments below. Your insights are incredibly valuable in helping us tailor our content and support the wider community.
+Weâ€™re excited to hear about your journey in setting up and utilizing Remote App in your RDS setup. Feel free to share your experiences, questions, or challenges in the comments below. Your insights are incredibly valuable in helping us tailor our content and support the wider community.
 
 Stay tuned for the next part in this series, where we'll continue exploring advanced features and best practices in Remote Desktop Services!

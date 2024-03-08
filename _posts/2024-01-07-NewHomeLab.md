@@ -18,7 +18,7 @@ The core of my home lab consists of three **HP ProDesk 600 G4 Mini PCs**.
 
 These compact powerhouses are equipped with impressive hardware and some notable features:
 
-- **CPU**: Intel® Core™ i3-8100T
+- **CPU**: IntelÂ® Coreâ„¢ i3-8100T
 - **RAM**: 32 GB each
 - **Storage**: 2 TB NVMe SSD each
 - **Graphics**: Integrated Intel Graphics for efficient hardware transcoding

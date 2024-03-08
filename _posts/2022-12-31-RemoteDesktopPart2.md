@@ -36,6 +36,6 @@ Implementing Group Policies for RDS allows for:
 
 As you advance in setting up and optimizing Remote Desktop Services, these group policy configurations play a crucial role in delivering a seamless and secure remote working environment.
 
-We’re eager to hear about your experiences with these configurations. Share your insights or any challenges you faced in the comments section below. Your feedback is invaluable in shaping our content and helping the wider community.
+Weâ€™re eager to hear about your experiences with these configurations. Share your insights or any challenges you faced in the comments section below. Your feedback is invaluable in shaping our content and helping the wider community.
 
 Stay tuned for more parts in this series, where we'll continue to explore advanced aspects of Remote Desktop Services in Windows Server 2022!

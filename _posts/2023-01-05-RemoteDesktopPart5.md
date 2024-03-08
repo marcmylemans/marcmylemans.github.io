@@ -70,6 +70,6 @@ If you've missed the earlier parts of this series, here are the links to get you
 
 The addition of the Remote Desktop Web Client significantly enhances the versatility and accessibility of your RDS setup. This tutorial aims to guide you through a straightforward setup process, enabling your users to benefit from a flexible, browser-based RDS experience.
 
-We’re eager to hear about your experiences with the Remote Desktop Web Client. Share your insights, questions, or any challenges you've encountered in the comments below. Your feedback is invaluable in helping us shape future content and assisting the wider community.
+Weâ€™re eager to hear about your experiences with the Remote Desktop Web Client. Share your insights, questions, or any challenges you've encountered in the comments below. Your feedback is invaluable in helping us shape future content and assisting the wider community.
 
 Stay tuned for more tutorials in this comprehensive series on Remote Desktop Services!

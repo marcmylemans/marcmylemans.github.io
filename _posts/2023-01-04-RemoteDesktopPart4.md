@@ -8,7 +8,7 @@ title: Installing Office 365 on a Remote Desktop Host!
 
 {% youtube "https://youtu.be/4wO82is6y40" %}
 
-Welcome to the fourth installment of our series on Remote Desktop Services for Windows Server 2022. In this tutorial, we’re tackling a vital component for many business environments: installing the Office 365 Suite on a Remote Desktop Host, specifically configured for shared licensing.
+Welcome to the fourth installment of our series on Remote Desktop Services for Windows Server 2022. In this tutorial, weâ€™re tackling a vital component for many business environments: installing the Office 365 Suite on a Remote Desktop Host, specifically configured for shared licensing.
 
 ### Office 365 on RDS: Shared Licensing Configuration
 

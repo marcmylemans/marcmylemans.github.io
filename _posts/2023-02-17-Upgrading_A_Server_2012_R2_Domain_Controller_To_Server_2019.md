@@ -16,7 +16,7 @@ Welcome to our tutorial on upgrading an older Server 2012 R2 domain controller t
 
 ### Supported Upgrade Paths
 
-Here’s a quick reference table for supported upgrade paths:
+Hereâ€™s a quick reference table for supported upgrade paths:
 
 | Upgrade from / to | WS 2008 R2 | WS 2012 | WS 2012 R2 | WS 2016 | WS 2019 | WS 2022 |
 | ----------------- | ---------- | ------- | ---------- | ------- | ------- | ------- |

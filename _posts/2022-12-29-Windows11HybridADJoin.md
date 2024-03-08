@@ -22,7 +22,7 @@ In this detailed video, we're focusing on:
 
 - **Combined Management Tools**: With Hybrid Azure AD Join, you get the best of both worlds - the robust management capabilities of Intune along with the familiarity and control of local Group Policies.
 - **Flexibility and Accessibility**: Provides seamless access to resources regardless of whether they are on-premises or in the cloud, offering a flexible work environment.
-- **Enhanced Security and Compliance**: Utilize Azure’s security features while maintaining compliance with on-premises policies.
+- **Enhanced Security and Compliance**: Utilize Azureâ€™s security features while maintaining compliance with on-premises policies.
 
 ### Why This Matters
 

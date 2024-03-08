@@ -31,7 +31,7 @@ Our video will guide you through the initial steps needed to implement these fea
 
 ### Concluding Thoughts
 
-Whether you’re a seasoned network administrator or new to Windows Server, understanding the creation and management of OUs and GPOs is crucial. This tutorial is designed to provide a clear and straightforward approach to these fundamental aspects of Windows Server 2022.
+Whether youâ€™re a seasoned network administrator or new to Windows Server, understanding the creation and management of OUs and GPOs is crucial. This tutorial is designed to provide a clear and straightforward approach to these fundamental aspects of Windows Server 2022.
 
 Your feedback and experiences with setting up OUs and GPOs are invaluable to us and the community. Please feel free to share your thoughts or any questions you might have in the comments section.
 

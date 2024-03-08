@@ -16,7 +16,7 @@ Dive deeper into the world of Azure Intune with our latest tutorial, where we ut
 This video is a continuation of our series on integrating on-premises and cloud environments. We're taking the next step by deploying applications and configuring settings through Intune:
 
 1) **Deploying Office Suite**: Learn how to remotely deploy essential Office applications like Word, Outlook, and more to your devices.
-2) **Administrative Template Management**: We’ll guide you on implementing administrative templates across your Hybrid AD-joined devices via Intune.
+2) **Administrative Template Management**: Weâ€™ll guide you on implementing administrative templates across your Hybrid AD-joined devices via Intune.
 
 ### Before You Begin
 
@@ -30,13 +30,13 @@ These will provide you with the necessary foundation for making the most out of 
 ### Why Intune for Hybrid Environments?
 
 - **Centralized Management**: Intune offers a unified platform to manage both your on-premises and cloud-based resources efficiently.
-- **Flexibility and Security**: Seamlessly manage your IT resources with the added benefits of Azure’s robust security features.
+- **Flexibility and Security**: Seamlessly manage your IT resources with the added benefits of Azureâ€™s robust security features.
 - **Streamlined Deployment and Configuration**: Simplify the deployment of applications and enforcement of policies across your network.
 
 ### Concluding Thoughts
 
 Leveraging Intune in a Hybrid AD/Azure AD setup is an advanced step towards modernizing your IT infrastructure, offering greater flexibility and control. This tutorial aims to guide you through this process, enhancing your network management capabilities.
 
-We’re eager to hear about your journey with Intune in a Hybrid environment. Share your experiences and any questions you have in the comments section below. Your insights are invaluable to us and the wider tech community.
+Weâ€™re eager to hear about your journey with Intune in a Hybrid environment. Share your experiences and any questions you have in the comments section below. Your insights are invaluable to us and the wider tech community.
 
 Stay tuned for more tutorials on Azure Intune and hybrid network management!

@@ -17,7 +17,7 @@ First things first, ensure that 'File Transfer' is enabled when you establish a 
 
 ### Uploading Made Easy
 
-Uploading files is a breeze. Just click the upload icon and select the file, and voilà, it gets uploaded to the server. It doesn’t get simpler than this!
+Uploading files is a breeze. Just click the upload icon and select the file, and voilÃ , it gets uploaded to the server. It doesnâ€™t get simpler than this!
 
 ### Downloading with a Twist
 

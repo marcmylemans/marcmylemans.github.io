@@ -29,7 +29,7 @@ Joining Windows 11 to a domain allows for centralized management, enhanced secur
 
 ### Concluding Thoughts
 
-Understanding how to join Windows 11 to a domain is a crucial skill in today's IT landscape, especially with the increasing adoption of Windows 11 in professional environments. This video aims to make this process accessible and straightforward, whether you’re setting up a single machine or preparing for a larger deployment.
+Understanding how to join Windows 11 to a domain is a crucial skill in today's IT landscape, especially with the increasing adoption of Windows 11 in professional environments. This video aims to make this process accessible and straightforward, whether youâ€™re setting up a single machine or preparing for a larger deployment.
 
 Your experiences and insights are valuable to us. Please feel free to share your thoughts or any questions you might have in the comments section.
 

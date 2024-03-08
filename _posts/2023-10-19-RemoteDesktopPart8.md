@@ -46,6 +46,6 @@ Here are the previous parts of the series for a comprehensive understanding of R
 
 With the completion of this VDI setup tutorial, we wrap up our comprehensive series on Remote Desktop Services. We hope these tutorials have provided you with a wealth of knowledge and practical skills to enhance your RDS environment in Windows Server 2022.
 
-We’re keen to hear about your experiences with setting up and managing VDI. Share your stories, questions, or challenges in the comments below. Your feedback enriches our content and supports the wider community in their tech endeavors.
+Weâ€™re keen to hear about your experiences with setting up and managing VDI. Share your stories, questions, or challenges in the comments below. Your feedback enriches our content and supports the wider community in their tech endeavors.
 
 Thank you for following this series, and stay tuned for more in-depth tutorials and insights in the world of Windows Server and remote desktop technologies!

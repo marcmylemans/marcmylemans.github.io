@@ -9,7 +9,7 @@ title: Server 2022 - Azure AD Connect Sync
 
 {% youtube "https://youtu.be/2XeRcNKzuUM" %}
 
-Embark on a journey to integrate your Windows Server 2022 Active Directory with Azure AD in this detailed tutorial. We’re covering the crucial steps to synchronize your on-premises AD with Azure, paving the way for a more connected and efficient network infrastructure.
+Embark on a journey to integrate your Windows Server 2022 Active Directory with Azure AD in this detailed tutorial. Weâ€™re covering the crucial steps to synchronize your on-premises AD with Azure, paving the way for a more connected and efficient network infrastructure.
 
 ### What This Video Covers
 
@@ -21,7 +21,7 @@ Our step-by-step guide is divided into two essential phases:
    - **Automating License Assignment**: Learn to create a security group that helps in the automatic assignment of licenses to Azure AD synced users.
 
 2. **Full Deployment**:
-   - After ensuring everything works flawlessly in the testing phase, we’ll show you how to expand the sync to include all relevant users and groups in your OU structure, achieving full synchronization with Azure AD.
+   - After ensuring everything works flawlessly in the testing phase, weâ€™ll show you how to expand the sync to include all relevant users and groups in your OU structure, achieving full synchronization with Azure AD.
 
 ### Getting Started
 
@@ -36,13 +36,13 @@ To follow along, here are some key resources:
 Integrating your on-premises Active Directory with Azure AD opens up a world of possibilities:
 
 - **Seamless Management**: Unify and streamline user, group, and license management.
-- **Enhanced Security**: Leverage Azure’s robust security features to protect your network.
+- **Enhanced Security**: Leverage Azureâ€™s robust security features to protect your network.
 - **Accessibility and Flexibility**: Access resources and applications from anywhere, enhancing productivity.
 
 ### Concluding Thoughts
 
 This tutorial is designed to guide you through the crucial process of syncing your on-premises Active Directory with Azure AD. Whether you're new to Azure or looking to enhance your existing setup, these steps will ensure a smooth and efficient integration.
 
-We're excited to see how this integration transforms your network management. Share your experiences and queries in the comments below – your insights are invaluable to us and the tech community.
+We're excited to see how this integration transforms your network management. Share your experiences and queries in the comments below â€“ your insights are invaluable to us and the tech community.
 
 Stay tuned for more tutorials and insights into Windows Server 2022!

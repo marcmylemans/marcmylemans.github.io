@@ -12,13 +12,13 @@ To change this behaviour you can download the newest Office 365 ADMX files. Or c
 To resolve this we need to run the following Powershell:
 
 ```powershell
-Set-ItemProperty -Path “HKCU:\SOFTWARE\Policies\Microsoft\Office\16.0\common\links” -Name ‘BrowserChoice’ -Value 0 -Type DWORD –Force
+Set-ItemProperty -Path â€œHKCU:\SOFTWARE\Policies\Microsoft\Office\16.0\common\linksâ€ -Name â€˜BrowserChoiceâ€™ -Value 0 -Type DWORD â€“Force
 ```
 
 To revert back to Edge as the default browser in Outlook:
 
 ```powershell
-Set-ItemProperty -Path “HKCU:\SOFTWARE\Policies\Microsoft\Office\16.0\common\links” -Name ‘BrowserChoice’ -Value 1 -Type DWORD –Force
+Set-ItemProperty -Path â€œHKCU:\SOFTWARE\Policies\Microsoft\Office\16.0\common\linksâ€ -Name â€˜BrowserChoiceâ€™ -Value 1 -Type DWORD â€“Force
 ```
 
 After this you need to close Outlook and open it again.

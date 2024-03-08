@@ -21,13 +21,13 @@ In this concise and informative video, we cover key steps to ensure a successful
 
 ### Why Install Windows 11 on Hyper-V?
 
-- **Testing and Exploration**: Ideal for users who want to test out Windows 11’s features in a controlled environment.
+- **Testing and Exploration**: Ideal for users who want to test out Windows 11â€™s features in a controlled environment.
 - **Development and Compatibility Checks**: For developers and IT professionals looking to ensure their applications and services are compatible with the latest Windows OS.
 - **Educational Purposes**: A great tool for training and educational scenarios where a sandboxed Windows 11 environment is needed.
 
 ### Concluding Thoughts
 
-Whether you’re an IT professional, a developer, or an enthusiast exploring the capabilities of Windows 11, this video provides a straightforward guide to get you up and running on Server 2022’s Hyper-V. Remember, adapting to new operating systems in a virtual environment is a great way to stay ahead in the ever-evolving world of technology.
+Whether youâ€™re an IT professional, a developer, or an enthusiast exploring the capabilities of Windows 11, this video provides a straightforward guide to get you up and running on Server 2022â€™s Hyper-V. Remember, adapting to new operating systems in a virtual environment is a great way to stay ahead in the ever-evolving world of technology.
 
 We're excited to share this journey with you, and we look forward to your thoughts and experiences with Windows 11 on Hyper-V. Stay tuned for more insights and tutorials!
 

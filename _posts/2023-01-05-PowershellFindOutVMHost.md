@@ -2,7 +2,7 @@
 categories: Windows Server
 layout: post
 tags: windows server powershell hyperv
-title: Find Your Hyper-V VM’s Host Name with PowerShell
+title: Find Your Hyper-V VMâ€™s Host Name with PowerShell
 ---
 
 use the powershell command below if you ever need to find out on wich Hyper-V server your vm is running.

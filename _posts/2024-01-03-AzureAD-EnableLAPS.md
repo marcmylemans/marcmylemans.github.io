@@ -33,7 +33,7 @@ To enable LAPS in Microsoft Entra, navigate through: EntraID -> Devices -> Devic
 
 1) Access Microsoft Intune at Intune.Microsoft.com. Navigate to Endpoint Security > Account Protection and select + Create Policy.
 
-2) Choose “Windows 10 or later” for the Platform and “Local admin password solution (Windows LAPS)” for the Profile. Then, click Create.
+2) Choose â€œWindows 10 or laterâ€ for the Platform and â€œLocal admin password solution (Windows LAPS)â€ for the Profile. Then, click Create.
 
 3) Assign a relevant name and an optional description to your policy, and proceed by clicking Next.
 

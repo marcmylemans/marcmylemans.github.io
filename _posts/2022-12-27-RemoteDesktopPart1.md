@@ -47,6 +47,6 @@ Remote Desktop Services in Server 2022 offers:
 
 This tutorial marks the beginning of your journey to a fully functional RDS environment in Windows Server 2022. Stay tuned for the next parts of this series, where we'll delve deeper into advanced configurations and best practices.
 
-We’re eager to hear about your experiences in setting up RDS. Your insights and questions are invaluable, helping us create more tailored and useful content for the community.
+Weâ€™re eager to hear about your experiences in setting up RDS. Your insights and questions are invaluable, helping us create more tailored and useful content for the community.
 
 Looking forward to your feedback, and stay tuned for more in-depth tutorials on Windows Server 2022!

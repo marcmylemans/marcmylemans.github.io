@@ -7,7 +7,7 @@ title: Streamlining Hyper-V Management - Introducing the Hyper-V Automation Proj
 
 # Introduction:
 
-Managing a Hyper-V environment efficiently can be a challenging task, especially when dealing with multiple virtual machines (VMs), complex network configurations, and the need for consistent setups. To address these challenges, I am excited to introduce the Hyper-V Automation Project – a comprehensive solution designed to automate and simplify the management of Hyper-V VMs.
+Managing a Hyper-V environment efficiently can be a challenging task, especially when dealing with multiple virtual machines (VMs), complex network configurations, and the need for consistent setups. To address these challenges, I am excited to introduce the Hyper-V Automation Project â€“ a comprehensive solution designed to automate and simplify the management of Hyper-V VMs.
 
 # Understanding the Prerequisites:
 

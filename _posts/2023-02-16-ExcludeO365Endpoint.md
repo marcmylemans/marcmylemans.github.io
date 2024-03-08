@@ -12,11 +12,11 @@ Because the mailbox was still on the Onpremise Exchange Outlook could not find a
 To resolve this we need to run the following Powershell:
 
 ```powershell
-Set-ItemProperty -Path “HKCU:\Software\Microsoft\Office\16.0\Outlook\AutoDiscover” -Name ‘ExcludeExplicitO365Endpoint’ -Value 1 -Type DWORD –Force
+Set-ItemProperty -Path â€œHKCU:\Software\Microsoft\Office\16.0\Outlook\AutoDiscoverâ€ -Name â€˜ExcludeExplicitO365Endpointâ€™ -Value 1 -Type DWORD â€“Force
 ```
 
 ```powershell
-Set-ItemProperty -Path “HKCU:\Software\Policies\Microsoft\Office\16.0\Outlook\AutoDiscover” -Name ‘ExcludeExplicitO365Endpoint’ -Value 1 -Type DWORD –Force
+Set-ItemProperty -Path â€œHKCU:\Software\Policies\Microsoft\Office\16.0\Outlook\AutoDiscoverâ€ -Name â€˜ExcludeExplicitO365Endpointâ€™ -Value 1 -Type DWORD â€“Force
 ```
 
 After this you need to close Outlook and open it again, sometimes it can take a few minutes.

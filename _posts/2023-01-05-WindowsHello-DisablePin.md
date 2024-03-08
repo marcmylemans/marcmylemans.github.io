@@ -15,7 +15,7 @@ $key = "PassportForWork"
 $name = "Enabled"
 $value = "0"
  
-New-Item -Path $path -Name $key –Force
+New-Item -Path $path -Name $key â€“Force
  
 New-ItemProperty -Path $path\$key -Name $name -Value $value -PropertyType DWORD -Force
  
@@ -27,6 +27,6 @@ if(Test-Path -Path $passportFolder)
 Takeown /f $passportFolder /r /d "Y"
 ICACLS $passportFolder /reset /T /C /L /Q
  
-Remove-Item –path $passportFolder –recurse -force
+Remove-Item â€“path $passportFolder â€“recurse -force
 }
 ```
