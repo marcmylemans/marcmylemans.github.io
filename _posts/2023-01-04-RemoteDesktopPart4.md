@@ -3,6 +3,7 @@ layout: post
 title: Installing Office 365 on a Remote Desktop Host!
 categories: Windows Server
 tags: server 2022 rdp part4 office o365
+image: https://i9.ytimg.com/vi/4wO82is6y40/mqdefault.jpg?v=63d00f07&sqp=CMS3q68G&rs=AOn4CLBxPb-FjbSCak16GoRGlwiPtuzAcA
 ---
 
 {% youtube "https://youtu.be/4wO82is6y40" %}
