@@ -1,10 +1,9 @@
 ---
-layout: post
-title: FSLogix - Service group policy client prevents login
 categories: Server
+layout: post
 tags: server 2022 gpo bug error fslogix wvd
+title: FSLogix - Service group policy client prevents login
 ---
-
 
 ![Assign users](/assets/GrouppolicyClientServiceFailedTheSignIn/error.png)
 
@@ -33,5 +32,3 @@ HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileService\References\<sid
 ```
 
 Change the "RefCount" value to 0.
-
-

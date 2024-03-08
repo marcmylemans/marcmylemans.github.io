@@ -1,8 +1,8 @@
 ---
-layout: post
-title: Deploying a Custom Application with IntuneWinAppUtil in Microsoft Intune
 categories: Azure Intune
+layout: post
 tags: entraid azuread intune intunewinapputil
+title: Deploying a Custom Application with IntuneWinAppUtil in Microsoft Intune
 ---
 
 # Deploying a Custom Application with IntuneWinAppUtil in Microsoft Intune
@@ -61,4 +61,3 @@ Ensure your application is ready for deployment:
 ## Conclusion
 
 Your custom application is now packaged and deployed through Microsoft Intune. Users in the assigned groups will receive the application via the company portal or automatically, depending on your settings.
-

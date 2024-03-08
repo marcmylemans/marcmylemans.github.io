@@ -1,10 +1,9 @@
 ---
-layout: post
-title: Converting Python Scripts to Executables
 categories: Python Script
+layout: post
 tags: python scripts
+title: Converting Python Scripts to Executables
 ---
-
 
 # Introduction
 

@@ -1,15 +1,15 @@
 ---
-layout: post
-title: Remote Desktop Services - FSLogix
-date: 2023-01-03 09:00:00
 categories: Windows Server
+date: 2023-01-03 09:00:00
+image: /assets/img/posts/dRf8k7loXQ0.jpg
+layout: post
 tags: server 2022 rdp part3 fslogix
-image: https://i9.ytimg.com/vi/dRf8k7loXQ0/mqdefault.jpg?v=63d00ef7&sqp=CMS3q68G&rs=AOn4CLCnce5O5t-doJBWRdQB0RmpYWRyYA
+title: Remote Desktop Services - FSLogix
 ---
 
 {% youtube "https://youtu.be/dRf8k7loXQ0" %}
 
-Continuing our deep dive into Remote Desktop Services on Windows Server 2022, Part 3 of this series introduces FSLogix â€“ a sophisticated solution for managing user profiles and data in RDS environments.
+Continuing our deep dive into Remote Desktop Services on Windows Server 2022, Part 3 of this series introduces FSLogix – a sophisticated solution for managing user profiles and data in RDS environments.
 
 ### Exploring FSLogix in RDS
 
@@ -42,7 +42,6 @@ Integrating FSLogix in your RDS setup offers several benefits:
 
 The integration of FSLogix into your RDS environment marks an advanced step in enhancing efficiency and scalability. This tutorial is aimed at guiding you through this sophisticated aspect of Remote Desktop Services in Windows Server 2022.
 
-Weâ€™re eager to hear about your experiences with FSLogix in your RDS setup. Share your insights, questions, or any challenges you've encountered in the comments below. Your feedback is invaluable in helping us shape future content and assisting the wider community.
+We’re eager to hear about your experiences with FSLogix in your RDS setup. Share your insights, questions, or any challenges you've encountered in the comments below. Your feedback is invaluable in helping us shape future content and assisting the wider community.
 
 Stay tuned for more tutorials in this series as we continue to explore the full potential of Remote Desktop Services!
-

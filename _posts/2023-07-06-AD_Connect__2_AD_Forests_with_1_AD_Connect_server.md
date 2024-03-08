@@ -1,10 +1,11 @@
 ---
-layout: post
-title: AD Connect - 2 AD Forests with 1 AD Connect server
 categories: Windows Server 2022
-tags: server 2022 activedirectory adconnect forests dnsforwarder
 image: https://i9.ytimg.com/vi/MpMrnlDbdwc/mqdefault.jpg?v=64a72ac1&sqp=CJi1q68G&rs=AOn4CLC6TF-XoAaQnzCR6xYaj83ltQ0e7A
+layout: post
+tags: server 2022 activedirectory adconnect forests dnsforwarder
+title: AD Connect - 2 AD Forests with 1 AD Connect server
 ---
+
 In this video we will be syncing 2 separate AD Forests with 1 AD Connect Server.
 You can use this technique to connect to multiple forest.
 

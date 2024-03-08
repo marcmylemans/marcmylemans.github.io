@@ -1,10 +1,9 @@
 ---
-layout: post
-title: Join Our Tech Community on Discord!
 categories: Community Discord
+layout: post
 tags: discord ko-fi community donate support-the-community
+title: Join Our Tech Community on Discord!
 ---
-
 
 Hello, tech enthusiasts! Marc here from your favorite tech-tastic YouTube channel. Today, I'm excited to share an exciting update with our digital family. We're taking our community interaction to the next level with our exclusive Discord server, and we want you to be a part of it!
 

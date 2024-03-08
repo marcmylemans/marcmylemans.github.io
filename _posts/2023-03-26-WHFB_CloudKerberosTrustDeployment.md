@@ -1,10 +1,10 @@
 ---
-layout: post
-title: Windows hello for business - Cloud Kerberos trust deployment
-date: 2023-03-26 09:00:00
 categories: Azure Intune
+date: 2023-03-26 09:00:00
+image: /assets/img/posts/FW3TF0zFWd0.jpg
+layout: post
 tags: server 2022 azure hybrid WindowsHelloForBusiness
-image: https://i9.ytimg.com/vi/FW3TF0zFWd0/mqdefault.jpg?v=64204305&sqp=CJi1q68G&rs=AOn4CLBthDBLunSnL9FjzkcWD6ys_9_Xpw
+title: Windows hello for business - Cloud Kerberos trust deployment
 ---
 
 In this video, we are going to deploy Cloud Kerberos Trust.

@@ -1,8 +1,8 @@
 ---
-layout: post
-title: Drivemapping with Registery key's
 categories: windows registery
+layout: post
 tags: windows register drivemapping networkdrive
+title: Drivemapping with Registery key's
 ---
 
 # Configuring Drivemapping with Registeryg Keys!

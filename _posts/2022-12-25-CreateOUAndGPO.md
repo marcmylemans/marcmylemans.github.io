@@ -1,10 +1,10 @@
 ---
-layout: post
-title: Server 2022  - Create Organizational Units and Group Policies
-date: 2022-12-25 09:00:00
 categories: Windows Server
+date: 2022-12-25 09:00:00
+image: /assets/img/posts/fG_hd0G9wo8.jpg
+layout: post
 tags: server 2022 gpo
-image: https://i9.ytimg.com/vi/fG_hd0G9wo8/mqdefault.jpg?v=63d01b55&sqp=CJy8q68G&rs=AOn4CLBHgaX6epYmZ4Ud_ZtBh1IgNs6UUA
+title: Server 2022  - Create Organizational Units and Group Policies
 ---
 
 {% youtube "https://youtu.be/fG_hd0G9wo8" %}
@@ -31,9 +31,8 @@ Our video will guide you through the initial steps needed to implement these fea
 
 ### Concluding Thoughts
 
-Whether youâ€™re a seasoned network administrator or new to Windows Server, understanding the creation and management of OUs and GPOs is crucial. This tutorial is designed to provide a clear and straightforward approach to these fundamental aspects of Windows Server 2022.
+Whether you’re a seasoned network administrator or new to Windows Server, understanding the creation and management of OUs and GPOs is crucial. This tutorial is designed to provide a clear and straightforward approach to these fundamental aspects of Windows Server 2022.
 
 Your feedback and experiences with setting up OUs and GPOs are invaluable to us and the community. Please feel free to share your thoughts or any questions you might have in the comments section.
 
 Looking forward to your feedback, and stay tuned for more Windows Server 2022 tutorials!
-

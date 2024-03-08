@@ -1,9 +1,9 @@
 ---
-layout: post
-title: Remote Desktop Services, Virtual Desktop Infrastructure!
 categories: Windows Server
+image: /assets/img/posts/RB4Z7Zrhsx4.jpg
+layout: post
 tags: server 2022 rdp part8 vdi
-image: https://i9.ytimg.com/vi/RB4Z7Zrhsx4/mqdefault.jpg?v=65306e04&sqp=CMS3q68G&rs=AOn4CLCIUsUiOci7LVGqyrfon30NwGcsFw
+title: Remote Desktop Services, Virtual Desktop Infrastructure!
 ---
 
 {% youtube "https://youtu.be/RB4Z7Zrhsx4" %}
@@ -46,7 +46,6 @@ Here are the previous parts of the series for a comprehensive understanding of R
 
 With the completion of this VDI setup tutorial, we wrap up our comprehensive series on Remote Desktop Services. We hope these tutorials have provided you with a wealth of knowledge and practical skills to enhance your RDS environment in Windows Server 2022.
 
-Weâ€™re keen to hear about your experiences with setting up and managing VDI. Share your stories, questions, or challenges in the comments below. Your feedback enriches our content and supports the wider community in their tech endeavors.
+We’re keen to hear about your experiences with setting up and managing VDI. Share your stories, questions, or challenges in the comments below. Your feedback enriches our content and supports the wider community in their tech endeavors.
 
 Thank you for following this series, and stay tuned for more in-depth tutorials and insights in the world of Windows Server and remote desktop technologies!
-

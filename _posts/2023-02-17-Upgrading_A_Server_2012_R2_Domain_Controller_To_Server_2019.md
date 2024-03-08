@@ -1,7 +1,7 @@
 ---
+image: /assets/img/posts/61H8PYeK0sw.jpg
 layout: post
 title: Upgrading A Server 2012 R2 Domain Controller To Server 2019!
-image: https://i9.ytimg.com/vi/61H8PYeK0sw/mqdefault.jpg?v=63e8bd23&sqp=CJi1q68G&rs=AOn4CLCeAmcUt0SyBFtzq2mpjjJNrKQNFg
 ---
 
 {% youtube "https://youtu.be/61H8PYeK0sw" %}
@@ -16,7 +16,7 @@ Welcome to our tutorial on upgrading an older Server 2012 R2 domain controller t
 
 ### Supported Upgrade Paths
 
-Hereâ€™s a quick reference table for supported upgrade paths:
+Here’s a quick reference table for supported upgrade paths:
 
 | Upgrade from / to | WS 2008 R2 | WS 2012 | WS 2012 R2 | WS 2016 | WS 2019 | WS 2022 |
 | ----------------- | ---------- | ------- | ---------- | ------- | ------- | ------- |

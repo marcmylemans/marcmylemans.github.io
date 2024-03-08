@@ -1,8 +1,8 @@
 ---
-layout: post
-title: Azure AD join error code 8018000a â€“ This device is already enrolled
 categories: Azure Intune
+layout: post
 tags: windows 10 11 powershell error azuread
+title: Azure AD join error code 8018000a – This device is already enrolled
 ---
 
 if you ever encounter this error code then it means your device was already Azure AD joined in the past.
@@ -76,5 +76,3 @@ write-host "Cleanup of device registration has been completed. Ensure you delete
 
 
 ```
-
-

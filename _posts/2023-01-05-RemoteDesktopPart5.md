@@ -1,9 +1,9 @@
 ---
-layout: post
-title: Installing the Remote Desktop Web Client!
 categories: Windows Server
+image: /assets/img/posts/i87spvTzR6w.jpg
+layout: post
 tags: server 2022 rdp part5 html5 browser
-image: https://i9.ytimg.com/vi/i87spvTzR6w/mqdefault.jpg?v=63d00f16&sqp=CMS3q68G&rs=AOn4CLDxI2B1ZYztQXkyC13WLDcgPGqLiA
+title: Installing the Remote Desktop Web Client!
 ---
 
 {% youtube "https://youtu.be/i87spvTzR6w" %}
@@ -70,7 +70,6 @@ If you've missed the earlier parts of this series, here are the links to get you
 
 The addition of the Remote Desktop Web Client significantly enhances the versatility and accessibility of your RDS setup. This tutorial aims to guide you through a straightforward setup process, enabling your users to benefit from a flexible, browser-based RDS experience.
 
-Weâ€™re eager to hear about your experiences with the Remote Desktop Web Client. Share your insights, questions, or any challenges you've encountered in the comments below. Your feedback is invaluable in helping us shape future content and assisting the wider community.
+We’re eager to hear about your experiences with the Remote Desktop Web Client. Share your insights, questions, or any challenges you've encountered in the comments below. Your feedback is invaluable in helping us shape future content and assisting the wider community.
 
 Stay tuned for more tutorials in this comprehensive series on Remote Desktop Services!
-

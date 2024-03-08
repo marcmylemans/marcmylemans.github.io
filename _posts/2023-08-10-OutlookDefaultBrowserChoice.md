@@ -1,8 +1,8 @@
 ---
-layout: post
-title: Outlook and Teams open links on Microsoft Edge
 categories: office outlook
+layout: post
 tags: office office365 outlook regkey
+title: Outlook and Teams open links on Microsoft Edge
 ---
 
 Microsoft decided to change the behavior of Outlook and Teams. From now Outlook and Teams will open hyperlinks with Edge despite if another browser has been selected as the default browser.
@@ -12,13 +12,13 @@ To change this behaviour you can download the newest Office 365 ADMX files. Or c
 To resolve this we need to run the following Powershell:
 
 ```powershell
-Set-ItemProperty -Path ‚ÄúHKCU:\SOFTWARE\Policies\Microsoft\Office\16.0\common\links‚Äù -Name ‚ÄòBrowserChoice‚Äô -Value 0 -Type DWORD ‚ÄìForce
+Set-ItemProperty -Path ìHKCU:\SOFTWARE\Policies\Microsoft\Office\16.0\common\linksî -Name ëBrowserChoiceí -Value 0 -Type DWORD ñForce
 ```
 
 To revert back to Edge as the default browser in Outlook:
 
 ```powershell
-Set-ItemProperty -Path ‚ÄúHKCU:\SOFTWARE\Policies\Microsoft\Office\16.0\common\links‚Äù -Name ‚ÄòBrowserChoice‚Äô -Value 1 -Type DWORD ‚ÄìForce
+Set-ItemProperty -Path ìHKCU:\SOFTWARE\Policies\Microsoft\Office\16.0\common\linksî -Name ëBrowserChoiceí -Value 1 -Type DWORD ñForce
 ```
 
 After this you need to close Outlook and open it again.

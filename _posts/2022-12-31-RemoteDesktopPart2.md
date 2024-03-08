@@ -1,10 +1,10 @@
 ---
-layout: post
-title: Server 2022 - Remote Desktop Services - Part 2
-date: 2022-12-31 09:00:00
 categories: Windows Server
+date: 2022-12-31 09:00:00
+image: /assets/img/posts/G-5se77LRyU.jpg
+layout: post
 tags: server 2022 rdp part2
-image: https://i9.ytimg.com/vi/G-5se77LRyU/mqdefault.jpg?v=63d00ee8&sqp=CMS3q68G&rs=AOn4CLADg4tMOTapJDBS29OFwbM25tBSjg
+title: Server 2022 - Remote Desktop Services - Part 2
 ---
 
 {% youtube "https://youtu.be/G-5se77LRyU" %}
@@ -36,7 +36,6 @@ Implementing Group Policies for RDS allows for:
 
 As you advance in setting up and optimizing Remote Desktop Services, these group policy configurations play a crucial role in delivering a seamless and secure remote working environment.
 
-Weâ€™re eager to hear about your experiences with these configurations. Share your insights or any challenges you faced in the comments section below. Your feedback is invaluable in shaping our content and helping the wider community.
+We’re eager to hear about your experiences with these configurations. Share your insights or any challenges you faced in the comments section below. Your feedback is invaluable in shaping our content and helping the wider community.
 
 Stay tuned for more parts in this series, where we'll continue to explore advanced aspects of Remote Desktop Services in Windows Server 2022!
-

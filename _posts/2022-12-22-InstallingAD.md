@@ -1,10 +1,10 @@
 ---
-layout: post
-title: Server 2022 - Installing Active Directory and Setting up DNS
-date: 2022-12-22 09:00:00
 categories: Windows Server
+date: 2022-12-22 09:00:00
+image: /assets/img/posts/k2J78SidPpg.jpg
+layout: post
 tags: server 2022 ad
-image: https://i9.ytimg.com/vi_webp/k2J78SidPpg/mqdefault.webp?v=63d01b3e&sqp=CJy8q68G&rs=AOn4CLBpXEbre8b3Ca55RaEhc6v1UbTX_Q
+title: Server 2022 - Installing Active Directory and Setting up DNS
 ---
 
 {% youtube "https://youtu.be/k2J78SidPpg" %}
@@ -31,4 +31,3 @@ Understanding and implementing Active Directory and DNS are fundamental skills f
 We hope this tutorial empowers you to set up and manage these crucial services with confidence. Your feedback and experiences are valuable to us and the community, so please share your thoughts in the comments.
 
 Looking forward to seeing you in future tutorials. Happy server management!
-

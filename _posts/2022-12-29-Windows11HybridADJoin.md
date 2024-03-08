@@ -1,10 +1,10 @@
 ---
-layout: post
-title: Windows 11 - Active Directory - Hybrid Join - Azure AD
-date: 2022-12-29 09:00:00
 categories: Windows 11
+date: 2022-12-29 09:00:00
+image: /assets/img/posts/HpDysxGxwR8.jpg
+layout: post
 tags: server 2022 azure hybrid
-image: https://i9.ytimg.com/vi/HpDysxGxwR8/mqdefault.jpg?v=63d016ce&sqp=CJy8q68G&rs=AOn4CLACFp14b2i-zqhcSPGXO5BxDHwGLw
+title: Windows 11 - Active Directory - Hybrid Join - Azure AD
 ---
 
 {% youtube "https://youtu.be/HpDysxGxwR8" %}
@@ -22,7 +22,7 @@ In this detailed video, we're focusing on:
 
 - **Combined Management Tools**: With Hybrid Azure AD Join, you get the best of both worlds - the robust management capabilities of Intune along with the familiarity and control of local Group Policies.
 - **Flexibility and Accessibility**: Provides seamless access to resources regardless of whether they are on-premises or in the cloud, offering a flexible work environment.
-- **Enhanced Security and Compliance**: Utilize Azureâ€™s security features while maintaining compliance with on-premises policies.
+- **Enhanced Security and Compliance**: Utilize Azure’s security features while maintaining compliance with on-premises policies.
 
 ### Why This Matters
 
@@ -35,4 +35,3 @@ This tutorial is just the beginning. We'll be exploring more on how to effective
 Your experiences, questions, and insights on setting up a Hybrid Azure AD environment are invaluable to us and the tech community. Feel free to share them in the comments section below.
 
 Looking forward to your feedback, and stay tuned for more Windows 11 tutorials!
-

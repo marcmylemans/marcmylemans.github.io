@@ -1,9 +1,9 @@
 ---
-layout: post
-title: Server 2022 - Remote Desktop Services - Part 6 Remote App
 categories: Windows Server
+image: /assets/img/posts/hdwa0Wq1XTI.jpg
+layout: post
 tags: server 2022 rdp part6 remoteapp
-image: https://i9.ytimg.com/vi/hdwa0Wq1XTI/mqdefault.jpg?v=63d00f23&sqp=CMS3q68G&rs=AOn4CLBb3m_whqR4giG8jFbTbAfaA1_18A
+title: Server 2022 - Remote Desktop Services - Part 6 Remote App
 ---
 
 {% youtube "https://youtu.be/hdwa0Wq1XTI" %}
@@ -43,7 +43,6 @@ If you've missed any of the previous parts in this series, be sure to check them
 
 The addition of a Remote App Server significantly expands the capabilities of your RDS environment, offering a more versatile and efficient approach to application management. This tutorial aims to guide you through this advanced feature, enhancing your network's functionality and user experience.
 
-Weâ€™re excited to hear about your journey in setting up and utilizing Remote App in your RDS setup. Feel free to share your experiences, questions, or challenges in the comments below. Your insights are incredibly valuable in helping us tailor our content and support the wider community.
+We’re excited to hear about your journey in setting up and utilizing Remote App in your RDS setup. Feel free to share your experiences, questions, or challenges in the comments below. Your insights are incredibly valuable in helping us tailor our content and support the wider community.
 
 Stay tuned for the next part in this series, where we'll continue exploring advanced features and best practices in Remote Desktop Services!
-

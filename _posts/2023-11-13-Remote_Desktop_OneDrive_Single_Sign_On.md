@@ -1,9 +1,9 @@
 ---
-layout: post
-title: Remote Desktop - OneDrive Single Sign On
 categories: Windows Server
+image: /assets/img/posts/GFqTZh6xxb4.jpg
+layout: post
 tags: server 2022 rdp onedrive sso
-image: https://i9.ytimg.com/vi/GFqTZh6xxb4/mqdefault.jpg?v=65528b02&sqp=CMS3q68G&rs=AOn4CLC9bKjny-BbTY441yoAgQBQTem7gQ
+title: Remote Desktop - OneDrive Single Sign On
 ---
 
 # Configure OneDrive Single Sign On!
@@ -44,4 +44,3 @@ Configuring OneDrive with SSO in a Remote Desktop setting enhances the user expe
 We look forward to your feedback and suggestions. Share your experiences, questions, or the challenges you've encountered in the comments below. Your input is invaluable and helps shape our future content.
 
 Stay tuned for more insights and tutorials in Remote Desktop Services and cloud integration!
-

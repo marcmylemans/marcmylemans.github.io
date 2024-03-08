@@ -1,9 +1,9 @@
 ---
-layout: post
-title: Remote Desktop Services, Securing it with Azure MFA!
 categories: Windows Server
+image: /assets/img/posts/b5WL7PgEmaY.jpg
+layout: post
 tags: server 2022 rdp part7 mfa
-image: https://i9.ytimg.com/vi/b5WL7PgEmaY/mqdefault.jpg?v=64fa0c74&sqp=CMS3q68G&rs=AOn4CLD24v-qeivbWqGsfeOwHc9r7I5xbg
+title: Remote Desktop Services, Securing it with Azure MFA!
 ---
 
 {% youtube "https://youtu.be/b5WL7PgEmaY" %}
@@ -56,7 +56,6 @@ If you've missed any of the previous parts in this series, here are the links to
 
 Integrating Azure MFA into your RDS setup is a critical step in securing your remote desktop environment. This tutorial aims to guide you through a seamless setup process, ensuring your network's security and integrity.
 
-Weâ€™re looking forward to hearing about your experiences with Azure MFA in your RDS environment. Your insights, questions, or challenges are invaluable for our community, so please share them in the comments below.
+We’re looking forward to hearing about your experiences with Azure MFA in your RDS environment. Your insights, questions, or challenges are invaluable for our community, so please share them in the comments below.
 
 Stay tuned for the next part in this series, where we'll continue to explore advanced features and best practices in Remote Desktop Services!
-

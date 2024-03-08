@@ -1,9 +1,9 @@
 ---
-layout: post
-title: My New Home Lab Journey
 categories: HomeLab Hardware
-tags: hardware network homelab
 image: https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06035997.png
+layout: post
+tags: hardware network homelab
+title: My New Home Lab Journey
 ---
 
 # My New Home Lab Journey
@@ -18,7 +18,7 @@ The core of my home lab consists of three **HP ProDesk 600 G4 Mini PCs**.
 
 These compact powerhouses are equipped with impressive hardware and some notable features:
 
-- **CPU**: IntelÂ® Coreâ„¢ i3-8100T
+- **CPU**: Intel® Core™ i3-8100T
 - **RAM**: 32 GB each
 - **Storage**: 2 TB NVMe SSD each
 - **Graphics**: Integrated Intel Graphics for efficient hardware transcoding

@@ -1,9 +1,9 @@
 ---
-layout: post
-title: Allow (Print) Driver installation (Non Admins)
 categories: Windows Server
+image: /assets/img/posts/sTIjM9f8e1Q.jpg
+layout: post
 tags: server 2022 printer gpo
-image: https://i9.ytimg.com/vi_webp/sTIjM9f8e1Q/mqdefault.webp?v=63b67dce&sqp=CJy8q68G&rs=AOn4CLDJsWbiktL0mUL4SwT1JecnylOYpw
+title: Allow (Print) Driver installation (Non Admins)
 ---
 
 In this video we will configure a Group Policy to allow our 'Non Administrator' users to install Printer Drivers to their workstations.
@@ -23,4 +23,3 @@ Class = PNPPrinters
 ```
 {4d36e979-e325-11ce-bfc1-08002be10318}
 ```
-

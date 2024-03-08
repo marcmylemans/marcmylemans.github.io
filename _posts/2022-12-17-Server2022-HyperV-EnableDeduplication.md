@@ -1,10 +1,10 @@
 ---
-layout: post
-title: Server 2022 - Hyper-V - Enable Deduplication
-date: 2022-12-17 09:00:00
 categories: Windows Server 2022
+date: 2022-12-17 09:00:00
+image: /assets/img/posts/yttWe5g0kmQ.jpg
+layout: post
 tags: server 2022 hyper-v virtualisation deduplication
-image: https://i9.ytimg.com/vi_webp/yttWe5g0kmQ/mqdefault.webp?v=63d0149f&sqp=CJy8q68G&rs=AOn4CLDytgKByA41PTYQp9giQGafbvaR3w
+title: Server 2022 - Hyper-V - Enable Deduplication
 ---
 
 {% youtube "https://youtu.be/yttWe5g0kmQ" %}
@@ -32,4 +32,3 @@ Beyond just enabling and configuring, we'll also touch upon how deduplication ca
 Enabling deduplication on Server 2022 is a smart move for any IT professional looking to optimize their virtualized environment. The upcoming videos in this series will further delve into the practical applications of deduplication, especially in relation to VM templates.
 
 Stay tuned for these future videos, and don't hesitate to share your experiences or questions. Your insights help enrich our growing community of tech enthusiasts and professionals. Happy virtualizing!
-

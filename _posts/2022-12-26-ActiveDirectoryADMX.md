@@ -1,10 +1,11 @@
 ---
-layout: post
-title: Server 2022 - Active Directory - Importing ADMX and Installing Applications with Group Policy
-date: 2022-12-26 09:00:00
 categories: Windows Server
+date: 2022-12-26 09:00:00
+image: /assets/img/posts/xbX_n8ysGrI.jpg
+layout: post
 tags: server 2022 gpo
-image: https://i9.ytimg.com/vi/xbX_n8ysGrI/mqdefault.jpg?v=63d01f5c&sqp=CJy8q68G&rs=AOn4CLDGICedo-6XHXsQluyG4eeBkatmWA
+title: Server 2022 - Active Directory - Importing ADMX and Installing Applications
+  with Group Policy
 ---
 
 {% youtube "https://youtu.be/xbX_n8ysGrI" %}
@@ -39,4 +40,3 @@ Mastering the use of ADMX templates and GPOs for software installation is crucia
 We're excited to share this knowledge with you and look forward to your thoughts and experiences. Your feedback helps us create content that best serves your needs.
 
 Stay tuned for more insights and tutorials on Windows Server 2022!
-

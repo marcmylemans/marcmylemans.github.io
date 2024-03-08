@@ -1,8 +1,8 @@
 ---
-layout: post
-title: AAD Connect / Cloud Sync with Existing Cloud Users
 categories: Azure Connect
+layout: post
 tags: azuread ad sync
+title: AAD Connect / Cloud Sync with Existing Cloud Users
 ---
 
 # Tackling Duplicate Users in AAD Connect / Cloud Sync

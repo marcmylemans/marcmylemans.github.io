@@ -1,9 +1,9 @@
 ---
-layout: post
-title: UrBackup - Deploying Clients with GPO!
 categories: Server UrBackup
+image: /assets/img/posts/OPYVI60i54w.jpg
+layout: post
 tags: server 2022 gpo windows 11 urbackup backup client
-image: https://i9.ytimg.com/vi/OPYVI60i54w/mqdefault.jpg?v=63d0197f&sqp=CJy8q68G&rs=AOn4CLAEw6WIDd2fgUn23eH3O2Olanv-kQ
+title: UrBackup - Deploying Clients with GPO!
 ---
 
 In this video we will be using our Group Policy to deploy the UrBackup client to all our Servers and Workstations.
@@ -20,4 +20,3 @@ In this video we will be using our Group Policy to deploy the UrBackup client to
 Be sure to watch the previous video:
 
 [UrBackup - Installing the Backup Server!]({% link _posts/2023-01-11-UrBackupServer.md %})
-

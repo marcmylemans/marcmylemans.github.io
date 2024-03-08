@@ -1,10 +1,11 @@
 ---
-layout: post
-title: Server 2022 - CodeTwo - Active Directory Photos
 categories: Windows Server 2022
+image: /assets/img/posts/BVYyfv8v4xQ.jpg
+layout: post
 tags: server 2022 activedirectory codetwo
-image: https://i9.ytimg.com/vi/BVYyfv8v4xQ/mqdefault.jpg?v=64315b5b&sqp=CMzFq68G&rs=AOn4CLAoXfN_uBynnpushjZDYUaOEEe-Jw
+title: Server 2022 - CodeTwo - Active Directory Photos
 ---
+
 In this video, we will add the functionality to manage user profile photos into Active Directory and sync them to Azure AD.
 
 You can download the CodeTwo software here:

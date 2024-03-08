@@ -1,8 +1,8 @@
 ---
-layout: post
-title: Calculate a Network Subnet using Python!
 categories: Python Scripts
+layout: post
 tags: script python automation
+title: Calculate a Network Subnet using Python!
 ---
 
 # Calculate a Network Subnet using Python!

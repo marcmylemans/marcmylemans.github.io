@@ -1,10 +1,10 @@
 ---
-layout: post
-title: Manage Local Admins with Group Policy on Workstations
-date: 2023-01-02 10:00:00
 categories: Windows Server
+date: 2023-01-02 10:00:00
+image: /assets/img/posts/FrRasK5DQiY.jpg
+layout: post
 tags: server 2022 ad gpo admin
-image: https://i9.ytimg.com/vi/FrRasK5DQiY/mqdefault.jpg?v=63b2ff86&sqp=CJy8q68G&rs=AOn4CLBsTnSjGd3vuCyRqnPBo7hsWaGwAg
+title: Manage Local Admins with Group Policy on Workstations
 ---
 
 In this video we will be managing our Local Admins with Group Policy's.
@@ -45,5 +45,3 @@ sAMAccountName
 ```
 PrimaryUser
 ```
-
-

@@ -1,9 +1,9 @@
 ---
-layout: post
-title: My Home Lab Adventure - Solving the BSOD Mystery with Proxmox and MDT
 categories: HomeLab Hardware
+image: /assets/img/posts/xhRHTdSN9kY.jpg
+layout: post
 tags: proxmox homeserversetup techguide virtualization mdt
-image: https://i9.ytimg.com/vi/xhRHTdSN9kY/mqdefault.jpg?v=65cbf5e0&sqp=CJi1q68G&rs=AOn4CLBwV9j5bYoCL7f3VZIWHUW1m_oGhA
+title: My Home Lab Adventure - Solving the BSOD Mystery with Proxmox and MDT
 ---
 
 Hey friends!
@@ -68,6 +68,3 @@ After watching the video, I'd love to hear about your own experiences, challenge
 Remember to like, share, and subscribe for more content where we demystify tech together. Your support is what makes this community so fantastic, and I can't wait to share more adventures with you.
 
 Here's to many more successful deployments and the end of BSODs in our labs!
-
-
-
