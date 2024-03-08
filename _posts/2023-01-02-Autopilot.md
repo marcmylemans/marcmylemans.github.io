@@ -4,6 +4,7 @@ title: AutoPilot - Hybrid Azure AD
 date: 2023-01-02 09:00:00
 categories: Azure Intune
 tags: server 2022 azure hybrid autopilot
+image: https://i9.ytimg.com/vi/Jp_kmppB_Fk/mqdefault.jpg?v=63d01eff&sqp=CJy8q68G&rs=AOn4CLBB81PyipaiMWfJVqpZPlEam1HPAw
 ---
 
 In this video we will be using the power of Autopilot / Intune / Active Directory Group Policy's to create a Hybrid Azure Joined Device.
