@@ -3,6 +3,7 @@ layout: post
 title: UrBackup - Installing the Backup Server!
 categories: Server UrBackup
 tags: server 2022 gpo windows 11 urbackup backup
+image: https://i9.ytimg.com/vi/ig6by0vgpyQ/mqdefault.jpg?v=63d01972&sqp=CJy8q68G&rs=AOn4CLCIyR4oQ8__zycmux1DcUUjbFonTQ
 ---
 
 In this video we will be installing a UrBackup backup server for our Lab!
