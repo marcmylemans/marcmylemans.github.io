@@ -3,6 +3,7 @@ layout: post
 title: Remote Desktop Services, Virtual Desktop Infrastructure!
 categories: Windows Server
 tags: server 2022 rdp part8 vdi
+image: https://i9.ytimg.com/vi/RB4Z7Zrhsx4/mqdefault.jpg?v=65306e04&sqp=CMS3q68G&rs=AOn4CLCIUsUiOci7LVGqyrfon30NwGcsFw
 ---
 
 {% youtube "https://youtu.be/RB4Z7Zrhsx4" %}
