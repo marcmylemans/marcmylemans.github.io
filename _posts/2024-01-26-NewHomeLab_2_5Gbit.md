@@ -3,7 +3,6 @@ layout: post
 title: My New Home Lab Journey - The 2.5 Gbit Network Upgrade
 categories: HomeLab Hardware
 tags: hardware network homelab
-image: https://m.media-amazon.com/images/I/41Dnc8dNuuL._AC_UF1000,1000_QL80_.jpg
 ---
 
 # Enhancing Connectivity - The 2.5 Gbit Network Upgrade
