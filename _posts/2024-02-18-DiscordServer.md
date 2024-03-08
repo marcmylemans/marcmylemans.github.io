@@ -3,7 +3,6 @@ layout: post
 title: Join Our Tech Community on Discord!
 categories: Community Discord
 tags: discord ko-fi community donate support-the-community
-image: assets/img/horizontal_on_transparent_by_logaster.png
 ---
 
 
