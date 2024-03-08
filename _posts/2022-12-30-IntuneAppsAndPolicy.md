@@ -4,6 +4,7 @@ title: Intune - Applications and Policies
 date: 2022-12-30 09:00:00
 categories: Azure Intune
 tags: server 2022 azure intune hybrid
+image: https://i9.ytimg.com/vi/PIu7nZ1jMOQ/mqdefault.jpg?v=63d015ae&sqp=CJy8q68G&rs=AOn4CLComGpjJhPZA6SkFL_25_gG1Tw09A
 ---
 
 {% youtube "https://youtu.be/PIu7nZ1jMOQ" %}
