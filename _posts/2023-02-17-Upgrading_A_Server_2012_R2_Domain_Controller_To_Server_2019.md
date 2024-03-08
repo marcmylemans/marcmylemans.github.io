@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Upgrading A Server 2012 R2 Domain Controller To Server 2019!
+image: https://i9.ytimg.com/vi/61H8PYeK0sw/mqdefault.jpg?v=63e8bd23&sqp=CJi1q68G&rs=AOn4CLCeAmcUt0SyBFtzq2mpjjJNrKQNFg
 ---
 
 {% youtube "https://youtu.be/61H8PYeK0sw" %}
