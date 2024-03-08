@@ -4,7 +4,7 @@ layout: post
 tags: python scripts
 title: Converting Python Scripts to Executables
 
-image: /assets/img/posts/Default.webp
+
 ---
 
 # Introduction

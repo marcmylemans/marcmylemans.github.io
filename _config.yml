@@ -202,3 +202,7 @@ plugins:
   - jekyll-analytics
   - jekyll-sitemap
   - jekyll-gzip
+
+
+# Default post image
+default_image: /assets/img/posts/Default.webp

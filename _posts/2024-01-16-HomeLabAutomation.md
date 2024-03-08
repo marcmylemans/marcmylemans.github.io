@@ -4,7 +4,7 @@ layout: post
 tags: automation powershell scripting network homelab
 title: Streamlining Hyper-V Management - Introducing the Hyper-V Automation Project
 
-image: /assets/img/posts/Default.webp
+
 ---
 
 # Introduction:
