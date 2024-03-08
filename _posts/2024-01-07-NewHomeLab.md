@@ -3,6 +3,7 @@ layout: post
 title: My New Home Lab Journey
 categories: HomeLab Hardware
 tags: hardware network homelab
+image: https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06035997.png
 ---
 
 # My New Home Lab Journey
