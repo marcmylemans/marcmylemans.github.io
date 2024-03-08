@@ -5,7 +5,7 @@ tags: exchange office365 migration azure
 title: Unexpected Autodiscover behavior when you have registry settings under the
   \Autodiscover key
 
-image: /asset/img/posts/Default.webp
+image: /assets/img/posts/Default.webp
 ---
 
 During a migration from an Onpremise Exchange to O365 i encountered the issue that Outlook would ask for the credentials from O365.

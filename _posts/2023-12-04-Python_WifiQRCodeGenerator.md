@@ -4,7 +4,7 @@ layout: post
 tags: python scripts
 title: Wi-Fi QR Code Generator
 
-image: /asset/img/posts/Default.webp
+image: /assets/img/posts/Default.webp
 ---
 
 # Wi-Fi QR Code Generator

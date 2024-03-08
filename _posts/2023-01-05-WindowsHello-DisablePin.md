@@ -4,7 +4,7 @@ layout: post
 tags: windows 10 11 powershell hello
 title: Windows hello - Disable PIN
 
-image: /asset/img/posts/Default.webp
+image: /assets/img/posts/Default.webp
 ---
 
 By default Windows 10/11 will enable Windows Hello and ask you to configure a PIN.

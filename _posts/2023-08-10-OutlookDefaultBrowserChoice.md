@@ -4,7 +4,7 @@ layout: post
 tags: office office365 outlook regkey
 title: Outlook and Teams open links on Microsoft Edge
 
-image: /asset/img/posts/Default.webp
+image: /assets/img/posts/Default.webp
 ---
 
 Microsoft decided to change the behavior of Outlook and Teams. From now Outlook and Teams will open hyperlinks with Edge despite if another browser has been selected as the default browser.

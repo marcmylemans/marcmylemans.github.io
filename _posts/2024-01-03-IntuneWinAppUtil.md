@@ -4,7 +4,7 @@ layout: post
 tags: entraid azuread intune intunewinapputil
 title: Deploying a Custom Application with IntuneWinAppUtil in Microsoft Intune
 
-image: /asset/img/posts/Default.webp
+image: /assets/img/posts/Default.webp
 ---
 
 # Deploying a Custom Application with IntuneWinAppUtil in Microsoft Intune
