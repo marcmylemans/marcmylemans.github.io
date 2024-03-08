@@ -3,6 +3,7 @@ layout: post
 title: Server 2022 - Remote Desktop Services - Part 6 Remote App
 categories: Windows Server
 tags: server 2022 rdp part6 remoteapp
+image: https://i9.ytimg.com/vi/hdwa0Wq1XTI/mqdefault.jpg?v=63d00f23&sqp=CMS3q68G&rs=AOn4CLBb3m_whqR4giG8jFbTbAfaA1_18A
 ---
 
 {% youtube "https://youtu.be/hdwa0Wq1XTI" %}
