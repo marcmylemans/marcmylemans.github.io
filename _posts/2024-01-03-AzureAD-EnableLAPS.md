@@ -3,6 +3,7 @@ layout: post
 title: Implementing LAPS in Microsoft Entra and Intune
 categories: EntraID Laps
 tags: entraid azuread intune laps
+image: https://i9.ytimg.com/vi/lEVq0h2qNvQ/mqdefault.jpg?v=6595b2c5&sqp=CJi1q68G&rs=AOn4CLDoWq435vOozLpTNkB2IT5YnUb47w
 ---
 
 # Implementing LAPS in Microsoft Entra and Intune
