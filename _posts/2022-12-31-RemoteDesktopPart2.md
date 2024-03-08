@@ -4,6 +4,7 @@ title: Server 2022 - Remote Desktop Services - Part 2
 date: 2022-12-31 09:00:00
 categories: Windows Server
 tags: server 2022 rdp part2
+image: https://i9.ytimg.com/vi/G-5se77LRyU/mqdefault.jpg?v=63d00ee8&sqp=CMS3q68G&rs=AOn4CLADg4tMOTapJDBS29OFwbM25tBSjg
 ---
 
 {% youtube "https://youtu.be/G-5se77LRyU" %}
