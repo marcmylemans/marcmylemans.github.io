@@ -94,10 +94,10 @@ comments:
   giscus:
     repo: marcmylemans/marcmylemans.github.io
     repo_id: R_kgDOItNOFw
-    category: Announcements
+    category: Posts
     category_id: DIC_kwDOItNOF84CeB7v
     mapping: pathname
-    input_position: bottom
+    input_position: top
     lang: # optional, default to the value of `site.lang`
     reactions_enabled: # optional, default to the value of `1`
 
