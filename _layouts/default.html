@@ -60,7 +60,7 @@ layout: compress
 
         {% include_cached search-results.html lang=lang %}
       </div>
-
+      {% cookie-consent.html %}
       <aside aria-label="Scroll to Top">
         <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow">
           <i class="fas fa-angle-up"></i>
@@ -84,7 +84,5 @@ layout: compress
 
     {% include_cached search-loader.html lang=lang %}
   
-  {% include cookie-consent.html %}
-
   </body>
 </html>
