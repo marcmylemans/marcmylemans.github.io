@@ -55,7 +55,6 @@ layout: compress
             {% endfor %}
 
             {% include_cached footer.html lang=lang %}
-	    {% include cookie-consent.html %}
           </div>
         </div>
 
@@ -84,5 +83,6 @@ layout: compress
     {% endif %}
 
     {% include_cached search-loader.html lang=lang %}
+    {% include cookie-consent.html %}
   </body>
 </html>
