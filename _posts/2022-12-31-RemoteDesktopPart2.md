@@ -1,6 +1,7 @@
 ---
 categories: Windows Server
 date: 2022-12-31 09:00:00
+image: https://mylemans.online/assets/img/posts/G-5se77LRyU.jpg
 layout: post
 tags: server 2022 rdp part2
 title: Server 2022 - Remote Desktop Services - Part 2

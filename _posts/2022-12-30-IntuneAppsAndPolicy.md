@@ -1,6 +1,7 @@
 ---
 categories: Azure Intune
 date: 2022-12-30 09:00:00
+image: https://mylemans.online/assets/img/posts/PIu7nZ1jMOQ.jpg
 layout: post
 tags: server 2022 azure intune hybrid
 title: Intune - Applications and Policies

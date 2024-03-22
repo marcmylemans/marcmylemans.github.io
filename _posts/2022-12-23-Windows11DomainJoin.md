@@ -1,6 +1,7 @@
 ---
 categories: Windows 11
 date: 2022-12-23 09:00:00
+image: https://mylemans.online/assets/img/posts/yFegSYXlCXE.jpg
 layout: post
 tags: windows 11
 title: Windows 11 Domain Join

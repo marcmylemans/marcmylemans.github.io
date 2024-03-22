@@ -1,5 +1,6 @@
 ---
 categories: Azure Intune
+image: https://mylemans.online/assets/img/posts/ltcvhYTvhl4.jpg
 layout: post
 tags: azure printer
 title: Azure - Universal Print

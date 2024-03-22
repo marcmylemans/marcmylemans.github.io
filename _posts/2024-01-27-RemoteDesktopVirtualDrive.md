@@ -1,6 +1,7 @@
 ---
 categories: Windows Server
 date: 2024-01-27
+image: https://mylemans.online/assets/img/posts/9c4l5CIV6Qw.jpg
 layout: post
 tags: server 2022 rdp webclient
 title: Effortless File Management with Remote Desktop Virtual Drive

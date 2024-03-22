@@ -1,5 +1,6 @@
 ---
 categories: Windows Server
+image: https://mylemans.online/assets/img/posts/TcTFFKfjLTQ.jpg
 layout: post
 tags: server 2022 printer
 title: Server 2022 -  Configure Point and Print - Trusted Printserver

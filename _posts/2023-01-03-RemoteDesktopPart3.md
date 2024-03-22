@@ -1,6 +1,7 @@
 ---
 categories: Windows Server
 date: 2023-01-03 09:00:00
+image: https://mylemans.online/assets/img/posts/dRf8k7loXQ0.jpg
 layout: post
 tags: server 2022 rdp part3 fslogix
 title: Remote Desktop Services - FSLogix

@@ -1,5 +1,6 @@
 ---
 categories: Windows Server 2022
+image: https://mylemans.online/assets/img/posts/4EiisQEA1Fk.jpg
 layout: post
 tags: server 2022 activedirectory trust
 title: Server 2022  - Active Directory Domain - Setup an External Trust

@@ -1,5 +1,6 @@
 ---
 categories: Windows Server
+image: https://mylemans.online/assets/img/posts/hdwa0Wq1XTI.jpg
 layout: post
 tags: server 2022 rdp part6 remoteapp
 title: Server 2022 - Remote Desktop Services - Part 6 Remote App

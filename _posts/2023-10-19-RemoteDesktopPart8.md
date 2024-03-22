@@ -1,5 +1,6 @@
 ---
 categories: Windows Server
+image: https://mylemans.online/assets/img/posts/RB4Z7Zrhsx4.jpg
 layout: post
 tags: server 2022 rdp part8 vdi
 title: Remote Desktop Services, Virtual Desktop Infrastructure!

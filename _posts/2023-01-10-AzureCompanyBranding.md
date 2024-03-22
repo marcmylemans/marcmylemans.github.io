@@ -1,5 +1,6 @@
 ---
 categories: Azure Intune
+image: https://mylemans.online/assets/img/posts/bJML_P-Ir_0.jpg
 layout: post
 tags: azure intune branding
 title: Azure - Company Branding
