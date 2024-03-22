@@ -1,6 +1,5 @@
 ---
 categories: Server UrBackup
-image: /assets/img/posts/OPYVI60i54w.jpg
 layout: post
 tags: server 2022 gpo windows 11 urbackup backup client
 title: UrBackup - Deploying Clients with GPO!

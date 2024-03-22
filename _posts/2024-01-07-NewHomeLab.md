@@ -1,6 +1,5 @@
 ---
 categories: HomeLab Hardware
-image: https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06035997.png
 layout: post
 tags: hardware network homelab
 title: My New Home Lab Journey

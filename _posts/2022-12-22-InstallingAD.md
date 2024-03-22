@@ -1,7 +1,6 @@
 ---
 categories: Windows Server
 date: 2022-12-22 09:00:00
-image: /assets/img/posts/k2J78SidPpg.jpg
 layout: post
 tags: server 2022 ad
 title: Server 2022 - Installing Active Directory and Setting up DNS

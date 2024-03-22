@@ -1,7 +1,6 @@
 ---
 categories: Windows 11
 date: 2022-12-24 09:00:00
-image: /assets/img/posts/FDcCoxioSp8.jpg
 layout: post
 tags: windows 11 rdp bugfix register
 title: Windows 11 - Fix 22H2 Remote Desktop issues!

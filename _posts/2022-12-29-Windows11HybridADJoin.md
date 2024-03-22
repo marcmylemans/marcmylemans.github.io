@@ -1,7 +1,6 @@
 ---
 categories: Windows 11
 date: 2022-12-29 09:00:00
-image: /assets/img/posts/HpDysxGxwR8.jpg
 layout: post
 tags: server 2022 azure hybrid
 title: Windows 11 - Active Directory - Hybrid Join - Azure AD

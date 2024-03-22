@@ -1,6 +1,5 @@
 ---
 categories: Windows Server
-image: /assets/img/posts/XQL3ma7Otg8.jpg
 layout: post
 tags: server 2022 printer
 title: Server 2022 - Installing PrintServer Role

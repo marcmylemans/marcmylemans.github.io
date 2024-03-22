@@ -1,7 +1,6 @@
 ---
 categories: Windows Server 2022
 date: 2022-12-17 09:00:00
-image: /assets/img/posts/yttWe5g0kmQ.jpg
 layout: post
 tags: server 2022 hyper-v virtualisation deduplication
 title: Server 2022 - Hyper-V - Enable Deduplication

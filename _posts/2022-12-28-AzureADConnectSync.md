@@ -1,7 +1,6 @@
 ---
 categories: Windows Server
 date: 2022-12-28 09:00:00
-image: /assets/img/posts/2XeRcNKzuUM.jpg
 layout: post
 tags: server 2022 azure
 title: Server 2022 - Azure AD Connect Sync

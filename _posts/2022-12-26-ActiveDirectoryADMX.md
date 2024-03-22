@@ -1,7 +1,6 @@
 ---
 categories: Windows Server
 date: 2022-12-26 09:00:00
-image: /assets/img/posts/xbX_n8ysGrI.jpg
 layout: post
 tags: server 2022 gpo
 title: Server 2022 - Active Directory - Importing ADMX and Installing Applications

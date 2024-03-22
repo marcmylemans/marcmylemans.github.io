@@ -1,7 +1,6 @@
 ---
 categories: Azure Intune
 date: 2023-01-02 09:00:00
-image: /assets/img/posts/Jp_kmppB_Fk.jpg
 layout: post
 tags: server 2022 azure hybrid autopilot
 title: AutoPilot - Hybrid Azure AD

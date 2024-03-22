@@ -1,5 +1,4 @@
 ---
-image: /assets/img/posts/61H8PYeK0sw.jpg
 layout: post
 title: Upgrading A Server 2012 R2 Domain Controller To Server 2019!
 ---
