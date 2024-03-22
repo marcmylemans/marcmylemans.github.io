@@ -7,7 +7,7 @@ title: FSLogix - Service group policy client prevents login
 
 ---
 
-![Assign users](/assets/GrouppolicyClientServiceFailedTheSignIn/error.png)
+![Assign users](https://mylemans.online/assets/GrouppolicyClientServiceFailedTheSignIn/error.png)
 
 If you ever encounter the following error with FSLogix that a user can't login because of the error Service group policy client prevents login.
 

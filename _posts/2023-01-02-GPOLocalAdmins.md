@@ -15,11 +15,11 @@ In the second part we will be using the Managed By field in Active directory to 
 
 Screenshots + Ldap Query's
 
-![Assign users](/assets/primaryuserlocaladmin/primaryuserlocaladmin_assign.jpg)
+![Assign users](https://mylemans.online/assets/primaryuserlocaladmin/primaryuserlocaladmin_assign.jpg)
 
-![Item Level targeting](/assets/primaryuserlocaladmin/primaryuserlocaladmin_itemlvltargeting.jpg)
+![Item Level targeting](https://mylemans.online/assets/primaryuserlocaladmin/primaryuserlocaladmin_itemlvltargeting.jpg)
 
-![LDAP Query](/assets/primaryuserlocaladmin/primaryuserlocaladmin_itemlvltargeting.jpg)
+![LDAP Query](https://mylemans.online/assets/primaryuserlocaladmin/primaryuserlocaladmin_itemlvltargeting.jpg)
 
 1st LDAP Query:
 
