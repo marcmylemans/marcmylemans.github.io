@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Creating VLAN's with Sophos XG in Hyper-V!
-image: https://i9.ytimg.com/vi/1GrQDet3XlU/mqdefault.jpg?v=63d0173a&sqp=CMzFq68G&rs=AOn4CLDm4esjcFZW8fwzvwSOurOZwd4-Bg
 ---
 
 In this video we continue our Sophos XG series. In the previous video we installed Sophos XG in Hyper-V as a virtual machine.
