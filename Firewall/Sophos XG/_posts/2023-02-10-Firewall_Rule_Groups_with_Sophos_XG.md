@@ -1,4 +1,5 @@
 ---
+image: https://mylemans.online/assets/img/posts/1GrQDet3XlU.jpg
 layout: post
 title: Firewall Rule Groups with Sophos XG!
 ---
