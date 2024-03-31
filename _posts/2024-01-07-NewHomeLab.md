@@ -1,5 +1,6 @@
 ---
 categories: HomeLab Hardware
+image: https://mylemans.online/assets/img/posts/Default.jpg
 layout: post
 tags: hardware network homelab
 title: My New Home Lab Journey

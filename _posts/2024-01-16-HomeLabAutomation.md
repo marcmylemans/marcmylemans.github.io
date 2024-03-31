@@ -1,5 +1,6 @@
 ---
 categories: HomeLab Automation
+image: https://mylemans.online/assets/img/posts/Default.jpg
 layout: post
 tags: automation powershell scripting network homelab
 title: Streamlining Hyper-V Management - Introducing the Hyper-V Automation Project
