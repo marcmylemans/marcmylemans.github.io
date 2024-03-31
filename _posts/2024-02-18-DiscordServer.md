@@ -1,5 +1,6 @@
 ---
 categories: Community Discord
+image: https://mylemans.online/assets/img/posts/Default.jpg
 layout: post
 tags: discord ko-fi community donate support-the-community
 title: Join Our Tech Community on Discord!

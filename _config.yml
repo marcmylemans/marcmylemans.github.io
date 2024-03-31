@@ -206,4 +206,4 @@ plugins:
 
 
 # Default post image
-default_image: /assets/img/posts/Default.webp
+default_image: https://mylemans.online/assets/img/posts/Default.jpg
