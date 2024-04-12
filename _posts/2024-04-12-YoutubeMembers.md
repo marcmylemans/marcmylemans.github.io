@@ -16,6 +16,7 @@ We are excited to introduce three exclusive membership tiers tailored specifical
 - **Loyalty Badges:** Display your support with unique badges that appear next to your name in comments and live chats.
 - **Member Mentions:** Get recognized as a valuable member of our community with occasional mentions in videos and live streams.
 - **Custom Emojis:** Use custom emojis in comments and live chats to enhance your interactions.
+- **Discord Server:** Join the Discord Server. It’s a place where our community can gather, chat, and grow together.
   
 [![:myonlinelol](https://yt3.googleusercontent.com/rIAeJgq5bGyjzDifQKcNdUpswlwX7vg1CV8BssknWWK-mLqT2_czh_OJWpJ8dYuBzAuexYs4cw=w48-h48-c-k-nd)](https://www.youtube.com/channel/UC1y0Dtbzss2I3mm45xPMm1Q/join)
 [![:myonlineking](https://yt3.googleusercontent.com/x6Hh9x9briAdz3whQAoOnJjMJMu0uPCUrsewV9InDYa4I6K9OlwnRC1QxjB6Mw0BcZIj8lOtvg=w48-h48-c-k-nd)](https://www.youtube.com/channel/UC1y0Dtbzss2I3mm45xPMm1Q/join)
