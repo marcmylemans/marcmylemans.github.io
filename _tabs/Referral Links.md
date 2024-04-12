@@ -7,37 +7,21 @@ Welcome to our Referral Links page! We've partnered with the following companies
 
 ### Recommended Partners
 
+
+
 **YouTube**
 
-[Youtube Channel](https://www.youtube.com/@marcmylemans)
+[Youtube Channel](https://www.youtube.com/@marcmylemans/join)
 
 YouTube is a fantastic platform for content creators, and you can support us by engaging with our channel. Here's how you can help:
 
 - Watch our videos
 - Subscribe to our channel
 - Like our videos
+- Becoming a member
 
 By doing these simple actions, you can show your support and help our channel grow. We appreciate your engagement!
 
-
-**Patreon**
-
-[Patreon](https://patreon.com/MylemansOnline?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=creatorshare_creator&utm_content=join_link)
-
-I'm thrilled to welcome you to our brand-new Patreon community, where we're embarking on an exciting journey of creativity, connection, and collaboration. I'm Marc Mylemans, and I can't wait to share this space with you.
-Our Patreon page is all about creating a special place where we can connect on a deeper level and celebrate our shared passions and interests. I believe in the power of community, and this is where we come together to take things to the next level.
-
-**What's In Store for Our Patrons?**
-As a member of our Patreon community, you'll get access to a world of exclusive benefits:
-
-📌 **Community Discord Server**: Join our private Discord server, where we can chat, share, and build meaningful connections. Engage with like-minded individuals, discuss your favorite topics, and even collaborate on exciting projects.
-
-🎁 **Exclusive Sticker Pack**: Express yourself like never before with our unique sticker pack! It's a little digital delight that you won't find anywhere else. Use these stickers to add flair to your messages and bring a smile to your friends' faces.
-
-✨ **And More**: This is just the beginning. As our community grows, so will the benefits and opportunities for our cherished patrons.
-
-Your support means the world to me, and it empowers me to continue creating and sharing with you. By becoming a Patreon, you're not only joining a community; you're becoming an integral part of the journey.
-Ready to dive in? Choose a membership tier that suits you best and let's embark on this incredible adventure together.
 
 
 **DigitalOcean**
