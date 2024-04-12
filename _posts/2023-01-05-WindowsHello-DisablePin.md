@@ -7,8 +7,20 @@ title: Windows hello - Disable PIN
 
 ---
 
-By default Windows 10/11 will enable Windows Hello and ask you to configure a PIN.
-If you want to remove the PIN after enabling run the following in Powershell as an Administrator.
+
+### Introduction:
+
+Windows Hello enhances security by using biometric data or a PIN to access Windows 10 and Windows 11 devices. However, there might be scenarios where you need to disable the PIN requirement after it's been set up. This can be especially useful in environments where simpler or traditional login methods are preferred.
+
+### Disabling the PIN Requirement:
+
+To disable the Windows Hello PIN requirement, you need to edit specific registry settings and remove existing PIN configuration files. This operation requires administrative rights.
+
+### Detailed Steps and Script Explanation:
+
+1) **Open PowerShell as an Administrator:** To do this, type "PowerShell" in the Windows search bar, right-click on the PowerShell app, and select "Run as administrator."
+
+2) **Run the PowerShell Commands:** Copy and paste the following script into the PowerShell window and press Enter.
 
 ```powershell
 #Disable pin requirement
@@ -32,3 +44,15 @@ ICACLS $passportFolder /reset /T /C /L /Q
 Remove-Item –path $passportFolder –recurse -force
 }
 ```
+
+### Explanation of the Script:
+
+- **Registry Edit:** The script first checks if the registry path exists and sets a DWORD value which effectively disables the PIN requirement for Windows Hello.
+- **Folder Removal:** It then checks if the folder containing the PIN data exists, takes ownership of it, resets its permissions, and finally deletes it to remove any existing PIN data.
+
+
+### Conclusion:
+
+After running this script, the PIN setup prompt should be disabled the next time you access or set up a user account on your Windows device. This action does not affect other Windows Hello authentication methods like facial recognition or fingerprint scanning, which can still be configured and used if supported by your hardware.
+
+This approach is useful for administrators managing multiple machines or users preferring not to use PIN-based authentication due to policy or personal preference.
