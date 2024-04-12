@@ -7,11 +7,11 @@ title: Azure AD join error code 8018000a – This device is already enrolled
 
 ---
 
-# Introduction:
+### Introduction:
 
 If you ever encounter the Azure AD join error code 8018000a, it indicates that the device was previously joined to Azure AD. This situation can prevent you from rejoining the device to Azure AD without first clearing certain settings.
 
-# Solution:
+### Solution:
 
 To resolve this error, you will need to remove the existing device registration from your system registry. Below is a PowerShell script that automates this process. Before proceeding, ensure you execute this script with administrative privileges and back up your registry to prevent any accidental data loss.
 
@@ -84,10 +84,10 @@ write-host "Cleanup of device registration has been completed. Ensure you delete
 
 ```
 
-# After Running the Script:
+### After Running the Script:
 
 After executing the script, make sure to manually delete the device registration from Azure AD to avoid any conflicts. This ensures that your device is fully ready for a new Azure AD join operation.
 
-# Conclusion:
+### Conclusion:
 
 Following these steps should clear the error and allow you to proceed with joining your device to Azure AD. If the problem persists, consider consulting Azure support for further assistance.
