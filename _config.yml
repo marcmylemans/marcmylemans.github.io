@@ -94,7 +94,7 @@ comments:
   giscus:
     repo: marcmylemans/marcmylemans.github.io
     repo_id: R_kgDOItNOFw
-    category: Posts
+    category: Announcements
     category_id: DIC_kwDOItNOF84CeB7v
     mapping: pathname
     input_position: top
