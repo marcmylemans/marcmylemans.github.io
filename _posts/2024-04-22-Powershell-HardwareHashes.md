@@ -16,7 +16,8 @@ Thankfully, PowerShell scripts can significantly simplify this process. Below, w
 ### Prerequisite: Understanding Hardware Hash Export from Windows Devices
 
 Before diving into the automation process with PowerShell scripts, it's essential to familiarize yourself with the process of exporting hardware hashes from Windows devices using the Diagnostics page in Autopilot. Microsoft provides detailed guidance on this topic in their documentation, which you can access [here](https://learn.microsoft.com/en-us/autopilot/add-devices#diagnostics-page-hash-export).
-
+> During OOBE, press Ctrl-Shift-D to bring up the Diagnostics Page. From this page, you can export logs to a thumb drive. The logs include a CSV file with the hardware hash.
+{: .prompt-tip }
 This guide outlines the steps to export hardware hashes from individual Windows devices using the Diagnostics page in Autopilot. Familiarizing yourself with this process will provide valuable context for leveraging PowerShell automation to streamline the import of hardware hashes into Microsoft Intune for Autopilot setup.
 
 
