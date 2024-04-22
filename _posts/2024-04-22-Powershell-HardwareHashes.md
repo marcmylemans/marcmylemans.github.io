@@ -2,9 +2,7 @@
 categories: Scriptis Powershell
 image: https://mylemans.online/assets/img/posts/Default.jpg
 layout: post
-tags: powershell autopilot scripts
 title: Efficient Intune Autopilot Setup: PowerShell Automation for Hardware Hashes and Device Management!
-
 ---
 
 ## Simplifying Intune Autopilot Setup with PowerShell
