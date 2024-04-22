@@ -67,9 +67,6 @@ foreach ($csvFile in $csvFiles) {
     # Get the folder name containing the CSV file
     $folderName = $csvFile.Directory.Name
     
-    # Append folder name to log content
-    $logContent += "$folderName, "
-    
     # Read the content of the CSV file
     $csvContent = Get-Content -Path $csvFile.FullName -Raw
     
