@@ -57,10 +57,7 @@ $rootFolder = "C:\Path\To\Root\Folder"
 
 # Set the output file paths
 $outputCSV = "C:\Path\To\Output\consolidated.csv"
-$logFile = "C:\Path\To\Output\log.txt"
 
-# Initialize an empty string to store log file content
-$logContent = ""
 
 # Recursively search for CSV files in all subfolders of the root folder
 $csvFiles = Get-ChildItem -Path $rootFolder -Filter "*.csv" -Recurse
@@ -76,12 +73,8 @@ foreach ($csvFile in $csvFiles) {
     # Read the content of the CSV file
     $csvContent = Get-Content -Path $csvFile.FullName -Raw
     
-    # Append CSV content to log content
-    $logContent += "$csvContent`r`n"
 }
 
-# Write log content to log file
-$logContent | Out-File -FilePath $logFile -Append -Encoding utf8
 
 # Combine all CSV files into one file
 Get-ChildItem -Path $rootFolder -Filter "*.csv" -Recurse | 
