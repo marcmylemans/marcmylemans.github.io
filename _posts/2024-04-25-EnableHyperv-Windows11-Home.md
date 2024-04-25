@@ -63,24 +63,18 @@ This command enables all necessary Hyper-V features but omits the automatic rest
 
 After your system restarts, Hyper-V will be fully operational. You can access the Hyper-V Manager from the Start Menu to begin creating and managing virtual machines. For those new to virtualization, the Hyper-V Manager provides a user-friendly interface to configure your virtual environments.
 
-### Recommended Hardware
+### Recommendations
 
-For those starting with Hyper-V:
-- **RAM**: At least 8 GB.
-- **Storage**: An SSD for better performance.
+Remember, running virtual machines can be resource-intensive. For the best performance, ensure your system has at least 8 GB of RAM and an SSD. If you find that you're using Hyper-V frequently and require more stability or features, consider upgrading to Windows 10/11 Pro.
 
-### Moving Forward
-
-For long-term and stable use of Hyper-V, upgrading from Windows Home to Pro is advisable, as it provides official support and stability for Hyper-V.
+By following these steps, you'll have a functional Hyper-V setup on your Windows Home system, allowing you to explore virtualization without the full cost of a professional operating system.
 
 For more detailed instructions on enabling Hyper-V using the script and other virtualization tips, check out the [original guide on The Windows Club](https://www.thewindowsclub.com/how-to-install-and-enable-hyper-v-on-windows-10-home) and [CloudBytes](https://cloudbytes.dev/snippets/enable-hyper-v-on-windows-1011-home).
 
-After enabling Hyper-V and setting up your environment, you might be interested in taking it a step further by creating Hyper-V templates, which can significantly streamline the management of multiple virtual machines. Here's how you can proceed:
 
-### Exploring Hyper-V Templates
-Once you've successfully activated Hyper-V on your system, you can begin to explore more advanced features like creating and using virtual machine templates. Templates in Hyper-V can save you a lot of time if you frequently deploy virtual machines with similar configurations.
+### Getting Started with Hyper-V Templates
 
-#### Getting Started with Hyper-V Templates
+After enabling Hyper-V and setting up your environment, you might be interested in taking it a step further by creating Hyper-V templates, which can significantly streamline the management of multiple virtual machines. 
 If you're ready to dive into creating Hyper-V templates, you can follow my detailed guide on this topic. This guide will walk you through the process of setting up server templates, which can be a great way to get familiar with more complex Hyper-V functionalities.
 
 You can find the guide here: [Creating Hyper-V Virtual Machine Templates](https://mylemans.online/posts/Server2022-Hyper-V-VirtualMachineTemplates/).
