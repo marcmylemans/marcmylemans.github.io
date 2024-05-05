@@ -57,7 +57,7 @@ $SysVHDPath = "C:\Path\To\Your\Template\vTemplateServer2022.vhdx"
 
 $_Customer = Read-host('Wich Customer?')
 $_VM_Role = Read-host('Give the VM a Role. Ex. DC = Domain Controller, TS = Terminal Server, DB/SQL = Database/SQL Server')
-$_TotalVMS = Read-Host('Total number of this vm Ex. srv-dc-01 - srv-dc-02')
+$_TotalVMS = Read-Host('Total number of this vm Ex. 1, 2, srv-dc-01 - srv-dc-02')
 $_CPU_Cores = Read-Host('How many Cores to assign? Ex. 2, 4, 6,...')
 [int64]$_RAM = 1GB*(Read-Host "How many RAM to assign? Ex. 4, 6, 8,...")
 $_VlanID =  Read-Host('Wich Vlan to Assign? Ex. 002')
