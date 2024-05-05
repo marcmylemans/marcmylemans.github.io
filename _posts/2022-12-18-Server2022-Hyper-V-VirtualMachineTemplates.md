@@ -62,7 +62,7 @@ $_CPU_Cores = Read-Host('How many Cores to assign? Ex. 2, 4, 6,...')
 [int64]$_RAM = 1GB*(Read-Host "How many RAM to assign? Ex. 4, 6, 8,...")
 $_VlanID =  Read-Host('Wich Vlan to Assign? Ex. 002')
 
-$VMName          = "v" + $_VlanID +"-" + $_Customer +"-ADC" +"-" + $_VM_Role + $_
+$VMName          = "v" + $_VlanID +"-" + $_Customer +"-" + $_VM_Role + $_
 
 ECHO Creating New VM:
 
