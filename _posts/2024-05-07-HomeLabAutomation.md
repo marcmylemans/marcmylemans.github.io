@@ -1,6 +1,6 @@
 ---
 categories: HomeLab Automation
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: https://mylemans.online/assets/img/posts/6wGd47lPLmU.png
 layout: post
 tags: automation powershell scripting network homelab
 title: Streamlining Hyper-V Management - Introducing the Hyper-V Automation Project
@@ -19,6 +19,8 @@ Before diving into the Hyper-V Automation Project, it's essential to understand 
 # Automate Your Hyper-V Environment:
 
 The Hyper-V Automation Project is a PowerShell-based toolkit that automates the setup of Hyper-V VMs. It's perfect for IT professionals and system administrators looking to streamline their virtual environment. Whether you're managing a home lab, a development environment, or a business infrastructure, this project can save you countless hours and reduce the potential for human error.
+
+{% youtube "https://youtu.be/WaNzzhy1Qoc" %}
 
 # Key Features:
 
