@@ -2,7 +2,7 @@
 categories: Scripts Powershell
 image: https://mylemans.online/assets/img/posts/Default.jpg
 layout: post
-title: "Automating Hyper-V VHD(X) Creation from a Windows Server ISO"
+title: "Automating Hyper-V VHD(X) Creation from a Windows ISO"
 ---
 
 ## Follow-Up: Enhancing the Hyper-V Automation Project with TemplateBuilder
@@ -12,7 +12,7 @@ As a follow-up to the initial Hyper-V Automation Project, I'm excited to introdu
 ### What's New?
 
 The TemplateBuilder script now includes:
-- **Automated ISO to VHD(X) Conversion:** Using the powerful [Convert-WindowsImage](https://github.com/x0nn/Convert-WindowsImage) script, the TemplateBuilder automates the conversion of Windows Server ISO files to VHD(X).
+- **Automated ISO to VHD(X) Conversion:** Using the powerful [Convert-WindowsImage](https://github.com/x0nn/Convert-WindowsImage) script, the TemplateBuilder automates the conversion of Windows ISO files to VHD(X).
 - **Integrated Answer File Handling:** The script injects an `unattend.xml` file directly into the VHD(X), allowing for a fully automated Windows setup.
 - ** Enables the NetFx3 feature by default.
 
