@@ -96,7 +96,7 @@ docker compose up -d
 
 ### Access the Dockge Web Interface
 
-Once the Dockge server is running, you can access the web interface to manage your Docker containers. Open your web browser and navigate to http://localhost:5001. 
+Once the Dockge server is running, you can access the web interface to manage your Docker containers. Open your web browser and navigate to [http://localhost:5001](http://localhost:5001). 
 Enter a username and a password.
 
 > If you changed the port in your configuration, make sure to use the adjusted port number.
