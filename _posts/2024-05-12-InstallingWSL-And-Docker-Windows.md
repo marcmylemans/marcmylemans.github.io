@@ -1,11 +1,10 @@
 ---
 categories: Scripts Powershell
-image: https://mylemans.online/assets/img/posts/73f0de5efefe.jpg
+image: https://mylemans.online/assets/img/posts/73f0de5efefe.png
 layout: post
 title: "How to Install WSL 2 and Docker on Windows"
 ---
 
-# 
 
 In this blog post, we will guide you through the steps to install WSL 2 on Windows, set up Docker Desktop to work with WSL 2, install Dockge as a container management system, and run a demo webserver using Docker. This tutorial will help you leverage the power of Linux containers directly on your Windows machine.
 
