@@ -77,7 +77,7 @@ Visit the Dockge configuration site: [https://dockge.kuma.pet/](https://dockge.k
 First, create the necessary directories to store your Docker stacks and Dockge's configuration:
 
 ```sh
-mkdir -p /opt/stacks /opt/dockge
+sudo mkdir -p /opt/stacks /opt/dockge
 cd /opt/dockge
 ```
 
@@ -85,7 +85,7 @@ cd /opt/dockge
 Use the following command to download the default compose.yaml file. If you prefer to customize the settings, use the URL provided on the Dockge configuration site.
 
 ```sh
-curl https://raw.githubusercontent.com/louislam/dockge/master/compose.yaml --output compose.yaml
+sudo curl https://raw.githubusercontent.com/louislam/dockge/master/compose.yaml --output compose.yaml
 ```
 
 ### Start the server
