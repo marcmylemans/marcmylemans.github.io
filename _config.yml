@@ -56,11 +56,7 @@ google_site_verification: google445ce971c729a3a8.html # fill in to your verifica
 analytics:
   google:
     id: G-WPGGY562HQ
-  goatcounter:
-    id: 7814bf4b4542
-# Pageviews settings
-pageviews:
-  provider: 'goatcounter'
+
   
 
 # Prefer color scheme setting.
