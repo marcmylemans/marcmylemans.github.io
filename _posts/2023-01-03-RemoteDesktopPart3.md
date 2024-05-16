@@ -1,9 +1,9 @@
 ---
-categories: Windows Server
 date: 2023-01-03 09:00:00
 image: https://mylemans.online/assets/img/posts/dRf8k7loXQ0.jpg
 layout: post
-tags: server 2022 rdp part3 fslogix
+categories: [Windows, Server 2022]
+tags: [server 2022, rdp, remote desktop services, rds, fslogix, tutorial, youtube, part3]
 title: Remote Desktop Services - FSLogix
 ---
 
