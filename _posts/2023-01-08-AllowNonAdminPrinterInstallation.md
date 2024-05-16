@@ -1,8 +1,8 @@
 ---
-categories: Windows Server
 image: https://mylemans.online/assets/img/posts/sTIjM9f8e1Q.jpg
 layout: post
-tags: server 2022 printer gpo
+categories: [Windows, Server 2022]
+tags: [server 2022, printer, gpo, non-admin, driver installation, group policy, tutorial, youtube]
 title: Allow (Print) Driver installation (Non Admins)
 ---
 
