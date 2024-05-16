@@ -1,8 +1,8 @@
 ---
-categories: Windows Server
 image: https://mylemans.online/assets/img/posts/4wO82is6y40.jpg
 layout: post
-tags: server 2022 rdp part4 office o365
+categories: [Windows, Server 2022]
+tags: [server 2022, rdp, remote desktop services, rds, office 365, shared licensing, tutorial, youtube, part4]
 title: Installing Office 365 on a Remote Desktop Host!
 ---
 
