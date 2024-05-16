@@ -2,7 +2,7 @@
 date: 2022-12-28 09:00:00
 image: https://mylemans.online/assets/img/posts/2XeRcNKzuUM.jpg
 layout: post
-categories: [Windows, Server]
+categories: [Windows, Server 2022]
 tags: [server 2022, azure ad, azure ad connect, active directory, sync, tutorial, youtube]
 title: Server 2022 - Azure AD Connect Sync
 ---
