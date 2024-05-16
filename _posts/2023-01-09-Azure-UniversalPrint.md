@@ -1,8 +1,8 @@
 ---
-categories: Azure Intune
 image: https://mylemans.online/assets/img/posts/ltcvhYTvhl4.jpg
 layout: post
-tags: azure printer
+categories: [Azure, Intune]
+tags: [azure, universal print, printer, print management, tutorial, youtube]
 title: Azure - Universal Print
 ---
 
