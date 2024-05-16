@@ -53,9 +53,8 @@ google_site_verification: google445ce971c729a3a8.html # fill in to your verifica
 # The end of `jekyll-seo-tag` settings
 
 # Web Analytics Settings
-analytics:
-  google:
-    id: G-WPGGY562HQ
+google_analytics:
+  id: G-WPGGY562HQ # fill in your Google Analytics ID
 
   
 
