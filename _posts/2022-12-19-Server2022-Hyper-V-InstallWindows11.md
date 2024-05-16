@@ -1,9 +1,9 @@
 ---
-categories: Windows Server 2022 11
 date: 2022-12-19 08:00:00
 image: https://mylemans.online/assets/img/posts/Vzks9iqvNos.jpg
 layout: post
-tags: 11 server 2022 hyper-v virtualisation
+categories: [Windows, Server 2022]
+tags: [windows 11, server 2022, hyper-v, virtualisation, tpm, tutorial]
 title: Server 2022 - Hyper-V - Install Windows 11
 ---
 
