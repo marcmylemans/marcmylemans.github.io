@@ -1,5 +1,5 @@
 ---
-categories: [Windows,Server]
+categories: [Windows,Server 2022]
 date: 2022-12-17 08:00:00
 image: https://mylemans.online/assets/img/posts/Y-Sadkf3Ims.jpg
 layout: post
