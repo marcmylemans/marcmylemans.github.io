@@ -3,7 +3,7 @@ date: 2022-12-23 09:00:00
 image: https://mylemans.online/assets/img/posts/yFegSYXlCXE.jpg
 layout: post
 categories: [Windows, Windows 11]
-tags: [windows 11, domain join, active directory, network management, tutorial]
+tags: [windows 11, domain join, active directory, network management, tutorial, youtube]
 title: Windows 11 Domain Join
 ---
 
