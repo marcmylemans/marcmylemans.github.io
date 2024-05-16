@@ -1,8 +1,8 @@
 ---
-categories: Windows Server
 image: https://mylemans.online/assets/img/posts/TcTFFKfjLTQ.jpg
 layout: post
-tags: server 2022 printer
+categories: [Windows, Server 2022]
+tags: [server 2022, printserver, point and print, trusted printserver, group policy, printer management, tutorial, youtube]
 title: Server 2022 -  Configure Point and Print - Trusted Printserver
 ---
 
