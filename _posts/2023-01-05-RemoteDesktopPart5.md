@@ -1,8 +1,8 @@
 ---
-categories: Windows Server
 image: https://mylemans.online/assets/img/posts/i87spvTzR6w.jpg
 layout: post
-tags: server 2022 rdp part5 html5 browser
+categories: [Windows, Server 2022]
+tags: [server 2022, rdp, remote desktop services, rds, web client, html5, browser, tutorial, youtube, part5]
 title: Installing the Remote Desktop Web Client!
 ---
 
