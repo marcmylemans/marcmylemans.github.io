@@ -1,8 +1,8 @@
 ---
-categories: Windows Server
 image: https://mylemans.online/assets/img/posts/XQL3ma7Otg8.jpg
 layout: post
-tags: server 2022 printer
+categories: [Windows, Server 2022]
+tags: [server 2022, printserver, group policy, printer deployment, tutorial, youtube]
 title: Server 2022 - Installing PrintServer Role
 ---
 
