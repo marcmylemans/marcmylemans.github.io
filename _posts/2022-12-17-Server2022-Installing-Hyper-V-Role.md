@@ -1,9 +1,9 @@
 ---
-categories: Windows Server 2022
+categories: [Windows, Server]
 date: 2022-12-17 08:00:00
 image: https://mylemans.online/assets/img/posts/Y-Sadkf3Ims.jpg
 layout: post
-tags: server 2022 hyper-v virtualisation
+tags: [server, 2022, hyper-v, virtualisation, windows-server, installation, tutorial]
 title: Server 2022 - Installing Hyper-V Role
 ---
 
