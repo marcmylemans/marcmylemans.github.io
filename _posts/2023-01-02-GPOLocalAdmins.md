@@ -1,9 +1,9 @@
 ---
-categories: Windows Server
 date: 2023-01-02 10:00:00
 image: https://mylemans.online/assets/img/posts/FrRasK5DQiY.jpg
 layout: post
-tags: server 2022 ad gpo admin
+categories: [Windows, Server 2022]
+tags: [server 2022, ad, gpo, local admins, group policy, admin, tutorial, youtube]
 title: Manage Local Admins with Group Policy on Workstations
 ---
 
