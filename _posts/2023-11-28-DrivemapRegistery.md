@@ -1,5 +1,5 @@
 ---
-categories: windows registery
+categories: Windows Server
 layout: post
 tags: windows register drivemapping networkdrive
 title: Drivemapping with Registery key's
