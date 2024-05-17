@@ -1,8 +1,8 @@
 ---
-categories: Community Discord
 image: https://mylemans.online/assets/img/posts/Default.jpg
 layout: post
-tags: discord ko-fi community donate support-the-community
+categories: [Community, Discord]
+tags: [discord, ko-fi, community, donate, support-the-community, youtube-members, tech-enthusiast, systems-specialist, network-architect]
 title: Join Our Youtube Members Community on Youtube!
 pin: true
 ---
