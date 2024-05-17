@@ -1,8 +1,8 @@
 ---
-categories: HomeLab Hardware
 image: https://mylemans.online/assets/img/posts/oQHi8IYxY-0.jpg
 layout: post
-tags: proxmox homeserversetup techguide virtualization
+categories: [HomeLab, Hardware]
+tags: [proxmox, homeserversetup, techguide, virtualization, ceph, cluster setup, high availability, infrastructure]
 title: Building a 3-Node Proxmox Cluster with Ceph Storage
 ---
 
