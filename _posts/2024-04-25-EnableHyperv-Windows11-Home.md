@@ -1,8 +1,8 @@
 ---
-categories: Windows Server 2022
 image: https://mylemans.online/assets/img/posts/a7OFMzM6HRY.jpg
 layout: post
-tags: hyper-v virtualisation home
+categories: [Windows, Windows 11]
+tags: [hyper-v, virtualisation, windows 10 home, windows 11 home]
 title: Enable Hyper-V on Windows 10/11 Home Edition!
 ---
 
