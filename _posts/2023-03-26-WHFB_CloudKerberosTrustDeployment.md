@@ -1,10 +1,10 @@
 ---
-categories: Azure Intune
+categories: [Azure, Intune]
 date: 2023-03-26 09:00:00
 image: https://mylemans.online/assets/img/posts/FW3TF0zFWd0.jpg
 layout: post
-tags: server 2022 azure hybrid WindowsHelloForBusiness
-title: Windows hello for business - Cloud Kerberos trust deployment
+tags: [server 2022, azure, hybrid, windows hello for business, tutorial, youtube, cloud kerberos]
+title: Windows Hello for Business - Cloud Kerberos trust deployment
 ---
 
 In this video, we are going to deploy Cloud Kerberos Trust.
