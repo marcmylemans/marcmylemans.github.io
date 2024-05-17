@@ -1,10 +1,8 @@
 ---
-categories: Windows Server
 layout: post
-tags: server 2022 rdp webfeed
 title: Remote Desktop Services, Set up email discovery to subscribe to your RDS feed
-
-
+categories: [Windows, Server]
+tags: [server 2022, rdp, remote desktop services, rds, webfeed, autodiscover]
 ---
 
 I am writing this small guide in extension of the Remote Desktop series.
