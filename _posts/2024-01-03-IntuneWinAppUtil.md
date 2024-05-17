@@ -1,8 +1,8 @@
 ---
-categories: Azure Intune
 image: https://mylemans.online/assets/img/posts/Default.jpg
 layout: post
-tags: entraid azuread intune intunewinapputil
+categories: [Azure Intune]
+tags: [entraid, azuread, intune, intunewinapputil]
 title: Deploying a Custom Application with IntuneWinAppUtil in Microsoft Intune
 
 
