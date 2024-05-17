@@ -1,9 +1,9 @@
 ---
-categories: Windows Server
 date: 2024-01-27
 image: https://mylemans.online/assets/img/posts/9c4l5CIV6Qw.jpg
 layout: post
-tags: server 2022 rdp webclient
+categories: [Windows Server]
+tags: [server, windows server 2022, rdp, webclient, file transfer, remote desktop, virtual drive, remote access, tech tutorial]
 title: Effortless File Management with Remote Desktop Virtual Drive
 ---
 
