@@ -1,8 +1,9 @@
 ---
-categories: Scripts Powershell
 image: https://mylemans.online/assets/img/posts/Default.jpg
 layout: post
 title: "Automating Hyper-V VHD(X) Creation from a Windows ISO"
+categories: Scripts Powershell
+tags: automation, powershell, scripting, hyper-v, virtual-machines, windows-server, iso, vhdx, template, homelab, Convert-WindowsImage
 ---
 
 ## Follow-Up: Enhancing the Hyper-V Automation Project with TemplateBuilder
