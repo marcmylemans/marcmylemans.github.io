@@ -2,6 +2,8 @@
 image: https://mylemans.online/assets/img/posts/61H8PYeK0sw.jpg
 layout: post
 title: Upgrading A Server 2012 R2 Domain Controller To Server 2019!
+categories: [Windows, Server 2012R2]
+tags: [upgrade, domain controller, server 2012 r2, server 2019, adprep, tutorial, youtube]
 ---
 
 {% youtube "https://youtu.be/61H8PYeK0sw" %}
