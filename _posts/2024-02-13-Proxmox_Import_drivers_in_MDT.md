@@ -1,8 +1,8 @@
 ---
-categories: HomeLab Hardware
 image: https://mylemans.online/assets/img/posts/xhRHTdSN9kY.jpg
 layout: post
-tags: proxmox homeserversetup techguide virtualization mdt
+categories: [HomeLab, Hardware]
+tags: [proxmox, homeserversetup, techguide, virtualization, mdt, bsod, driver compatibility, deployment server]
 title: My Home Lab Adventure - Solving the BSOD Mystery with Proxmox and MDT
 ---
 
