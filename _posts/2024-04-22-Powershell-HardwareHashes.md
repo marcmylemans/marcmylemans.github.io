@@ -1,8 +1,9 @@
 ---
-categories: Scripts Powershell
 image: https://mylemans.online/assets/img/posts/Default.jpg
 layout: post
 title: "Efficient Intune Autopilot Setup: PowerShell Automation for Hardware Hashes and Device Management!"
+categories: [Scripts, Powershell]
+tags: [scripts, powershell, intune, autopilot, hardware-hashes, device-management, automation, windows11, intunewinapputil, mdm]
 ---
 
 ## Simplifying Intune Autopilot Setup with PowerShell
