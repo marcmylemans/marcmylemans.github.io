@@ -1,8 +1,8 @@
 ---
-categories: HomeLab Hardware
 image: https://mylemans.online/assets/img/posts/iF88CwweAko.jpg
 layout: post
-tags: proxmox homeserversetup techguide virtualization
+categories: [HomeLab, Hardware]
+tags: [proxmox, homeserversetup, techguide, virtualization, server setup, homelab, installation]
 title: Installing Proxmox
 ---
 
