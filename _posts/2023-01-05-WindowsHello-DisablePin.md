@@ -1,7 +1,7 @@
 ---
-categories: Windows 11
+categories: [Windows, Windows 11]
 layout: post
-tags: windows 10 11 powershell hello
+tags: [windows 10, windows 11, powershell ,windows hello, windows hello for business, disable pin]
 title: Windows hello - Disable PIN
 
 
