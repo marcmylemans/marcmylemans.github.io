@@ -7,11 +7,14 @@ tags: [automation, powershell, scripting, docker, wsl2, containers, webserver, l
 
 ---
 
+## **Introduction:**
 
 In this blog post, we will guide you through the steps to install WSL 2 on Windows, set up Docker Desktop to work with WSL 2, install Dockge as a container management system, and run a demo webserver using Docker. This tutorial will help you leverage the power of Linux containers directly on your Windows machine.
 
-{% youtube "https://youtu.be/dcSEcIHheOc" %}
 
+## **Video Guide:**
+
+{% youtube "https://youtu.be/dcSEcIHheOc" %}
 
 ## **Written Guide:**
 
@@ -134,7 +137,7 @@ One of the great features of Dockge is the ability to convert Docker run command
 After deploying, you will see the container start up, and a terminal session will display debug information. The container state (healthy) and the port will also be shown. You can access your new webserver by navigating to `http://localhost` or by clicking on the port number (80 in this example) to go directly to the hello-world webserver.
 
 
-### Conclusion
+## **Conclusion**
 
 In this tutorial, you learned how to install WSL 2 on Windows, set up Docker Desktop to work with WSL 2, install Dockge as a container management system, and run a Docker container to host a demo webserver. This setup provides a powerful and flexible environment for developing and running containerized applications on Windows.
 
