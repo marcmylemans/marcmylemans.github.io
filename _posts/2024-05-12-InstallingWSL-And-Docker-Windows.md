@@ -12,11 +12,12 @@ In this blog post, we will guide you through the steps to install WSL 2 on Windo
 
 {% youtube "https://youtu.be/dcSEcIHheOc" %}
 
-**Written Guide:**
 
-## Step 1: Install WSL 2
+## **Written Guide:**
 
-### Enable WSL and Virtual Machine Platform
+### Step 1: Install WSL 2
+
+#### Enable WSL and Virtual Machine Platform
 
 First, enable the necessary features for WSL and the Virtual Machine Platform. By default, the installed Linux distribution will be Ubuntu. This can be changed using the -d flag.
 
@@ -27,7 +28,7 @@ First, enable the necessary features for WSL and the Virtual Machine Platform. B
     wsl --install
     ```
 
-### Set up your Linux username and password
+#### Set up your Linux username and password
 
 After installing your Linux distribution, open it (Ubuntu is the default) from the Start menu. You will be prompted to create a username and password for the distribution.
 
@@ -36,13 +37,13 @@ After installing your Linux distribution, open it (Ubuntu is the default) from t
 - The username and password you create will be used for logging in by default and will serve as the admin account for the distribution, allowing you to execute sudo (Super User Do) commands.
 - Each Linux distribution you install on WSL will require you to set up a separate user account. This setup process must be repeated for each new distribution you add, reinstall, or reset.
 
-### Update and upgrade packages
+#### Update and upgrade packages
 
 ```
 sudo apt update && sudo apt upgrade
 ```
 
-### Optional: Change the default Linux Distribution
+#### Optional: Change the default Linux Distribution
 
 - To change the distribution installed, replace <Distribution Name> with the name of the distribution you would like to install, enter:
     ```powershell
@@ -57,13 +58,13 @@ sudo apt update && sudo apt upgrade
    wsl --install -d <Distribution Name>
    ```
 
-## Step 2: Install Docker Desktop
+### Step 2: Install Docker Desktop
 
 1. Download Docker Desktop from the [official website](https://docs.docker.com/docker-for-windows/wsl/#download).
 2. Run the installer and follow the prompts.
 3. During the installation, ensure that the option to use WSL 2 instead of Hyper-V is selected.
 
-### Configure Docker to Use WSL 2
+#### Configure Docker to Use WSL 2
 
 1. Open Docker Desktop.
 2. Go to Settings > General and ensure "Use the WSL 2 based engine" is checked.
@@ -78,7 +79,7 @@ sudo apt update && sudo apt upgrade
 
 Visit the Dockge configuration site: [https://dockge.kuma.pet/](https://dockge.kuma.pet/)
 
-### Create Directories for Stacks and Dockge's Configuration
+#### Create Directories for Stacks and Dockge's Configuration
 
 First, create the necessary directories to store your Docker stacks and Dockge's configuration:
 
@@ -87,20 +88,20 @@ sudo mkdir -p /opt/stacks /opt/dockge
 cd /opt/dockge
 ```
 
-### Download the compose.yaml
+#### Download the compose.yaml
 Use the following command to download the default compose.yaml file. If you prefer to customize the settings, use the URL provided on the Dockge configuration site.
 
 ```sh
 sudo curl https://raw.githubusercontent.com/louislam/dockge/master/compose.yaml --output compose.yaml
 ```
 
-### Start the server
+#### Start the server
 
 ```sh
 docker compose up -d
 ```
 
-### Access the Dockge Web Interface
+#### Access the Dockge Web Interface
 
 Once the Dockge server is running, you can access the web interface to manage your Docker containers. Open your web browser and navigate to [http://localhost:5001](http://localhost:5001). 
 Enter a username and a password.
@@ -110,13 +111,13 @@ Enter a username and a password.
 
 
 
-## Step 4: Install a Demo Webserver
+### Step 4: Install a Demo Webserver
 
-### Download the Webserver Container
+#### Download the Webserver Container
 
 Navigate to [https://hub.docker.com/r/crccheck/hello-world](https://hub.docker.com/r/crccheck/hello-world) to find information about this container, including sample usage.
 
-### Using Dockge to Convert Docker Run Command to Docker Compose
+#### Using Dockge to Convert Docker Run Command to Docker Compose
 
 One of the great features of Dockge is the ability to convert Docker run commands into Docker Compose files directly from its interface. Here’s how you can do it:
 
@@ -133,7 +134,7 @@ One of the great features of Dockge is the ability to convert Docker run command
 After deploying, you will see the container start up, and a terminal session will display debug information. The container state (healthy) and the port will also be shown. You can access your new webserver by navigating to `http://localhost` or by clicking on the port number (80 in this example) to go directly to the hello-world webserver.
 
 
-## Conclusion
+### Conclusion
 
 In this tutorial, you learned how to install WSL 2 on Windows, set up Docker Desktop to work with WSL 2, install Dockge as a container management system, and run a Docker container to host a demo webserver. This setup provides a powerful and flexible environment for developing and running containerized applications on Windows.
 
