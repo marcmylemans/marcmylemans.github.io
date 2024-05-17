@@ -2,7 +2,7 @@
 date: 2022-12-26 09:00:00
 image: https://mylemans.online/assets/img/posts/xbX_n8ysGrI.jpg
 layout: post
-categories: [Windows, Server]
+categories: [Windows, Server 2022]
 tags: [server 2022, admx, group policy, gpo, active directory, software installation, tutorial, youtube]
 title: Server 2022 - Active Directory - Importing ADMX and Installing Applications
   with Group Policy
