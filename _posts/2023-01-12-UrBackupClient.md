@@ -1,7 +1,7 @@
 ---
 image: https://mylemans.online/assets/img/posts/OPYVI60i54w.jpg
 layout: post
-categories: [Server, UrBackup]
+categories: [Open Source Software, UrBackup Server]
 tags: [server 2022, gpo, windows 11, urbackup, backup, client, tutorial, youtube]
 title: UrBackup - Deploying Clients with GPO!
 ---
