@@ -11,6 +11,11 @@ tags: [azure, conditional access, powershell, export, import, tutorial, youtube]
 
 This guide provides PowerShell scripts to export and import Azure conditional access policies using Microsoft Graph. The scripts require the `Microsoft.Graph` and `Microsoft.Graph.Beta` modules.
 
+
+## Explanation
+
+1. **Install Modules Script**: Installs the `Microsoft.Graph` and `Microsoft.Graph.Beta` modules necessary for interacting with Microsoft Graph API.
+
 ## Install Modules
 
 First, you'll need to install the necessary PowerShell modules:
@@ -23,6 +28,12 @@ Install-Module -Name Microsoft.Graph -Scope CurrentUser -Force -AllowClobber
 Install-Module -Name Microsoft.Graph.Beta -Scope CurrentUser -Force -AllowClobber
 ```
 
+
+2. **Export Conditional Access Policies Script**:
+   - Connects to Microsoft Graph with the necessary scope.
+   - Retrieves all conditional access policies.
+   - Exports the policies to a JSON file.
+     
 ## Export Conditional Access Policies
 
 Use the following script to export your conditional access policies to a JSON file:
@@ -89,6 +100,12 @@ catch {
 }
 ```
 
+
+3. **Import Conditional Access Policies Script**:
+   - Connects to Microsoft Graph with the necessary scope.
+   - Reads the JSON file containing the policies.
+   - Imports each policy into the Azure environment.
+  
 ## Import Conditional Access Policies
 
 Use the following script to import conditional access policies from a JSON file:
@@ -159,23 +176,19 @@ else {
 }
 ```
 
-## Explanation
-
-1. **Install Modules Script**: Installs the `Microsoft.Graph` and `Microsoft.Graph.Beta` modules necessary for interacting with Microsoft Graph API.
-2. **Export Conditional Access Policies Script**:
-   - Connects to Microsoft Graph with the necessary scope.
-   - Retrieves all conditional access policies.
-   - Exports the policies to a JSON file.
-3. **Import Conditional Access Policies Script**:
-   - Connects to Microsoft Graph with the necessary scope.
-   - Reads the JSON file containing the policies.
-   - Imports each policy into the Azure environment.
-
 By following these steps, you can easily export and import Azure conditional access policies.
 
 ## Acknowledgements
 
-This guide is based on the excellent articles by Alitajran. For more detailed information, please refer to the original articles:
+This guide is based on the excellent articles by [Ali Tajran](https://www.alitajran.com/about/). For more detailed information, please refer to the original articles:
 
 - [Export Conditional Access Policies](https://www.alitajran.com/export-conditional-access-policies/)
 - [Import Conditional Access Policies](https://www.alitajran.com/import-conditional-access-policies/)
+
+
+
+
+
+
+
+
