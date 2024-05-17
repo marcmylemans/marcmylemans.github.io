@@ -1,8 +1,8 @@
 ---
-categories: HomeLab Hardware
 image: https://mylemans.online/assets/img/posts/Default.jpg
 layout: post
-tags: hardware network homelab
+categories: [HomeLab Hardware]
+tags: [hardware, network, homelab, server, virtualization, hyper-v, deployment, windows server]
 title: My New Home Lab Journey
 ---
 
