@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jgg
+image: https://mylemans.online/assets/img/posts/Default.jpg
 layout: post
 title: "How to Export and Import Conditional Access Policy's"
 categories: [Azure, Intune]
