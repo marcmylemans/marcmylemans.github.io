@@ -1,10 +1,8 @@
 ---
-categories: Server
 layout: post
-tags: server 2022 gpo bug error fslogix wvd
 title: FSLogix - Service group policy client prevents login
-
-
+categories: [Server]
+tags: [server 2022, gpo, bug, error, fslogix, wvd, troubleshooting]
 ---
 
 ![Assign users](https://mylemans.online/assets/GrouppolicyClientServiceFailedTheSignIn/error.png)
