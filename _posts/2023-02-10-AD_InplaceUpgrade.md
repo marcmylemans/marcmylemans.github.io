@@ -1,8 +1,8 @@
 ---
-categories: Windows Server
 layout: post
-tags: upgrade domaincontroller AD
 title: Upgrade domain controllers to a newer version of Windows Server
+categories: [Windows, Server]
+tags: [upgrade, domain controller, AD, windows server, tutorial]
 
 
 ---
