@@ -1,8 +1,8 @@
 ---
-categories: EntraID Laps
 image: https://mylemans.online/assets/img/posts/lEVq0h2qNvQ.jpg
 layout: post
-tags: entraid azuread intune laps
+categories: [EntraID, Laps]
+tags: [entraid, azuread, intune, laps]
 title: Implementing LAPS in Microsoft Entra and Intune
 ---
 
