@@ -1,8 +1,8 @@
 ---
-categories: HomeLab Hardware
 image: https://mylemans.online/assets/img/posts/Default.jpg
 layout: post
-tags: hardware network homelab
+categories: [HomeLab Hardware]
+tags: [hardware, network, homelab, server, virtualization, deployment, windows server, networking]
 title: My New Home Lab Journey - The 2.5 Gbit Network Upgrade
 
 
