@@ -1,10 +1,8 @@
 ---
-categories: Azure Connect
 layout: post
-tags: azuread ad sync
 title: AAD Connect / Cloud Sync with Existing Cloud Users
-
-
+categories: [Azure, Connect]
+tags: [azuread, ad, sync, aad connect, cloud sync, powershell, tutorial]
 ---
 
 # Tackling Duplicate Users in AAD Connect / Cloud Sync
