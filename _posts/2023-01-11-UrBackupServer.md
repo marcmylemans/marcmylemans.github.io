@@ -1,7 +1,7 @@
 ---
 image: https://mylemans.online/assets/img/posts/ig6by0vgpyQ.jpg
 layout: post
-categories: [Server, UrBackup]
+categories: [Open Source Software, UrBackup Server]
 tags: [server 2022, gpo, windows 11, urbackup, backup, tutorial, youtube]
 title: UrBackup - Installing the Backup Server!
 ---
