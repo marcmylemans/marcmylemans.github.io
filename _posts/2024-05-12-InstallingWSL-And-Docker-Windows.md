@@ -1,8 +1,10 @@
 ---
-categories: Scripts Powershell
 image: https://mylemans.online/assets/img/posts/73f0de5efefe.png
 layout: post
 title: "How to Install WSL 2 and Docker on Windows"
+categories: [Scripts, Powershell]
+tags: [automation, powershell, scripting, docker, wsl2, containers, webserver, linux, windows, devops, virtualization]
+
 ---
 
 
