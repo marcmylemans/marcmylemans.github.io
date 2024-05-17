@@ -1,9 +1,9 @@
 ---
-categories: Azure Intune
 date: 2023-04-01 09:00:00
 image: https://mylemans.online/assets/img/posts/GI8HQE9ZOGk.jpg
 layout: post
-tags: intune azure epm
+categories: [Azure, Intune]
+tags: [intune, azure, epm]
 title: Intune - Endpoint Privilege Management
 ---
 
