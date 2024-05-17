@@ -70,7 +70,7 @@ sudo apt update && sudo apt upgrade
 2. Go to Settings > General and ensure "Use the WSL 2 based engine" is checked.
 3. Go to Settings > Resources > WSL Integration and enable integration with your chosen Linux distribution(s).
 
-## Step 3: Install Dockge
+### Step 3: Install Dockge
 
 [Dockge](https://github.com/louislam/dockge) is a container management system that simplifies managing Docker containers, similar to [Portainer](https://github.com/portainer/portainer). 
 
