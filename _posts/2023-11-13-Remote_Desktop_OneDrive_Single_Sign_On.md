@@ -1,8 +1,8 @@
 ---
-categories: Windows Server
 image: https://mylemans.online/assets/img/posts/GFqTZh6xxb4.jpg
 layout: post
-tags: server 2022 rdp onedrive sso
+categories: [Windows Server 2022]
+tags: [server 2022, rdp, onedrive, sso]
 title: Remote Desktop - OneDrive Single Sign On
 ---
 
