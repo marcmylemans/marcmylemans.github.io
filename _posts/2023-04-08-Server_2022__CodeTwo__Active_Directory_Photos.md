@@ -1,8 +1,8 @@
 ---
-categories: Windows Server 2022
 image: https://mylemans.online/assets/img/posts/BVYyfv8v4xQ.jpg
 layout: post
-tags: server 2022 activedirectory codetwo
+categories: [Windows, Server 2022]
+tags: [server 2022, activedirectory, codetwo]
 title: Server 2022 - CodeTwo - Active Directory Photos
 ---
 
