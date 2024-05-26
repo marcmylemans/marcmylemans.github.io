@@ -16,10 +16,10 @@ timezone:
 
 title: Mylemans Online   # the main title
 
-tagline: Tech tips, blogs and video documentation # it will display as the sub-title
+tagline: Your Go To Source for Tech Tips, Blogs, and Tutorials # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  A minimal website for tech tips, blogs and video documentation.
+  Discover essential tech tips, in-depth blogs, and comprehensive video tutorials on our tech-focused website. Stay updated with the latest in technology, troubleshooting guides, and expert insights to enhance your tech knowledge.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
