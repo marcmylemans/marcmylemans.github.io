@@ -36,7 +36,7 @@ You may refuse the use of cookies by selecting the appropriate settings on your 
 
 ---
 
-Feel free to explore, engage, and enjoy the content here at Mylemans Online. Let's make tech both fun and professional!
+Feel free to explore, engage, and enjoy the content here at Mylemans Online. Let's make tech fun!
 
 Best,
 Marc
