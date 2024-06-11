@@ -13,6 +13,14 @@ Integrating your existing Active Directory with Azure AD using AD Connect or Clo
 
 Please note that these scripts are provided for informational purposes and should be used with caution. Always test scripts in a non-production environment first, and ensure you have backups of your data. I am not responsible for any issues that may arise from the use of these scripts. Users should have an understanding of PowerShell and Active Directory operations before proceeding.
 
+# Prerequisites
+
+The following PowerShell command will install the Powershell Azure AD Module.
+
+```powershell
+Install-Module AzureAD
+```
+
 ### Step 1: Exporting User Data from Office 365
 
 The following PowerShell script will export all user data from Office 365, which serves as both an information source and a backup.
