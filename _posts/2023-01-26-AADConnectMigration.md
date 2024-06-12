@@ -246,7 +246,7 @@ Import-Module ActiveDirectory
 $ADUpdateList | ForEach-Object {
     if ($_.Skip_Import -eq "No") {
         # Get the AD user
-        $ADUser = Get-ADUser -Filter { UserPrincipalName -eq $_.UserPrincipalName } -Properties ProxyAddresses
+        $ADUser = Get-ADUser $_.SamAccountName -Properties ProxyAddresses
         
         if ($ADUser) {
             # Update the AD user's ProxyAddresses
