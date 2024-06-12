@@ -1,26 +1,4 @@
-<form id="newsletterRssFeedPulse" action="https://rssfeedpulse.com/api/campaign/86d9b36e-b8e2-4dfe-a2ee-73f1150fc391/subscribe" method="get">
+<form action="https://rssfeedpulse.com/campaign/86d9b36e-b8e2-4dfe-a2ee-73f1150fc391/subscribe" method="get">
     <input type="email" name="email" placeholder="Your email" required>
     <button type="submit">Subscribe</button>
 </form>
-
-<script>
-document.getElementById('newsletterRssFeedPulse').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the form from submitting the default way
-
-    var email = document.querySelector('input[name="email"]').value;
-    var actionUrl = this.action;
-
-    fetch(`${actionUrl}?email=${encodeURIComponent(email)}`, {
-        method: 'GET'
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Success:', data);
-        // You can add more actions here, such as showing a success message to the user
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        // You can add error handling here
-    });
-});
-</script>
