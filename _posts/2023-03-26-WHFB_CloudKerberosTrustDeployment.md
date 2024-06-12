@@ -116,14 +116,21 @@ To configure the cloud Kerberos trust policy:
 
 5) In Configuration Settings, add a new configuration with the following settings:
 
-Name: Windows Hello for Business cloud Kerberos trust or another familiar name
-Description (optional): Enable Windows Hello for Business cloud Kerberos trust for sign-in and on-premises SSO
-OMA-URI: ./Device/Vendor/MSFT/PassportForWork/<tenant ID>/Policies/UseCloudTrustForOnPremAuth
-Data type: Boolean
-Value: True
- Important
+**Name:** Windows Hello for Business cloud Kerberos trust or another familiar name
 
-Tenant ID in the OMA-URI must be replaced with the tenant ID for your Azure AD tenant. See How to find your Azure AD tenant ID for instructions on looking up your tenant ID.
+**Description (optional):** Enable Windows Hello for Business cloud Kerberos trust for sign-in and on-premises SSO
+
+**OMA-URI:** ./Device/Vendor/MSFT/PassportForWork/***tenant ID***/Policies/UseCloudTrustForOnPremAuth
+
+**Data type:** Boolean
+
+**Value:** True
+
+
+
+>  Important:
+> Tenant ID in the OMA-URI must be replaced with the tenant ID for your Azure AD tenant. See How to find your Azure AD tenant ID for instructions on looking up your tenant ID.
+{: .prompt-warning }
 
 <img src="https://learn.microsoft.com/en-us/windows/security/identity-protection/hello-for-business/images/hello-cloud-trust-intune-large.png" alt="hello-cloud-trust-intune-large">
 
