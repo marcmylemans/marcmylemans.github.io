@@ -21,8 +21,8 @@ Recently, I encountered a scenario where the existing storage capacity was insuf
 
 Adding new storage volumes to a virtual appliance in Hyper-V involves several steps. 
 
-1) We need to create the VHDX files for the new volumes. 
-2) These VHDX files need to be attached to the StoreOnce VSA.
+1. We need to create the VHDX files for the new volumes. 
+2. These VHDX files need to be attached to the StoreOnce VSA.
 
 To streamline this process, I wrote a PowerShell script that automates the creation and attachment of these volumes.
 
