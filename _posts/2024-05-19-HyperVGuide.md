@@ -3,7 +3,6 @@ image: https://mylemans.online/assets/img/posts/Default.jpg
 layout: post
 title: "Support Our Hyper-V Guide: Get Early Access"
 tags: [support, hyper-v, guide, early access]
-pin: true
 ---
 
 # Support Our Hyper-V Guide: Get Early Access
