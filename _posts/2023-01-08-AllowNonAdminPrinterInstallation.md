@@ -26,7 +26,10 @@ For a step-by-step visual guide, watch our video tutorial:
 4) **Allow Non-Admins to Install Printers:** Locate the setting "Allow installation of devices using drivers that match these device setup classes". Enable this setting and click on the "Show" button to add the device class GUIDs for printers:
 - Class = Printer: {4658ee7e-f050-11d1-b6bd-00c04fa372a7}
 - Class = PNPPrinters: {4d36e979-e325-11ce-bfc1-08002be10318}
-  
+
+> [System-Defined Device Setup Classes Available to Vendors](https://learn.microsoft.com/en-us/windows-hardware/drivers/install/system-defined-device-setup-classes-available-to-vendors)
+{: .prompt-info }
+
 5) **Apply and Test the GPO:** After setting up the policy, apply it by linking it to the appropriate OU. Test the policy by attempting to install a printer on a non-admin user's workstation to ensure the policy is effectively allowing the installation.
 
 ## Understanding Device Classes:
