@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: https://mylemans.online/assets/img/posts/b29dce92-c896-496f-a0c1-cac1799c8848.png
 layout: post
 title: "Massive CrowdStrike Falcon Sensor Update Crash Disrupts Windows PCs Worldwide"
 date: 2024-07-02
