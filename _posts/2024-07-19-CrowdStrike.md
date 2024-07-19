@@ -19,10 +19,13 @@ CrowdStrike has stated that it has pulled the faulty update, but this comes too 
 
 If you have been affected by this issue, here are the steps to resolve it:
 
-1) Boot Windows into Safe Mode or the Windows Recovery Environment.
-2) Navigate to the C:\Windows\System32\drivers\CrowdStrike directory.
-3) Locate the file matching C-00000291*.sys, and delete it.
-4) Boot the host normally.
+1. Boot Windows into Safe Mode or the Windows Recovery Environment.
+   
+2. Navigate to the C:\Windows\System32\drivers\CrowdStrike directory.
+
+3. Locate the file matching C-00000291*.sys, and delete it.
+
+4. Boot the host normally.
 
 
 [Source](https://itdaily.be/nieuws/security/crowdstrike-sloopt-windows/)
