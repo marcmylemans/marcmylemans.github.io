@@ -4,6 +4,7 @@ layout: post
 title: "Massive CrowdStrike Falcon Sensor Update Crash Disrupts Windows PCs Worldwide"
 date: 2024-07-02
 categories: [BSOD, csagent.sys, CrowdStrike]
+tags: [bsod, crowdstrike, csagent.sys, domain controller]
 ---
 
 
