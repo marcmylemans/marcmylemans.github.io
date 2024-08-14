@@ -73,6 +73,32 @@ sudo apt update && sudo apt upgrade
 2. Go to Settings > General and ensure "Use the WSL 2 based engine" is checked.
 3. Go to Settings > Resources > WSL Integration and enable integration with your chosen Linux distribution(s).
 
+#### Optional: Enable Nvidia Cuda Support
+
+1. Open Docker Desktop.
+2. Go to Settings > Docker Engine and add/replace the following under "Configure the Docker daemon by typing a json Docker daemon"
+
+```
+{
+  "builder": {
+    "gc": {
+      "defaultKeepStorage": "20GB",
+      "enabled": true
+    }
+  },
+  "experimental": false,
+  "runtimes":{
+      "nvidia":{
+        "path":"/usr/bin/nvidia-container-runtime",
+        "runtimeArgs":[]
+    }
+  }
+}
+```
+
+3. Apply and restart
+
+
 ### Step 3: Install Dockge
 
 [Dockge](https://github.com/louislam/dockge) is a container management system that simplifies managing Docker containers, similar to [Portainer](https://github.com/portainer/portainer). 
