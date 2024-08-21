@@ -1,0 +1,44 @@
+---
+image: https://mylemans.online/assets/img/posts/Default.jpg
+layout: post
+title: "Title"
+date: 2024-07-02
+categories: [Category 1, Category 2, Category 3]
+---
+
+
+# Reclaiming Storage by Cleaning Up DFS Cache and Conflict/Deleted Files
+
+Recently, I encountered a disk space issue on a file server where the System Volume Information folder was occupying a significant amount of space due to DFS caching. It turns out that during the initial migration to the new file server, a large cache size had been set for DFS. Now that the files are more static, such a large cache is unnecessary, but DFS continues to reserve this space.
+
+To help others reclaim this lost storage, here's a streamlined guide to clean up DFS cache, specifically targeting the ConflictAndDeleted folder, which can accumulate excessive data. Here's how you can do it effectively:
+
+## Steps to Clean Up ConflictAndDeleted Folder
+
+### Method 1: Using WMI for a Fast Cleanup
+
+Instead of going through the more disruptive process of lowering the quota and waiting for DFSR polling and replication, you can clean up the ConflictAndDeleted folder quickly using WMI. Here’s how:
+
+1. **Open Command Prompt as Administrator**  
+   On your DFSR server, open a Command Prompt with administrator privileges.
+
+2. **Obtain the Replicated Folder GUID**  
+   Run the following command to get the GUID of the replicated folder:
+
+  ```cmd
+  WMIC.EXE /namespace:\\root\microsoftdfs path dfsrreplicatedfolderconfig get replicatedfolderguid,replicatedfoldername
+  ```
+  
+Clean the ConflictAndDeleted Folder
+Now, run the following command, replacing <RF GUID> with the actual GUID of your replicated folder:
+
+cmd
+Copy code
+WMIC.EXE /namespace:\\root\microsoftdfs path dfsrreplicatedfolderinfo where "replicatedfolderguid='<RF GUID>'" call cleanupconflictdirectory
+Example:
+
+cmd
+Copy code
+WMIC.EXE /namespace:\\root\microsoftdfs path dfsrreplicatedfolderinfo where "replicatedfolderguid='08D61A29-D8C0-4559-BF43-FAC137DAD46C'" call cleanupconflictdirectory
+Result
+This process will empty the ConflictAndDeleted folder, and the ConflictAndDeletedManifest.xml file will be removed, freeing up disk space.
