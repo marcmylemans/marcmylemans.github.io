@@ -4,6 +4,7 @@ layout: post
 title: "Reclaiming Storage by Cleaning Up DFS Cache and Conflict/Deleted Files"
 date: 2024-07-02
 categories: [File Servers, DFS]
+tags: [DFS, DFSR, File Server, Storage Management, Windows Server, Disk Cleanup, ConflictAndDeleted, System Volume Information, WMI, IT Troubleshooting, Server Optimization, Data Storage]
 ---
 
 
