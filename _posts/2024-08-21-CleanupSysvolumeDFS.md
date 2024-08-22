@@ -29,7 +29,7 @@ Instead of going through the more disruptive process of lowering the quota and r
 2. **Obtain the Replicated Folder GUID**  
    Run the following command to get the GUID of the replicated folder:
 
-```cmd
+```
 WMIC.EXE /namespace:\\root\microsoftdfs path dfsrreplicatedfolderconfig get replicatedfolderguid,replicatedfoldername
 ```
 
@@ -49,7 +49,7 @@ Example:
 
 ![Clean the ConflictAndDeleted Folder](https://mylemans.online/assets/img/posts/d01419abf6f4.png)
 
-```cmd
+```
 WMIC.EXE /namespace:\\root\microsoftdfs path dfsrreplicatedfolderinfo where "replicatedfolderguid='08D61A29-D8C0-4559-BF43-FAC137DAD46C'" call cleanupconflictdirectory
 ```
 
