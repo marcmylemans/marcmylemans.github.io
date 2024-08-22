@@ -39,7 +39,7 @@ WMIC.EXE /namespace:\\root\microsoftdfs path dfsrreplicatedfolderconfig get repl
 Clean the ConflictAndDeleted Folder
 Now, run the following command, replacing <RF GUID> with the actual GUID of your replicated folder:
 
-```cmd
+```
 WMIC.EXE /namespace:\\root\microsoftdfs path dfsrreplicatedfolderinfo where "replicatedfolderguid='<RF GUID>'" call cleanupconflictdirectory
 ```
 
