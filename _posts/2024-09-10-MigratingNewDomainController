@@ -6,15 +6,6 @@ date: 2024-07-02
 categories: [Category 1, Category 2, Category 3]
 ---
 
-
-## Header 2
-
-```powershell
-Script
-```
-
-[Text](url)
-
 # Migrating to a New Domain Controller: A Smooth Transition Guide
 
 Migrating to a new domain controller might sound like a daunting task, but with the right steps and some preparation, you can make it a seamless process. Follow this guide to ensure everything runs smoothly!
