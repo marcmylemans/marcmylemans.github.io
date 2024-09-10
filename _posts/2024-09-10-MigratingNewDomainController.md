@@ -2,8 +2,7 @@
 image: https://mylemans.online/assets/img/posts/Default.jpg
 layout: post
 title: "Migrating to a New Domain Controller"
-date: 2024-07-02
-categories: [Category 1, Category 2, Category 3]
+categories: [Active Directory, Migration]
 ---
 
 # Migrating to a New Domain Controller: A Smooth Transition Guide
