@@ -36,8 +36,8 @@ If your forest functional level needs an upgrade, follow these steps:
 
 Need to raise the domain functional level? No problem:
 
-1. Open **Active Directory Domains and Trusts** from **Administrative Tools**.
-2. Right-click the domain in the console tree, then select **Raise Domain Functional Level**.
+1. From the **Server Manager** panel, click on Tools and then select **Active Directory Users and Computers**.
+2. Right-click on the root domain from the pane on the left, and then click on **Properties**.
 3. Choose the appropriate level from the list and click **Raise**.
 
 > **Tip:** Speed up replication across your domain by running this command:
@@ -70,6 +70,9 @@ Now, wait until all Domain Controllers are in the **Prepared** state. You can mo
 ```powershell
 Dfsrmig /getmigrationstate
 ```
+
+If the result shows that **SYSVOL** is already using DFSR and in the **eliminated** state, you’re all set! This means your domain is already using DFSR, and you can skip the migration steps.
+
 
 ### Step 3: Migrate to the Redirected State
 
@@ -156,7 +159,15 @@ Move-ADDirectoryServerOperationMasterRole -Identity "dc2" SchemaMaster
 
 ## 5. Finalizing the Migration: Wrapping Things Up
 
-Once the FSMO roles have been successfully transferred and your new server is up and running as the primary domain controller, you’re almost there. At this point, you can safely decommission your old server if necessary.
+You’re almost done! Once the FSMO roles have been transferred and your new server is fully functioning as the primary domain controller, there are just a few final touches to ensure everything is running smoothly.
+
+Here are some important steps to finalize your migration:
+
+- **Update your DHCP settings:** Make sure your **DHCP scope** is updated to include the new domain controller as a **DNS server**. This ensures clients are properly directed to the new controller.
+- **Check static IP configurations:** Don’t forget to update any **statically configured network devices** (such as servers, printers, or network hardware) to point to the new domain controller for DNS and other services.
+- **Backup your new domain controller:** Before decommissioning the old server, take a backup of your new domain controller to ensure you have a restore point if needed.
+
+Once you’ve completed these checks, you can safely decommission the old server if it’s no longer needed.
 
 ---
 
