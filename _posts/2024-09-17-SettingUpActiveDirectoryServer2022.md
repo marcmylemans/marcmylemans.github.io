@@ -94,9 +94,9 @@ Organize users, computers, and servers into **OUs** for easier management. For e
 │   │   ├── Database
 │   │   └── Application
 │   └── Groups
-│       ├── Security
-│       │   ├── Departments
-│       │   ├── Shares
+│       └── Security
+│           ├── Departments
+│           ├── Shares
 │           └──  Applications
 └── EntraAD-Synced
     ├── Users
