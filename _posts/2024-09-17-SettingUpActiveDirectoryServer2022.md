@@ -97,15 +97,15 @@ Organize users, computers, and servers into **OUs** for easier management. For e
 │       └── Security
 │           ├── Departments
 │           ├── Shares
-│           └──  Applications
+│           └── Applications
 └── EntraAD-Synced
     ├── Users
-    ├── Computers
+    ├── Hybrid Joined Computers
     └── Groups
         ├── Security
         │   ├── Departments
         │   ├── Shares
-        │   ├── Applications
+        │   └── Applications
         └── Distribution
 
 ```
