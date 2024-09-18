@@ -80,6 +80,10 @@ Mistakes happen—if you accidentally delete a user or computer, the Active Dire
 ### 3. Create Organizational Units (OUs)  
 Organize users, computers, and servers into **OUs** for easier management. For example, create OUs for Users, Groups, Servers, and Computers. You can later apply group policies (GPOs) to these OUs for better control over your network.
 
+  ```
+  <Domain Netbios Name> │ ├── AD-Synced │ ├── Users │ │ └── Service Accounts │ ├── Computers │ └── Groups │ ├── Security │ │ ├── Departments │ │ │ ├── SG_Management │ │ │ ├── SG_Internal-IT │ │ │ ├── SG_HR │ │ │ ├── SG_Stagiair │ │ │ ├── SG_Interim │ │ │ ├── SG_Developers │ │ │ └── SG_Accounting │ │ ├── Printers │ │ ├── Shares │ │ ├── Applications │ │ ├── Computers │ │ └── Servers │ └── Distribution ├── Servers │ ├── RDS │ ├── Web │ ├── Database │ └── Application
+  ```
+
 ### 4. Change Default OUs for New Users and Computers  
 By default, new user and computer accounts go into generic containers. You can redirect them to specific OUs to keep things organized.
 
