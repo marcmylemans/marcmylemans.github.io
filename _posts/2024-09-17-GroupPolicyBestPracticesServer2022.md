@@ -12,6 +12,8 @@ Now that you've got the basics of creating and managing Group Policies and impor
 
 For a step-by-step guide on creating OUs and GPOs, refer to [this post](https://mylemans.online/posts/CreateOUAndGPO/). Additionally, for more information on working with ADMX files in Active Directory, check out [this guide](https://mylemans.online/posts/ActiveDirectoryADMX/).
 
+If you're setting up Active Directory on Windows Server 2022, you can follow [this comprehensive guide](https://mylemans.online/posts/SettingUpActiveDirectoryServer2022/) for a step-by-step walkthrough.
+
 ## Difference Between Computer and User Administrative Templates
 
 When you’re setting up Group Policies, you’ll notice two main sections: **Computer Configuration** and **User Configuration**. These correspond to two types of administrative templates, and knowing which one to use is key.
