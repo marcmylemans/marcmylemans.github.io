@@ -1,4 +1,5 @@
 ---
+date: 2024-09-17 19:00:00
 image: https://mylemans.online/assets/img/posts/Default.jpg
 layout: post
 title: "Group Policy, Templates, Preferences, Loopback Policy, and Best Practices"
