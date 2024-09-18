@@ -10,6 +10,8 @@ categories: [Active Directory, Group Policy]
 
 Now that you've got the basics of creating and managing Group Policies and importing ADMX files down, it’s time to dig a bit deeper. Let’s talk about the different types of policies you can apply, how to structure them efficiently, and some best practices to keep your environment scalable and easy to manage.
 
+For a step-by-step guide on creating OUs and GPOs, refer to [this post](https://mylemans.online/posts/CreateOUAndGPO/). Additionally, for more information on working with ADMX files in Active Directory, check out [this guide](https://mylemans.online/posts/ActiveDirectoryADMX/).
+
 ## Difference Between Computer and User Administrative Templates
 
 When you’re setting up Group Policies, you’ll notice two main sections: **Computer Configuration** and **User Configuration**. These correspond to two types of administrative templates, and knowing which one to use is key.
