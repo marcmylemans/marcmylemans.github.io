@@ -81,7 +81,7 @@ Mistakes happen—if you accidentally delete a user or computer, the Active Dire
 Organize users, computers, and servers into **OUs** for easier management. For example, create OUs for Users, Groups, Servers, and Computers. You can later apply group policies (GPOs) to these OUs for better control over your network. 
 
 ```
-  **<Domain Netbios Name>
+<Your Domain Netbios Name>
 │
 ├── Onpremise-Only
 │   ├── Users
@@ -107,7 +107,6 @@ Organize users, computers, and servers into **OUs** for easier management. For e
         │   ├── Applications
         └── Distribution
 
-**
 ```
 
 ### 4. Change Default OUs for New Users and Computers  
