@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/3e10439b-a030-4834-b64a-8c8f44db25ab.png
+image: https://mylemans.online/assets/img/posts/3e10439b-a030-4834-b64a-8c8f44db25ac.webp
 layout: post
 title: "Migrating to a New Domain Controller"
 categories: [Active Directory, Migration]
