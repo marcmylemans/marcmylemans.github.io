@@ -92,12 +92,12 @@ Organize users, computers, and servers into **OUs** for easier management. For e
 │   │   ├── RDS
 │   │   ├── WEB
 │   │   ├── Database
-│   │   ├── Application
+│   │   └── Application
 │   └── Groups
 │       ├── Security
 │       │   ├── Departments
 │       │   ├── Shares
-│       │   ├── Applications
+│           └──  Applications
 └── EntraAD-Synced
     ├── Users
     ├── Computers
