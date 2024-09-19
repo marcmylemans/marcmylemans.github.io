@@ -6,7 +6,6 @@ date: 2024-09-18 17:00:00
 categories: [Networking, Basics]
 ---
 
-
 Have you ever wondered how your computer, phone, or tablet connects to the internet? Or how you can send a message to your friend who’s miles away, and they receive it almost instantly? It’s all thanks to **computer networks**! But don’t worry, you don’t need to be a tech expert to understand how this works. Let’s break it down in simple terms.
 
 ### What is a Computer Network?
@@ -32,7 +31,7 @@ There are different types of computer networks, depending on how big the "group 
 
 ## Diving a Little Deeper: The OSI Model (Only the Fun Parts!)
 
-Now, if you want to know more about how computers communicate, you’ll need to learn about the **OSI model**. This is like a roadmap that explains how information travels through a network, layer by layer. But don’t worry, we’ll only go up to **Layer 3**—the most interesting parts for now!
+Now, if you want to know more about how computers communicate, you’ll need to learn about the **OSI model**. This is like a roadmap that explains how information travels through a network, layer by layer. But don’t worry, we’ll only dive into the **first four layers**—the most interesting parts for now!
 
 ### Layer 1: Physical Layer (The Hardware)
 
@@ -51,6 +50,16 @@ When computers on a network talk to each other at Layer 2, they use **broadcasti
 This is the layer where **IP addresses** come in. If Layer 2 is all about your device’s name tag (MAC address), then Layer 3 is about your device’s **street address** (IP address). IP addresses help data packets (those little envelopes of information) know where they’re going.
 
 At Layer 3, we use **routers** to make sure your data finds its way across the network. Routers act like traffic cops—they figure out the best path for your data to travel across the internet.
+
+### Layer 4: Transport Layer (How Data Gets Delivered)
+
+Now that your data has an address and a path to follow, we need to think about **how** that data is delivered. This is where **Layer 4**, the **Transport Layer**, comes in. 
+
+At this layer, data is packaged and sent using one of two protocols: **TCP** or **UDP**.
+
+- **TCP (Transmission Control Protocol)**: Think of TCP as a reliable postal service. It ensures that all the packets of data are delivered in order, none are lost, and the recipient confirms they’ve received everything. It's like getting a certified mail receipt for each letter!
+
+- **UDP (User Datagram Protocol)**: UDP, on the other hand, is more like an express courier. It doesn’t wait for any confirmations or check if the packets arrived safely. It just sends them out quickly. This makes it great for things like live video streaming or online gaming, where speed is more important than reliability.
 
 ---
 
@@ -101,7 +110,7 @@ Routers also act as **gateways**—they manage the traffic between your local ne
 So, in short:
 
 - **A computer network** is how devices connect and communicate, sharing information through wires or wireless signals.
-- **The OSI model** breaks down communication into layers, helping us understand how data moves from one device to another. We focused on the first three layers: physical (hardware), data link (MAC addresses and broadcasting), and network (IP addresses and routing).
+- **The OSI model** breaks down communication into layers, helping us understand how data moves from one device to another. We focused on the first four layers: physical (hardware), data link (MAC addresses and broadcasting), network (IP addresses and routing), and transport (how data gets delivered).
 - **TCP and UDP** are two ways data is delivered. TCP is reliable but slower, while UDP is fast but doesn’t check if everything arrives.
 - **DHCP** assigns IP addresses automatically, **DNS** translates website names into IP addresses, and your **router** makes sure your data finds its way across the internet.
 
