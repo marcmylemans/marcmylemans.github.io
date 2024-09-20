@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: https://mylemans.online/assets/img/posts/df1ec33de41c.png
 layout: post
 title: "Understanding Routing and Network Address Translation (NAT)"
 date: 2024-09-18 21:00:00
