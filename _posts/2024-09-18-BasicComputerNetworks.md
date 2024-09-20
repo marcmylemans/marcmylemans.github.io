@@ -8,6 +8,8 @@ categories: [Networking, Basics]
 
 Have you ever wondered how your computer, phone, or tablet connects to the internet? Or how you can send a message to your friend who’s miles away, and they receive it almost instantly? It’s all thanks to **computer networks**! But don’t worry, you don’t need to be a tech expert to understand how this works. Let’s break it down in simple terms.
 
+{% youtube "https://youtu.be/A75ln-bDtXM" %}
+
 ### What is a Computer Network?
 
 A **computer network** is like a group of friends who talk to each other. Just like how you use your voice, texts, or phone calls to communicate with your friends, computers use special languages and technologies to "talk" to each other.
