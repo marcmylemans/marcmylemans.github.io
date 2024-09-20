@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: https://mylemans.online/assets/img/posts/ed8f8e2a133c.png
 layout: post
 title: "Understanding VLANs: How to Keep Your Networks Organized and Secure"
 date: 2024-09-18 19:30:00
