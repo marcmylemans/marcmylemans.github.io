@@ -14,12 +14,12 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Mylemans Online   # the main title
+title: Mylemans Online: Tech Tips, Trends & Tutorials   # the main title
 
-tagline: Your Go To Source for Tech Tips, Blogs, and Tutorials # it will display as the sub-title
+tagline: Helping You Master Tech: Tips, Blogs & Tutorials for All # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  Discover essential tech tips, in-depth blogs, and comprehensive video tutorials on our tech-focused website. Stay updated with the latest in technology, troubleshooting guides, and expert insights to enhance your tech knowledge.
+  Unlock tech with simple tips, blogs, and guides! From trends to troubleshooting, we offer expert insights for every tech user.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
