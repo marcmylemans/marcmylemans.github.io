@@ -9,6 +9,8 @@ categories: [Active Directory, Migration]
 
 Migrating to a new domain controller might sound like a daunting task, but with the right steps and some preparation, you can make it a seamless process. Follow this guide to ensure everything runs smoothly!
 
+{% youtube "https://youtu.be/Y3kIJydyTzA" %}
+
 ## 1. Pre-Migration Checks: Get Ready Before You Start
 
 Before you jump into the migration, it’s important to do a few checks to ensure everything’s good to go:
