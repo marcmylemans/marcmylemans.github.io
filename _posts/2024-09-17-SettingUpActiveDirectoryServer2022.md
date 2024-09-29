@@ -9,6 +9,8 @@ categories: [Active Directory, Step by Step Guide]
 
 Are you ready to set up Active Directory on your Windows Server 2022? Whether you're managing a small office or a larger enterprise, this guide will walk you through the essential steps to get everything up and running smoothly. Let’s dive in!
 
+{% youtube "https://youtu.be/bNvEHfJWZE0" %}
+
 ## Prerequisites Before You Begin:
 
 Before starting, make sure your server meets the following requirements:
