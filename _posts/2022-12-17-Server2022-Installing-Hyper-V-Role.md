@@ -7,7 +7,7 @@ tags: [server 2022,hyper-v,virtualisation,windows-server,installation,tutorial]
 title: Server 2022 - Installing Hyper-V Role
 ---
 
-{% youtube "https://youtu.be/Y-Sadkf3Ims" %}
+{% youtube "https://youtu.be/fKlEj_w-kHY" %}
 
 Hello and welcome to a key tutorial in our Windows Server 2022 series! Today, we're diving into the installation of the Hyper-V Role on Server 2022 – a crucial step for anyone looking to leverage the power of virtualization in their network infrastructure.
 
