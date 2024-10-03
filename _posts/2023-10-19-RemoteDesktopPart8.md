@@ -20,7 +20,7 @@ This video covers:
 ### Essential Links and Resources
 
 - **Recap of Previous Steps**: For those who might find the first part of the video quick, it revisits the wizard used in the first part of this series. [Remote Desktop Services - Part 1]({% link _posts/2022-12-27-RemoteDesktopPart1.md %})
-- **Creating a VM Template**: A refresher on creating a Virtual Machine template. [How to create a Virtual Machine template]({% link _posts/2022-12-18-Server2022-Hyper-V-VirtualMachineTemplates.md %})
+- **Creating a VM Template**
 - **Microsoft's VDI Recommendations**: For optimal configuration of your VDI VMs. [Microsoft Learn, RDS/VDI recommendations](https://learn.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-vdi-recommendations)
 - **Setting Up Hyper-V**: In case you need to set up a Hyper-V server for hosting VMs. [Installing the Hyper-V Role]({% link _posts/2022-12-17-Server2022-Installing-Hyper-V-Role.md %})
 
