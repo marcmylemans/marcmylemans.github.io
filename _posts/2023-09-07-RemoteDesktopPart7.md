@@ -24,16 +24,26 @@ Here are the essential PowerShell commands and registry settings for setting up 
 1) Download the NPS Extension: [Download NPS Extension](https://www.microsoft.com/en-us/download/details.aspx?id=54688)
 
 2) Run these PowerShell commands:
+   
     ```powershell
     cd 'c:\Program Files\Microsoft\AzureMfa\Config'
     .\AzureMfaNpsExtnConfigSetup.ps1
     ```
 
-3) To allow Non MFA users to connect, add this registry key:
+4) To allow Non MFA users to connect, add this registry key:
+
     ```cmd
     reg add HKLM\Software\Microsoft\AzureMFA /v REQUIRE_USER_MATCH /t REG_SZ /d FALSE
     ```
     Then, reboot the server for the changes to take effect.
+
+5) To override Number Matching, add this registry key:
+   
+    ```cmd
+    reg add HKLM\Software\Microsoft\AzureMFA /v OVERRIDE_NUMBER_MATCHING_WITH_OTP /t REG_SZ /d FALSE
+    ```
+    Then, reboot the server for the changes to take effect.
+     
 
 ### Why Azure MFA?
 
