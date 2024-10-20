@@ -1,0 +1,132 @@
+# Setting Up Remote Desktop Services with Windows Server 2022: A Step-by-Step Guide
+
+**Welcome to this comprehensive guide** on setting up Remote Desktop Services (RDS) using Windows Server 2022! Whether you're managing a small business or setting up a lab environment, this tutorial will walk you through the entire process of creating a scalable, secure RDS environment that supports multiple users. By the end, you'll have everything configured for remote access, complete with security features and user-friendly interfaces.
+
+---
+
+## Prerequisites
+
+Before we dive into the technical details, it's important to make sure you have the following prerequisites in place:
+
+1. **A Domain Controller**: Ensure that Active Directory is up and running. If you're not familiar with this, check out our video on [Setting up Active Directory on Server 2022](#).
+2. **Group Policy Knowledge**: Familiarity with Group Policy is essential for this setup. We have a video on [Group Policy Essentials and Best Practices](#) that you can watch for more insights.
+3. **Two Virtual Machines (VMs)**: 
+   - **VM 1**: Will serve as the Remote Desktop Session Host.
+   - **VM 2**: Will handle the Remote Desktop Connection Broker, Web Access, Licensing, and Gateway roles.
+4. **Static IP Addresses** for both VMs.
+5. **Public Domain Name**: Required for external access. We'll use Let's Encrypt for generating SSL certificates.
+6. **Port Forwarding**: Ensure your router is configured to forward ports **80** and **443** to your environment.
+
+For related setup videos, check out the links in the description!
+
+---
+
+## Part 1: Installing and Configuring Active Directory Certificate Services (AD CS)
+
+Setting up a Certificate Authority (CA) is critical for securing your RDS environment. Here's how to install and configure AD CS.
+
+### Step 1: Installing AD CS
+
+1. Open **Server Manager** and select **Add Roles and Features**.
+2. Choose **Active Directory Certificate Services**, and follow the setup wizard.
+3. Select **Certification Authority (CA)** and complete the installation.
+
+### Step 2: Configuring the Certificate Authority
+
+1. Once installation is complete, select **Configure Active Directory Certificate Services**.
+2. Choose **Enterprise CA** and **Root CA** during setup.
+3. Set the validity period for the CA to **5 years**.
+4. Complete the setup wizard.
+
+### Step 3: Configuring Group Policies for CA
+
+1. In **Group Policy Management**, edit the `Default Domain Policy`.
+2. Navigate to: `Computer Configuration > Policies > Windows Settings > Security Settings > Public Key Policies`.
+3. Enable **Certificate Services Client - Auto Enrollment** with the following options:
+   - `Renew expired certificates`
+   - `Update certificates that use certificate templates`
+4. Repeat the process under the **User Configuration** path.
+
+---
+
+## Part 2: Installing Remote Desktop Services (RDS)
+
+Now, let's install and configure the core RDS roles.
+
+### Step 1: Installing RDS Roles
+
+1. Open **Server Manager** and select **Add Roles and Features**.
+2. Choose **Remote Desktop Services Installation**.
+3. Select a **Standard Deployment** and choose **Session-based desktop deployment**.
+4. Assign the roles:
+   - **Connection Broker**: VM 2
+   - **Web Access**: VM 2
+   - **Session Host**: VM 1
+
+### Step 2: Configuring RDS Certificates
+
+To secure RDS traffic, you'll need an SSL certificate. Here’s how to set it up using **Certify The Web**:
+
+1. Download and install **Certify The Web** on your server.
+2. Request a certificate for your **public DNS name** and apply it to IIS.
+3. Export the certificate and import it into **Server Manager** under **Remote Desktop Services > Edit Deployment Properties**.
+4. Assign the certificate to:
+   - **Connection Broker**
+   - **Web Access**
+   - **Gateway**
+
+### Step 3: Configuring Remote Desktop Licensing
+
+1. Open **Edit Deployment Properties** in **Server Manager**.
+2. Navigate to **RD Licensing** and select **Per User** mode for licensing.
+
+---
+
+## Part 3: Configuring FSLogix for User Profiles
+
+FSLogix optimizes user profile management in RDS environments, offering faster logins and smoother session experiences.
+
+### Step 1: Downloading and Installing FSLogix
+
+1. Download the latest version of **FSLogix** from Microsoft's website.
+2. Install FSLogix on each Remote Desktop Session Host server.
+
+### Step 2: Configuring FSLogix Profiles
+
+1. Create two shared folders for storing user profiles and containers:
+   - `\\FSLogix\FSLogix_Profiles`
+   - `\\FSLogix\FSLogix_Containers`
+2. Set appropriate folder permissions to ensure secure access.
+3. Create a **Group Policy** for FSLogix:
+   - Navigate to: `Computer Configuration > Administrative Templates > FSLogix`.
+   - Set paths for **Profile Containers** and **Office 365 Containers** to the shared folders you just created.
+
+---
+
+## Part 4: Setting Up Single Sign-On (SSO)
+
+Single Sign-On (SSO) enhances the user experience by allowing users to sign in once and access multiple services seamlessly.
+
+### Step 1: Configuring SSO Policies
+
+1. Create a new Group Policy called `Computer Policy - Enable RDP SSO`.
+2. Enable:
+   - `Allow delegating default credentials` under `Administrative Templates > System > Credentials Delegation`.
+   - Set the policy to use: `TERMSRV/*.domain.local`.
+3. Create another Group Policy called `User Policy - Enable RD Gateway SSO`.
+4. In this policy, configure:
+   - **RD Gateway Authentication Method** to use **locally logged-on credentials**.
+
+### Step 2: Configuring Web Feed for RemoteApp Connections
+
+1. Create a new Group Policy named `User Policy - Enable RDP Webfeed`.
+2. Set the **default connection URL** to your RDS Web Access feed:
+   - Example: `https://yourdnsrecord/rdweb/feed/webfeed.aspx`.
+
+---
+
+## Conclusion
+
+Congratulations! 🎉 You've successfully set up a complete Remote Desktop Services environment using Windows Server 2022. With SSL certificates for secure access, FSLogix for user profile management, and Single Sign-On for a seamless user experience, your RDS setup is now fully operational and ready to support multiple users.
+
+This setup can easily scale for larger environments or remain efficient for small businesses. Be sure to check out the video links in the description for more detailed configurations, and don't hesitate to leave comments or questions below!
