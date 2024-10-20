@@ -1,4 +1,23 @@
-# Setting Up Remote Desktop Services with Windows Server 2022: A Step-by-Step Guide
+---
+image: https://mylemans.online/assets/img/posts/Default.jpg
+layout: post
+title: "A Step-by-Step Guide - Setting Up Remote Desktop Services with Windows Server 2022"
+date: 2024-10-20
+categories: [Windows Server, Remote Desktop Services]
+tags: [windows server 2022, remote desktop services, rds, active directory, group policy, fslogix, single sign-on, sso, certificate services, let's encrypt, server manager, rds licensing]
+---
+
+
+## Header 2
+
+```powershell
+Script
+```
+
+[Text](url)
+
+
+# 
 
 **Welcome to this comprehensive guide** on setting up Remote Desktop Services (RDS) using Windows Server 2022! Whether you're managing a small business or setting up a lab environment, this tutorial will walk you through the entire process of creating a scalable, secure RDS environment that supports multiple users. By the end, you'll have everything configured for remote access, complete with security features and user-friendly interfaces.
 
