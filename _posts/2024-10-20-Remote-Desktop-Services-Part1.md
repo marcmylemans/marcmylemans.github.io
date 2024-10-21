@@ -194,7 +194,7 @@ Navigate to `Computer Configuration > Administrative Templates > FSLogix` for ea
 **VHD location**  
    - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > Office 365 Containers`  
    - State: **Enabled**  
-   - Value: `\\test.lan\DFS\O365Containers$`
+   - Value: `\\DC1\FSLogix_Containers`
 
 **Virtual disk type**  
    - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > Office 365 Containers`  
@@ -217,7 +217,7 @@ Navigate to `Computer Configuration > Administrative Templates > FSLogix` for ea
 **VHD location**  
    - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > Profile Containers`  
    - State: **Enabled**  
-   - Value: `\\test.lan\DFS\ProfileContainers$`
+   - Value: `\\DC1\FSLogix_Profiles`
 
 **Virtual disk type**  
    - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > Profile Containers > Container and Directory Naming`  
@@ -244,7 +244,7 @@ Single Sign-On (SSO) enhances the user experience by allowing users to sign in o
 
 1. Create a new Group Policy named `User Policy - Enable RDP Webfeed`.
 2. Set the **default connection URL** to your RDS Web Access feed:
-   - Example: `https://yourdnsrecord/rdweb/feed/webfeed.aspx`.
+   - Example: `https://yourpublicdns/rdweb/feed/webfeed.aspx`.
 
 ---
 
