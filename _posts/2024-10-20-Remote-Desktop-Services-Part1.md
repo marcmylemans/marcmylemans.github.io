@@ -149,55 +149,55 @@ These permissions ensure that:
 
 ### 2. Configure FSLogix Group Policies
 
-You will configure FSLogix settings through Group Policy to manage the profile and Office 365 containers.
+You will configure FSLogix settings through Group Policy to manage the profile and ODFC Containers.
 Locate the two files (fslogix.admx and fslogix.adml) and copy them to a location based on a local or central store configuration.
 
 Navigate to `Computer Configuration > Administrative Templates > FSLogix` for each of the following settings:
 
-#### Office 365 Containers
+#### ODFC Containers
 **Enabled**  
-   - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > Office 365 Containers`  
+   - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > ODFC Containers`  
    - State: **Enabled**
 
 **Include Office cache data in container**  
-   - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > Office 365 Containers`  
+   - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > ODFC Containers`  
    - State: **Enabled**
 
 **Include OneDrive data in container**  
-   - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > Office 365 Containers`  
+   - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > ODFC Containers`  
    - State: **Enabled**
 
 **Include OneNote data in container**  
-   - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > Office 365 Containers`  
+   - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > ODFC Containers`  
    - State: **Enabled**
 
 **Include Outlook data in container**  
-   - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > Office 365 Containers`  
+   - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > ODFC Containers`  
    - State: **Enabled**
 
 **Include Outlook personalization data in container**  
-   - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > Office 365 Containers`  
+   - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > ODFC Containers`  
    - State: **Enabled**
 
 **Include Skype data in container**  
-   - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > Office 365 Containers`  
+   - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > ODFC Containers`  
    - State: **Enabled**
 
 **Include Teams data in container**  
-   - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > Office 365 Containers`  
+   - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > ODFC Containers`  
    - State: **Enabled**
 
 **Set Outlook cached mode on successful container attach**  
-   - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > Office 365 Containers`  
+   - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > ODFC Containers`  
    - State: **Enabled**
 
 **VHD location**  
-   - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > Office 365 Containers`  
+   - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > ODFC Containers`  
    - State: **Enabled**  
    - Value: `\\DC1\FSLogix_Containers`
 
 **Virtual disk type**  
-   - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > Office 365 Containers`  
+   - Navigate to: `Computer Configuration > Administrative Templates > FSLogix > ODFC Containers`  
    - State: **Enabled**  
    - Value: **VHDX**
 
