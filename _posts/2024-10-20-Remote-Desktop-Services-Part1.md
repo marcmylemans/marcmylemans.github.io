@@ -234,16 +234,18 @@ Single Sign-On (SSO) enhances the user experience by allowing users to sign in o
 
 1. Create a new Group Policy called `Computer Policy - Enable RDP SSO`.
 2. Enable:
-   - `Allow delegating default credentials` under `Administrative Templates > System > Credentials Delegation`.
+   - `Allow delegating default credentials` under `Computer Configuration > Administrative Templates > System > Credentials Delegation`.
    - Set the policy to use: `TERMSRV/*.domain.local`.
 3. Create another Group Policy called `User Policy - Enable RD Gateway SSO`.
 4. In this policy, configure:
+   - `RD Gateway Authentication Method` under `User Configuration > Administrative Templates > Windows Components > Remote Desktop Services > RD Gateway`.
    - **RD Gateway Authentication Method** to use **locally logged-on credentials**.
 
 ### Step 2: Configuring Web Feed for RemoteApp Connections
 
 1. Create a new Group Policy named `User Policy - Enable RDP Webfeed`.
 2. Set the **default connection URL** to your RDS Web Access feed:
+   - `Specify default connection URL` under `User Configuration > Administrative Templates > Windows Components > Remote Desktop Services > RemoteApp and Desktop COnnections`.
    - Example: `https://yourpublicdns/rdweb/feed/webfeed.aspx`.
 
 ---
