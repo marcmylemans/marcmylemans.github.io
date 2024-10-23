@@ -250,6 +250,63 @@ Single Sign-On (SSO) enhances the user experience by allowing users to sign in o
 
 ---
 
+## Part 5: Creating a Desktop Collection with Your Remote Desktop Session Host
+
+Now that we've set up the foundational pieces of Remote Desktop Services (RDS), it's time to create a desktop collection, which is where users will access their remote sessions. Follow the steps below to create and configure the desktop collection.
+
+### Step 1: Creating the Session Collection
+
+1. Open **Server Manager**.
+2. In the left-hand menu, click **Remote Desktop Services**, then under **Collections**, select **Tasks** and click **Create Session Collection**.
+3. The wizard will open. Give your collection a name—let's use **Remote Desktop Sessions** for this guide.
+4. In the next step, select the **RDS1** virtual machine as the **Session Host** server for this collection.
+5. For the **User Groups**, select **Domain Users**. This will allow all users in the default domain group to access the collection. You can create custom groups if you want to restrict access to specific users.
+
+   > **Tip:** You can further refine who has access by selecting specific security groups rather than the entire domain users group.
+
+### Step 2: Disabling User Profile Disks
+
+6. When you reach the step to **Specify User Profile Disks**, ensure **this option is not enabled**. We’re using **FSLogix** for user profile management, so enabling this feature here would conflict with FSLogix.
+
+   > **Important:** FSLogix manages user profiles more efficiently, so there’s no need to use the built-in user profile disk feature of RDS.
+
+### Step 3: Completing the Collection Creation
+
+7. Finish the wizard by reviewing the settings and clicking **Create**. Once completed, your **Remote Desktop Sessions** collection will be available and configured for use.
+8. Users in the specified groups can now log in and access the session hosts via Remote Desktop.
+
+---
+
+## Part 6: Demonstrating Single Sign-On (SSO) and Web Feed from a Client Device
+
+Now that we’ve set up the infrastructure, let’s see how your users can easily access their Remote Desktop sessions and apps using **Single Sign-On (SSO)** and the **RemoteApp Web Feed**. This setup ensures a seamless experience where users don’t have to re-enter their credentials or manually configure connections.
+
+### Step 1: Open the Start Menu
+
+On your client device, follow these steps:
+
+1. **Open the Start Menu**.
+   - If you’ve configured the **RemoteApp Web Feed** correctly, you’ll notice that the remote desktop session or any published apps are automatically populated under **Work Resources** or **RemoteApp and Desktop Connections** in the Start Menu.
+   
+   > **Note:** The Web Feed automatically pulls in the resources from your RDS environment and displays them without any manual configuration by the user.
+
+### Step 2: Select the Remote Desktop Session
+
+2. From the Start Menu, click on the **Remote Desktop Session** (or any other published apps) to launch it.
+
+3. Notice how you **don’t need to enter credentials again**—this is thanks to the **Single Sign-On (SSO)** that we configured earlier.
+
+   > **Tip:** SSO allows your users to authenticate once when they log into their local machine or domain and seamlessly access their remote desktops or applications without having to log in again.
+
+### Step 3: Seamless Access to Remote Desktop
+
+Once clicked, the **Remote Desktop Session** will open, and the user is immediately logged in using their domain credentials—**no additional logins required**.
+
+- Users can now navigate their remote desktop, access files, and use applications just as if they were directly connected to the server.
+  
+- **FSLogix** ensures that their profile is loaded quickly and efficiently, providing a consistent experience across sessions.
+
+
 ## Conclusion
 
 Congratulations! 🎉 You've successfully set up a complete Remote Desktop Services environment using Windows Server 2022. With SSL certificates for secure access, FSLogix for user profile management, and Single Sign-On for a seamless user experience, your RDS setup is now fully operational and ready to support multiple users.
