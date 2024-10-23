@@ -26,7 +26,7 @@ Before we dive into the technical details, it's important to make sure you have 
 4. **Static IP Addresses** for both VMs.
 5. A Fileserver (**DC1**): Required for storing FSLogix.
 6. **Public Domain Name**: Required for external access. We'll use Let's Encrypt for generating SSL certificates.
-7. **Port Forwarding**: Ensure your router is configured to forward ports **80** and **443** to your environment.
+7. **Port Forwarding**: Ensure your router is configured to [forward ports](https://portforward.com/router.htm) **80** and **443** to your environment.
 
 For related setup videos, check out the links in the description!
 
