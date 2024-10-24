@@ -1,7 +1,7 @@
 ---
 image: https://mylemans.online/assets/img/posts/3c6960198dfa.png
 layout: post
-title: "A Step-by-Step Guide - Setting Up Remote Desktop Services with Windows Server 2022"
+title: "A Step-by-Step Guide - Setting Up Remote Desktop Services With FS Logix And Single Sign On!"
 date: 2024-10-20
 categories: [Windows Server, Remote Desktop Services]
 tags: [windows server 2022, remote desktop services, rds, active directory, group policy, fslogix, single sign-on, sso, certificate services, let's encrypt, server manager, rds licensing]
