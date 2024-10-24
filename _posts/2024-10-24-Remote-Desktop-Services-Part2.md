@@ -210,10 +210,10 @@ Here are a few policies I love configuring to enhance user experience:
 
 {% youtube "https://youtu.be/hdwa0Wq1XTI" %}
 
-If you want to streamline the experience and save server resources, **RemoteApps** might be your jam. Instead of offering full desktops, you can let users access individual applications as if they were installed locally. Here’s how you do it:
+If you want to streamline the experience and save server resources, **RemoteApps** might be your solution. Instead of offering full desktops, you can let users access individual applications as if they were installed locally. Here’s how you do it:
 
 1. Open **Server Manager**, right-click **All Servers**, and add **RDS2** (or your chosen VM).
-2. Go to **Remote Desktop Services** and create a **Session Collection**. Name it something snazzy like "Remote Applications."
+2. Go to **Remote Desktop Services** and create a **Session Collection**. Name it something like "Remote Applications."
 3. Assign a security group (default: **Domain Users**), and make sure to **deselect user profile disks**. We’ll use **FS Logix** instead for profile management.
 4. Publish your desired apps through the wizard.
 
@@ -225,6 +225,6 @@ Now your users can access Office (or any other app) directly from their local de
 
 And there you have it! You’ve now installed and configured Microsoft Office on a Remote Desktop Services host, set up Group Policies using ADMX files, and optionally deployed RemoteApps for a sleek, lightweight user experience.
 
-If you’re looking for more tips, tricks, or need help troubleshooting, check out our other [guides](https://mylemans.online/posts) or drop us a comment below. We’re here to help!
+If you’re looking for more tips, tricks, or need help troubleshooting, check out our other [guides](https://mylemans.online) or drop us a comment below. We’re here to help!
 
 Happy configuring!
