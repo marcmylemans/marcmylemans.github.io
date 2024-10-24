@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: https://mylemans.online/assets/img/posts/Hyper-V-Chapter2.PNG
 layout: post
 title: "Setting Up Your First Virtual Machine in Hyper-V"
 date: 2024-05-27
