@@ -59,8 +59,6 @@ Now let’s create a **virtual switch** in Hyper-V. Here’s a step-by-step guid
 #### 5. **Apply and Save:**
    - After configuring the switch, click **Apply** and then **OK** to finalize the setup.
 
-**![Virtual Switch Manager](https://img.veeam.com/hyperv_portal/blog/vSwitch-Manager.jpg)**
-
 ---
 
 ### **Connecting Virtual Machines to a Virtual Switch**
@@ -77,8 +75,6 @@ Once you’ve created a virtual switch, you’ll need to connect your VMs to it.
    - In the **right pane**, select your virtual switch from the dropdown menu (e.g., "ExternalSwitch").
    - Click **Apply** and then **OK**.
 
-**![VM Network Adapter Settings](https://handsontek.net/images/hot2/Hyper-V/Add%20Virtual%20Switch.png)**
-
 ---
 
 ### **Configuring Network Settings Inside the VM**
@@ -92,8 +88,6 @@ Once your VM is connected to a virtual switch, you’ll need to configure the ne
 
 #### 2. **Dynamic IP Address:**
    - If your network uses **DHCP**, leave the settings on **Obtain an IP address automatically**. Your VM will receive an IP address from the DHCP server.
-
-**![Network Settings](https://www.xsofthost.com/help/wp-content/uploads/2018/04/hyper-v-network-bridging-windows-VM-Network-adapter.jpg.webp)**
 
 ---
 
@@ -109,8 +103,6 @@ Hyper-V offers several **advanced networking features** to optimize your setup:
 
 #### **Network Isolation:**
    - Use **Private** and **Internal switches** to isolate VMs from the external network for testing or security reasons.
-
-**![Advanced Network Settings](https://askme4tech.com/sites/default/files/styles/resize/public/advance-features.png?itok=uVOD8dPo)**
 
 ---
 
