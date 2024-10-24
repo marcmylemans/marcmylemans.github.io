@@ -7,7 +7,7 @@ tags: [server 2022, rdp, remote desktop services, rds, tutorial, youtube, part1]
 title: Server 2022 - Remote Desktop Services - Part 1
 ---
 
-{% youtube "https://youtu.be/bkTFagCdycc" %}
+{% youtube "https://youtu.be/rmZewkdN91U" %}
 
 ---
 
