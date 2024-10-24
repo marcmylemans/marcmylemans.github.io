@@ -63,7 +63,7 @@ Now that we’ve got the configuration ready, let’s get Office installed!
 
 Since you’re in a multi-user environment, it’s handy to put application shortcuts on the desktop for all users.
 
-1. Navigate to the Start Menu shortcuts, copy them, and drop them in the public desktop folder (%public%\desktop). This way, every user gets easy access, and since they don’t have admin rights, they can’t delete them. 🎉
+1. Navigate to the Start Menu shortcuts, copy them, and drop them in the public desktop folder (%public%\desktop). This way, every user gets easy access, and since they don’t have admin rights, they can’t delete them.
 
 ## Part 2: Configuring Office Using Administrative Templates (ADMX Files)
 
