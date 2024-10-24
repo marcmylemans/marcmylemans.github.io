@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Hyper-V-Chapter1.PNG
+image: https://mylemans.online/assets/img/posts/Hyper-V-Chapter01.PNG
 layout: post
 title: "Introduction to Hyper-V - What It Is and Why You Should Use It"
 date: 2024-05-20
