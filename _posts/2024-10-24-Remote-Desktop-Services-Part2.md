@@ -76,14 +76,131 @@ You can grab the latest ADMX files for Office [here](https://www.microsoft.com).
 Need a refresher on setting up a central store? Check out our [Group Policy Best Practices guide](https://mylemans.online/posts/GroupPolicyBestPracticesServer2022/).
 
 ### Step 2: Configure Policies for Office
-Here are a few policies I love configuring to enhance user experience:
-- **Disable the First Run Movie**: Let’s skip that awkward “Welcome to Office” video.
-   - Path: `User Configuration > Administrative Templates > Microsoft Office 2016 > First Run`
-   - Set to **Enabled**.
-  
+
 - **Configure Default Office Settings**: For smooth sailing, set default options for Word, Excel, and other Office apps. You can tweak everything from default file locations to user privacy settings.
 
-Create a Group Policy called **User Policy - Office - Default Settings** and go wild. Your users will thank you!
+Create a Group Policy called **User Policy - Office - Default Settings** your users will thank you!
+Here are a few policies I love configuring to enhance user experience:
+
+### 1. Disable the Office Start Screen for Excel
+
+- **Path:** `User Configuration > Administrative Templates > Microsoft Excel 2016 > Miscellaneous > Disable the Office Start screen for Excel`
+- **State:** Enabled
+- **Description:** 
+   - This policy controls whether the Office Start screen appears when Excel is launched.
+   - If **Enabled**, the Office Start screen will not be shown when Excel boots.
+   - If **Disabled** or **Not Configured**, the Start screen will be displayed.
+
+---
+
+### 2. Disable First Run Movie
+
+- **Path:** `User Configuration > Administrative Templates > Microsoft Office 2016 > First Run > Disable First Run Movie`
+- **State:** Enabled
+- **Description:** 
+   - This policy controls whether the video about signing in to Office is shown during Office's first run.
+   - If **Enabled**, the video will not run.
+   - If **Disabled** or **Not Configured**, the video will play the first time Office is launched.
+
+---
+
+### 3. Disable Office First Run on Application Boot
+
+- **Path:** `User Configuration > Administrative Templates > Microsoft Office 2016 > First Run > Disable Office First Run on Application Boot`
+- **State:** Enabled
+- **Description:** 
+   - This policy determines whether the Office First Run screen is shown when an Office application is booted for the first time.
+   - If **Enabled**, the First Run screen will not appear.
+   - If **Disabled** or **Not Configured**, users will see the Office First Run screen on first application boot.
+
+---
+
+### 4. Disable Office Animations
+
+- **Path:** `User Configuration > Administrative Templates > Microsoft Office 2016 > Miscellaneous > Disable Office Animations`
+- **State:** Enabled
+- **Description:** 
+   - This setting disables Office animations such as fading between views.
+   - If **Enabled**, all Office animations will be turned off.
+   - If **Disabled** or **Not Configured**, animations will be enabled by default.
+
+---
+
+### 5. Disable the Office Start Screen for All Office Applications
+
+- **Path:** `User Configuration > Administrative Templates > Microsoft Office 2016 > Miscellaneous > Disable the Office Start screen for all Office applications`
+- **State:** Enabled
+- **Description:** 
+   - This policy controls whether the Office Start screen appears when any Office application is booted.
+   - If **Enabled**, users will not see the Office Start screen for any Office app.
+   - If **Disabled** or **Not Configured**, the Start screen will be displayed when users launch Office applications.
+
+---
+
+### 6. Do Not Use Hardware Graphics Acceleration
+
+- **Path:** `User Configuration > Administrative Templates > Microsoft Office 2016 > Miscellaneous > Do Not Use Hardware Graphics Acceleration`
+- **State:** Enabled
+- **Description:** 
+   - This policy controls whether Office uses hardware graphics acceleration.
+   - If **Enabled**, hardware graphics acceleration will be turned off.
+   - If **Disabled** or **Not Configured**, hardware graphics acceleration will be used.
+
+---
+
+### 7. Show Screen Tips
+
+- **Path:** `User Configuration > Administrative Templates > Microsoft Office 2016 > Miscellaneous > Show Screen Tips`
+- **State:** Disabled
+- **Description:** 
+   - This policy controls whether Office displays screen tips (tooltips) when users hover over commands on the Ribbon.
+   - If **Disabled**, no screen tips will be shown.
+   - If **Enabled**, you can configure the display to show feature descriptions or only feature names.
+   - If **Not Configured**, Office will show both feature names and descriptions.
+
+---
+
+### 8. Disable Opt-in Wizard on First Run
+
+- **Path:** `User Configuration > Administrative Templates > Microsoft Office 2016 > Privacy/Trust Center > Disable Opt-in Wizard on First Run`
+- **State:** Enabled
+- **Description:** 
+   - This policy controls whether users see the Opt-in Wizard the first time they run an Office application.
+   - If **Enabled**, the Opt-in Wizard will not appear.
+   - If **Disabled** or **Not Configured**, users will see the Opt-in Wizard the first time they run Office.
+
+---
+
+### 9. Disable the Office Start Screen for PowerPoint
+
+- **Path:** `User Configuration > Administrative Templates > Microsoft PowerPoint 2016 > Miscellaneous > Disable the Office Start screen for PowerPoint`
+- **State:** Enabled
+- **Description:** 
+   - This policy controls whether the Office Start screen appears when PowerPoint is launched.
+   - If **Enabled**, the Start screen will not appear for PowerPoint.
+   - If **Disabled** or **Not Configured**, the Start screen will be displayed when PowerPoint is launched.
+
+---
+
+### 10. Prevent Microsoft Teams from Starting Automatically After Installation
+
+- **Path:** `User Configuration > Administrative Templates > Microsoft Teams > Prevent Microsoft Teams from starting automatically after installation`
+- **State:** Enabled
+- **Description:** 
+   - This policy controls whether Microsoft Teams automatically starts when users log into a device after Teams is installed.
+   - If **Enabled**, Teams will not start automatically after installation.
+   - If **Disabled** or **Not Configured**, Teams will start automatically after installation.
+
+---
+
+### 11. Disable the Office Start Screen for Word
+
+- **Path:** `User Configuration > Administrative Templates > Microsoft Word 2016 > Miscellaneous > Disable the Office Start screen for Word`
+- **State:** Enabled
+- **Description:** 
+   - This policy controls whether the Office Start screen appears when Word is launched.
+   - If **Enabled**, the Start screen will not appear for Word.
+   - If **Disabled** or **Not Configured**, the Start screen will be displayed when Word is launched.
 
 ---
 
