@@ -1,9 +1,9 @@
 ---
 image: https://mylemans.online/assets/img/posts/a803d385944d.png
 layout: post
-title: "A Step-by-Step Guide - Installing and Configuring Office on Remote Desktop Services"
+title: "A Step-by-Step Guide - Installing and Configuring Office on RemoteAPP/Desktop Services"
 date: 2024-10-24
-categories: [Windows Server, Remote Desktop Services, Microsoft Office]
+categories: [Windows Server, Remote Desktop Services]
 tags: [windows server 2022, remote desktop services, rds, microsoft office, group policy, admx, office 365, office deployment tool, remote apps, fslogix]
 ---
 
