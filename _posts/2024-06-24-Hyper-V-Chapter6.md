@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: https://mylemans.online/assets/img/posts/Hyper-V-Chapter6.PNG
 layout: post
 title: "Backup and Recovery in Hyper-V - Strategies and Best Practices"
 date: 2024-06-24
