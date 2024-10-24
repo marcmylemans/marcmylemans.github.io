@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: https://mylemans.online/assets/img/posts/Hyper-V-Chapter4.PNG
 layout: post
 title: "Storage in Hyper-V - Managing Virtual Hard Disks (VHDs)"
 date: 2024-06-10
