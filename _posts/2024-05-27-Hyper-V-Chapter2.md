@@ -61,7 +61,7 @@ Let’s walk through how to create a VM using **Hyper-V Manager**.
 #### 9. **Complete the Wizard:**
    - Review your settings and click **Finish**.
 
-**![Create VM Wizard](https://www.nakivo.com/blog/wp-content/uploads/2019/01/Creating-New-VM-with-Hyper-V-Manager.webp)**
+**![Create VM Wizard](https://mylemans.online/assets/img/Hyper-V-Guide/Chapter-2/Chapter-2-2-3.png)**
 
 ---
 
@@ -75,8 +75,6 @@ Now that your virtual machine is created, it’s time to install the operating s
 
 #### 2. **Install the OS:**
    - Follow the installation steps for your chosen OS, just as you would on a physical machine.
-
-**![OS Installation](https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/media/osdeploy_upd.png)**
 
 ---
 
@@ -93,8 +91,6 @@ After your OS is installed, it’s time to fine-tune your VM:
 #### 3. **Snapshots and Checkpoints:**
    - **Take Snapshots** (or checkpoints) to capture the state of a VM at a specific point in time. This can be a lifesaver when testing new configurations or updates.
 
-**![VM Settings](https://uploads-us-west-2.insided.com/workspot-en/attachment/08bc4bbd-7829-48eb-a91e-3698ef1c667c.png)**
-
 ---
 
 ### **Managing Virtual Machines**
@@ -104,7 +100,6 @@ Here are some basic tasks you’ll need to know for managing your VM:
 - **Start and Stop VMs:** You can start, shut down, or pause VMs from **Hyper-V Manager** by right-clicking the VM.
 - **Monitoring VM Performance:** Use **Task Manager** or **Resource Monitor** inside the VM to monitor resource usage. You can also check performance in **Hyper-V Manager**.
 
-**![Performance Monitoring](https://www.nakivo.com/blog/wp-content/uploads/2020/12/Hyper-V-performance-monitoring-by-using-Performance-Monitor.webp)**
 
 ---
 
