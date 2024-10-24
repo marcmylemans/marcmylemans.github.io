@@ -63,8 +63,6 @@ Let’s walk through how to create and manage VHDs in Hyper-V:
 7. **Complete the Wizard:**
    - Review your settings and click **Finish**.
 
-**![Create VHD Wizard](https://www.altaro.com/hyper-v/wp-content/uploads/2015/10/addvhd__format.png)**
-
 ---
 
 ### **Attaching a VHD to a Virtual Machine**
@@ -84,8 +82,6 @@ Once you’ve created a VHD, you can attach it to a VM for storage:
 
 4. **Apply and Save:**
    - Click **Apply** and then **OK** to save the changes.
-
-**![Attach VHD](https://askme4tech.com//sites/default/files/attach-existing-vhdx-hyperv/created-vm/step3.png)**
 
 ---
 
@@ -117,8 +113,6 @@ After expanding the VHD, you’ll also need to extend the volume inside the VM:
 2. **Extend Volume:**
    - Right-click the volume and select **Extend Volume** to use the newly expanded space.
 
-**![Expand VHD](https://www.nakivo.com/blog/wp-content/uploads/2019/07/Choose-Action-Increase-Disk-Size-in-Hyper-V.webp)**
-
 ---
 
 ### **Backup and Restore of VHDs**
@@ -135,8 +129,6 @@ Backing up your VHDs is crucial for protecting your data. Here are some best pra
 1. Use your backup software to **restore the VHD**.
 2. **Reattach the VHD** to your VM in **Hyper-V Manager**.
 
-**![VM Recovery](https://www.ubackup.com/screenshot/en/acbn/others/restore-hyper-v-virtual-machine-from-windows-server-backup/select-items-to-recover.png)**
-
 ---
 
 ### **Best Practices for Managing Storage in Hyper-V**
@@ -149,8 +141,6 @@ Backing up your VHDs is crucial for protecting your data. Here are some best pra
 
 #### **Monitor Disk Performance:**
    - Use **Performance Monitor** to keep an eye on disk I/O and resource usage, especially in high-demand environments.
-
-**![Monitoring Disk Performance](https://www.nakivo.com/blog/wp-content/uploads/2020/12/Hyper-V-performance-monitoring-by-using-Performance-Monitor.webp)**
 
 ---
 
