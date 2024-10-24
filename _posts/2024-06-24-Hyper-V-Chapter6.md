@@ -63,8 +63,6 @@ There are several tools available to help you back up your VMs. Let’s cover th
    - **Features:** Offer **deduplication**, **compression**, **cloud integration**, and more robust disaster recovery options.
    - **Best for:** Organizations that need **advanced features** or **multi-hypervisor support**.
 
-**![Backup Tools for Hyper-V](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/forest-recovery-guide/media/a31518eb8f4ce532c957c9f4b61db202.png)**
-
 ---
 
 ### **Configuring Backups in Hyper-V Using Windows Server Backup**
@@ -89,8 +87,6 @@ Let’s walk through how to configure backups using **Windows Server Backup**—
 
 5. **Finish the Wizard**  
    - Confirm your settings and click **Finish** to complete the setup.
-
-**![Windows Server Backup](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/forest-recovery-guide/media/a31518eb8f4ce532c957c9f4b61db202.png)**
 
 ---
 
@@ -120,8 +116,6 @@ Restoring VMs is just as important as backing them up! Whether you're recovering
 
 7. **Complete the Wizard**  
    - Choose whether to recover the VMs to their original location or to an alternate location.
-
-**![VM Recovery](https://www.ubackup.com/screenshot/en/acbn/others/restore-hyper-v-virtual-machine-from-windows-server-backup/select-items-to-recover.png)**
 
 ---
 
