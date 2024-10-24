@@ -2,7 +2,7 @@
 image: https://mylemans.online/assets/img/posts/Default.jpg
 layout: post
 title: "Introduction to Hyper-V: What It Is and Why You Should Use It"
-date: 2024-10-24
+date: 2024-05-20
 categories: [Windows Server, Hyper-V]
 tags: [hyper-v, windows server, virtualization, virtual machines, microsoft]
 ---
@@ -109,6 +109,14 @@ To open Hyper-V Manager:
 
 ---
 
+### **Want the Full Written Guide? Get Early Access on Ko-fi**
+
+If you’re finding this series useful and want to dive deeper into Hyper-V, consider supporting our work by getting early access to the **full written guide** on Ko-fi! You’ll get a comprehensive, step-by-step guide covering everything from beginner to advanced topics in Hyper-V. Plus, your support helps us continue creating and improving content.
+
+Head over to **Ko-fi** to download your copy today: [Get It Now on Ko-fi](https://ko-fi.com/s/4dd04dba14)
+
+---
+
 ### **Conclusion**
 
 That’s it for **Chapter 1: Introduction to Hyper-V**! You should now have a good grasp of what Hyper-V is and how to enable it on your system. In the next chapter, we’ll dive deeper into **creating your first virtual machine** in Hyper-V.
@@ -116,7 +124,3 @@ That’s it for **Chapter 1: Introduction to Hyper-V**! You should now have a go
 If you found this post and video helpful, don’t forget to **like, share, and subscribe** to our channel for more tutorials. Stay tuned for the next part in our series, and feel free to drop any questions or comments below.
 
 **Next Up:** [Chapter 2: Setting Up Your First Virtual Machine](https://mylemans.online/posts/Hyper-V-Chapter2/)
-
----
-
-{% include social-media-share-buttons.html %}
