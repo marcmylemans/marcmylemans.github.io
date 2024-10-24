@@ -11,6 +11,8 @@ tags: [windows server 2022, remote desktop services, rds, microsoft office, grou
 
 Hey there! Welcome to our follow-up guide on Remote Desktop Services (RDS). If you've already set up your RDS environment with Windows Server 2022 from our previous tutorial, congrats—you've laid a solid foundation! Now, we’re going to make your setup even more productive by installing and configuring Office applications. And hey, we’ll even throw in a few power tips using ADMX files for Group Policy, so you can enhance productivity with minimal manual work. Let’s dive in!
 
+{% youtube "https://youtu.be/4wO82is6y40" %}
+
 ## Prerequisites
 
 Before we get started, make sure you’ve got a working Remote Desktop Services environment. If not, no worries! We’ve got you covered with our [Step-by-Step RDS Guide](https://mylemans.online/posts/Remote-Desktop-Services-Part1/).
@@ -205,6 +207,8 @@ Here are a few policies I love configuring to enhance user experience:
 ---
 
 ## Part 3: Optional - Deploying RemoteApps
+
+{% youtube "https://youtu.be/hdwa0Wq1XTI" %}
 
 If you want to streamline the experience and save server resources, **RemoteApps** might be your jam. Instead of offering full desktops, you can let users access individual applications as if they were installed locally. Here’s how you do it:
 
