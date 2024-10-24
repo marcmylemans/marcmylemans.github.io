@@ -9,7 +9,7 @@ tags: [windows server 2022, remote desktop services, rds, microsoft office, grou
 
 # A Step-by-Step Guide to Installing and Configuring Office on Remote Desktop Services
 
-Hey there! 🎉 Welcome to our follow-up guide on Remote Desktop Services (RDS). If you've already set up your RDS environment with Windows Server 2022 from our previous tutorial, congrats—you've laid a solid foundation! Now, we’re going to make your setup even more productive by installing and configuring Office applications. And hey, we’ll even throw in a few power tips using ADMX files for Group Policy, so you can enhance productivity with minimal manual work. Let’s dive in!
+Hey there! Welcome to our follow-up guide on Remote Desktop Services (RDS). If you've already set up your RDS environment with Windows Server 2022 from our previous tutorial, congrats—you've laid a solid foundation! Now, we’re going to make your setup even more productive by installing and configuring Office applications. And hey, we’ll even throw in a few power tips using ADMX files for Group Policy, so you can enhance productivity with minimal manual work. Let’s dive in!
 
 ## Prerequisites
 
@@ -82,7 +82,7 @@ Need a refresher on setting up a central store? Check out our [Group Policy Best
 Create a Group Policy called **User Policy - Office - Default Settings** your users will thank you!
 Here are a few policies I love configuring to enhance user experience:
 
-### 1. Disable the Office Start Screen for Excel
+#### 1. Disable the Office Start Screen for Excel
 
 - **Path:** `User Configuration > Administrative Templates > Microsoft Excel 2016 > Miscellaneous > Disable the Office Start screen for Excel`
 - **State:** Enabled
@@ -93,7 +93,7 @@ Here are a few policies I love configuring to enhance user experience:
 
 ---
 
-### 2. Disable First Run Movie
+#### 2. Disable First Run Movie
 
 - **Path:** `User Configuration > Administrative Templates > Microsoft Office 2016 > First Run > Disable First Run Movie`
 - **State:** Enabled
@@ -104,7 +104,7 @@ Here are a few policies I love configuring to enhance user experience:
 
 ---
 
-### 3. Disable Office First Run on Application Boot
+#### 3. Disable Office First Run on Application Boot
 
 - **Path:** `User Configuration > Administrative Templates > Microsoft Office 2016 > First Run > Disable Office First Run on Application Boot`
 - **State:** Enabled
@@ -115,7 +115,7 @@ Here are a few policies I love configuring to enhance user experience:
 
 ---
 
-### 4. Disable Office Animations
+#### 4. Disable Office Animations
 
 - **Path:** `User Configuration > Administrative Templates > Microsoft Office 2016 > Miscellaneous > Disable Office Animations`
 - **State:** Enabled
@@ -126,7 +126,7 @@ Here are a few policies I love configuring to enhance user experience:
 
 ---
 
-### 5. Disable the Office Start Screen for All Office Applications
+#### 5. Disable the Office Start Screen for All Office Applications
 
 - **Path:** `User Configuration > Administrative Templates > Microsoft Office 2016 > Miscellaneous > Disable the Office Start screen for all Office applications`
 - **State:** Enabled
@@ -137,7 +137,7 @@ Here are a few policies I love configuring to enhance user experience:
 
 ---
 
-### 6. Do Not Use Hardware Graphics Acceleration
+#### 6. Do Not Use Hardware Graphics Acceleration
 
 - **Path:** `User Configuration > Administrative Templates > Microsoft Office 2016 > Miscellaneous > Do Not Use Hardware Graphics Acceleration`
 - **State:** Enabled
@@ -148,7 +148,7 @@ Here are a few policies I love configuring to enhance user experience:
 
 ---
 
-### 7. Show Screen Tips
+#### 7. Show Screen Tips
 
 - **Path:** `User Configuration > Administrative Templates > Microsoft Office 2016 > Miscellaneous > Show Screen Tips`
 - **State:** Disabled
@@ -160,7 +160,7 @@ Here are a few policies I love configuring to enhance user experience:
 
 ---
 
-### 8. Disable Opt-in Wizard on First Run
+#### 8. Disable Opt-in Wizard on First Run
 
 - **Path:** `User Configuration > Administrative Templates > Microsoft Office 2016 > Privacy/Trust Center > Disable Opt-in Wizard on First Run`
 - **State:** Enabled
@@ -171,7 +171,7 @@ Here are a few policies I love configuring to enhance user experience:
 
 ---
 
-### 9. Disable the Office Start Screen for PowerPoint
+#### 9. Disable the Office Start Screen for PowerPoint
 
 - **Path:** `User Configuration > Administrative Templates > Microsoft PowerPoint 2016 > Miscellaneous > Disable the Office Start screen for PowerPoint`
 - **State:** Enabled
@@ -182,7 +182,7 @@ Here are a few policies I love configuring to enhance user experience:
 
 ---
 
-### 10. Prevent Microsoft Teams from Starting Automatically After Installation
+#### 10. Prevent Microsoft Teams from Starting Automatically After Installation
 
 - **Path:** `User Configuration > Administrative Templates > Microsoft Teams > Prevent Microsoft Teams from starting automatically after installation`
 - **State:** Enabled
@@ -193,7 +193,7 @@ Here are a few policies I love configuring to enhance user experience:
 
 ---
 
-### 11. Disable the Office Start Screen for Word
+#### 11. Disable the Office Start Screen for Word
 
 - **Path:** `User Configuration > Administrative Templates > Microsoft Word 2016 > Miscellaneous > Disable the Office Start screen for Word`
 - **State:** Enabled
