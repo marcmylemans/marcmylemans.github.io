@@ -39,8 +39,6 @@ If you missed the earlier chapters, check them out here: [Chapter 1: Introductio
 4. **Migrate a VM**:  
    Right-click the running VM, select **Move**, and follow the wizard to migrate the VM to another host.
 
-**![Live Migration](https://www.ubackup.com/screenshot/en/acb/virtual-machine/hyper-v-live-migrations/open-hyper-v-move-wizard.png)**
-
 ---
 
 ### **What is Hyper-V Replica?**
@@ -63,8 +61,6 @@ If you missed the earlier chapters, check them out here: [Chapter 1: Introductio
 
 5. **Choose Initial Replication**:  
    Specify how the initial VM copy is transferred (over the network or using external media).
-
-**![Hyper-V Replica Setup](https://www.nakivo.com/blog/wp-content/uploads/2017/12/How-to-enable-replication-in-Hyper-V.webp)**
 
 ---
 
