@@ -73,7 +73,7 @@ Enabling Hyper-V is straightforward, and here’s how you do it:
 3. Scroll down, check the box for **Hyper-V**, and click **OK**.
 4. Restart your computer to complete the process.
 
-**![Enabling Hyper-V](https://learn.microsoft.com/nl-nl/virtualization/hyper-v-on-windows/quick-start/media/enable_role_upd.png)**
+**![Enable Hyper-V](https://mylemans.online/assets/img/Hyper-V-Guide/Chapter-01/Chapter-01-1-5-1.png)**
 
 Once your system reboots, you’ll be able to open **Hyper-V Manager** and start creating virtual machines.
 
@@ -88,7 +88,7 @@ For Windows Server users, enabling Hyper-V is a bit different:
 3. Follow the wizard to install the **Hyper-V** role.
 4. Restart your server after the installation is complete.
 
-**![Enabling Hyper-V on Server](https://www.sqlskills.com/blogs/tim/wp-content/uploads/2016/02/AddRoles1.png)**
+**![Enable Hyper-V on Server](https://mylemans.online/assets/img/Hyper-V-Guide/Chapter-01/Chapter-01-1-5.png)**
 
 ---
 
@@ -104,8 +104,6 @@ To open Hyper-V Manager:
 
 - On **Windows 10/11**, search for **Hyper-V Manager** in the Start menu.
 - On **Windows Server**, open **Server Manager**, go to **Tools**, and select **Hyper-V Manager**.
-
-**![Hyper-V Manager Interface](https://docs.oracle.com/en/database/oracle/key-vault/21.6/okvig/img/hyper-v-manager.png)**
 
 ---
 
