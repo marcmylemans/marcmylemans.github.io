@@ -25,9 +25,14 @@ Before we get started, make sure you’ve got a working Remote Desktop Services 
 
 First things first, we’ll install Microsoft Office on your remote desktop host. Let’s make sure your users can work remotely without skipping a beat.
 
-### Step 1: Download and Configure Office
+### Step 1: Download the Office Deployment Tool
 
-1. Head over to [config.office.com](https://config.office.com) to create a custom configuration file.
+1. Download the **Office Deployment Tool** from the official Microsoft website [here](https://www.microsoft.com/en-us/download/details.aspx?id=49117).
+2. Once downloaded, extract the contents to a folder on your server. I suggest using a directory like `c:\temp` for easy access.
+
+### Step 2: Create and Configure Your Office Installation
+
+1. Head over to [config.office.com](https://config.office.com) to create a custom configuration file for your Office installation.
    - Select **Microsoft 365 Apps for Enterprise** (or **Business**, depending on your license).
    - Choose the applications you want to install. Maybe you're a fan of Word and Excel but don’t need PowerPoint—your choice! 👍
    - Don’t forget to add all the languages you need. Office will default to the operating system’s language, but you can install multiple languages and proofing tools.
@@ -40,9 +45,9 @@ First things first, we’ll install Microsoft Office on your remote desktop host
    - Accept the EULA.
    - Make sure to select **Shared Computer Licensing**—crucial for remote desktop environments.
 
-5. Once you’ve tweaked all the settings, **export the configuration**. Save the `.xml` file alongside the Office setup files.
+5. Once you’ve tweaked all the settings, **export the configuration**. Save the `.xml` file alongside the Office setup files you downloaded earlier.
 
-### Step 2: Install Office on the RDS Host
+### Step 3: Install Office on the RDS Host
 
 Now that we’ve got the configuration ready, let’s get Office installed!
 
@@ -54,7 +59,7 @@ Now that we’ve got the configuration ready, let’s get Office installed!
    ```
 3. Wait for the installation to finish, and don’t close the wizard until you’re done!
 
-### Step 3: Add Shortcuts for Users
+### Step 4: Add Shortcuts for Users
 
 Since you’re in a multi-user environment, it’s handy to put application shortcuts on the desktop for all users.
 
