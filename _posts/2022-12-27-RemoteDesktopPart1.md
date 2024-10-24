@@ -61,7 +61,7 @@ Remote Desktop Services in Server 2022 offers:
 
 ### Concluding Thoughts
 
-This tutorial marks the beginning of your journey to a fully functional RDS environment in Windows Server 2022. For a more detailed and comprehensive guide that covers these topics and more, check out our new post: [Link to New Blog Post].
+This tutorial marks the beginning of your journey to a fully functional RDS environment in Windows Server 2022. For a more detailed and comprehensive guide that covers these topics and more, check out our new post: [A Step-by-Step Guide - Setting Up Remote Desktop Services With FS Logix And Single Sign On!](https://mylemans.online/posts/Remote-Desktop-Services-Part1/).
 
 Stay tuned for more in-depth tutorials on Windows Server 2022, and we’re eager to hear your feedback!
 
