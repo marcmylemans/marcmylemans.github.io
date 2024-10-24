@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: https://mylemans.online/assets/img/posts/Hyper-V-Chapter5.PNG
 layout: post
 title: "Advanced Hyper-V Features - Live Migration, Hyper-V Replica, and More"
 date: 2024-06-17
