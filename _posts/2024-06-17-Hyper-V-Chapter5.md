@@ -74,7 +74,10 @@ If you missed the earlier chapters, check them out here: [Chapter 1: Introductio
    On the host machine, open PowerShell as an administrator and run the following command:  
    ```powershell
    Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
+   ```
 
+2. **Configure the VM:**
+   - Inside the nested VM, install Hyper-V as you would on a physical machine.
 
 ---
 
