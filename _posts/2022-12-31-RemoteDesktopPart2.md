@@ -9,12 +9,22 @@ title: Server 2022 - Remote Desktop Services - Part 2
 
 {% youtube "https://youtu.be/G-5se77LRyU" %}
 
-Welcome back to our series on Remote Desktop Services (RDS) in Windows Server 2022. In Part 2, we're focusing on enhancing the user experience with strategic Group Policy settings for RDS.
+---
+
+**Update:** We've created a comprehensive guide that brings together all the important aspects of setting up and optimizing **Remote Desktop Services (RDS)** in **Windows Server 2022**, including advanced configurations like Group Policies and FSLogix for user profile management. For a full, step-by-step walkthrough, check out the updated post here: [A Step-by-Step Guide - Setting Up Remote Desktop Services With FS Logix And Single Sign On!](https://mylemans.online/posts/Remote-Desktop-Services-Part1/).
+
+---
+
+Welcome back to our series on Remote Desktop Services (RDS) in Windows Server 2022. In Part 2, we're focusing on enhancing the user experience with strategic **Group Policy** settings for RDS.
+
+---
 
 ### What This Video Covers
 
 - **Creating Group Policies for RDS**: Learn how to configure Group Policy settings specifically for RDS, ensuring a smooth and efficient remote desktop experience for users.
 - **Optimizing User Experience**: We delve into policies that can improve session responsiveness, manage resource allocation, and more.
+
+---
 
 ### Continuing the RDS Journey
 
@@ -24,6 +34,8 @@ If you missed the initial setup of Remote Desktop Services, catch up with Part 1
 
 This first part covers the setup of core RDS components such as the Broker, Host, Web Access, and Gateway.
 
+---
+
 ### Why Group Policies for RDS?
 
 Implementing Group Policies for RDS allows for:
@@ -32,9 +44,13 @@ Implementing Group Policies for RDS allows for:
 - **Improved Performance**: Optimize settings to enhance the overall performance and responsiveness of RDS sessions.
 - **Customized User Experience**: Tailor the remote desktop environment to suit organizational needs and user preferences.
 
+---
+
 ### Concluding Thoughts
 
 As you advance in setting up and optimizing Remote Desktop Services, these group policy configurations play a crucial role in delivering a seamless and secure remote working environment.
+
+For a more detailed and up-to-date guide that covers these topics and more, make sure to check out our new post: [A Step-by-Step Guide - Setting Up Remote Desktop Services With FS Logix And Single Sign On!](https://mylemans.online/posts/Remote-Desktop-Services-Part1/).
 
 We’re eager to hear about your experiences with these configurations. Share your insights or any challenges you faced in the comments section below. Your feedback is invaluable in shaping our content and helping the wider community.
 
