@@ -9,7 +9,7 @@ tags: [windows server 2022, remote desktop services, rds, microsoft office, grou
 
 # A Step-by-Step Guide to Installing and Configuring Office on Remote Desktop Services
 
-Hey there! 🎉 Welcome to our follow-up guide on Remote Desktop Services (RDS). If you've already set up your RDS environment with Windows Server 2022 from our previous tutorial, congrats—you've laid a solid foundation! Now, we’re going to make your setup even more productive by installing and configuring Office applications. And hey, we’ll even throw in a few power tips using ADMX files for Group Policy, so you can enhance productivity with minimal manual work. Let’s dive in! 💻✨
+Hey there! 🎉 Welcome to our follow-up guide on Remote Desktop Services (RDS). If you've already set up your RDS environment with Windows Server 2022 from our previous tutorial, congrats—you've laid a solid foundation! Now, we’re going to make your setup even more productive by installing and configuring Office applications. And hey, we’ll even throw in a few power tips using ADMX files for Group Policy, so you can enhance productivity with minimal manual work. Let’s dive in!
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ Before we get started, make sure you’ve got a working Remote Desktop Services 
 
 ### What you need:
 - **Group Policy Knowledge**: You’ll need a basic understanding of Group Policy. If you need a quick refresher, check out our [Group Policy Best Practices guide](https://mylemans.online/posts/GroupPolicyBestPracticesServer2022/).
-- **(Optional)**: An extra virtual machine (VM) for deploying Remote Apps. I like to call mine **RDS2**, but feel free to name yours something cooler. 😎
+- **(Optional)**: An extra virtual machine (VM) for deploying Remote Apps. I like to call mine **RDS2**.
 
 ---
 
@@ -34,10 +34,10 @@ First things first, we’ll install Microsoft Office on your remote desktop host
 
 1. Head over to [config.office.com](https://config.office.com) to create a custom configuration file for your Office installation.
    - Select **Microsoft 365 Apps for Enterprise** (or **Business**, depending on your license).
-   - Choose the applications you want to install. Maybe you're a fan of Word and Excel but don’t need PowerPoint—your choice! 👍
+   - Choose the applications you want to install. Maybe you're a fan of Word and Excel but don’t need PowerPoint—your choice!
    - Don’t forget to add all the languages you need. Office will default to the operating system’s language, but you can install multiple languages and proofing tools.
 
-2. Select **Office Content Delivery Network (CDN)** as your source location. This ensures you’re always installing the latest version. You can also set up a local source as a fallback if bandwidth is an issue. 🚀
+2. Select **Office Content Delivery Network (CDN)** as your source location. This ensures you’re always installing the latest version. You can also set up a local source as a fallback if bandwidth is an issue.
 
 3. Enable **automatic architecture upgrades** (like from 32-bit to 64-bit). If you’ve still got some 32-bit installations hanging around, this is your chance to upgrade!
 
@@ -83,7 +83,7 @@ Here are a few policies I love configuring to enhance user experience:
   
 - **Configure Default Office Settings**: For smooth sailing, set default options for Word, Excel, and other Office apps. You can tweak everything from default file locations to user privacy settings.
 
-Create a Group Policy called **User Policy - Office - Default Settings** and go wild. Your users will thank you! 🙌
+Create a Group Policy called **User Policy - Office - Default Settings** and go wild. Your users will thank you!
 
 ---
 
@@ -96,7 +96,7 @@ If you want to streamline the experience and save server resources, **RemoteApps
 3. Assign a security group (default: **Domain Users**), and make sure to **deselect user profile disks**. We’ll use **FS Logix** instead for profile management.
 4. Publish your desired apps through the wizard.
 
-Boom, now your users can access Office (or any other app) directly from their local desktops, without the overhead of a full desktop session. 🌟
+Now your users can access Office (or any other app) directly from their local desktops, without the overhead of a full desktop session. 
 
 ---
 
@@ -104,6 +104,6 @@ Boom, now your users can access Office (or any other app) directly from their lo
 
 And there you have it! You’ve now installed and configured Microsoft Office on a Remote Desktop Services host, set up Group Policies using ADMX files, and optionally deployed RemoteApps for a sleek, lightweight user experience.
 
-If you’re looking for more tips, tricks, or need help troubleshooting, check out our other [guides](https://mylemans.online/posts) or drop us a comment below. We’re here to help! 😎
+If you’re looking for more tips, tricks, or need help troubleshooting, check out our other [guides](https://mylemans.online/posts) or drop us a comment below. We’re here to help!
 
 Happy configuring!
