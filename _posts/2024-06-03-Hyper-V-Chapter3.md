@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: https://mylemans.online/assets/img/posts/Hyper-V-Chapter3.PNG
 layout: post
 title: "Networking in Hyper-V - Virtual Switches and Network Configuration"
 date: 2024-06-03
