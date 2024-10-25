@@ -164,13 +164,45 @@ Automating these steps with PowerShell means language settings stay up-to-date, 
 Here’s the PowerShell script that does it all. This script should be saved (e.g., as `Update-UserLanguageGroups.ps1`) on your AD server and run as a scheduled task.
 
 ```powershell
-# Script Name: Update-UserLanguageGroups.ps1
-# Description: Assigns users to language-specific security groups based on the language portion of their preferredLanguage attribute in Active Directory.
-# Author: Your Name
-# Date: YYYY-MM-DD
+
+<#
+    .SYNOPSIS
+        Create a organised OU Structure for multi client use.
+    .DESCRIPTION
+    Assigns users to language-specific security groups based on the language portion of their preferredLanguage attribute in Active Directory.
+    .NOTES
+        Version:        1.0
+        Author:         Marc Mylemans
+        Creation Date:  25/10/2024
+        Purpose/Change: Initial script development
+    .EXAMPLE
+        .\Update-UserLanguageGroups.ps1
+
+#>
 
 # Import Active Directory module
 Import-Module ActiveDirectory
+
+#-----------------------------Error Action-------------------------------
+
+$ErrorActionPreference= 'silentlycontinue'
+
+#-----------------------------Variables----------------------------------
+
+$DirectoryPath = "C:\temp"
+$logFile = "C:\temp\Update-UserLanguageGroups.log"
+
+#Change working Directory
+if(!(Test-Path -path $DirectoryPath))  
+{  
+ New-Item -ItemType directory -Path $DirectoryPath
+ Write-Host "Folder path has been created successfully at: " $DirectoryPath    
+ }
+else 
+{ 
+Write-Host "The given folder path $DirectoryPath already exists"; 
+}
+Set-Location -Path $DirectoryPath
 
 # Define the security groups corresponding to each language policy
 $languageGroups = @{
@@ -232,10 +264,6 @@ foreach ($user in $users) {
     }
 }
 
-# Optional: Log the script execution time
-# Define log file path
-$logFile = "C:\Temp\Update-UserLanguageGroups.log"
-
 # Function to log messages
 function Log-Message {
     param (
@@ -250,7 +278,6 @@ Log-Message "Added $samAccountName to $($languageGroups[$preferredLanguageCode])
 Log-Message "Removed $samAccountName from $($languageGroups[$lang])"
 Log-Message "Removed $samAccountName from all language groups due to undefined or unsupported preferredLanguage: $preferredLanguageFull"
 Log-Message "Language group update completed at $(Get-Date)"
-
 
 ```
 
