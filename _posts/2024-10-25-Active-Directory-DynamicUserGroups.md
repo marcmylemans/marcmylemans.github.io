@@ -38,7 +38,7 @@ In a multilingual organization, managing user preferences for regional and langu
 
 We’ll create three separate GPOs for the languages **English (EN)**, **Dutch (NL)**, and **French (FR)**. Each GPO will be configured with the necessary settings to enforce language-specific regional options.
 
-1. In the **Group Policy Management Console**, navigate to your **domain** (e.g., `test.lan`) in the left pane.
+1. In the **Group Policy Management Console**, navigate to your **domain** (e.g., `domain.local`) in the left pane.
 2. Right-click on the **Group Policy Objects** folder, select **New**, and name your GPO according to the language. For example:
    - **User Policy - Language EN** for English
    - **User Policy - Language NL** for Dutch
