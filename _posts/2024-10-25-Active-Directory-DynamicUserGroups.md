@@ -243,7 +243,7 @@ Once you’re confident it’s working, schedule the task to automate the proces
 
 To make sure each user is assigned the correct language settings, you’ll need to set the `preferredLanguage` attribute in Active Directory for each user. This attribute follows the [RFC 1766](https://tools.ietf.org/html/rfc1766) format, such as `"en-US"` for English (United States) or `"fr-FR"` for French (France). 
 
-Here’s how to update this attribute for a user in Active Directory Users and Computers (ADUC).
+Here’s how to update this attribute for a user in Active Directory Users and Computers (ADUC) or via PowerShell.
 
 ### Using Active Directory Users and Computers (ADUC)
 
@@ -253,6 +253,28 @@ Here’s how to update this attribute for a user in Active Directory Users and C
 4. Find the `preferredLanguage` attribute in the list, select it, and click **Edit**.
 5. Enter the desired language code (e.g., `"en-US"` for English or `"nl-NL"` for Dutch).
 6. Click **OK** to save your changes.
+
+### Using PowerShell
+
+If you need to update the `preferredLanguage` attribute for multiple users or automate the process, PowerShell is a great option.
+
+- **To set the `preferredLanguage` attribute for a single user**:
+  ```Powershell
+  # Replace 'username' and 'en-US' with the target username and preferred language code
+  Set-ADUser -Identity username -Replace @{preferredLanguage = "en-US"}
+  ```
+
+- **To update the `preferredLanguage` attribute for multiple users using a CSV file**:  
+  ```Powershell
+  # Import users from a CSV file with 'Username' and 'Language' columns
+  $users = Import-Csv -Path "C:\path\to\your\file.csv"
+  
+  foreach ($user in $users) {
+      Set-ADUser -Identity $user.Username -Replace @{preferredLanguage = $user.Language}
+      Write-Output "Updated preferredLanguage for $($user.Username) to $($user.Language)"
+  }
+
+  ```
 
 ### Supported Values
 
