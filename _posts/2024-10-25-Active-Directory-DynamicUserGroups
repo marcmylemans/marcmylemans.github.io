@@ -1,5 +1,7 @@
 ---
-title: Dynamic User Language Switching in Active Directory Using PowerShell
+image: https://mylemans.online/assets/img/posts/Default.jpg
+layout: post
+title: "Dynamic User Language Switching in Active Directory Using PowerShell"
 date: 2024-10-25
 categories: [Active Directory, PowerShell]
 tags: [active directory, powerShell, group policy, automation, language settings]
