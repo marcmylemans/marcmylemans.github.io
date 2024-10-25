@@ -303,6 +303,9 @@ Log-Message "Language group update completed at $(Get-Date)"
 4. **Set the Action** to run `PowerShell.exe` with the argument pointing to your script’s location (e.g., `-File "C:\Scripts\Update-UserLanguageGroups.ps1"`).
 5. **Configure the Task** to run with the highest privileges and to use a service account that has permissions to modify AD groups.
 
+> **Note:** It is not recommended to run scheduled scripts as a domain administrator. Instead, create a dedicated non-admin user account and delegate Active Directory group management privileges to it, or utilize a Group Managed Service Account (gMSA). For more information, refer to [Delegate Control in Active Directory](https://woshub.com/delegate-control-active-directory/) and [Group Managed Service Accounts in Windows Server 2012](https://woshub.com/group-managed-service-accounts-in-windows-server-2012/).
+
+
 ## Testing and Validation
 
 Before rolling this out, test it on a few user accounts to make sure everything is working as expected:
