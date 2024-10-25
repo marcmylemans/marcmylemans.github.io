@@ -38,13 +38,15 @@ Before we jump into the fun part, here’s what you’ll need:
 If you need to update the `preferredLanguage` attribute for multiple users or automate the process, PowerShell is a great option.
 
 - **To set the `preferredLanguage` attribute for a single user**:
-  ```Powershell
+  
+  ```powershell
   # Replace 'username' and 'en-US' with the target username and preferred language code
   Set-ADUser -Identity username -Replace @{preferredLanguage = "en-US"}
   ```
 
-- **To update the `preferredLanguage` attribute for multiple users using a CSV file**:  
-  ```Powershell
+- **To update the `preferredLanguage` attribute for multiple users using a CSV file**:
+   
+  ```powershell
   # Import users from a CSV file with 'Username' and 'Language' columns
   $users = Import-Csv -Path "C:\path\to\your\file.csv"
   
@@ -52,7 +54,6 @@ If you need to update the `preferredLanguage` attribute for multiple users or au
       Set-ADUser -Identity $user.Username -Replace @{preferredLanguage = $user.Language}
       Write-Output "Updated preferredLanguage for $($user.Username) to $($user.Language)"
   }
-
   ```
 
 ### Supported Values
