@@ -132,17 +132,13 @@ If you are also managing Microsoft Office language preferences, you can set the 
 
 Now that each GPO is configured, we can use **Security Filtering** to assign the GPOs to the appropriate security groups, rather than linking them to specific OUs. This approach makes it easier to manage language settings across different departments or user locations without needing a specific OU structure.
 
-1. Create three security groups in Active Directory, for example:
-- `User Policy Language EN`
-- `User Policy Language NL`
-- `User Policy Language FR`
-2. In the **Group Policy Management Console**, locate the GPO you created for each language (e.g., **User Policy - Language EN**).
+1. In the **Group Policy Management Console**, locate the GPO you created for each language (e.g., **User Policy - Language EN**).
 2. Click on the GPO to open its **Scope** tab.
-4. Under **Security Filtering**, click **Add** and select the security group corresponding to that GPO:
+3. Under **Security Filtering**, click **Add** and select the security group corresponding to that GPO:
    - For the **User Policy - Language EN** GPO, add the **User Policy Language EN** group.
    - For the **User Policy - Language NL** GPO, add the **User Policy Language NL** group.
    - For the **User Policy - Language FR** GPO, add the **User Policy Language FR** group.
-5. Remove **Authenticated Users** from the **Security Filtering** list to restrict the GPO to only members of the specified security group.
+4. Remove **Authenticated Users** from the **Security Filtering** list to restrict the GPO to only members of the specified security group.
 
 This method ensures that only users within the designated security group will receive the GPO settings. If a user’s preferred language changes, you can simply move them to a different language group without adjusting the OU structure or GPO links.
 By following these steps, you can create dedicated GPOs that apply language and regional settings based on user preferences. This approach ensures consistency across your organization and allows users to work in the language that suits them best, while automating the process for IT administrators. 
