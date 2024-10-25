@@ -223,7 +223,7 @@ function Remove-FromAllLanguageGroups {
         [string]$UserDN
     )
     foreach ($groupDN in $groupDNs.Values) {
-        Remove-ADGroupMember -Identity $groupDN -Members $UserDN -ErrorAction SilentlyContinue
+        Remove-ADGroupMember -Identity $groupDN -Members $UserDN -Confirm:$false
     }
 }
 
@@ -242,7 +242,7 @@ foreach ($user in $users) {
         
         # Add user to the target group if not already a member
         if (-not (Get-ADGroupMember -Identity $targetGroupDN -Recursive | Where-Object { $_.DistinguishedName -eq $userDN })) {
-            Add-ADGroupMember -Identity $targetGroupDN -Members $userDN
+            Add-ADGroupMember -Identity $targetGroupDN -Members $userDN -Confirm:$false
             Write-Output "Added $samAccountName to $($languageGroups[$preferredLanguageCode])"
         }
 
@@ -250,7 +250,7 @@ foreach ($user in $users) {
         foreach ($lang in $languageGroups.Keys) {
             if ($lang -ne $preferredLanguageCode) {
                 $otherGroupDN = $groupDNs[$lang]
-                Remove-ADGroupMember -Identity $otherGroupDN -Members $userDN -ErrorAction SilentlyContinue
+                Remove-ADGroupMember -Identity $otherGroupDN -Members $userDN -Confirm:$false
                 Write-Output "Removed $samAccountName from $($languageGroups[$lang])"
             }
         }
