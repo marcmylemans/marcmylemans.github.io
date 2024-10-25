@@ -164,7 +164,6 @@ Automating these steps with PowerShell means language settings stay up-to-date, 
 Here’s the PowerShell script that does it all. This script should be saved (e.g., as `Update-UserLanguageGroups.ps1`) on your AD server and run as a scheduled task.
 
 ```powershell
-
 <#
     .DESCRIPTION
     Assigns users to language-specific security groups based on the language portion of their preferredLanguage attribute in Active Directory.
@@ -228,6 +227,15 @@ function Remove-FromAllLanguageGroups {
     }
 }
 
+# Function to log messages
+function Log-Message {
+    param (
+        [string]$Message
+    )
+    $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+    "$timestamp - $Message" | Out-File -FilePath $logFile -Append
+}
+
 # Get all users with the 'preferredLanguage' attribute
 $users = Get-ADUser -Filter { preferredLanguage -like "*" } -Properties preferredLanguage, DistinguishedName, SamAccountName
 
@@ -263,15 +271,7 @@ foreach ($user in $users) {
     }
 }
 
-# Function to log messages
-function Log-Message {
-    param (
-        [string]$Message
-    )
-    $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-    "$timestamp - $Message" | Out-File -FilePath $logFile -Append
-}
-
+Log-Message "Language group update completed at $(Get-Date)"
 ```
 
 ## Setting Up the Scheduled Task
