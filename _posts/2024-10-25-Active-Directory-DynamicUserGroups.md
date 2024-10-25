@@ -24,6 +24,112 @@ Before we jump into the fun part, here’s what you’ll need:
   - `User Policy Language NL`
 - **PowerShell Access**: You’ll be running a PowerShell script on your AD server.
 
+
+## Creating Language-Specific GPOs in Active Directory
+
+In a multilingual organization, managing user preferences for regional and language settings can be streamlined by creating dedicated GPOs for each language. This setup allows users to interact with their Windows environment in their preferred language, enhancing productivity and comfort. Here’s how to create GPOs for **English (EN)**, **Dutch (NL)**, and **French (FR)** in Active Directory.
+
+### Step 1: Open Group Policy Management Console
+
+1. **Log into your domain controller** with an account that has permissions to create and manage Group Policy Objects.
+2. Open the **Group Policy Management Console (GPMC)** by searching for "Group Policy Management" in the Start menu or running `gpmc.msc`.
+
+### Step 2: Create a New GPO for Each Language
+
+We’ll create three separate GPOs for the languages **English (EN)**, **Dutch (NL)**, and **French (FR)**. Each GPO will be configured with the necessary settings to enforce language-specific regional options.
+
+1. In the **Group Policy Management Console**, navigate to your **domain** (e.g., `test.lan`) in the left pane.
+2. Right-click on the **Group Policy Objects** folder, select **New**, and name your GPO according to the language. For example:
+   - **User Policy - Language EN** for English
+   - **User Policy - Language NL** for Dutch
+   - **User Policy - Language FR** for French
+
+3. Click **OK** to create each GPO.
+
+### Step 3: Edit the GPO and Configure Language Settings
+
+Now, we’ll configure the settings for each GPO individually to apply the correct regional and language options for each target language.
+
+#### 1. Configure Regional Options for Each Language
+
+For each GPO (**User Policy - Language EN**, **User Policy - Language NL**, **User Policy - Language FR**), follow these steps:
+
+1. Right-click on the newly created GPO (e.g., **User Policy - Language EN**) and select **Edit**.
+2. In the Group Policy Management Editor, navigate to: User Configuration > Policies > Administrative Templates > Control Panel > Regional and Language Options
+
+3. Double-click **Restrict selection of Windows menus and dialogs language** and configure it as follows:
+- **State**: Enabled
+- **Restrict users to the following language**: Set the language according to the GPO:
+  - **English (EN)**: Select **English**
+  - **Dutch (NL)**: Select **Dutch**
+  - **French (FR)**: Select **French**
+- Click **Apply** and **OK**.
+
+#### 2. Configure Office Language Settings
+
+If you are also managing Microsoft Office language preferences, you can set the Office display and editing languages for each GPO.
+
+1. In the Group Policy Management Editor for each language-specific GPO, navigate to: User Configuration > Policies > Administrative Templates > Microsoft Office 2016 > Language Preferences
+
+
+2. Configure the following settings:
+
+- **Display menus and dialog boxes in**:
+  - **State**: Enabled
+  - **Display menus and dialog boxes in**: Select the appropriate language
+    - **English (EN)**: Set to **English**
+    - **Dutch (NL)**: Set to **Dutch**
+    - **French (FR)**: Set to **French**
+
+- **Primary Editing Language**:
+  - **State**: Enabled
+  - **Primary Editing Language**: Select the appropriate language
+    - **English (EN)**: Set to **English**
+    - **Dutch (NL)**: Set to **Dutch (Belgium)**
+    - **French (FR)**: Set to **French (France)**
+
+3. Click **Apply** and **OK** for each setting.
+
+> **Note:** These Office-specific settings require that users have Microsoft Office 2016 or later. The settings are applied when Office applications are launched and can be used to ensure users see Office in their preferred language.
+
+### Step 4: Link the GPOs to the Appropriate Organizational Units (OUs)
+
+Now that each GPO is configured, we need to link them to the appropriate OUs in Active Directory.
+
+1. In the **Group Policy Management Console**, locate the **Organizational Unit (OU)** where your users are stored. This might be a departmental OU or a specific OU for users.
+2. Right-click on the target OU, select **Link an Existing GPO**, and choose the appropriate GPO:
+- Link **User Policy - Language EN** for users who prefer English.
+- Link **User Policy - Language NL** for users who prefer Dutch.
+- Link **User Policy - Language FR** for users who prefer French.
+3. Repeat this process for each OU or group of users that needs a specific language policy applied.
+
+### Step 5: Assign Users to Language-Based Security Groups
+
+To ensure that users are only affected by the GPOs that match their language preference, assign them to language-specific security groups in Active Directory.
+
+1. Create three security groups in Active Directory, for example:
+- `User Policy Language EN`
+- `User Policy Language NL`
+- `User Policy Language FR`
+2. Add users to the appropriate group based on their language preference.
+3. Modify the **Security Filtering** of each GPO to apply only to the corresponding group:
+- Open each GPO in the **Group Policy Management Console**.
+- In the **Scope** tab, under **Security Filtering**, add the relevant security group (e.g., `User Policy Language EN` for **User Policy - Language EN**).
+- Remove **Authenticated Users** from the Security Filtering list to restrict the GPO to only the specified group.
+
+### Step 6: Test and Verify
+
+1. Log in as a test user for each language group and verify that the language and regional settings are correctly applied.
+2. Open Windows and check that system menus, dialogs, and regional settings reflect the language specified in the GPO.
+3. For Office users, open an Office application (such as Word or Excel) and confirm that the interface language and editing language match the settings specified in the GPO.
+
+---
+
+By following these steps, you can create dedicated GPOs that apply language and regional settings based on user preferences. This approach ensures consistency across your organization and allows users to work in the language that suits them best, while automating the process for IT administrators. 
+
+For more information on language codes and locale settings, refer to the [official Microsoft documentation on language locale settings](https://learn.microsoft.com/en-us/previous-versions/commerce-server/ee825488(v=cs.20)?redirectedfrom=MSDN).
+
+
 ## Implementation Strategy
 
 Here’s the game plan: we’ll use the `preferredLanguage` attribute in AD to assign users to specific language groups, which in turn link to GPOs for language settings. This way, as user language preferences change, AD will automatically handle the adjustments.
