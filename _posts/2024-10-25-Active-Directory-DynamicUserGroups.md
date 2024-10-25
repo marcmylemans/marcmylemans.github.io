@@ -179,11 +179,11 @@ $languageGroups = @{
     "NL" = "User Policy Language NL"
 }
 
-# Define the distinguished names of the security groups
+# Define the distinguished names of the security groups using -Identity
 $groupDNs = @{
-    "FR" = (Get-ADGroup -Filter { Name -eq $languageGroups["FR"] }).DistinguishedName
-    "EN" = (Get-ADGroup -Filter { Name -eq $languageGroups["EN"] }).DistinguishedName
-    "NL" = (Get-ADGroup -Filter { Name -eq $languageGroups["NL"] }).DistinguishedName
+    "FR" = (Get-ADGroup -Identity $languageGroups["FR"]).DistinguishedName
+    "EN" = (Get-ADGroup -Identity $languageGroups["EN"]).DistinguishedName
+    "NL" = (Get-ADGroup -Identity $languageGroups["NL"]).DistinguishedName
 }
 
 # Function to remove user from all language groups
@@ -198,13 +198,14 @@ function Remove-FromAllLanguageGroups {
 }
 
 # Get all users with the 'preferredLanguage' attribute
-$users = Get-ADUser -Filter { preferredLanguage -like "*" } -Properties preferredLanguage, DistinguishedName
+$users = Get-ADUser -Filter { preferredLanguage -like "*" } -Properties preferredLanguage, DistinguishedName, SamAccountName
 
 foreach ($user in $users) {
     # Extract the language code from the preferredLanguage attribute (e.g., 'en' from 'en-US')
     $preferredLanguageFull = $user.preferredLanguage
     $preferredLanguageCode = $preferredLanguageFull.Split('-')[0].ToUpper()
     $userDN = $user.DistinguishedName
+    $samAccountName = $user.SamAccountName
 
     if ($languageGroups.ContainsKey($preferredLanguageCode)) {
         $targetGroupDN = $groupDNs[$preferredLanguageCode]
@@ -212,7 +213,7 @@ foreach ($user in $users) {
         # Add user to the target group if not already a member
         if (-not (Get-ADGroupMember -Identity $targetGroupDN -Recursive | Where-Object { $_.DistinguishedName -eq $userDN })) {
             Add-ADGroupMember -Identity $targetGroupDN -Members $userDN
-            Write-Output "Added $($user.SamAccountName) to $($languageGroups[$preferredLanguageCode])"
+            Write-Output "Added $samAccountName to $($languageGroups[$preferredLanguageCode])"
         }
 
         # Remove user from other language groups
@@ -220,19 +221,37 @@ foreach ($user in $users) {
             if ($lang -ne $preferredLanguageCode) {
                 $otherGroupDN = $groupDNs[$lang]
                 Remove-ADGroupMember -Identity $otherGroupDN -Members $userDN -ErrorAction SilentlyContinue
-                Write-Output "Removed $($user.SamAccountName) from $($languageGroups[$lang])"
+                Write-Output "Removed $samAccountName from $($languageGroups[$lang])"
             }
         }
     }
     else {
         # If preferredLanguage is not set correctly, remove from all language groups
         Remove-FromAllLanguageGroups -UserDN $userDN
-        Write-Output "Removed $($user.SamAccountName) from all language groups due to undefined or unsupported preferredLanguage: $preferredLanguageFull"
+        Write-Output "Removed $samAccountName from all language groups due to undefined or unsupported preferredLanguage: $preferredLanguageFull"
     }
 }
 
 # Optional: Log the script execution time
-Write-Output "Language group update completed at $(Get-Date)"
+# Define log file path
+$logFile = "C:\Temp\Update-UserLanguageGroups.log"
+
+# Function to log messages
+function Log-Message {
+    param (
+        [string]$Message
+    )
+    $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+    "$timestamp - $Message" | Out-File -FilePath $logFile -Append
+}
+
+# Replace Write-Output with Log-Message
+Log-Message "Added $samAccountName to $($languageGroups[$preferredLanguageCode])"
+Log-Message "Removed $samAccountName from $($languageGroups[$lang])"
+Log-Message "Removed $samAccountName from all language groups due to undefined or unsupported preferredLanguage: $preferredLanguageFull"
+Log-Message "Language group update completed at $(Get-Date)"
+
+
 ```
 
 ## Setting Up the Scheduled Task
