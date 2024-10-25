@@ -8,7 +8,11 @@ tags: [active directory, powerShell, group policy, automation, language settings
 ---
 
 Managing language preferences in a diverse organization is more than just a nice-to-have; it’s about creating an efficient and user-friendly environment. In this post, we’ll dive into how to automatically apply language settings for users in Active Directory (AD) based on their preferences using PowerShell. This solution saves time, minimizes errors, and ensures each user interacts with Windows in their preferred language.
+
+This post was inspired by reading the topic [Implementing Dynamic Groups in Active Directory with PowerShell](https://woshub.com/active-directory-dynamic-user-groups-powershell/).
+
 Imagine a workplace with employees who speak different languages—some prefer English, others French or Dutch. Configuring language settings for each person individually? That’s tedious and prone to mistakes. Instead, we can automate this process using Active Directory attributes and Group Policy Objects (GPOs). By letting a PowerShell script handle the heavy lifting, we ensure everyone gets the right settings consistently and with minimal effort from IT.
+
 Ready to simplify your admin life? Let’s break it down.
 
 
