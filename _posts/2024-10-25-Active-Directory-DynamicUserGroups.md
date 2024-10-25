@@ -55,6 +55,16 @@ If you need to update the `preferredLanguage` attribute for multiple users or au
       Write-Output "Updated preferredLanguage for $($user.Username) to $($user.Language)"
   }
   ```
+  If you'd like to quickly create a CSV file, you can copy the following content into a text editor and save it as users_language.csv
+
+  ```csv
+  Username,Language
+  jdoe,en-US
+  asmith,fr-FR
+  mbrown,nl-BE
+  ljohnson,en-GB
+  kgarcia,fr-BE
+  ```
 
 ### Supported Values
 
