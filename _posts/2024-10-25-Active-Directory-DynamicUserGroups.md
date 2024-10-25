@@ -24,7 +24,42 @@ Before we jump into the fun part, here’s what you’ll need:
   - `User Policy Language NL`
 - **PowerShell Access**: You’ll be running a PowerShell script on your AD server.
 
+### Using Active Directory Users and Computers (ADUC)
 
+1. **Open ADUC** and find the user you want to modify.
+2. Right-click the user and select **Properties**.
+3. Go to the **Attribute Editor** tab. (If you don’t see this tab, you may need to enable **Advanced Features** in the **View** menu.)
+4. Find the `preferredLanguage` attribute in the list, select it, and click **Edit**.
+5. Enter the desired language code (e.g., `"en-US"` for English or `"nl-NL"` for Dutch).
+6. Click **OK** to save your changes.
+
+### Using PowerShell
+
+If you need to update the `preferredLanguage` attribute for multiple users or automate the process, PowerShell is a great option.
+
+- **To set the `preferredLanguage` attribute for a single user**:
+  ```Powershell
+  # Replace 'username' and 'en-US' with the target username and preferred language code
+  Set-ADUser -Identity username -Replace @{preferredLanguage = "en-US"}
+  ```
+
+- **To update the `preferredLanguage` attribute for multiple users using a CSV file**:  
+  ```Powershell
+  # Import users from a CSV file with 'Username' and 'Language' columns
+  $users = Import-Csv -Path "C:\path\to\your\file.csv"
+  
+  foreach ($user in $users) {
+      Set-ADUser -Identity $user.Username -Replace @{preferredLanguage = $user.Language}
+      Write-Output "Updated preferredLanguage for $($user.Username) to $($user.Language)"
+  }
+
+  ```
+
+### Supported Values
+
+The `preferredLanguage` attribute uses language codes specified in [Microsoft's official documentation for locale settings](https://learn.microsoft.com/en-us/previous-versions/commerce-server/ee825488(v=cs.20)?redirectedfrom=MSDN). Make sure to use the correct language codes for your organization’s requirements.
+
+This allows you to set a wide range of languages based on user preferences, making your environment more inclusive and tailored to individual needs.
 
 ## Creating Language-Specific GPOs in Active Directory
 
@@ -93,41 +128,24 @@ If you are also managing Microsoft Office language preferences, you can set the 
 
 > **Note:** These Office-specific settings require that users have Microsoft Office 2016 or later. The settings are applied when Office applications are launched and can be used to ensure users see Office in their preferred language.
 
-### Step 4: Link the GPOs to the Appropriate Organizational Units (OUs)
+### Step 4: Assign Security Groups to the GPOs Using Security Filtering
 
-Now that each GPO is configured, we need to link them to the appropriate OUs in Active Directory.
-
-1. In the **Group Policy Management Console**, locate the **Organizational Unit (OU)** where your users are stored. This might be a departmental OU or a specific OU for users.
-2. Right-click on the target OU, select **Link an Existing GPO**, and choose the appropriate GPO:
-- Link **User Policy - Language EN** for users who prefer English.
-- Link **User Policy - Language NL** for users who prefer Dutch.
-- Link **User Policy - Language FR** for users who prefer French.
-3. Repeat this process for each OU or group of users that needs a specific language policy applied.
-
-### Step 5: Assign Users to Language-Based Security Groups
-
-To ensure that users are only affected by the GPOs that match their language preference, assign them to language-specific security groups in Active Directory.
+Now that each GPO is configured, we can use **Security Filtering** to assign the GPOs to the appropriate security groups, rather than linking them to specific OUs. This approach makes it easier to manage language settings across different departments or user locations without needing a specific OU structure.
 
 1. Create three security groups in Active Directory, for example:
 - `User Policy Language EN`
 - `User Policy Language NL`
 - `User Policy Language FR`
-2. Add users to the appropriate group based on their language preference.
-3. Modify the **Security Filtering** of each GPO to apply only to the corresponding group:
-- Open each GPO in the **Group Policy Management Console**.
-- In the **Scope** tab, under **Security Filtering**, add the relevant security group (e.g., `User Policy Language EN` for **User Policy - Language EN**).
-- Remove **Authenticated Users** from the Security Filtering list to restrict the GPO to only the specified group.
+2. In the **Group Policy Management Console**, locate the GPO you created for each language (e.g., **User Policy - Language EN**).
+2. Click on the GPO to open its **Scope** tab.
+4. Under **Security Filtering**, click **Add** and select the security group corresponding to that GPO:
+   - For the **User Policy - Language EN** GPO, add the **User Policy Language EN** group.
+   - For the **User Policy - Language NL** GPO, add the **User Policy Language NL** group.
+   - For the **User Policy - Language FR** GPO, add the **User Policy Language FR** group.
+5. Remove **Authenticated Users** from the **Security Filtering** list to restrict the GPO to only members of the specified security group.
 
-### Step 6: Test and Verify
-
-1. Log in as a test user for each language group and verify that the language and regional settings are correctly applied.
-2. Open Windows and check that system menus, dialogs, and regional settings reflect the language specified in the GPO.
-3. For Office users, open an Office application (such as Word or Excel) and confirm that the interface language and editing language match the settings specified in the GPO.
-
----
-
+This method ensures that only users within the designated security group will receive the GPO settings. If a user’s preferred language changes, you can simply move them to a different language group without adjusting the OU structure or GPO links.
 By following these steps, you can create dedicated GPOs that apply language and regional settings based on user preferences. This approach ensures consistency across your organization and allows users to work in the language that suits them best, while automating the process for IT administrators. 
-
 For more information on language codes and locale settings, refer to the [official Microsoft documentation on language locale settings](https://learn.microsoft.com/en-us/previous-versions/commerce-server/ee825488(v=cs.20)?redirectedfrom=MSDN).
 
 
@@ -244,43 +262,6 @@ Once you’re confident it’s working, schedule the task to automate the proces
 To make sure each user is assigned the correct language settings, you’ll need to set the `preferredLanguage` attribute in Active Directory for each user. This attribute follows the [RFC 1766](https://tools.ietf.org/html/rfc1766) format, such as `"en-US"` for English (United States) or `"fr-FR"` for French (France). 
 
 Here’s how to update this attribute for a user in Active Directory Users and Computers (ADUC) or via PowerShell.
-
-### Using Active Directory Users and Computers (ADUC)
-
-1. **Open ADUC** and find the user you want to modify.
-2. Right-click the user and select **Properties**.
-3. Go to the **Attribute Editor** tab. (If you don’t see this tab, you may need to enable **Advanced Features** in the **View** menu.)
-4. Find the `preferredLanguage` attribute in the list, select it, and click **Edit**.
-5. Enter the desired language code (e.g., `"en-US"` for English or `"nl-NL"` for Dutch).
-6. Click **OK** to save your changes.
-
-### Using PowerShell
-
-If you need to update the `preferredLanguage` attribute for multiple users or automate the process, PowerShell is a great option.
-
-- **To set the `preferredLanguage` attribute for a single user**:
-  ```Powershell
-  # Replace 'username' and 'en-US' with the target username and preferred language code
-  Set-ADUser -Identity username -Replace @{preferredLanguage = "en-US"}
-  ```
-
-- **To update the `preferredLanguage` attribute for multiple users using a CSV file**:  
-  ```Powershell
-  # Import users from a CSV file with 'Username' and 'Language' columns
-  $users = Import-Csv -Path "C:\path\to\your\file.csv"
-  
-  foreach ($user in $users) {
-      Set-ADUser -Identity $user.Username -Replace @{preferredLanguage = $user.Language}
-      Write-Output "Updated preferredLanguage for $($user.Username) to $($user.Language)"
-  }
-
-  ```
-
-### Supported Values
-
-The `preferredLanguage` attribute uses language codes specified in [Microsoft's official documentation for locale settings](https://learn.microsoft.com/en-us/previous-versions/commerce-server/ee825488(v=cs.20)?redirectedfrom=MSDN). Make sure to use the correct language codes for your organization’s requirements.
-
-This allows you to set a wide range of languages based on user preferences, making your environment more inclusive and tailored to individual needs.
 
 
 ## Conclusion
