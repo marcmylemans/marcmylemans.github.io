@@ -24,6 +24,12 @@ Before we jump into the fun part, here’s what you’ll need:
   - `User Policy Language NL`
 - **PowerShell Access**: You’ll be running a PowerShell script on your AD server.
 
+## Changing the preferredLanguage Attribute
+
+To make sure each user is assigned the correct language settings, you’ll need to set the `preferredLanguage` attribute in Active Directory for each user. This attribute follows the [RFC 1766](https://tools.ietf.org/html/rfc1766) format, such as `"en-US"` for English (United States) or `"fr-FR"` for French (France). 
+
+Here’s how to update this attribute for a user in Active Directory Users and Computers (ADUC) or via PowerShell.
+
 ### Using Active Directory Users and Computers (ADUC)
 
 1. **Open ADUC** and find the user you want to modify.
@@ -302,12 +308,6 @@ Before rolling this out, test it on a few user accounts to make sure everything 
 3. **Check the Group Membership** of test users in AD to confirm changes.
 
 Once you’re confident it’s working, schedule the task to automate the process!
-
-## Changing the preferredLanguage Attribute
-
-To make sure each user is assigned the correct language settings, you’ll need to set the `preferredLanguage` attribute in Active Directory for each user. This attribute follows the [RFC 1766](https://tools.ietf.org/html/rfc1766) format, such as `"en-US"` for English (United States) or `"fr-FR"` for French (France). 
-
-Here’s how to update this attribute for a user in Active Directory Users and Computers (ADUC) or via PowerShell.
 
 
 ## Conclusion
