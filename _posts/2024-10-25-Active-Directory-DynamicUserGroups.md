@@ -166,8 +166,6 @@ Here’s the PowerShell script that does it all. This script should be saved (e.
 ```powershell
 
 <#
-    .SYNOPSIS
-        Create a organised OU Structure for multi client use.
     .DESCRIPTION
     Assigns users to language-specific security groups based on the language portion of their preferredLanguage attribute in Active Directory.
     .NOTES
