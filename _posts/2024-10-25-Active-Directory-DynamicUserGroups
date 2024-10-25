@@ -1,0 +1,121 @@
+---
+title: Dynamic User Language Switching in Active Directory Using PowerShell
+date: 2024-10-25
+categories: [Active Directory, PowerShell]
+tags: [active directory, powerShell, group policy, automation, language settings]
+---
+
+Managing user language preferences in a diverse organization can be challenging. Ensuring that each user interacts with their preferred language enhances productivity and user satisfaction. In this post, we'll explore how to dynamically switch Windows region and language settings for users based on the `preferredLanguage` attribute in Active Directory (AD) using a PowerShell script. This script will run as a scheduled task on your AD server, applying the appropriate Group Policy based on user preferences.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Prerequisites](#prerequisites)
+- [Implementation Strategy](#implementation-strategy)
+- [The PowerShell Script](#the-powershell-script)
+- [Setting Up the Scheduled Task](#setting-up-the-scheduled-task)
+- [Testing and Validation](#testing-and-validation)
+- [Conclusion](#conclusion)
+
+## Overview
+
+In environments where users speak different languages, manually configuring each user's settings can be time-consuming and error-prone. By leveraging Active Directory attributes and Group Policy Objects (GPOs), we can automate the process of applying language-specific settings. This approach ensures consistency and reduces administrative overhead.
+
+## Prerequisites
+
+Before diving into the implementation, ensure you have the following:
+
+- **Active Directory Environment**: An AD setup with user accounts.
+- **Group Policy Management**: Three GPOs created for French (FR), English (EN), and Dutch (NL) language settings.
+- **Security Groups**: Three security groups corresponding to each language policy:
+  - `User Policy Language FR`
+  - `User Policy Language EN`
+  - `User Policy Language NL`
+- **PowerShell**: Access to run PowerShell scripts on your AD server.
+
+## Implementation Strategy
+
+The goal is to assign users to one of three security groups based on the language portion of their `preferredLanguage` attribute in AD. Each security group is linked to a specific GPO that applies the necessary language and region settings. Here's the high-level approach:
+
+1. **Retrieve Users**: Fetch all users from AD with the `preferredLanguage` attribute set.
+2. **Determine Language**: For each user, extract the language code from their `preferredLanguage` attribute.
+3. **Assign to Group**: Add the user to the corresponding security group based on their language code.
+4. **Remove from Other Groups**: Ensure the user is not a member of other language groups.
+5. **Handle Undefined or Unsupported Languages**: If a user doesn't have the `preferredLanguage` attribute set or has an unsupported language code, remove them from all language groups.
+
+Automating this process with a PowerShell script ensures that language settings remain up-to-date as user preferences change.
+
+## The PowerShell Script
+
+Below is the updated PowerShell script that handles `preferredLanguage` values in the `language-region` format (e.g., `'en-US'`, `'fr-FR'`, `'nl-BE'`). This script should be saved (e.g., as `Update-UserLanguageGroups.ps1`) on your AD server.
+
+```powershell
+# Script Name: Update-UserLanguageGroups.ps1
+# Description: Assigns users to language-specific security groups based on the language portion of their preferredLanguage attribute in Active Directory.
+# Author: Your Name
+# Date: YYYY-MM-DD
+
+# Import Active Directory module
+Import-Module ActiveDirectory
+
+# Define the security groups corresponding to each language policy
+$languageGroups = @{
+    "FR" = "User Policy Language FR"
+    "EN" = "User Policy Language EN"
+    "NL" = "User Policy Language NL"
+}
+
+# Define the distinguished names of the security groups
+$groupDNs = @{
+    "FR" = (Get-ADGroup -Filter { Name -eq $languageGroups["FR"] }).DistinguishedName
+    "EN" = (Get-ADGroup -Filter { Name -eq $languageGroups["EN"] }).DistinguishedName
+    "NL" = (Get-ADGroup -Filter { Name -eq $languageGroups["NL"] }).DistinguishedName
+}
+
+# Function to remove user from all language groups
+function Remove-FromAllLanguageGroups {
+    param (
+        [Parameter(Mandatory = $true)]
+        [string]$UserDN
+    )
+    foreach ($groupDN in $groupDNs.Values) {
+        Remove-ADGroupMember -Identity $groupDN -Members $UserDN -ErrorAction SilentlyContinue
+    }
+}
+
+# Get all users with the 'preferredLanguage' attribute
+$users = Get-ADUser -Filter { preferredLanguage -like "*" } -Properties preferredLanguage, DistinguishedName
+
+foreach ($user in $users) {
+    # Extract the language code from the preferredLanguage attribute (e.g., 'en' from 'en-US')
+    $preferredLanguageFull = $user.preferredLanguage
+    $preferredLanguageCode = $preferredLanguageFull.Split('-')[0].ToUpper()
+    $userDN = $user.DistinguishedName
+
+    if ($languageGroups.ContainsKey($preferredLanguageCode)) {
+        $targetGroupDN = $groupDNs[$preferredLanguageCode]
+        
+        # Add user to the target group if not already a member
+        if (-not (Get-ADGroupMember -Identity $targetGroupDN -Recursive | Where-Object { $_.DistinguishedName -eq $userDN })) {
+            Add-ADGroupMember -Identity $targetGroupDN -Members $userDN
+            Write-Output "Added $($user.SamAccountName) to $($languageGroups[$preferredLanguageCode])"
+        }
+
+        # Remove user from other language groups
+        foreach ($lang in $languageGroups.Keys) {
+            if ($lang -ne $preferredLanguageCode) {
+                $otherGroupDN = $groupDNs[$lang]
+                Remove-ADGroupMember -Identity $otherGroupDN -Members $userDN -ErrorAction SilentlyContinue
+                Write-Output "Removed $($user.SamAccountName) from $($languageGroups[$lang])"
+            }
+        }
+    }
+    else {
+        # If preferredLanguage is not set correctly, remove from all language groups
+        Remove-FromAllLanguageGroups -UserDN $userDN
+        Write-Output "Removed $($user.SamAccountName) from all language groups due to undefined or unsupported preferredLanguage: $preferredLanguageFull"
+    }
+}
+
+# Optional: Log the script execution time
+Write-Output "Language group update completed at $(Get-Date)"
