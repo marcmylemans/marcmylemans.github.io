@@ -1,0 +1,130 @@
+---
+image: https://mylemans.online/assets/img/posts/Default.jpg
+layout: post
+title: "How to Set Up Microsoft Entra Cloud Sync with SSO"
+date: 2024-11-19
+categories: [Cloud, Identity Management]
+tags: [microsoft entra, azure ad, cloud sync, single sign-on, sso, active directory, identity, hybrid cloud]
+---
+
+Syncing your on-premises Active Directory (AD) with Microsoft Entra ID (formerly Azure AD) can streamline user sign-in experiences, especially with Single Sign-On (SSO). This guide will walk you through setting up Microsoft Entra Cloud Sync and configuring SSO.
+
+---
+
+## Why Use Microsoft Entra Cloud Sync?
+
+With Cloud Sync, you get:
+- **Automated Sync**: Keeps user data up-to-date automatically.
+- **Enhanced Security**: Syncs only essential user information with strong encryption.
+- **Improved Performance**: Syncs lightweight and efficient data to the cloud.
+
+With **Single Sign-On (SSO)**, users can sign in to both on-premises and cloud applications using a single set of credentials, improving their experience and reducing password management for IT teams.
+
+---
+
+## Prerequisites
+
+Before you start, ensure you have:
+1. **An Azure subscription** with access to the Azure portal.
+2. **Global Administrator** rights in Microsoft Entra ID.
+3. **Directory permissions** for the AD domain you want to sync.
+4. **Internet access** for the server that will host the Cloud Sync Agent and SSO components.
+
+---
+
+## Step 1: Set Up the Cloud Sync Agent
+
+1. **Login to the [Azure Portal](https://portal.azure.com)**.
+2. Go to **Microsoft Entra ID** > **Provisioning** > **Cloud Sync**.
+3. Select **+ New Agent Group** and **Download Agent**.
+
+### Install the Agent
+1. Run the downloaded setup on a Windows Server (it doesn’t need to be a Domain Controller).
+2. Complete the installation, ensuring it’s connected to your domain.
+3. After installation, the agent should auto-register in the Azure portal.
+
+---
+
+## Step 2: Configure Synchronization Rules
+
+1. In the **Cloud Sync** section in Azure, you’ll see the agent registered.
+2. Select the agent group you created.
+3. Click **Add Scope** to define the organizational units (OUs) or groups you want to sync.
+   - **TIP**: Start by syncing a test OU before deploying across your entire directory.
+4. **Mapping Rules**: Define what user information syncs to Entra ID.
+   - The default mappings work well for most setups; adjust only if needed.
+
+---
+
+## Step 3: Enable Single Sign-On (SSO) with Microsoft Entra Cloud Sync
+
+To enable SSO for your users, follow these steps:
+
+### Step 3.1: Create a Group Policy Object (GPO) for SSO
+
+1. Open **Group Policy Management** on your Domain Controller.
+2. Create a **new GPO** in the domain where the devices are located, and name it (e.g., “Entra SSO GPO”).
+3. Right-click the GPO and select **Edit**.
+
+### Step 3.2: Configure GPO for SSO
+
+1. In the Group Policy Management Editor, navigate to:
+   ```
+   Computer Configuration > Policies > Administrative Templates > System > Group Policy
+   ```
+2. Enable the policy **Allow processing across a slow network connection**.
+3. Set **Startup policy processing wait time** to **90 seconds**.
+
+4. Go to:
+   ```
+   Computer Configuration > Policies > Administrative Templates > System > Kerberos
+   ```
+5. Enable **Specify smart card removal behavior** and set it to **No Action**.
+
+### Step 3.3: Add the Azure AD Service URL to Intranet Zone
+
+1. Go to:
+   ```
+   Computer Configuration > Policies > Administrative Templates > Windows Components > Internet Explorer > Internet Control Panel > Security Page
+   ```
+2. Enable the policy **Site to Zone Assignment List**.
+3. Add **https://autologon.microsoftazuread-sso.com** to the Intranet zone (value **1**).
+
+### Step 3.4: Link the GPO to the Organizational Unit (OU)
+
+1. Go back to **Group Policy Management**.
+2. Link your new SSO GPO to the OU containing the computers where you want SSO to be enabled.
+
+### Step 3.5: Verify SSO Configuration
+
+1. Sign in to the Azure portal, navigate to **Microsoft Entra ID** > **Hybrid Identity** > **Azure AD Connect**.
+2. Under **Seamless Single Sign-On**, confirm that it’s enabled and working correctly.
+
+---
+
+## Step 4: Test and Enable the Sync
+
+1. **Start a Test Sync**: Use the **Provisioning On** button to start a test sync in Azure.
+2. **Review the Sync Logs**:
+   - Check **Provisioning Logs** for any errors.
+3. **Enable Sync for Production**:
+   - Enable **Provisioning Status** to start syncing your directory in production.
+
+---
+
+## Step 5: Monitor and Maintain the Sync and SSO
+
+1. **Monitoring**: Use the **Provisioning Logs** and **Health Status** in the Azure portal to monitor sync and SSO health.
+2. **Agent Updates**: Regularly update the Cloud Sync agent and SSO components to avoid potential issues.
+
+---
+
+## Wrapping Up
+
+With Microsoft Entra Cloud Sync and SSO configured, your users can enjoy seamless sign-in across both on-premises and cloud environments using a single set of credentials. This setup not only improves user experience but also simplifies IT management.
+
+---
+
+This guide should help you get Microsoft Entra Cloud Sync and SSO running smoothly. Let us know if you have questions, and feel free to share this with anyone looking to streamline their cloud sync and SSO setup!
+
+---
