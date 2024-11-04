@@ -15,6 +15,7 @@ Imagine a workplace with employees who speak different languages—some prefer E
 
 Ready to simplify your admin life? Let’s break it down.
 
+{% youtube "https://youtu.be/qD0PJClRmhA" %}
 
 ## Prerequisites
 
