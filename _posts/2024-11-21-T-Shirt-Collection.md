@@ -2,8 +2,8 @@
 image: https://mylemans.online/assets/img/posts/Default.jpg
 layout: post
 title: "Mylemans Online T-Shirt Collection"
-date: 2024-07-02
-categories: [Category 1, Category 2, Category 3]
+date: 2024-11-21
+categories: [Shop, Apparel]
 ---
 
 
