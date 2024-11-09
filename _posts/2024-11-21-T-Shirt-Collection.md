@@ -68,7 +68,7 @@ Celebrate the important work of keeping systems optimized with this comfortable 
 ---
 
 ## "Code Fast, Leave a Legacy" T-Shirt
-[![Code Fast, Leave a Legacy T-Shirt](https://mylemans.online/assets/img/posts/04_Coding_CodeFast_Shirt.jpg)](https://shop.mylemans.online/products/34-code-fast-leave-a-legacy-t-shirt?source=dashboard)
+[![Code Fast, Leave a Legacy T-Shirt](https://mylemans.online/assets/img/posts/04_Coding_CodeFast_Shirt.jpg)](https://shop.mylemans.online/products/34-code-fast-leave-a-legacy-34-t-shirt?source=dashboard)
 
 For coders who aim to make an impact, this tee is a statement of ambition and purpose.
 
