@@ -6,8 +6,24 @@ date: 2024-11-21
 categories: [Shop, Apparel]
 ---
 
+Welcome to the official Mylemans Online T-Shirt Collection! Each design is crafted with tech enthusiasts in mind, combining humor, inspiration, and style. Perfect for anyone passionate about coding, data, and IT. Explore our collection and take advantage of our **special promotions** below!
 
-Welcome to the official Mylemans Online T-Shirt Collection! Each design is crafted with tech enthusiasts in mind, combining humor, inspiration, and style. Perfect for anyone passionate about coding, data, and IT. Explore our collection below!
+---
+
+## Limited-Time Promotions 🎉
+1. **Buy 4 Classic T-Shirts, Get 1 Free!** Add any 4 Classic Fit T-shirts to your cart, and we’ll automatically add a 5th shirt for free.
+2. **Free Mug on Orders Over $75!** Just add a mug to your cart and spend $75 or more – your free mug discount will apply automatically at checkout!
+
+---
+
+### Quality Update
+I’m thrilled to announce that I’ve received the samples of our **Classic T-shirts and Mugs**, and I couldn’t be happier with the quality! Each shirt is soft, durable, and designed with care, while the mugs are sturdy and perfect for your daily coffee fix.
+
+**Note:** The desk mats are currently stuck in customs, and due to shipping delays and unexpected fees, I may remove them from the shop for now. However, I’m actively seeking a reliable supplier and hope to bring them back soon. Thank you for your patience!
+
+---
+
+## Featured T-Shirt Collection
 
 ---
 
