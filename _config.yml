@@ -217,6 +217,7 @@ plugins:
   - jekyll-analytics
   - jekyll-sitemap
   - jekyll-gzip
+  - jekyll-redirect-from
 
 
 # Default post image
