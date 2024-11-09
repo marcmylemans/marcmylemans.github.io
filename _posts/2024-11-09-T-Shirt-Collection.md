@@ -11,7 +11,7 @@ Welcome to the official Mylemans Online T-Shirt Collection! Each design is craft
 
 
 ## Limited-Time Promotions 🎉
-1. **Buy 4 Classic T-Shirts, Get 1 Free!** Add any 4 Classic Fit T-shirts to your cart, and we’ll automatically add a 5th shirt for free.
+1. **Buy 4 Classic T-Shirts, Get 1 Free!** Add any 4 Classic Fit T-shirts to your cart, and we’ll automatically add a 25% discount.
 2. **Free Mug on Orders Over $75!** Just add a mug to your cart and spend $75 or more – your free mug discount will apply automatically at checkout!
 
 
