@@ -2,13 +2,11 @@
 image: https://mylemans.online/assets/img/posts/Default.jpg
 layout: post
 title: "Automatically Enroll Active Directory Devices into Intune via Group Policy and Deploy Apps with Company Portal"
-date: 2024-11-19
+date: 2024-11-13
 categories: [Cloud, Endpoint Management]
 tags: [Microsoft Intune, Active Directory, Group Policy, Device Enrollment, Company Portal, Application Deployment, Remote Work, Microsoft 365, Entra ID, Azure AD, Device Management, MDM]
 ---
 
-
-# Automatically Enroll Active Directory Devices into Intune via Group Policy and Deploy Apps with Company Portal
 
 Managing devices remotely has become essential for modern workplaces, especially with so many users working from home or in hybrid setups. If you’re looking to streamline device enrollment and make application deployment easy for your users, this guide is for you. We’ll walk through how to automatically enroll Active Directory (AD) devices into **Microsoft Intune** using **Group Policy**, and how to deploy applications via the **Company Portal**.
 
