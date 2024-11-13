@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: https://mylemans.online/assets/img/posts/3ee97659683e.png
 layout: post
 title: "Dynamic User Language Switching in Active Directory Using PowerShell"
 date: 2024-10-25
