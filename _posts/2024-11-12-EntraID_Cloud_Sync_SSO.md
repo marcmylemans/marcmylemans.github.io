@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: https://mylemans.online/assets/img/posts/615a419091ee.png
 layout: post
 title: "Step-by-Step Guide - Connecting Local Active Directory to Microsoft Entra ID"
 date: 2024-11-12
@@ -8,6 +8,8 @@ tags: [microsoft entra, azure ad, cloud sync, single sign-on, sso, active direct
 ---
 
 In today's tech-driven workplaces, managing user identities across various platforms can be challenging. Connecting your local Active Directory to Microsoft Entra ID (formerly Azure Active Directory) simplifies user management, enhances security, and improves the sign-on experience. This guide walks you through the entire setup process, from adding a custom domain to enabling single sign-on.
+
+{% youtube "https://youtu.be/dqQkp4_Lmhg" %}
 
 ## Why Integrate Active Directory with Microsoft Entra ID?
 
@@ -18,7 +20,6 @@ By connecting Active Directory to Microsoft Entra ID, you can:
 - Offer single sign-on (SSO) for smoother access to applications
 
 Letâ€™s dive in!
-
 
 
 ### Step 1: Accessing the Admin Portal
@@ -93,11 +94,30 @@ Download **Microsoft Entra Connect**, then cancel the installation after extract
 
 #### Configuring SSO via PowerShell
 
-Use the following commands in PowerShell:
-- `Import-Module .\AzureADSSO.psd1`
-- `New-AzureADSSOAuthenticationContext`
-- `Enable-AzureADSSOForest`
-- `Enable-AzureADSSO -Enable $true`
+**Import Azure AD SSO Module:**
+
+```powershell
+cd "C:\Program Files\Microsoft Azure Active Directory Connect"
+Import-Module .\AzureADSSO.psd1
+```
+
+**Establish Authentication Context:**
+
+```powershell
+New-AzureADSSOAuthenticationContext
+```
+
+**Enable SSO for Your Forest:**
+
+```powershell
+Enable-AzureADSSOForest
+```
+
+**Finalize SSO Setup:**
+
+```powershell
+Enable-AzureADSSO -Enable $true
+```
 
 This sets up SSO for your domain.
 
@@ -113,6 +133,8 @@ In the Group Policy Management Console, configure policies to assign Microsoftâ€
 
 For enhanced integration, consider using Cloud Sync with Cloud Kerberos Trust. This additional setup allows for seamless authentication across environments.
 
+You can follow my detailed guide on setting up Cloud Kerberos Trust here:
+[Windows Hello for Business - Cloud Kerberos trust deployment](https://mylemans.online/posts/WHFB_CloudKerberosTrustDeployment/)
 
 ## Final Recap
 
