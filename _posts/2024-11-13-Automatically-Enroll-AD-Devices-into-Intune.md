@@ -18,12 +18,17 @@ Microsoft Intune provides a robust set of tools for managing devices across your
 
 ## Prerequisites
 
-Before starting, make sure you have the following:
+Before you begin setting up automatic device enrollment into Intune, make sure you have the following prerequisites in place. If you need help with any of these, check out our dedicated blog posts for detailed guides.
 
-- **Active Directory** on-premises.
-- **Entra ID (formerly Azure AD)** connected to your AD environment.
-- A **Microsoft Intune** license (Microsoft Business Premium or similar) that includes device management capabilities.
-- Basic understanding of **Group Policy** in Windows Server.
+- **Active Directory** on-premises. If you haven’t set up Active Directory yet, follow our guide here: [Setting Up Active Directory on Server 2022](https://mylemans.online/posts/SettingUpActiveDirectoryServer2022/).
+
+- Familiarity with **Group Policies**. This configuration uses Group Policy to manage device enrollment. For best practices and setup, see [Group Policy Best Practices for Server 2022](https://mylemans.online/posts/GroupPolicyBestPracticesServer2022/).
+
+- **Dynamic Security Groups in Active Directory**. Dynamic groups can help automate access management, especially when used with Intune and Entra ID. Learn more in [How to Set Up Dynamic User Groups in Active Directory](https://mylemans.online/posts/Active-Directory-DynamicUserGroups/).
+
+- A **sync with Entra ID** (formerly Azure AD). This allows seamless integration between your on-premises AD and cloud identities. Follow our guide on [Setting Up Entra ID Cloud Sync with SSO](https://mylemans.online/posts/EntraID_Cloud_Sync_SSO/).
+
+- A license for **Microsoft Intune** (Microsoft Business Premium or similar), which provides device management capabilities.
 
 Once you have these prerequisites in place, you’re ready to start.
 
