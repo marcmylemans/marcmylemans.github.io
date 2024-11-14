@@ -16,7 +16,10 @@
       <g:price>19.99 USD</g:price>
       <g:condition>new</g:condition>
       <g:brand>MyLemans</g:brand>
-      <!-- Optional Attributes -->
+      <g:color>Black</g:color>
+      <g:age_group>Adult</g:age_group>
+      <g:gender>Unisex</g:gender>
+      <g:size>S-3XL</g:size>
       <g:gtin></g:gtin>
       <g:mpn></g:mpn>
     </item>
@@ -32,6 +35,10 @@
       <g:price>19.99 USD</g:price>
       <g:condition>new</g:condition>
       <g:brand>MyLemans</g:brand>
+      <g:color>Black</g:color>
+      <g:age_group>Adult</g:age_group>
+      <g:gender>Unisex</g:gender>
+      <g:size>S-3XL</g:size>
       <g:gtin></g:gtin>
       <g:mpn></g:mpn>
     </item>
@@ -47,6 +54,10 @@
       <g:price>19.99 USD</g:price>
       <g:condition>new</g:condition>
       <g:brand>MyLemans</g:brand>
+      <g:color>Black</g:color>
+      <g:age_group>Adult</g:age_group>
+      <g:gender>Unisex</g:gender>
+      <g:size>S-3XL</g:size>
       <g:gtin></g:gtin>
       <g:mpn></g:mpn>
     </item>
@@ -62,6 +73,10 @@
       <g:price>19.99 USD</g:price>
       <g:condition>new</g:condition>
       <g:brand>MyLemans</g:brand>
+      <g:color>Black</g:color>
+      <g:age_group>Adult</g:age_group>
+      <g:gender>Unisex</g:gender>
+      <g:size>S-3XL</g:size>
       <g:gtin></g:gtin>
       <g:mpn></g:mpn>
     </item>
@@ -77,6 +92,10 @@
       <g:price>19.99 USD</g:price>
       <g:condition>new</g:condition>
       <g:brand>MyLemans</g:brand>
+      <g:color>Black</g:color>
+      <g:age_group>Adult</g:age_group>
+      <g:gender>Unisex</g:gender>
+      <g:size>S-3XL</g:size>
       <g:gtin></g:gtin>
       <g:mpn></g:mpn>
     </item>
@@ -92,6 +111,10 @@
       <g:price>19.99 USD</g:price>
       <g:condition>new</g:condition>
       <g:brand>MyLemans</g:brand>
+      <g:color>Black</g:color>
+      <g:age_group>Adult</g:age_group>
+      <g:gender>Unisex</g:gender>
+      <g:size>S-3XL</g:size>
       <g:gtin></g:gtin>
       <g:mpn></g:mpn>
     </item>
@@ -107,6 +130,10 @@
       <g:price>19.99 USD</g:price>
       <g:condition>new</g:condition>
       <g:brand>MyLemans</g:brand>
+      <g:color>White</g:color>
+      <g:age_group>Adult</g:age_group>
+      <g:gender>Unisex</g:gender>
+      <g:size>S-3XL</g:size>
       <g:gtin></g:gtin>
       <g:mpn></g:mpn>
     </item>
@@ -122,6 +149,10 @@
       <g:price>19.99 USD</g:price>
       <g:condition>new</g:condition>
       <g:brand>MyLemans</g:brand>
+      <g:color>Black</g:color>
+      <g:age_group>Adult</g:age_group>
+      <g:gender>Unisex</g:gender>
+      <g:size>S-3XL</g:size>
       <g:gtin></g:gtin>
       <g:mpn></g:mpn>
     </item>
@@ -137,6 +168,10 @@
       <g:price>19.99 USD</g:price>
       <g:condition>new</g:condition>
       <g:brand>MyLemans</g:brand>
+      <g:color>Black</g:color>
+      <g:age_group>Adult</g:age_group>
+      <g:gender>Unisex</g:gender>
+      <g:size>S-3XL</g:size>
       <g:gtin></g:gtin>
       <g:mpn></g:mpn>
     </item>
@@ -152,6 +187,10 @@
       <g:price>19.99 USD</g:price>
       <g:condition>new</g:condition>
       <g:brand>MyLemans</g:brand>
+      <g:color>Black</g:color>
+      <g:age_group>Adult</g:age_group>
+      <g:gender>Unisex</g:gender>
+      <g:size>S-3XL</g:size>
       <g:gtin></g:gtin>
       <g:mpn></g:mpn>
     </item>
