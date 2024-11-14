@@ -2,118 +2,159 @@
 <rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
   <channel>
     <title>Mylemans Online T-Shirt Collection</title>
-    <link>https://shop.mylemans.online</link>
-    <description>Official Mylemans Online T-Shirt Collection for tech enthusiasts</description>
+    <link>https://shop.mylemans.online/collections/techie-tees-collection-classic-fit</link>
+    <description>Product feed for MyLemans Online T-Shirt Collection</description>
 
     <!-- Product 1 -->
     <item>
-      <g:id>001</g:id>
+      <g:id>34-i-turn-coffee-into-websites-34</g:id>
       <g:title>I Turn Coffee Into Websites T-Shirt</g:title>
       <g:description>For the coders and designers fueled by caffeine, this tee is the perfect match. Ultra-soft and lightweight, it’s ideal for both work and play.</g:description>
-      <g:link>https://shop.mylemans.online/products/i-turn-coffee-into-websites-t-shirt-classic-fit</g:link>
+      <g:link>https://shop.mylemans.online/products/34-i-turn-coffee-into-websites-34-t-shirt-classic-fit?source=dashboard</g:link>
       <g:image_link>https://mylemans.online/assets/img/posts/06_InformationTechnology_ITurnCoffeeIntoWebsite_Shirt.jpg</g:image_link>
       <g:availability>in stock</g:availability>
       <g:price>19.99 USD</g:price>
       <g:condition>new</g:condition>
-      <g:brand>Mylemans Online</g:brand>
-      <g:google_product_category>Apparel & Accessories &gt; Clothing &gt; Shirts & Tops</g:google_product_category>
+      <g:brand>MyLemans</g:brand>
+      <!-- Optional Attributes -->
+      <g:gtin></g:gtin>
+      <g:mpn></g:mpn>
     </item>
 
     <!-- Product 2 -->
     <item>
-      <g:id>002</g:id>
+      <g:id>34-debugging-life-one-line-at-a-time-34</g:id>
       <g:title>Debugging Life – One Line at a Time T-Shirt</g:title>
       <g:description>Celebrate the art of troubleshooting with this fun tee. Comfortable and stylish, it’s a must-have for anyone who spends their days fixing code.</g:description>
-      <g:link>https://shop.mylemans.online/products/debugging-life-one-line-at-a-time-t-shirt-classic-fit</g:link>
+      <g:link>https://shop.mylemans.online/products/34-debugging-life-one-line-at-a-time-34-t-shirt-classic-fit?source=dashboard</g:link>
       <g:image_link>https://mylemans.online/assets/img/posts/07_Coding_DebuggingLife_Shirt.jpg</g:image_link>
       <g:availability>in stock</g:availability>
       <g:price>19.99 USD</g:price>
       <g:condition>new</g:condition>
-      <g:brand>Mylemans Online</g:brand>
-      <g:google_product_category>Apparel & Accessories &gt; Clothing &gt; Shirts & Tops</g:google_product_category>
+      <g:brand>MyLemans</g:brand>
+      <g:gtin></g:gtin>
+      <g:mpn></g:mpn>
     </item>
 
     <!-- Product 3 -->
     <item>
-      <g:id>003</g:id>
+      <g:id>34-system-admin-handle-with-care-34</g:id>
       <g:title>System Admin – Handle with Care T-Shirt</g:title>
       <g:description>A lighthearted nod to the essential work of system admins, this tee is perfect for any sysadmin ready to handle business.</g:description>
-      <g:link>https://shop.mylemans.online/products/system-admin-handle-with-care-t-shirt-classic-fit</g:link>
+      <g:link>https://shop.mylemans.online/products/34-system-admin-handle-with-care-34-t-shirt-classic-fit?source=dashboard</g:link>
       <g:image_link>https://mylemans.online/assets/img/posts/08_Programmer_Packing_Shirt.jpg</g:image_link>
       <g:availability>in stock</g:availability>
       <g:price>19.99 USD</g:price>
       <g:condition>new</g:condition>
-      <g:brand>Mylemans Online</g:brand>
-      <g:google_product_category>Apparel & Accessories &gt; Clothing &gt; Shirts & Tops</g:google_product_category>
+      <g:brand>MyLemans</g:brand>
+      <g:gtin></g:gtin>
+      <g:mpn></g:mpn>
     </item>
 
     <!-- Product 4 -->
     <item>
-      <g:id>004</g:id>
+      <g:id>34-while-alive-eat-sleep-code-34</g:id>
       <g:title>while(alive) { eat(); sleep(); code(); } T-Shirt</g:title>
       <g:description>Embrace the coder’s lifestyle with this stylish loop tee. Ideal for programmers who live and breathe code.</g:description>
-      <g:link>https://shop.mylemans.online/products/while-alive-eat-sleep-code-t-shirt-classic-fit</g:link>
+      <g:link>https://shop.mylemans.online/products/34-while-alive-eat-sleep-code-34-t-shirt-classic-fit?source=dashboard</g:link>
       <g:image_link>https://mylemans.online/assets/img/posts/09_technology_while_tshirt.jpg</g:image_link>
       <g:availability>in stock</g:availability>
       <g:price>19.99 USD</g:price>
       <g:condition>new</g:condition>
-      <g:brand>Mylemans Online</g:brand>
-      <g:google_product_category>Apparel & Accessories &gt; Clothing &gt; Shirts & Tops</g:google_product_category>
+      <g:brand>MyLemans</g:brand>
+      <g:gtin></g:gtin>
+      <g:mpn></g:mpn>
     </item>
 
     <!-- Product 5 -->
     <item>
-      <g:id>005</g:id>
+      <g:id>34-talk-data-to-me-34</g:id>
       <g:title>Talk Data to Me T-Shirt</g:title>
       <g:description>A must-have for data enthusiasts! This comfortable tee is perfect for anyone who loves to crunch numbers and make data talk.</g:description>
-      <g:link>https://shop.mylemans.online/products/talk-data-to-me-t-shirt-classic-fit</g:link>
+      <g:link>https://shop.mylemans.online/products/34-talk-data-to-me-34-t-shirt-classic-fit?source=dashboard</g:link>
       <g:image_link>https://mylemans.online/assets/img/posts/10_InformationTechnology_TalkDataToMe_Shirt.jpg</g:image_link>
       <g:availability>in stock</g:availability>
       <g:price>19.99 USD</g:price>
       <g:condition>new</g:condition>
-      <g:brand>Mylemans Online</g:brand>
-      <g:google_product_category>Apparel & Accessories &gt; Clothing &gt; Shirts & Tops</g:google_product_category>
+      <g:brand>MyLemans</g:brand>
+      <g:gtin></g:gtin>
+      <g:mpn></g:mpn>
     </item>
 
     <!-- Product 6 -->
     <item>
-      <g:id>006</g:id>
+      <g:id>34-seniors-texting-code-34</g:id>
       <g:title>Senior’s Texting Code T-Shirt</g:title>
       <g:description>Add some humor to your wardrobe with this fun take on texting abbreviations. Great for a good laugh with friends.</g:description>
-      <g:link>https://shop.mylemans.online/products/seniors-texting-code-t-shirt-classic-fit</g:link>
+      <g:link>https://shop.mylemans.online/products/34-seniors-texting-code-34-t-shirt-classic-fit?source=dashboard</g:link>
       <g:image_link>https://mylemans.online/assets/img/posts/01_SeniorsTexting_Code_Shirt.jpg</g:image_link>
       <g:availability>in stock</g:availability>
       <g:price>19.99 USD</g:price>
       <g:condition>new</g:condition>
-      <g:brand>Mylemans Online</g:brand>
-      <g:google_product_category>Apparel & Accessories &gt; Clothing &gt; Shirts & Tops</g:google_product_category>
+      <g:brand>MyLemans</g:brand>
+      <g:gtin></g:gtin>
+      <g:mpn></g:mpn>
     </item>
 
     <!-- Product 7 -->
     <item>
-      <g:id>007</g:id>
+      <g:id>34-no-place-like-127-0-0-1-34</g:id>
       <g:title>No Place Like 127.0.0.1 T-Shirt</g:title>
       <g:description>Show your tech pride with this clever tee – perfect for developers, network pros, and anyone who calls 127.0.0.1 home.</g:description>
-      <g:link>https://shop.mylemans.online/products/no-place-like-127-0-0-1-t-shirt-classic-fit</g:link>
+      <g:link>https://shop.mylemans.online/products/34-no-place-like-127-0-0-1-34-t-shirt-classic-fit?source=dashboard</g:link>
       <g:image_link>https://mylemans.online/assets/img/posts/02_Coding_ThereIsNoPlace_Shirt.jpg</g:image_link>
       <g:availability>in stock</g:availability>
       <g:price>19.99 USD</g:price>
       <g:condition>new</g:condition>
-      <g:brand>Mylemans Online</g:brand>
-      <g:google_product_category>Apparel & Accessories &gt; Clothing &gt; Shirts & Tops</g:google_product_category>
+      <g:brand>MyLemans</g:brand>
+      <g:gtin></g:gtin>
+      <g:mpn></g:mpn>
     </item>
 
     <!-- Product 8 -->
     <item>
-      <g:id>008</g:id>
+      <g:id>34-optimizing-the-world-one-system-at-a-time-34</g:id>
       <g:title>Optimizing the World One System at a Time T-Shirt</g:title>
       <g:description>Celebrate the important work of keeping systems optimized with this comfortable and stylish tee.</g:description>
-      <g:link>https://shop.mylemans.online/products/optimizing-the-world-one-system-at-a-time-t-shirt-classic-fit</g:link>
+      <g:link>https://shop.mylemans.online/products/34-optimizing-the-world-one-system-at-a-time-34-t-shirt-classic-fit?source=dashboard</g:link>
       <g:image_link>https://mylemans.online/assets/img/posts/03_Information_technology_System_Engineer_Shirt.jpg</g:image_link>
       <g:availability>in stock</g:availability>
       <g:price>19.99 USD</g:price>
       <g:condition>new</g:condition>
-      <g:brand>Mylemans Online</g:brand>
-      <g:google_product_category>Apparel & Accessories &gt; Clothing &gt; Shirts & Tops</g:google_product_category>
+      <g:brand>MyLemans</g:brand>
+      <g:gtin></g:gtin>
+      <g:mpn></g:mpn>
     </item>
 
+    <!-- Product 9 -->
+    <item>
+      <g:id>34-code-fast-leave-a-legacy-34</g:id>
+      <g:title>Code Fast, Leave a Legacy T-Shirt</g:title>
+      <g:description>For coders who aim to make an impact, this tee is a statement of ambition and purpose.</g:description>
+      <g:link>https://shop.mylemans.online/products/34-code-fast-leave-a-legacy-34-t-shirt-classic-fit?source=dashboard</g:link>
+      <g:image_link>https://mylemans.online/assets/img/posts/04_Coding_CodeFast_Shirt.jpg</g:image_link>
+      <g:availability>in stock</g:availability>
+      <g:price>19.99 USD</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>MyLemans</g:brand>
+      <g:gtin></g:gtin>
+      <g:mpn></g:mpn>
+    </item>
+
+    <!-- Product 10 -->
+    <item>
+      <g:id>34-badass-miracle-worker-34</g:id>
+      <g:title>System Engineer – Because Badass Miracle Worker Isn’t an Official Job Title T-Shirt</g:title>
+      <g:description>A tee for the dedicated system engineers who keep everything running. Show off your skills with pride.</g:description>
+      <g:link>https://shop.mylemans.online/products/34-badass-miracle-worker-34-t-shirt-classic-fit?source=dashboard</g:link>
+      <g:image_link>https://mylemans.online/assets/img/posts/05_InformationTechnology_System_Engineer_rBecause_Shirt.jpg</g:image_link>
+      <g:availability>in stock</g:availability>
+      <g:price>19.99 USD</g:price>
+      <g:condition>new</g:condition>
+      <g:brand>MyLemans</g:brand>
+      <g:gtin></g:gtin>
+      <g:mpn></g:mpn>
+    </item>
+
+  </channel>
+</rss>
