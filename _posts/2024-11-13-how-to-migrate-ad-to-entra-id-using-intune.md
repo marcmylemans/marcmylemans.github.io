@@ -17,7 +17,7 @@ Windows Autopilot streamlines the setup of new devices, allowing users to get up
 
 To automatically group Autopilot devices:
 
-1. Navigate to the Azure portal and select **Azure Active Directory > Groups > New Group**.
+1. Navigate to the [Azure portal](https://entra.microsoft.com) and select **Azure Active Directory > Groups > New Group**.
 2. Set the following:
    - **Group Type:** Security  
    - **Group Name:** `SG_AutoPilotDevices`  
@@ -32,7 +32,7 @@ To automatically group Autopilot devices:
 
 ### Step 2: Create an Autopilot Deployment Profile
 
-1. In Intune, go to **Devices > Windows > Windows enrollment > Deployment Profiles**.
+1. In [Intune](https://intune.microsoft.com), go to **Devices > Windows > Windows enrollment > Deployment Profiles**.
 2. Click **+ Create profile** and select **Windows PC**.
 3. Configure the profile:
    - **Name:** `Autopilot`  
