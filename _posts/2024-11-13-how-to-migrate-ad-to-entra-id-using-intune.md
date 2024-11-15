@@ -132,7 +132,7 @@ The **Get-WindowsAutoPilotInfo** script is available on the PowerShell Gallery. 
 The script will now be installed in the default PowerShell scripts directory:
 
   ```plaintext
-  C:\Program Files\WindowsPowerShell\Scripts
+  cd "C:\Program Files\WindowsPowerShell\Scripts"
   ```
 
 #### **Step 2: Use the Script to Gather Device Info**
@@ -146,9 +146,15 @@ Once the script is installed, you can use it to gather the hardware hash and dev
      ```powershell
      WindowsAutoPilotInfo.ps1 -Online
      ```
+   > **Note:** If you encounter an error saying that scripts are not allowed to run, you can temporarily allow scripts by running the following command:
+    ```powershell
+    Set-ExecutionPolicy Unrestricted -Scope Process
+    ```
+
+
    - This command uploads the device’s hardware hash directly to Intune using your authenticated session.
 
-2. **Gather Information for Multiple Devices**  
+1. **Gather Information for Multiple Devices**  
    If you need to gather hardware information for multiple devices over the network, you can use the `Get-ADComputer` cmdlet to retrieve a list of devices and pipe that into the **Get-WindowsAutoPilotInfo** script.
 
    - Use the following command to gather information for multiple devices and export it to a CSV file:
