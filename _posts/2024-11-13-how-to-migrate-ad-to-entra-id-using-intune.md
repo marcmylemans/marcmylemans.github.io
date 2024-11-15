@@ -111,12 +111,72 @@ When moving users to new devices:
 3. **Browser Settings:** Import bookmarks and settings to Microsoft Edge and enable synchronization.
 4. **Assign User to Device:** Use Autopilot to assign the user to the new device.
 
-### Device Setup Process
+### **Device Setup Process**
 
-1. Connect the device to the internet via Ethernet or configure Wi-Fi during setup.
-2. The user signs in with their work account.
-3. **Windows Hello** is configured (PIN, fingerprint, or facial recognition).
-4. Device setup completes with policies and applications applied automatically.
+Before setting up the device, you’ll need to gather the necessary hardware information to register it in Intune. We’ll be using the **Get-WindowsAutoPilotInfo** PowerShell script for this process.
+
+Here’s how to get the devices ready for Intune:
+
+---
+
+#### **Step 1: Install the Windows AutoPilot Info Script**
+The **Get-WindowsAutoPilotInfo** script is available on the PowerShell Gallery. Follow these steps to install it:
+
+1. Open **PowerShell** as an administrator.
+2. Run the following command to install the script:
+   ```powershell
+   Install-Script -Name Get-WindowsAutoPilotInfo
+   ```
+3. When prompted to trust the repository, type Y to confirm.
+
+The script will now be installed in the default PowerShell scripts directory:
+
+  ```plaintext
+  C:\Program Files\WindowsPowerShell\Scripts
+  ```
+
+#### **Step 2: Use the Script to Gather Device Info**
+
+Once the script is installed, you can use it to gather the hardware hash and device information for Autopilot registration. You have two options:
+
+1. **Import a Single Device**  
+   For this demonstration, we’ll focus on gathering information for a single device and importing it directly into Intune.
+
+   - Run the following command:
+     ```powershell
+     WindowsAutoPilotInfo.ps1 -Online
+     ```
+   - This command uploads the device’s hardware hash directly to Intune using your authenticated session.
+
+2. **Gather Information for Multiple Devices**  
+   If you need to gather hardware information for multiple devices over the network, you can use the `Get-ADComputer` cmdlet to retrieve a list of devices and pipe that into the **Get-WindowsAutoPilotInfo** script.
+
+   - Use the following command to gather information for multiple devices and export it to a CSV file:
+     ```powershell
+     Get-ADComputer -Filter * | .\GetWindowsAutoPilotInfo.ps1 -OutputFile .\MyComputers.csv
+     ```
+   - To enable this method, you’ll need to ensure the appropriate firewall rules are activated on the target devices. Specifically, enable the following rules in the firewall settings:
+     - **Windows Management Instrumentation (WMI-In)**  
+     - **Windows Remote Management (HTTP-In)**  
+
+   > **Note:** This method is ideal for bulk device setup but requires network configuration and elevated permissions.
+
+#### **Step 3: Device Setup Process**
+
+Once the device has been registered in Intune, proceed with the following steps:
+
+1. **Connect the Device to the Internet**  
+   - Use Ethernet or configure Wi-Fi during the initial setup process.
+
+2. **Sign in with the User's Work Account**  
+   - When prompted, the user signs in with their organizational account (e.g., their Microsoft 365 credentials).
+
+3. **Configure Windows Hello**  
+   - The user sets up Windows Hello, which can include a PIN, fingerprint, or facial recognition, depending on the device’s capabilities.
+
+4. **Automatic Policy and Application Deployment**  
+   - After signing in, the device setup will complete automatically.  
+   - Company policies and applications are deployed to the device as configured in Intune.
 
 ---
 
