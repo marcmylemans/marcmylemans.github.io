@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: https://mylemans.online/assets/img/posts/e7a4ee8db2ad.png
 layout: post
 title: "How to Migrating from On-Premise Active Directory to Entra ID with Intune"
 date: 2024-11-13
