@@ -15,6 +15,24 @@ Welcome to the official Mylemans Online T-Shirt Collection! Each design is craft
 2. **Free Mug on Orders Over $75!** Just add a mug to your cart and spend $75 or more – your free mug discount will apply automatically at checkout!
 
 
+---
+
+## 🎉 Black Friday Weekend Sale! 🛍️
+
+From **Black Friday to Cyber Monday**, enjoy **exclusive discounts** on all your favorite designs! Here’s what’s waiting for you:
+
+- **15% OFF** orders over $50 with code **SAVEMORE15**  
+- **20% OFF** orders over $75 with code **SAVEMORE20**  
+- **25% OFF** orders over $100 with code **SAVEMORE25**  
+- 🎁 **Free shipping** on all orders $50+!  
+
+🕒 **Hurry! These deals end at midnight on Cyber Monday (December 2nd).**
+
+[Start Shopping Now](https://shop.mylemans.online)
+
+---
+
+
 ### Quality Update
 I’m thrilled to announce that I’ve received the samples of our **Classic T-shirts and Mugs**, and I couldn’t be happier with the quality! Each shirt is soft, durable, and designed with care, while the mugs are sturdy and perfect for your daily coffee fix.
 
