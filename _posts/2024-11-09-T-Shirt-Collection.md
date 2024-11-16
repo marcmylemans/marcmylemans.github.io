@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: https://mylemans.online/assets/img/posts/Black Friday Sale Shop Ad.png
 layout: post
 title: "Mylemans Online T-Shirt Collection"
 date: 2024-11-09
