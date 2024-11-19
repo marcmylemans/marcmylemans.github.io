@@ -17,9 +17,9 @@ Welcome to the official Mylemans Online T-Shirt Collection! Each design is craft
 
 ---
 
-## 🎉 Black Friday Weekend Sale! 🛍️
+## 🎉 Black Friday Week Sale! 🛍️
 
-From **Black Friday to Cyber Monday**, enjoy **exclusive discounts** on all your favorite designs! Here’s what’s waiting for you:
+From **Friday 22/11/2024 to Cyber Monday**, enjoy **exclusive discounts** on all your favorite designs! Here’s what’s waiting for you:
 
 - **15% OFF** orders over $50 with code **SAVEMORE15**  
 - **20% OFF** orders over $75 with code **SAVEMORE20**  
