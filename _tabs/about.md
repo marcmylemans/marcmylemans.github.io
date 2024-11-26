@@ -16,7 +16,7 @@ At Mylemans Online, I strive to create a welcoming space for tech lovers of all 
 
 ## Join the Community
 
-But wait, there's more! I'm not just writing about tech; I'm also sharing my adventures on my YouTube channel. There, you'll find a treasure trove of video tutorials that brings my written content to life. If you're up for some visual tech thrills, head over to [my YouTube Channel](https://www.youtube.com/@marcmylemans) and hit that subscribe button. Together, we'll unlock the secrets of the tech universe in both written and video form.
+But wait, there's more! I'm not just writing about tech; I'm also sharing my adventures on my YouTube channel. There, you'll find a treasure trove of video tutorials that brings my written content to life. If you're up for some visual tech thrills, head over to [my YouTube Channel](https://www.youtube.com/@mylemansonline) and hit that subscribe button. Together, we'll unlock the secrets of the tech universe in both written and video form.
 
 {% include LiveSubsCount.html %}
 
