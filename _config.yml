@@ -9,27 +9,31 @@ theme: jekyll-theme-chirpy
 lang: en
 
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
-timezone: 
+timezone:
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Mylemans Online, Tech Tips, Trends & Tutorials # the main title
+title: Mylemans Online, Tech Tips, Trends & Tutorials   # the main title
 
-tagline: Helping You Master Tech! Tips, Blogs & Tutorials for All # it will display as the subtitle
+tagline: Helping You Master Tech! Tips, Blogs & Tutorials for All # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   Unlock tech with simple tips, blogs, and guides! From trends to troubleshooting, we offer expert insights for every tech user.
 
 # Fill in the protocol & hostname for your site.
-# E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://marcmylemans.github.io"
+# e.g. 'https://username.github.io', note that it does not end with a '/'.
+url: 'https://marcmylemans.github.io'
 
 github:
-  username: marcmylemans # change to your GitHub username
+  username: marcmylemans  # change to your github username
+
+#twitter:
+#  username: twitter_username # change to your twitter username
 
 youtube:
   channelid: UC1y0Dtbzss2I3mm45xPMm1Q
+
 
 social:
   # Change to your full name.
@@ -38,44 +42,21 @@ social:
   email: info@mylemans.online # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://github.com/marcmylemans # change to your GitHub homepage
+    - https://github.com/marcmylemans  # change to your github homepage
     - https://www.linkedin.com/in/marc-mylemans-887567b9/
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
 
-# Site Verification Settings
-webmaster_verifications:
-  google: google445ce971c729a3a8.html
-  bing: # fill in your Bing verification code
-  alexa: # fill in your Alexa verification code
-  yandex: # fill in your Yandex verification code
-  baidu: # fill in your Baidu verification code
-  facebook: # fill in your Facebook verification code
+google_site_verification: google445ce971c729a3a8.html # fill in to your verification string
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
 
 # Web Analytics Settings
-analytics:
-  google:
-    id: G-WPGGY562HQ
-  goatcounter:
-    id: # fill in your GoatCounter ID
-  umami:
-    id: # fill in your Umami ID
-    domain: # fill in your Umami domain
-  matomo:
-    id: # fill in your Matomo ID
-    domain: # fill in your Matomo domain
-  cloudflare:
-    id: # fill in your Cloudflare Web Analytics token
-  fathom:
-    id: # fill in your Fathom Site ID
+google_analytics:
+  id: G-WPGGY562HQ # fill in your Google Analytics ID
 
-# Page views settings
-pageviews:
-  provider: # now only supports 'goatcounter'
+  
 
 # Prefer color scheme setting.
 #
@@ -85,17 +66,17 @@ pageviews:
 #
 # Available options:
 #
-#     light — Use the light color scheme
-#     dark — Use the dark color scheme
+#     light  - Use the light color scheme
+#     dark   - Use the dark color scheme
 #
 theme_mode: # [light | dark]
 
-# The CDN endpoint for media resources.
+# The CDN endpoint for images.
 # Notice that once it is assigned, the CDN url
-# will be added to all media resources (site avatar, posts' images, audio and video files) paths starting with '/'
+# will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-cdn: "https://mylemans.online"
+img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
 avatar: https://avatars.githubusercontent.com/u/33804113?v=4
@@ -108,11 +89,10 @@ social_preview_image: # string, local or CORS resources
 toc: true
 
 comments:
-  # Global switch for the post-comment system. Keeping it empty means disabled.
-  provider: # [disqus | utterances | giscus]
-  # The provider options are as follows:
+  active: giscus # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
+  # The active options are as follows:
   disqus:
-    shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+    shortname: blog-mylemans-online # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
   utterances:
     repo: # <gh-username>/<repo>
@@ -128,7 +108,6 @@ comments:
     lang: # optional, default to the value of `site.lang`
     reactions_enabled: # optional, default to the value of `1`
 
-# Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
   self_host:
     enabled: # boolean, keep empty means false
@@ -137,14 +116,15 @@ assets:
     env: # [development | production]
 
 pwa:
-  enabled: true # The option for PWA feature (installable)
+  enabled: true # the option for PWA feature (installable)
   cache:
-    enabled: true # The option for PWA offline cache
+    enabled: true # the option for PWA offline cache
     # Paths defined here will be excluded from the PWA cache.
     # Usually its value is the `baseurl` of another website that
     # shares the same domain name as the current website.
     deny_paths:
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
+  
 
 paginate: 10
 
@@ -154,7 +134,6 @@ baseurl: ""
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
-  footnote_backlink: "&#8617;&#xfe0e;"
   syntax_highlighter: rouge
   syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
     css_class: highlight
@@ -191,6 +170,14 @@ defaults:
     values:
       layout: page
       permalink: /:title/
+  - scope:
+      path: assets/img/favicons
+    values:
+      swcache: true
+  - scope:
+      path: assets/js/dist
+    values:
+      swcache: true
 
 sass:
   style: compressed
@@ -211,7 +198,7 @@ exclude:
   - tools
   - README.md
   - LICENSE
-  - "*.config.js"
+  - rollup.config.js
   - package*.json
 
 jekyll-archives:
