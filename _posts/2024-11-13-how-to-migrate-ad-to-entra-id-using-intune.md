@@ -9,6 +9,9 @@ tags: [Entra ID, Azure AD, Microsoft Intune, Active Directory Migration, Autopil
 
 # Guide to Setting Up Autopilot and Migrating to Entra ID with Intune
 
+{% youtube "https://youtu.be/xrNkSVDas5E" %}
+
+
 ## 1. Creating an Autopilot Profile
 
 Windows Autopilot streamlines the setup of new devices, allowing users to get up and running with minimal IT intervention.
