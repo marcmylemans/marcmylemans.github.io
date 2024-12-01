@@ -59,7 +59,14 @@ Ensure your on-premises Active Directory users are synced with Microsoft Entra I
 
 #### 2. Guide Users to Register for MFA  
 1. Have users visit [https://aka.ms/mfasetup](https://aka.ms/mfasetup).  
-2. Walk them through setting up their preferred MFA method (e.g., the Microsoft Authenticator app).  
+2. Walk them through setting up their preferred MFA method (e.g., the Microsoft Authenticator app).
+
+> **Important:**
+> The sign-in behavior for Remote Desktop Gateway doesn't provide the option to enter a verification code with Microsoft Entra multifactor authentication. Users must be configured for phone verification or the Microsoft Authenticator App with **Approve**/**Deny** push notifications.
+>
+> - If neither phone verification nor the Microsoft Authenticator App with **Approve**/**Deny** push notifications is configured for a user, they won't be able to complete the Microsoft Entra multifactor authentication challenge and sign in to Remote Desktop Gateway.
+> - The SMS text method doesn't work with Remote Desktop Gateway because it doesn't provide the option to enter a verification code.
+
 
 ---
 
