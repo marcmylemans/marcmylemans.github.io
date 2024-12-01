@@ -337,11 +337,13 @@ Congrats! You've added a powerful layer of security to your RD Gateway with Micr
 
 ---
 
-## Watch the Video Guide  
+## Watch the Video Guide
 
-Need a visual walkthrough? Check out our detailed step-by-step video [here](https://www.youtube.com/watch?v=YourVideoID).  
+Need a visual walkthrough? Check out our detailed step-by-step video [here](https://youtu.be/b5WL7PgEmaY).
 
-[![Watch on YouTube](https://img.youtube.com/vi/YourVideoID/0.jpg)](https://www.youtube.com/watch?v=YourVideoID)  
+{% youtube "https://youtu.be/b5WL7PgEmaY" %}
+
+*This video links to an older recording. A new version based on this guide is currently being recorded and will be available as soon as possible.*
 
 ---
 
