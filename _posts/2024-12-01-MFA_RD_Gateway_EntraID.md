@@ -8,9 +8,8 @@ tags: [Multi-Factor Authentication, MFA, Microsoft Entra ID, Azure Active Direct
 ---
 
 
-## Simplify Your Remote Work Security: Set Up MFA for RD Gateway with Microsoft Entra ID
 
-Securing remote work access doesn't have to be complicated. Multi-factor authentication (MFA) is one of the most effective ways to protect your Remote Desktop Gateway (RD Gateway). This guide will walk you through how to integrate Microsoft Entra ID (formerly Azure Active Directory) with RD Gateway using the Network Policy Server (NPS) extension. No jargon—just clear steps to get you up and running with confidence.
+Securing remote work access doesn't have to be complicated. Multi-factor authentication (MFA) is one of the most effective ways to protect your Remote Desktop Gateway (RD Gateway). This guide will walk you through how to integrate Microsoft Entra ID (formerly Azure Active Directory) with RD Gateway using the Network Policy Server (NPS) extension.
 
 ---
 
