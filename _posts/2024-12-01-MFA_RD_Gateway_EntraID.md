@@ -82,12 +82,12 @@ Ensure your on-premises Active Directory users are synced with Microsoft Entra I
    ```powershell
    cd "C:\Program Files\Microsoft\AzureMfa\Config"
    ```
- 3. Run the setup script:
+3. Run the setup script:
    ```powershell
    .\AzureMfaNpsExtnConfigSetup.ps1
    ```
- 4. When prompted, sign in with your Microsoft Entra ID admin credentials.
- 5. Enter your Tenant ID when prompted (you can find this in the Microsoft Entra admin center under Azure Active Directory > Properties > Tenant ID).
+4. When prompted, sign in with your Microsoft Entra ID admin credentials.
+5. Enter your Tenant ID when prompted (you can find this in the Microsoft Entra admin center under Azure Active Directory > Properties > Tenant ID).
 
 
 ---
