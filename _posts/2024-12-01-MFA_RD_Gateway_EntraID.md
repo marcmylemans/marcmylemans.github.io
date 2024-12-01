@@ -94,6 +94,8 @@ Ensure your on-premises Active Directory users are synced with Microsoft Entra I
 
 ### Step 4: Configure NPS Components on Remote Desktop Gateway
 
+**Disclaimer:** The following steps are crucial and must be followed exactly as described to ensure proper integration of MFA with your RD Gateway. These instructions are based on the [official Microsoft documentation](https://learn.microsoft.com/en-us/entra/identity/authentication/howto-mfa-nps-extension-rdg#configure-nps-components-on-remote-desktop-gateway) to provide accurate guidance.
+
 In this step, we'll configure the Remote Desktop Gateway to communicate with the NPS server where the NPS extension is installed. This involves setting up connection authorization policies and adjusting RADIUS settings to ensure proper authentication flow between the RD Gateway and the NPS server.
 
 #### **a. Configure RD Gateway to Use Central NPS Policies**
