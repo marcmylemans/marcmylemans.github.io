@@ -13,7 +13,9 @@ categories: [Category 1, Category 2, Category 3]
 Script
 ```
 
-[Text](url)
+[Text](URL)
+
+{% youtube "https://youtu.be/" %}
 
 ## Prompts
 
