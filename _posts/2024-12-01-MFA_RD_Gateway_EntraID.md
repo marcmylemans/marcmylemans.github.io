@@ -118,10 +118,35 @@ A successful MFA prompt means your setup is good to go. If not, double-check sha
 
 ### Troubleshooting Like a Pro  
 
+If users are not receiving the MFA prompt or the connection fails during authentication, you may need to adjust the NPS extension settings to support your authentication methods.
+
+**Solution:**
+
+1. On the NPS server, open the **Registry Editor**.
+2. Navigate to the following key:
+   ```
+   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\AzureMfa
+   ```
+3. If the `AzureMfa` key doesn't exist, create it.
+4. Within the `AzureMfa` key, create a new **String Value** with the following details:
+- **Name**: `OVERRIDE_NUMBER_MATCHING_WITH_OTP`
+- **Value**: `FALSE`
+
+This configuration disables the number matching feature, which can interfere with certain authentication methods like TOTP codes when used with RD Gateway.
+
+5. Close the Registry Editor.
+6. Restart the **Network Policy Server (NPS)** service for the changes to take effect.
+
+**Explanation:**
+
+This registry setting tells the NPS extension not to enforce number matching, which can cause issues with RD Gateway connections if users are registered for certain MFA methods like TOTP codes. Setting the value to `FALSE` allows the NPS extension to fallback to push notifications or phone call methods that are compatible with RD Gateway.
+
 If you run into issues:  
 - **Event Logs:** Check **Event Viewer** > **Microsoft** > **AzureMfa** for errors.  
 - **Verify MFA Registration:** Ensure users are correctly set up in [https://aka.ms/mfasetup](https://aka.ms/mfasetup).  
-- **Network Connectivity:** Confirm RD Gateway can reach your NPS server over the required ports.  
+- **Network Connectivity:** Confirm RD Gateway can reach your NPS server over the required ports.
+
+
 
 ---
 
