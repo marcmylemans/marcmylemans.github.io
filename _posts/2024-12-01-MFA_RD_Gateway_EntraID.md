@@ -329,14 +329,6 @@ Congrats! You've added a powerful layer of security to your RD Gateway with Micr
 
 ---
 
-## Pro Tips for Continued Success  
-
-- Regularly audit MFA settings and encourage users to update their methods.  
-- Monitor logs for any suspicious activity.  
-- Explore Conditional Access policies for even greater security.  
-
----
-
 ## Watch the Video Guide
 
 Need a visual walkthrough? Check out our detailed step-by-step video [here](https://youtu.be/b5WL7PgEmaY).
@@ -349,6 +341,3 @@ Need a visual walkthrough? Check out our detailed step-by-step video [here](http
 
 We’d love to hear from you! Did this guide help? Drop us a comment or connect with us on social media.  
 
----
-
-**Secure your future—one step at a time.**
