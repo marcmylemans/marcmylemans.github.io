@@ -119,6 +119,13 @@ Remote Desktop Connection Authorization Policies (RD CAPs) define who can connec
 
    - Click **Add**.
    - In the **Shared Secret** dialog box, enter a **shared secret**. This is a password that establishes trust between the RD Gateway and the NPS server. Make sure to create a strong, complex password and keep it secure.
+     - **Tip:** A quick and easy way to generate a random, strong password is to open PowerShell and run the following command:
+
+       ```powershell
+       new-guid
+       ```
+
+       This command generates a new GUID, which you can use as your shared secret.
    - Click **OK** to save.
 
 5. **Finalize Configuration:**
