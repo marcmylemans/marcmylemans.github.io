@@ -14,7 +14,7 @@ Securing remote work access doesn't have to be complicated. Multi-Factor Authent
 
 ---
 
-### Why This Matters  
+## Why This Matters  
 
 In a world of remote work, safeguarding sensitive company data is crucial. By adding MFA to your RD Gateway, you add an essential extra layer of defense. This setup not only protects against unauthorized access but also enhances trust within your IT ecosystem.
 
@@ -26,7 +26,7 @@ Here’s what you’ll achieve by the end of this guide:
 
 ---
 
-### Ready to Get Started?  
+## Ready to Get Started?  
 
 Before diving in, make sure you have:
 
@@ -38,26 +38,26 @@ Before diving in, make sure you have:
 
 ---
 
-### Step 1: Prepping Your Environment  
+## Step 1: Prepping Your Environment  
 
-#### 1. Install the NPS Role  
+### 1. Install the NPS Role  
 1. Open **Server Manager** on your NPS-designated server.  
 2. Select **Add roles and features** and proceed to **Server Roles**.  
 3. Check **Network Policy and Access Services**, then complete the wizard.  
 
-#### 2. Sync Users with Microsoft Entra ID  
+### 2. Sync Users with Microsoft Entra ID  
 Ensure your on-premises Active Directory users are synced with Microsoft Entra ID using **Azure AD Connect**. This allows seamless integration of existing accounts.  
 
 ---
 
-### Step 2: Setting Up MFA in Microsoft Entra ID  
+## Step 2: Setting Up MFA in Microsoft Entra ID  
 
-#### 1. Enable MFA for Users  
+### 1. Enable MFA for Users  
 1. Log in to the [Microsoft Entra admin center](https://entra.microsoft.com).  
 2. Navigate to **Users** > **All Users**, then select the desired accounts.  
 3. Click **Multi-Factor Authentication** and enable MFA for selected users.  
 
-#### 2. Guide Users to Register for MFA  
+### 2. Guide Users to Register for MFA  
 1. Have users visit [https://aka.ms/mfasetup](https://aka.ms/mfasetup).  
 2. Walk them through setting up their preferred MFA method (e.g., the Microsoft Authenticator app).
 
@@ -70,13 +70,13 @@ Ensure your on-premises Active Directory users are synced with Microsoft Entra I
 
 ---
 
-### Step 3: Installing the NPS Extension  
+## Step 3: Installing the NPS Extension  
 
-#### 1. Download & Install  
+### 1. Download & Install  
 - Download the NPS extension for Microsoft Entra ID [here](https://aka.ms/npsmfa).  
 - Run the installer on your NPS server and follow the prompts.  
 
-#### 2. Configure the Extension  
+### 2. Configure the Extension  
 1. Open **PowerShell** as an administrator.  
 2. Navigate to the config folder:  
    ```powershell
@@ -92,13 +92,13 @@ Ensure your on-premises Active Directory users are synced with Microsoft Entra I
 
 ---
 
-### Step 4: Configure NPS Components on Remote Desktop Gateway
+## Step 4: Configure NPS Components on Remote Desktop Gateway
 
 **Disclaimer:** The following steps are crucial and must be followed exactly as described to ensure proper integration of MFA with your RD Gateway. These instructions are based on the [official Microsoft documentation](https://learn.microsoft.com/en-us/entra/identity/authentication/howto-mfa-nps-extension-rdg#configure-nps-components-on-remote-desktop-gateway) to provide accurate guidance.
 
 In this step, we'll configure the Remote Desktop Gateway to communicate with the NPS server where the NPS extension is installed. This involves setting up connection authorization policies and adjusting RADIUS settings to ensure proper authentication flow between the RD Gateway and the NPS server.
 
-#### **Configure RD Gateway to Use Central NPS Policies**
+### **Configure RD Gateway to Use Central NPS Policies**
 
 Remote Desktop Connection Authorization Policies (RD CAPs) define who can connect through the RD Gateway. By default, these policies are stored locally, but we'll configure the RD Gateway to use a central NPS server for these policies.
 
@@ -134,7 +134,7 @@ Remote Desktop Connection Authorization Policies (RD CAPs) define who can connec
 
    - Click **OK** to close the RD Gateway Properties dialog box.
 
-#### **Adjust RADIUS Timeout Values**
+### **Adjust RADIUS Timeout Values**
 
 To allow enough time for MFA authentication, we need to adjust the RADIUS timeout settings on the RD Gateway server.
 
@@ -168,7 +168,7 @@ To allow enough time for MFA authentication, we need to adjust the RADIUS timeou
    - Click **OK** to close the **Edit RADIUS Server** dialog.
    - Click **OK** again to close the **TS GATEWAY SERVER GROUP Properties** dialog.
 
-#### **Verify Connection Request Policies**
+### **Verify Connection Request Policies**
 
 Ensure that the RD Gateway is correctly forwarding authentication requests to the NPS server.
 
@@ -190,11 +190,11 @@ Ensure that the RD Gateway is correctly forwarding authentication requests to th
 
    - Click **Cancel** to close the properties dialog.
 
-#### **Configure NPS Server to Accept Requests from RD Gateway**
+### **Configure NPS Server to Accept Requests from RD Gateway**
 
 Now, we'll configure the NPS server (where the NPS extension is installed) to accept RADIUS requests from the RD Gateway server.
 
-##### **Register NPS Server in Active Directory**
+#### **Register NPS Server in Active Directory**
 
 1. **Open Network Policy Server Console:**
 
@@ -206,7 +206,7 @@ Now, we'll configure the NPS server (where the NPS extension is installed) to ac
    - In the **NPS (Local)** console, right-click **NPS (Local)** and select **Register server in Active Directory**.
    - Click **OK** twice to confirm.
 
-##### **Add RD Gateway as a RADIUS Client**
+#### **Add RD Gateway as a RADIUS Client**
 
 1. **Create New RADIUS Client:**
 
@@ -222,7 +222,7 @@ Now, we'll configure the NPS server (where the NPS extension is installed) to ac
 
    - Click **OK** to add the RD Gateway as a RADIUS client.
 
-##### **Create Network Policy for RD Gateway Connections**
+#### **Create Network Policy for RD Gateway Connections**
 
 1. **Duplicate Existing Policy:**
 
@@ -254,9 +254,9 @@ Now, we'll configure the NPS server (where the NPS extension is installed) to ac
 
 ---
 
-### Step 5: Verify the Configuration
+## Step 5: Verify the Configuration
 
-#### **a. Test the Connection**
+### **Test the Connection**
 
 1. **Set Up Remote Desktop Connection:**
 
@@ -282,14 +282,14 @@ Now, we'll configure the NPS server (where the NPS extension is installed) to ac
    - Approve the MFA prompt using your registered method.
    - Once authenticated, you should gain access to the remote resource.
 
-#### **b. Confirm Access**
+### **Confirm Access**
 
 - If you successfully connect, your configuration is correct.
 - If not, revisit the previous steps to ensure all settings are properly configured.
 
 ---
 
-### Troubleshooting Like a Pro  
+## Troubleshooting Like a Pro  
 
 If users are not receiving the MFA prompt or the connection fails during authentication, you may need to adjust the NPS extension settings to support your authentication methods.
 
@@ -323,13 +323,13 @@ If you run into issues:
 
 ---
 
-### Conclusion  
+## Conclusion  
 
 Congrats! You've added a powerful layer of security to your RD Gateway with Microsoft Entra ID. Your organization’s remote access is now safer, and your users can work confidently knowing their data is protected.  
 
 ---
 
-### Pro Tips for Continued Success  
+## Pro Tips for Continued Success  
 
 - Regularly audit MFA settings and encourage users to update their methods.  
 - Monitor logs for any suspicious activity.  
@@ -337,7 +337,7 @@ Congrats! You've added a powerful layer of security to your RD Gateway with Micr
 
 ---
 
-### Watch the Video Guide  
+## Watch the Video Guide  
 
 Need a visual walkthrough? Check out our detailed step-by-step video [here](https://www.youtube.com/watch?v=YourVideoID).  
 
