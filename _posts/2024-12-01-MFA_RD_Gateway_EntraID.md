@@ -306,6 +306,7 @@ If users are not receiving the MFA prompt or the connection fails during authent
 - **Value**: `FALSE`
 
 > This configuration disables the number matching feature, which can interfere with certain authentication methods like TOTP codes when used with RD Gateway.
+{: .prompt-info }
 
 5. Close the Registry Editor.
 6. Restart the **Network Policy Server (NPS)** service for the changes to take effect.
