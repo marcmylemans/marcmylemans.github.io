@@ -10,7 +10,7 @@ tags: [Multi-Factor Authentication, MFA, Microsoft Entra ID, Azure Active Direct
 
 ## Simplify Your Remote Work Security: Set Up MFA for RD Gateway with Microsoft Entra ID
 
-Securing remote work access doesn't have to be complicated. Multi-Factor Authentication (MFA) is one of the most effective ways to protect your Remote Desktop Gateway (RD Gateway). This guide will walk you through how to integrate Microsoft Entra ID (formerly Azure Active Directory) with RD Gateway using the Network Policy Server (NPS) extension. No jargon—just clear steps to get you up and running with confidence.
+Securing remote work access doesn't have to be complicated. Multi-factor authentication (MFA) is one of the most effective ways to protect your Remote Desktop Gateway (RD Gateway). This guide will walk you through how to integrate Microsoft Entra ID (formerly Azure Active Directory) with RD Gateway using the Network Policy Server (NPS) extension. No jargon—just clear steps to get you up and running with confidence.
 
 ---
 
@@ -30,8 +30,8 @@ Here’s what you’ll achieve by the end of this guide:
 
 Before diving in, make sure you have:
 
-1. **An RD Gateway Server:** Installed and operational.  
-2. **Microsoft Entra ID:** With user accounts synced via Azure AD Connect.  
+1. **An RD Gateway Server:** [Installed and operational](https://mylemans.online/posts/Remote-Desktop-Services-Part1/).  
+2. **Microsoft Entra ID:** [With user accounts synced](https://mylemans.online/posts/EntraID_Cloud_Sync_SSO/).  
 3. **Microsoft Entra P1 or P2 License:** Required for MFA functionality.  
 4. **NPS Role:** Installed on a domain member server or controller.  
 5. **Administrator Access:** To configure server settings and Microsoft Entra ID.  
@@ -46,7 +46,7 @@ Before diving in, make sure you have:
 3. Check **Network Policy and Access Services**, then complete the wizard.  
 
 ### 2. Sync Users with Microsoft Entra ID  
-Ensure your on-premises Active Directory users are synced with Microsoft Entra ID using **Azure AD Connect**. This allows seamless integration of existing accounts.  
+Please make sure your on-premises Active Directory users are synced with [Microsoft Entra ID](https://mylemans.online/posts/EntraID_Cloud_Sync_SSO/). This allows seamless integration of existing accounts.  
 
 ---
 
@@ -61,11 +61,11 @@ Ensure your on-premises Active Directory users are synced with Microsoft Entra I
 1. Have users visit [https://aka.ms/mfasetup](https://aka.ms/mfasetup).  
 2. Walk them through setting up their preferred MFA method (e.g., the Microsoft Authenticator app).
 
-> **Important:**
 > The sign-in behavior for Remote Desktop Gateway doesn't provide the option to enter a verification code with Microsoft Entra multifactor authentication. Users must be configured for phone verification or the Microsoft Authenticator App with **Approve**/**Deny** push notifications.
 >
 > - If neither phone verification nor the Microsoft Authenticator App with **Approve**/**Deny** push notifications is configured for a user, they won't be able to complete the Microsoft Entra multifactor authentication challenge and sign in to Remote Desktop Gateway.
 > - The SMS text method doesn't work with Remote Desktop Gateway because it doesn't provide the option to enter a verification code.
+{: .prompt-warning }
 
 
 ---
@@ -86,8 +86,8 @@ Ensure your on-premises Active Directory users are synced with Microsoft Entra I
    ```powershell
    .\AzureMfaNpsExtnConfigSetup.ps1
    ```
-4. When prompted, sign in with your Microsoft Entra ID admin credentials.
-5. Enter your Tenant ID when prompted (you can find this in the Microsoft Entra admin center under Azure Active Directory > Properties > Tenant ID).
+4. sign in with your Microsoft Entra ID admin credentials when prompted.
+5. Enter your Tenant ID when prompted (you can find this in the Microsoft Entra admin center under Identity > Overview).
 
 
 ---
