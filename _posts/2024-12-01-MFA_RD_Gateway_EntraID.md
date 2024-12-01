@@ -98,7 +98,7 @@ Ensure your on-premises Active Directory users are synced with Microsoft Entra I
 
 In this step, we'll configure the Remote Desktop Gateway to communicate with the NPS server where the NPS extension is installed. This involves setting up connection authorization policies and adjusting RADIUS settings to ensure proper authentication flow between the RD Gateway and the NPS server.
 
-#### **a. Configure RD Gateway to Use Central NPS Policies**
+#### **Configure RD Gateway to Use Central NPS Policies**
 
 Remote Desktop Connection Authorization Policies (RD CAPs) define who can connect through the RD Gateway. By default, these policies are stored locally, but we'll configure the RD Gateway to use a central NPS server for these policies.
 
@@ -134,7 +134,7 @@ Remote Desktop Connection Authorization Policies (RD CAPs) define who can connec
 
    - Click **OK** to close the RD Gateway Properties dialog box.
 
-#### **b. Adjust RADIUS Timeout Values**
+#### **Adjust RADIUS Timeout Values**
 
 To allow enough time for MFA authentication, we need to adjust the RADIUS timeout settings on the RD Gateway server.
 
@@ -168,7 +168,7 @@ To allow enough time for MFA authentication, we need to adjust the RADIUS timeou
    - Click **OK** to close the **Edit RADIUS Server** dialog.
    - Click **OK** again to close the **TS GATEWAY SERVER GROUP Properties** dialog.
 
-#### **c. Verify Connection Request Policies**
+#### **Verify Connection Request Policies**
 
 Ensure that the RD Gateway is correctly forwarding authentication requests to the NPS server.
 
@@ -190,11 +190,11 @@ Ensure that the RD Gateway is correctly forwarding authentication requests to th
 
    - Click **Cancel** to close the properties dialog.
 
-#### **d. Configure NPS Server to Accept Requests from RD Gateway**
+#### **Configure NPS Server to Accept Requests from RD Gateway**
 
 Now, we'll configure the NPS server (where the NPS extension is installed) to accept RADIUS requests from the RD Gateway server.
 
-**i. Register NPS Server in Active Directory**
+##### **Register NPS Server in Active Directory**
 
 1. **Open Network Policy Server Console:**
 
@@ -206,7 +206,7 @@ Now, we'll configure the NPS server (where the NPS extension is installed) to ac
    - In the **NPS (Local)** console, right-click **NPS (Local)** and select **Register server in Active Directory**.
    - Click **OK** twice to confirm.
 
-**ii. Add RD Gateway as a RADIUS Client**
+##### **Add RD Gateway as a RADIUS Client**
 
 1. **Create New RADIUS Client:**
 
@@ -222,7 +222,7 @@ Now, we'll configure the NPS server (where the NPS extension is installed) to ac
 
    - Click **OK** to add the RD Gateway as a RADIUS client.
 
-**iii. Create Network Policy for RD Gateway Connections**
+##### **Create Network Policy for RD Gateway Connections**
 
 1. **Duplicate Existing Policy:**
 
