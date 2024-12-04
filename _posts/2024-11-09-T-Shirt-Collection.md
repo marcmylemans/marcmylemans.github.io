@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/abfa461d1908.png
+image: https://mylemans.online/assets/img/posts/ac79f6204b4f.png
 layout: post
 title: "Mylemans Online T-Shirt Collection"
 date: 2024-11-09
@@ -17,26 +17,9 @@ Welcome to the official Mylemans Online T-Shirt Collection! Each design is craft
 
 ---
 
-## 🎉 Black Friday Week Sale! 🛍️
-
-From **Friday 22/11/2024 to Cyber Monday**, enjoy **exclusive discounts** on all your favorite designs! Here’s what’s waiting for you:
-
-- **15% OFF** orders over $50 with code **SAVEMORE15**  
-- **20% OFF** orders over $75 with code **SAVEMORE20**  
-- **25% OFF** orders over $100 with code **SAVEMORE25**  
-- 🎁 **Free shipping** on all orders $50+!  
-
-🕒 **Hurry! These deals end at midnight on Cyber Monday (December 2nd).**
-
 [Start Shopping Now](https://shop.mylemans.online)
 
 ---
-
-
-### Quality Update
-I’m thrilled to announce that I’ve received the samples of our **Classic T-shirts and Mugs**, and I couldn’t be happier with the quality! Each shirt is soft, durable, and designed with care, while the mugs are sturdy and perfect for your daily coffee fix.
-
-**Note:** The desk mats are currently stuck in customs, and due to shipping delays and unexpected fees, I may remove them from the shop for now. However, I’m actively seeking a reliable supplier and hope to bring them back soon. Thank you for your patience!
 
 
 ## Featured T-Shirt Collection
