@@ -32,7 +32,17 @@ Set-VMSwitch -Name vSwitchName -EnableSoftwareRsc $false
 ```powershell
 netsh int tcp set global rsc=disabled
 ```
-  
+
+
+```powershell
+Get-NetAdapterVmq
+```
+
+```powershell
+Set-NetAdapterVmq -Name “NICName” -Enabled $False
+```
+
+
 [Text](URL)
 
 {% youtube "https://youtu.be/" %}
