@@ -26,7 +26,7 @@ Get-VMSwitch | Select-Object *RSC*
 ```
 
 ```powershell
-Set-VMSwitch -Name vSwitchName -EnableSoftwareRsc $false
+Set-VMSwitch -Name vSwitch -EnableSoftwareRsc $false
 ```
 
 ```powershell
