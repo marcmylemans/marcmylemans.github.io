@@ -1,0 +1,23 @@
+# Output file path
+$outputFile = "C:\temp\switch_config.txt"
+
+# Number of interfaces
+$startInterface = 1
+$endInterface = 28
+
+# Clear existing file content
+Clear-Content -Path $outputFile -ErrorAction SilentlyContinue
+
+# Loop through the interfaces and generate the configuration
+for ($i = $startInterface; $i -le $endInterface; $i++) {
+    $interfaceConfig = @"
+interface 1/1/$i
+vlan trunk native 1
+vlan trunk allowed all
+exit
+"@
+    # Append configuration to the output file
+    Add-Content -Path $outputFile -Value $interfaceConfig
+}
+
+Write-Host "Configuration file generated at $outputFile"
