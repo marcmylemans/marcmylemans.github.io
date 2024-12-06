@@ -25,8 +25,13 @@ Set-VMSwitchTeam -Name "vSwitch" -NetAdapterName "PCIe Slot 1 Port 1","PCIe Slot
 Get-VMSwitch | Select-Object *RSC*
 ```
 
+```powershell
+Set-VMSwitch -Name vSwitchName -EnableSoftwareRsc $false
+```
 
-
+```powershell
+netsh int tcp set global rsc=disabled
+```
   
 [Text](URL)
 
