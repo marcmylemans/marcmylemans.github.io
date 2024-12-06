@@ -1,0 +1,50 @@
+---
+image: https://mylemans.online/assets/img/posts/Default.jpg
+layout: post
+title: "Hyper-V Config"
+date: 2024-12-06
+categories: [Category 1, Category 2]
+---
+
+
+## Header 2
+
+```powershell
+Get-NetAdapter
+```
+
+```powershell
+New-VMSwitch -Name "vSwitch" -NetAdapterName "PCIe Slot 1 Port 1" -EnableEmbeddedTeaming $true
+```
+  
+```powershell
+Set-VMSwitchTeam -Name "vSwitch" -NetAdapterName "PCIe Slot 1 Port 1","PCIe Slot 1 Port 2"
+```
+  
+```powershell
+Get-VMSwitch | Select-Object *RSC*
+```
+
+
+
+  
+[Text](URL)
+
+{% youtube "https://youtu.be/" %}
+
+## Prompts
+
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+> An example showing the `tip` type prompt.
+{: .prompt-tip }
+
+> An example showing the `info` type prompt.
+{: .prompt-info }
+
+> An example showing the `warning` type prompt.
+{: .prompt-warning }
+
+> An example showing the `danger` type prompt.
+{: .prompt-danger }
+<!-- markdownlint-restore -->
