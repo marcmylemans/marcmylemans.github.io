@@ -2,6 +2,7 @@
 image: https://mylemans.online/assets/img/posts/Default.jpg
 layout: post
 title: How to Resolve Identity Management for UNIX Upgrade Blocks on Windows Server
+date: 2024-12-09
 categories: [Windows, Server 2012R2]
 tags: [upgrade, domain controller, server 2012 r2, server 2019, adprep, tutorial, youtube, nis]
 ---
