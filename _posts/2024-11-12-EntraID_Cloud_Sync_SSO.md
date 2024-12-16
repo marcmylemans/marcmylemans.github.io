@@ -129,6 +129,26 @@ Check that a new computer account (`AZUREADSSOACC`) has been created in Active D
 
 In the Group Policy Management Console, configure policies to assign Microsoft’s autologon URL to the Intranet zone. Link the GPO to the OU containing your synced users to complete the setup.
 
+#### Enable TLS 1.2 for Server 2016 and up.
+
+Save the following content as **Enable_TSL1_2.reg** and execute to enable TLS 1.2 on your server.
+After applying these registery values you will have to restart your server.
+
+```
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\TLS 1.2]
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\TLS 1.2\Client]
+"DisabledByDefault"=dword:00000000
+"Enabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\TLS 1.2\Server]
+"Enabled"=dword:00000001
+"DisabledByDefault"=dword:00000000
+
+```
+
 ### Optional: Setting Up Cloud Kerberos Trust
 
 For enhanced integration, consider using Cloud Sync with Cloud Kerberos Trust. This additional setup allows for seamless authentication across environments.
