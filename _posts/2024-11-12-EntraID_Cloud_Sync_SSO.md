@@ -7,6 +7,8 @@ categories: [Cloud, Identity Management]
 tags: [microsoft entra, azure ad, cloud sync, single sign-on, sso, active directory, identity, hybrid cloud]
 ---
 
+{% include google-adsense.html %}
+
 In today's tech-driven workplaces, managing user identities across various platforms can be challenging. Connecting your local Active Directory to Microsoft Entra ID (formerly Azure Active Directory) simplifies user management, enhances security, and improves the sign-on experience. This guide walks you through the entire setup process, from adding a custom domain to enabling single sign-on.
 
 {% youtube "https://youtu.be/dqQkp4_Lmhg" %}
