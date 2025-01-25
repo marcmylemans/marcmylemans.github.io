@@ -7,6 +7,8 @@ tags: [azure, conditional access, powershell, export, import, tutorial, youtube]
 
 ---
 
+{% include google-adsense.html %}
+
 # Export and Import Azure Conditional Access Policies
 
 This guide provides PowerShell scripts to export and import Azure conditional access policies using Microsoft Graph. The scripts require the `Microsoft.Graph` and `Microsoft.Graph.Beta` modules.
