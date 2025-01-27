@@ -6,6 +6,8 @@ tags: [server 2022, rdp, remote desktop services, rds, office 365, shared licens
 title: Installing Office 365 on a Remote Desktop Host!
 ---
 
+{% include google-adsense.html %}
+
 {% youtube "https://youtu.be/4wO82is6y40" %}
 
 ---
