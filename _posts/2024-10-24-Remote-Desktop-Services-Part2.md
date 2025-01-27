@@ -7,6 +7,8 @@ categories: [Windows Server, Remote Desktop Services]
 tags: [windows server 2022, remote desktop services, rds, microsoft office, group policy, admx, office 365, office deployment tool, remote apps, fslogix]
 ---
 
+{% include google-adsense.html %}
+
 # A Step-by-Step Guide to Installing and Configuring Office on Remote Desktop Services
 
 Hey there! Welcome to our follow-up guide on Remote Desktop Services (RDS). If you've already set up your RDS environment with Windows Server 2022 from our previous tutorial, congrats—you've laid a solid foundation! Now, we’re going to make your setup even more productive by installing and configuring Office applications. And hey, we’ll even throw in a few power tips using ADMX files for Group Policy, so you can enhance productivity with minimal manual work. Let’s dive in!
