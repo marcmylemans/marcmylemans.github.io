@@ -7,6 +7,8 @@ title: Windows hello - Disable PIN
 
 ---
 
+{% include google-adsense.html %}
+
 
 ### Introduction:
 
