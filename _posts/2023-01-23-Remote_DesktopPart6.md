@@ -6,6 +6,8 @@ categories: [Windows, Server 2022]
 tags: [server 2022, rdp, remote desktop services, rds, remoteapp, tutorial, youtube, part6]
 ---
 
+{% include google-adsense.html %}
+
 {% youtube "https://youtu.be/hdwa0Wq1XTI" %}
 
 ---
