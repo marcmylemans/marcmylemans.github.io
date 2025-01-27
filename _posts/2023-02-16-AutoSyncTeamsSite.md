@@ -5,6 +5,8 @@ categories: [Azure, Intune]
 tags: [sharepoint, teams, onedrive, azure, sync, tutorial]
 ---
 
+{% include google-adsense.html %}
+
 This setting lets you specify SharePoint team site libraries to sync automatically the next time users sign in to the OneDrive sync app (OneDrive.exe), within an eight-hour window, to help distribute network load. To use this setting, the computer must be running Windows 10 Fall Creators Update (version 1709) or later, and you must enable OneDrive Files On-Demand. This feature is not enabled for on-premises SharePoint sites.
 
 If you enable this setting, the OneDrive sync app automatically syncs the contents of the libraries you specified as online-only files the next time the user signs in. The user isn't able to stop syncing the libraries.
