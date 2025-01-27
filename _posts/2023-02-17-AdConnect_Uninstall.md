@@ -5,6 +5,8 @@ categories: [Windows, Server]
 tags: [azure, domain controller, adconnect, sync, uninstall, tutorial]
 ---
 
+{% include google-adsense.html %}
+
 In this article we are going to uninstall AD Connect because the customer is fully migrated to the cloud.
 
 On the server where AD Connect is installed run the following powershell commands:
