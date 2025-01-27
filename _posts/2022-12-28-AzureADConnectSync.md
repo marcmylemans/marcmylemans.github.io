@@ -7,6 +7,8 @@ tags: [server 2022, azure ad, azure ad connect, active directory, sync, tutorial
 title: Server 2022 - Azure AD Connect Sync
 ---
 
+{% include google-adsense.html %}
+
 {% youtube "https://youtu.be/2XeRcNKzuUM" %}
 
 Embark on a journey to integrate your Windows Server 2022 Active Directory with Azure AD in this detailed tutorial. We’re covering the crucial steps to synchronize your on-premises AD with Azure, paving the way for a more connected and efficient network infrastructure.
