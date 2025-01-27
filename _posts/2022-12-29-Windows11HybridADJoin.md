@@ -7,6 +7,8 @@ tags: [windows 11, server 2022, azure, hybrid join, active directory, tutorial, 
 title: Windows 11 - Active Directory - Hybrid Join - Azure AD
 ---
 
+{% include google-adsense.html %}
+
 {% youtube "https://youtu.be/HpDysxGxwR8" %}
 
 Welcome to our latest tutorial where we dive into configuring Hybrid Azure AD Join in an Active Directory environment. This setup is pivotal for organizations looking to leverage the benefits of both on-premises Active Directory and Azure AD with Windows 11.
