@@ -7,6 +7,8 @@ categories: [Shop, Apparel]
 pin: true
 ---
 
+{% include google-adsense.html %}
+
 Welcome to the official Mylemans Online T-Shirt Collection! Each design is crafted with tech enthusiasts in mind, combining humor, inspiration, and style. Perfect for anyone passionate about coding, data, and IT. Explore our collection and take advantage of our **special promotions** below!
 
 
