@@ -6,6 +6,8 @@ categories: [Windows, Server 2012R2]
 tags: [upgrade, domain controller, server 2012 r2, server 2019, adprep, tutorial, youtube]
 ---
 
+{% include google-adsense.html %}
+
 {% youtube "https://youtu.be/61H8PYeK0sw" %}
 
 Welcome to our tutorial on upgrading an older Server 2012 R2 domain controller to Server 2019. While the typical approach involves installing a new domain controller and migrating FSMO roles, there are scenarios where an in-place upgrade is necessary. This video guides you through this process.
