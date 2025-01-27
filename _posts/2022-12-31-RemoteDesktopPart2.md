@@ -7,6 +7,8 @@ tags: [server 2022, rdp, remote desktop services, rds, group policy, tutorial, y
 title: Server 2022 - Remote Desktop Services - Part 2
 ---
 
+{% include google-adsense.html %}
+
 {% youtube "https://youtu.be/rmZewkdN91U" %}
 
 ---
