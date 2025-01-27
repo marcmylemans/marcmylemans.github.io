@@ -6,6 +6,8 @@ tags: [server 2022, gpo, windows 11, urbackup, backup, client, tutorial, youtube
 title: UrBackup - Deploying Clients with GPO!
 ---
 
+{% include google-adsense.html %}
+
 In this video we will be using our Group Policy to deploy the UrBackup client to all our Servers and Workstations.
 
 {% youtube "https://youtu.be/OPYVI60i54w" %}
