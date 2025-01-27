@@ -7,6 +7,8 @@ categories: [Cloud Computing, Endpoint Management]
 tags: [Entra ID, Azure AD, Microsoft Intune, Active Directory Migration, Autopilot, Group Policy Migration, Device Enrollment, Company Portal, Application Deployment, Remote Work, Cloud Kerberos Trust, Windows Hello, OneDrive, Microsoft Edge, Modern Workplace, MDM]
 ---
 
+{% include google-adsense.html %}
+
 # Guide to Setting Up Autopilot and Migrating to Entra ID with Intune
 
 {% youtube "https://youtu.be/xrNkSVDas5E" %}
