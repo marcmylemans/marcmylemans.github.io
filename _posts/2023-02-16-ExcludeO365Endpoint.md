@@ -6,6 +6,8 @@ categories: [Azure, Exchange]
 tags: [exchange, office365, migration, azure, autodiscover, troubleshooting]
 ---
 
+{% include google-adsense.html %}
+
 During a migration from an Onpremise Exchange to O365 i encountered the issue that Outlook would ask for the credentials from O365.
 Because the mailbox was still on the Onpremise Exchange Outlook could not find a mailbox.
 
