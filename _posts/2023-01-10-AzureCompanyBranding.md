@@ -6,6 +6,8 @@ tags: [azure, intune, company branding, azure ad, tutorial, youtube]
 title: Azure - Company Branding
 ---
 
+{% include google-adsense.html %}
+
 In this video we will be adding some Company Branding to our Azure Tenant.
 
 {% youtube "https://youtu.be/bJML_P-Ir_0" %}
