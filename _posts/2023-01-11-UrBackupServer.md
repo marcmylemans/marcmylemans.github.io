@@ -6,6 +6,8 @@ tags: [server 2022, gpo, windows 11, urbackup, backup, tutorial, youtube]
 title: UrBackup - Installing the Backup Server!
 ---
 
+{% include google-adsense.html %}
+
 In this video we will be installing a UrBackup backup server for our Lab!
 
 {% youtube "https://youtu.be/ig6by0vgpyQ" %}
