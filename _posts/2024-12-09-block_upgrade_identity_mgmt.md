@@ -7,6 +7,8 @@ categories: [Windows, Server 2012R2]
 tags: [upgrade, domain controller, server 2012 r2, server 2019, adprep, tutorial, youtube, nis]
 ---
 
+{% include google-adsense.html %}
+
 
 ## Introduction
 Upgrading Windows Server from **2008 R2 to 2012 R2** or **2012 R2 to 2019** often encounters a roadblock due to the presence of **Identity Management for UNIX (IDMU)**. This guide provides step-by-step instructions to fix the issue, including removing IDMU components and editing the `compliance.ini` file to bypass upgrade checks.
