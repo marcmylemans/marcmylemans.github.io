@@ -7,6 +7,8 @@ categories: [Active Directory, Group Policy]
 ---
 
 
+{% include google-adsense.html %}
+
 
 Now that you've got the basics of creating and managing Group Policies and importing ADMX files down, it’s time to dig a bit deeper. Let’s talk about the different types of policies you can apply, how to structure them efficiently, and some best practices to keep your environment scalable and easy to manage.
 
