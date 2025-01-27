@@ -7,6 +7,8 @@ tags: [server 2022, rdp, remote desktop services, rds, fslogix, tutorial, youtub
 title: Remote Desktop Services - FSLogix
 ---
 
+{% include google-adsense.html %}
+
 {% youtube "https://youtu.be/rmZewkdN91U" %}
 
 ---
