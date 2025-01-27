@@ -7,6 +7,8 @@ categories: [Remote Desktop Services, Security]
 tags: [Multi-Factor Authentication, MFA, Microsoft Entra ID, Azure Active Directory, NPS Extension, Remote Desktop Gateway, RD Gateway, Network Policy Server, NPS, RADIUS, Step-by-Step Guide, Remote Access, Secure Remote Access, Authentication, IT Infrastructure, Windows Server, Azure MFA]
 ---
 
+{% include google-adsense.html %}
+
 
 
 Securing remote work access doesn't have to be complicated. Multi-factor authentication (MFA) is one of the most effective ways to protect your Remote Desktop Gateway (RD Gateway). This guide will walk you through how to integrate Microsoft Entra ID (formerly Azure Active Directory) with RD Gateway using the Network Policy Server (NPS) extension.
