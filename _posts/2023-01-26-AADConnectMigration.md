@@ -5,6 +5,8 @@ categories: [Azure, Connect]
 tags: [azuread, ad, sync, aad connect, cloud sync, powershell, tutorial]
 ---
 
+{% include google-adsense.html %}
+
 # Tackling Duplicate Users in AAD Connect / Cloud Sync
 
 Integrating your existing Active Directory with Azure AD using AD Connect or Cloud Sync can sometimes result in duplicate user entries. This video demonstrates how to link existing ImmutableIDs from Active Directory to Azure Directory users and ensure that all proxy addresses in Office 365 are present in Active Directory.
