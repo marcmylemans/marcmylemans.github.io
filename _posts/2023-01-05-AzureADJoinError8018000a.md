@@ -7,6 +7,8 @@ title: Azure AD join error code 8018000a – This device is already enrolled
 
 ---
 
+{% include google-adsense.html %}
+
 ### Introduction:
 
 If you ever encounter the Azure AD join error code 8018000a, it indicates that the device was previously joined to Azure AD. This situation can prevent you from rejoining the device to Azure AD without first clearing certain settings.
