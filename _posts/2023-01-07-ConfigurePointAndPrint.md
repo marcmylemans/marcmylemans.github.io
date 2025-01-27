@@ -6,6 +6,8 @@ tags: [server 2022, printserver, point and print, trusted printserver, group pol
 title: Server 2022 -  Configure Point and Print - Trusted Printserver
 ---
 
+{% include google-adsense.html %}
+
 ## Introduction:
 
 Configuring a trusted PrintServer and managing Point and Print settings are critical for enhancing security and operational efficiency within a Windows Server environment. This guide focuses on setting up a Group Policy in Windows Server 2022 to specify trusted internal PrintServers, thus streamlining printer management and improving security against potential vulnerabilities.
