@@ -6,6 +6,8 @@ tags: [server 2022, printserver, group policy, printer deployment, tutorial, you
 title: Server 2022 - Installing PrintServer Role
 ---
 
+{% include google-adsense.html %}
+
 ## Introduction:
 
 In this guide, we'll walk through the process of installing the PrintServer role on Windows Server 2022. Additionally, we will demonstrate how to deploy a demo printer using Group Policy. This setup is ideal for organizations looking to manage multiple printers efficiently across their network.
