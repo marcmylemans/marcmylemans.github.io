@@ -7,6 +7,8 @@ tags: [server 2022, azure, intune, hybrid, applications, policies, tutorial, you
 title: Intune - Applications and Policies
 ---
 
+{% include google-adsense.html %}
+
 {% youtube "https://youtu.be/PIu7nZ1jMOQ" %}
 
 Dive deeper into the world of Azure Intune with our latest tutorial, where we utilize our previously established Hybrid Active Directory/Azure Directory configuration to manage applications and policies.
