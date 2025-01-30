@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: https://mylemans.online/assets/img/posts/0c47c709f624.png
 layout: post
 title: "How to Install Ollama on Windows and Run DeepSeek R1 Locally"
 date: 2025-01-30
