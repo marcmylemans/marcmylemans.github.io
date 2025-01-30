@@ -23,7 +23,7 @@ Let’s get started.
 
 ### Step 1: Download and Install Ollama  
 
-Installing Ollama is straightforward—just follow these steps:  
+Installing Ollama is straightforward, just follow these steps:  
 
 1. Head over to the official **[Ollama download page](https://ollama.com/download)**.  
 2. Click on the **Windows download** option.  
@@ -52,31 +52,74 @@ Ollama will automatically download the Llama 2 model if you don’t already have
 Once downloaded, it will start running the AI model, and you can chat with it right from the command line.
 
 
-### Step 4: Running DeepSeek R1 Locally
-What is DeepSeek R1?
-DeepSeek R1 is a 67B parameter, open-weight LLM, optimized for reasoning and complex AI tasks. It is one of the most powerful open-source alternatives to GPT-4, making it highly sought after by AI researchers and developers.
+### Step 4: Running DeepSeek R1 Locally  
 
-How to Install and Run DeepSeek R1
-To run DeepSeek R1 on your local machine using Ollama, enter:
+#### What is DeepSeek R1?  
+DeepSeek R1 is an **open-weight LLM** available in multiple sizes, ranging from **1.5B to 671B parameters**. It is optimized for **reasoning, coding, and complex AI tasks**, making it one of the most powerful open-source alternatives to GPT-4.  
+
+#### How to Install and Run DeepSeek R1  
+
+By default, running the following command will download and start **DeepSeek R1 7B**:  
 
 ```sh
-ollama run deepseek-r1
+ollama run deepseek
 ```
 
-If this is your first time running DeepSeek R1, Ollama will automatically download the model before starting the session.
+If this is your first time using DeepSeek R1, Ollama will automatically download the 7B model before starting it.
+
 
 ### DeepSeek R1 vs. Llama 2  
 
-DeepSeek R1 and Llama 2 are both powerful open-source language models, but they have different strengths. Here’s a comparison:  
+DeepSeek R1 is available in **multiple sizes**, ranging from **1.5B to 671B parameters**, making it a versatile option for different hardware setups and use cases.  
 
-| Feature         | DeepSeek R1 | Llama 2 |
-|---------------|------------|---------|
-| Model Size    | 67B        | 7B / 13B / 65B |
-| Reasoning Ability | Advanced | Moderate |
-| Open-Weight   | ✅ Yes      | ✅ Yes |
-| Ideal For     | Complex AI tasks, coding, research | General-purpose AI |
+### **DeepSeek R1 Model Sizes:**  
+- **1.5B** – Lightweight, optimized for efficiency.  
+- **7B** – Default model in Ollama, good for general AI tasks.  
+- **8B** – Slightly larger than 7B, with improved performance.  
+- **14B** – More capable model for reasoning and longer responses.  
+- **32B** – Stronger reasoning and context retention.  
+- **70B** – High-end model with near GPT-4 class performance.  
+- **671B** – Massive-scale model for enterprise and advanced AI research.  
 
-DeepSeek R1 excels in **reasoning, problem-solving, and handling complex queries**, making it a great alternative to closed-source models like GPT-4.  
+### **DeepSeek R1 vs. Llama 2 Comparison**  
+
+| Feature         | DeepSeek R1 (7B) | DeepSeek R1 (70B) | DeepSeek R1 (671B) | Llama 2 (7B / 13B / 65B) |
+|---------------|----------------|----------------|----------------|------------------|
+| Model Size    | 7B             | 70B           | 671B           | 7B / 13B / 65B   |
+| Reasoning Ability | High          | Advanced       | Cutting-edge   | Moderate to High |
+| Open-Weight   | ✅ Yes         | ✅ Yes         | ✅ Yes         | ✅ Yes |
+| Hardware Requirements | Moderate  | High          | Extremely High | Varies |
+| Ideal For     | General AI, coding, chatbots | Complex AI tasks, research | Enterprise-scale AI applications | General-purpose AI |
+
+### **How to Run Different DeepSeek R1 Models in Ollama**  
+
+By default, running `ollama run deepseek` will load the **7B version**.  
+
+To specify a different model size, use:  
+
+```sh
+ollama run deepseek:<size>
+```
+
+For example, to run the 70B model, use:
+
+```sh
+ollama run deepseek:70b
+```
+
+Or, for the 671B version:
+
+```sh
+ollama run deepseek:671b
+```
+
+You can list all available models with:
+
+```sh
+ollama list
+```
+
+This ensures you load the best model for your hardware and needs.
 
 ### Step 5: Explore Other AI Models  
 
