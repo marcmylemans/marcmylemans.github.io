@@ -8,6 +8,8 @@ tags: [Ollama, AI, LLM, Windows, Machine Learning, DeepSeek R1, Open-Source AI]
 description: "Learn how to install Ollama on Windows and run DeepSeek R1, Llama 2, and other AI models locally. A step-by-step guide for setting up open-source LLMs without cloud dependency."
 ---
 
+{% include google-adsense.html %}
+
 ## How to Install Ollama on Windows and Run DeepSeek R1 Locally  
 
 Running **large language models (LLMs) locally** has never been easier. With **Ollama**, you can install and use **DeepSeek R1, Llama 2, Gemma, and more** right on your Windows machine—no cloud computing required.  
