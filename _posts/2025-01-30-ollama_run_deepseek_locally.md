@@ -62,7 +62,7 @@ DeepSeek R1 is an **open-weight LLM** available in multiple sizes, ranging from 
 By default, running the following command will download and start **DeepSeek R1 7B**:  
 
 ```sh
-ollama run deepseek
+ollama run deepseek-r1
 ```
 
 If this is your first time using DeepSeek R1, Ollama will automatically download the 7B model before starting it.
@@ -98,19 +98,19 @@ By default, running `ollama run deepseek` will load the **7B version**.
 To specify a different model size, use:  
 
 ```sh
-ollama run deepseek:<size>
+ollama run deepseek-r1:<size>
 ```
 
 For example, to run the 70B model, use:
 
 ```sh
-ollama run deepseek:70b
+ollama run deepseek-r1:70b
 ```
 
 Or, for the 671B version:
 
 ```sh
-ollama run deepseek:671b
+ollama run deepseek-r1:671b
 ```
 
 You can list all available models with:
