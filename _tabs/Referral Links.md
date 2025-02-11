@@ -11,7 +11,7 @@ We've partnered with some fantastic companies and services. By using the referra
 
 #### **YouTube**
 
-[Join our YouTube Channel](https://www.youtube.com/@marcmylemans/join)
+[Join our YouTube Channel](https://www.youtube.com/@mylemansonline/join)
 
 YouTube is a fantastic platform for content creators, and you can support us by engaging with our channel. Here's how you can help:
 
