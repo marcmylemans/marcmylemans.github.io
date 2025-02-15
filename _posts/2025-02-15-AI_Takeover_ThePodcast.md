@@ -7,7 +7,7 @@ categories: [Podcast, AI]
 ---
 
 
-[Podcast01.mp3]('https://raw.githubusercontent.com/marcmylemans/marcmylemans.github.io/refs/heads/main/assets/Podcast01.mp3?autoplay=1&loop=1&controls=0’)
+[Podcast01.mp3](https://raw.githubusercontent.com/marcmylemans/marcmylemans.github.io/refs/heads/main/assets/Podcast01.mp3?autoplay=1&loop=1&controls=0)
 
 
 {% include open-embed.html %}
