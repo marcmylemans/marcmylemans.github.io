@@ -1,6 +1,11 @@
 ---
+image: https://mylemans.online/assets/img/posts/Default.jpg
+layout: post
 title: "How to Create and Secure a VPS on DigitalOcean"
-description: "Learn to quickly set up a secure VPS on DigitalOcean, install Docker, Docker Compose, and Nginx Proxy Manager with best security practices."
+description: "Learn to quickly set up a secure VPS on DigitalOcean, install Docker, Docker Compose, and Nginx Proxy Manager."
+date: 2025-03-09
+categories: [VPS, DigitalOcean]
+tags: [VPS, DigitalOcean, Docker, SSH, Security]
 ---
 
 A home lab is a fantastic way to experiment, learn new skills, and host various projects. However, certain applications, such as web servers, may expose your home network to unnecessary security risks. This is where Virtual Private Servers (VPS) become invaluable. DigitalOcean offers an easy, secure, and affordable way to host your projects online.
@@ -13,7 +18,7 @@ A VPS allows you to isolate your public-facing applications from your home netwo
 
 Sign up on DigitalOcean using our special affiliate link and receive **$200 in free credits for 60 days**. Plus, your signup supports our website!
 
-> [Sign up and claim your $200 DigitalOcean credit now!](YOUR_AFFILIATE_LINK_HERE)
+> [Sign up and claim your $200 DigitalOcean credit now!](https://m.do.co/c/e03b740d65fb)
 
 ## Step 1: Creating a DigitalOcean Account and VPS (Droplet)
 
@@ -149,7 +154,7 @@ Access Nginx Proxy Manager by navigating to `http://your_server_ip:81`. Default 
 
 ## Conclusion
 
-You've successfully set up a secure VPS with Docker, Docker Compose, and Nginx Proxy Manager. Now you can safely expose applications without risking your home network. Don't forget to claim your $200 credit by [signing up via our affiliate link](YOUR_AFFILIATE_LINK_HERE).
+You've successfully set up a secure VPS with Docker, Docker Compose, and Nginx Proxy Manager. Now you can safely expose applications without risking your home network. Don't forget to claim your $200 credit by [signing up via our affiliate link](https://m.do.co/c/e03b740d65fb).
 
 Happy Hosting!
 
