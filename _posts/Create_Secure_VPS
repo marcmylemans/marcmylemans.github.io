@@ -37,16 +37,12 @@ Sign up on DigitalOcean using our special affiliate link and receive **$200 in f
 
 ![Add SSH Key](https://mylemans.online/assets/img/posts/digitalocean/step-29.png)
 
-## Step 2: Securing Your VPS with SSH Keys
-
-To enhance security, always use SSH keys instead of passwords.
-
 ### Generating SSH Keys
 
 Run this command in your terminal:
 
 ```bash
-ssh-keygen -t ed25519 -C "your_email@example.com"
+ssh-keygen
 ```
 
 Copy the public key to DigitalOcean during droplet creation:
@@ -57,7 +53,7 @@ cat ~/.ssh/id_ed25519.pub
 
 Paste this public key into the SSH key field on DigitalOcean.
 
-## Step 3: Initial Server Setup
+## Step 2: Initial Server Setup
 
 Log into your new VPS:
 
