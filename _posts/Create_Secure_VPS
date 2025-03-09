@@ -20,13 +20,22 @@ Sign up on DigitalOcean using our special affiliate link and receive **$200 in f
 
 > [Sign up and claim your $200 DigitalOcean credit now!](https://m.do.co/c/e03b740d65fb)
 
-## Step 1: Creating a DigitalOcean Account and VPS (Droplet)
+## Step 1: Creating a VPS on DigitalOcean
 
-1. **Create an account** using the provided affiliate link.
-2. After logging in, click **"Create" → "Droplet"**.
+1. Sign up on [DigitalOcean](https://m.do.co/c/e03b740d65fb).
+2. After logging in, select **"Create Droplet"**.
+
+![Create Droplet](https://mylemans.online/assets/img/posts/digitalocean/step-0.png)
+
 3. Select your desired Linux distribution (we recommend Ubuntu 22.04 LTS).
-4. Choose the droplet size according to your needs.
-5. Choose your data center location closest to your primary audience.
+4. Choose your Droplet size based on your project's needs.
+5. Select your preferred data center location (Amsterdam is recommended for Europe).
+
+![Choose Location](https://mylemans.online/assets/img/posts/digitalocean/step-2.png)
+
+6. Add your SSH keys to enhance security.
+
+![Add SSH Key](https://mylemans.online/assets/img/posts/digitalocean/step-26.png)
 
 ## Step 2: Securing Your VPS with SSH Keys
 
