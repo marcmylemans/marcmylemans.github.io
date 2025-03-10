@@ -71,7 +71,19 @@ Create a non-root user:
 
 ```bash
 adduser yourusername
+```
+
+Add the user to the sudo group
+
+```bash
 usermod -aG sudo yourusername
+```
+
+Test the new user:
+
+```bash
+su - yourusername
+sudo apt update
 ```
 
 Set up SSH key access for this new user:
@@ -162,4 +174,3 @@ Access Nginx Proxy Manager by navigating to `http://your_server_ip:81`. Default 
 You've successfully set up a secure VPS with Docker, Docker Compose, and Nginx Proxy Manager. Now you can safely expose applications without risking your home network. Don't forget to claim your $200 credit by [signing up via our affiliate link](https://m.do.co/c/e03b740d65fb).
 
 Happy Hosting!
-
