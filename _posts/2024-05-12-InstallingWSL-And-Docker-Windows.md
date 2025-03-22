@@ -27,9 +27,17 @@ First, enable the necessary features for WSL and the Virtual Machine Platform. B
 1. Open PowerShell as Administrator.
 2. Run the following command:
 
-    ```powershell
+   **Enable Virtual Machine feature:**
+   
+   ```powershell
+   dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+   ```
+
+  **Enable WSL:**
+  
+   ```powershell
     wsl --install
-    ```
+   ```
 
 #### Set up your Linux username and password
 
