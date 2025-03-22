@@ -33,10 +33,10 @@ First, enable the necessary features for WSL and the Virtual Machine Platform. B
    dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
    ```
 
-  **Enable WSL:**
-  
+   **Enable WSL:**
+
    ```powershell
-    wsl --install
+   wsl --install
    ```
 
 #### Set up your Linux username and password
