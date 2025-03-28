@@ -11,7 +11,7 @@ tags: [DeskPi, Proxmox, MiniPC, Ceph, Rackmount, Homelab]
 
 ## Intro
 
-Looking for a clean, compact way to house your homelab hardware? In this post, I’ll walk you through unboxing and assembling the **DeskPi Rackmate T0**, and how I used it to build a powerful yet whisper-quiet Proxmox cluster using three HP Mini PCs.
+Looking for a clean, compact way to house your homelab hardware? In this post, I’ll walk you through unboxing and assembling the [**DeskPi Rackmate T0**](https://www.amazon.de/dp/B0DPGZPTPP), and how I used it to build a powerful yet whisper-quiet Proxmox cluster using three HP Mini PCs.
 
 ---
 
@@ -40,7 +40,7 @@ While assembling the rack, I shared my homelab story—starting from a single de
 - 3× HP ProDesk 600 G4 Mini PCs  
 - Each with: i3-8100T, 32GB RAM, 2TB NVMe, 2.5GbE networking  
 - Running: Proxmox for virtualization, Ceph for shared storage  
-- Connected via 2.5GbE switch (hidden inside the rack)
+- Connected via 2.5GbE switch
 
 ![HP ProDesk Cluster](https://mylemans.online/assets/img/posts/prodesk-stack.jpg)
 
@@ -61,10 +61,8 @@ Also installed the included shelf and demoed the blank panel. All parts mount di
 Here are a few shots of the completed build:
 
 - **Inside:** power and network neatly managed  
-- **Front view:** super minimal—switch is hidden  
-- **Before:** utility closet chaos  
-- **During:** Mini PCs in a Kallax unit (IKEA hack!)  
-- **Now:** Rack mounted in the Kallax, then moved back to closet
+- **Front view:** super minimal—switch is hidden     
+- **Now:** Rack mounted in the Kallax
 
 ![Inside Rack](https://mylemans.online/assets/img/posts/rackmate-inside.jpg)  
 ![Front View](https://mylemans.online/assets/img/posts/rackmate-front.jpg)  
