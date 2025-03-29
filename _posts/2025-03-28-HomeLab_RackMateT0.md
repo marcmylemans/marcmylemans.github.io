@@ -9,6 +9,8 @@ tags: [DeskPi, Proxmox, MiniPC, Ceph, Rackmount, Homelab]
 
 {% include google-adsense.html %}
 
+{% youtube "https://youtu.be/-lN0Wyh-Y6o" %}
+
 ## Intro
 
 Looking for a clean, compact way to house your homelab hardware? In this post, I’ll walk you through unboxing and assembling the [**DeskPi Rackmate T0**](https://www.amazon.de/dp/B0DPGZPTPP), and how I used it to build a powerful yet whisper-quiet Proxmox cluster using three HP Mini PCs.
