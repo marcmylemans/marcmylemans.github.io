@@ -62,13 +62,18 @@ Also installed the included shelf and demoed the blank panel. All parts mount di
 
 Here are a few shots of the completed build:
 
-- **Inside:** power and network neatly managed  
-- **Front view:** super minimal—switch is hidden     
-- **Now:** Rack mounted in the Kallax
+- **Inside:** power and network neatly managed
 
 ![Inside Rack](https://mylemans.online/assets/img/posts/rackmate-inside.jpg)  
+
+- **Front view:** super minimal—switch is hidden
+
 ![Front View](https://mylemans.online/assets/img/posts/rackmate-front.jpg)  
+
+- **Now:** Rack mounted in the Kallax
+
 ![Kallax Hack](https://mylemans.online/assets/img/posts/kallax-hack.jpg)
+
 
 ---
 
@@ -87,3 +92,37 @@ Let me know in the comments!
 
 I’m designing custom 3D-printed rackmounts for these Mini PCs.  
 If that sounds interesting, make sure to **subscribe** or follow for updates!
+
+## 🙏 Thank You to My YouTube Members
+
+A huge shoutout to the amazing people who support **Mylemans Online** through channel memberships.  
+Your support helps keep the homelab running and allows me to create more tutorials, reviews, and behind-the-scenes content.
+
+### Systems Specialist 
+*Exclusive members-only videos + all previous tier perks*
+
+- **Michael Jochum**
+
+---
+
+### Tech Enthusiast
+*Loyalty badges • Custom emojis • Discord access • Early video access*
+
+- **Antonio Oliveira**  
+- **Ringo Richter** 
+- **Brian Ochoa** 
+- **brian prinkki** 
+- **Shogun Chungath** 
+- **Josh Cochenour**  
+- **Oliver Saarniit**
+
+---
+
+### Network Architect 
+This tier is currently open! Want to see your name here and unlock **the highest level of support**?  
+Join today and help shape the future of Mylemans Online.
+
+---
+
+*Want to support the channel?*  
+[👉 Become a Member on YouTube](https://www.youtube.com/channel/UC1y0Dtbzss2I3mm45xPMm1Q/join)
