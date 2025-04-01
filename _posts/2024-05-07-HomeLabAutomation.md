@@ -8,8 +8,6 @@ title: "Automating Your RDS Lab, From ISO to Full Deployment with PowerShell"
 
 ---
 
-# Automating Your RDS Lab: From ISO to Full Deployment with PowerShell
-
 Setting up a Remote Desktop Services (RDS) lab doesn't need to take hours of manual work. With my PowerShell-based [HomeLab project](https://github.com/marcmylemans/HomeLab), you can build a fully automated Hyper-V test environment—from converting an ISO into a deployable template all the way to configuring your RDS stack.
 
 In this blog post, I’ll walk you through the complete process, combining two core automation scripts:
