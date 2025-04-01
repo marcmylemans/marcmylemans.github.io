@@ -3,53 +3,199 @@ image: https://mylemans.online/assets/img/posts/6wGd47lPLmU.png
 layout: post
 categories: [HomeLab, Automation]
 tags: [automation, powershell, scripting, network, homelab, virtualization, hyper-v, infrastructure, IT management]
-title: Streamlining Hyper-V Management - Introducing the Hyper-V Automation Project
+title: "Automating Your RDS Lab, From ISO to Full Deployment with PowerShell"
 
 
 ---
 
-# Introduction:
+# Automating Your RDS Lab: From ISO to Full Deployment with PowerShell
 
-Managing a Hyper-V environment efficiently can be a challenging task, especially when dealing with multiple virtual machines (VMs), complex network configurations, and the need for consistent setups. To address these challenges, I am excited to introduce the Hyper-V Automation Project – a comprehensive solution designed to automate and simplify the management of Hyper-V VMs.
+Setting up a Remote Desktop Services (RDS) lab doesn't need to take hours of manual work. With my PowerShell-based [HomeLab project](https://github.com/marcmylemans/HomeLab), you can build a fully automated Hyper-V test environment—from converting an ISO into a deployable template all the way to configuring your RDS stack.
 
-# Understanding the Prerequisites:
+In this blog post, I’ll walk you through the complete process, combining two core automation scripts:
 
-Before diving into the Hyper-V Automation Project, it's essential to understand the basics of creating and managing Hyper-V VM templates. For newcomers or those looking to refresh their knowledge, I recommend checking out my previous post: [My New Home Lab Journey](https://mylemans.online/posts/NewHomeLab/). This guide will give you a solid foundation and ensure you're well-prepared to make the most of the automation project.
+1. **Template Builder** – Converts a Windows Server ISO into a fully-prepped VHDX using Unattended setup.
+2. **RDS Lab Deployer** – Spins up VMs, creates a domain, joins servers, and configures RDS—all from a JSON config.
 
-# Automate Your Hyper-V Environment:
+---
 
-The Hyper-V Automation Project is a PowerShell-based toolkit that automates the setup of Hyper-V VMs. It's perfect for IT professionals and system administrators looking to streamline their virtual environment. Whether you're managing a home lab, a development environment, or a business infrastructure, this project can save you countless hours and reduce the potential for human error.
+## Step 1: Creating the VHDX Template from ISO
+
+Before we can automate the lab deployment, we need a Windows Server template disk image. That’s where the `TemplateBuilder/main.ps1` script comes in.
+
+It uses the excellent [Convert-WindowsImage](https://github.com/x0nn/Convert-WindowsImage) PowerShell module to:
+
+- Extract a chosen Windows edition from an ISO  
+- Apply an **Unattend.xml** file for automatic setup, a sample file is included or you can generate an answer file on [Windows Answer File Generator](https://www.windowsafg.com/).
+- Output a bootable VHDX, ready for Hyper-V deployment  
+
+### PowerShell Snippet
+
+```powershell
+Convert-WindowsImage -SourcePath $isoPath `
+    -VHDFormat "VHDX" `
+    -DiskLayout "UEFI" `
+    -Edition "Windows Server 2022 Standard (Desktop Experience)" `
+    -VHDPath $vhdPath `
+    -SizeBytes 64GB `
+    -UnattendPath $unattendPath `
+    -Feature "NetFx3"
+```
+
+Once this runs, you’ve got a pre-configured VHDX ready to be cloned into multiple VMs.
+
+---
+
+## Step 2: Deploying the RDS Lab with `rds_lab.ps1`
+
+Now that we have our base image, the real magic begins.
+
+Edit the `Remote Desktop Services/config.json` file to set up your environment. It should include:
+
+- VM names, IPs.
+- Domain controller configuration.
+- RDS setup details.
+- VM template paths.
+- Network configurations.
+
+Example:
+```json
+{
+    "VMs": [
+        {"Name": "dc1", "IP": "192.168.48.10"},
+        {"Name": "rdgw", "IP": "192.168.48.11"},
+        {"Name": "rds1", "IP": "192.168.48.12"},
+        {"Name": "rds2", "IP": "192.168.48.13"}
+    ],
+    "DomainController": "dc1",
+    "TemplateVHDXPath": "C:\\Hyper-V\\Virtual Hard Disks\\Templates\\template_server2019.vhdx",
+    "VMStoragePath": "C:\\Hyper-V\\Virtual Machines",
+    "VMSwitch": "vSwitch",
+    "DomainName": "homelab.local",
+    "AdminUsername": "Administrator",
+    "AdminPassword": "Azerty123!",
+    "SubnetMask": 24,
+    "Gateway": "192.168.48.254",
+    "DNS": "192.168.48.10",
+    "RDS": {
+        "connectionBrokerVM": "dc1",
+        "ConnectionBroker": "rdgw.homelab.local",
+        "WebAccessServer": "rdgw.homelab.local",
+        "SessionHost": "rds1.homelab.local",
+        "LicenseServer": "rdgw.homelab.local",
+        "HostRemoteApp": "rds2.homelab.local",
+        "GatewayExternalFqdn": "rdgw.homelab.com",
+        "SessionCollectionName": "RDS Host",
+        "RemoteAppCollectionName": "RDS Remote App",
+        "UserGroupSession": ["homelab\\domain users", "homelab\\domain admins"],
+        "UserGroupRemoteApp": ["homelab\\domain users", "homelab\\domain admins"]
+    }
+}
+```
+
+The `Remote Desktop Services/main.ps1` script handles:
+
+- VM creation and static IP assignment  
+- Network configuration via PowerShell remoting  
+- Domain controller promotion  
+- Domain join for other VMs  
+- Full Remote Desktop Services role setup  
+
+### How to Use It
+
+1. **Clone the repo**
+
+```bash
+git clone https://github.com/marcmylemans/HomeLab.git
+```
+
+2. **Edit `config.json`**  
+Define your VM names, IPs, domain name, and RDS preferences.
+
+3. **Run the script**
+
+Set execution policy to Unrestricted for the current session
+
+```powershell
+Set-ExecutionPolicy Unrestricted -Scope Process -Force
+```
+
+Unblock all files in the folder
+
+```powershell
+Get-ChildItem | Unblock-File
+```
+Run the script
+
+```powershell
+.
+.\main.ps1
+```
+
+And voilà: Your test lab is online!
+
+---
+
+## Repository Overview
+
+The GitHub repo includes:
+
+- ✅ `TemplateBuilder/main.ps1`: VHDX template builder  
+- ✅ `Remote Desktop Services/main.ps1`: Main deployment script for your Remote Desktop Lab 
+- ✅ `Remote Desktop Services/config.json`: Central configuration  
+- ✅ Modular helper scripts:  
+  - `Setup-DomainController.ps1`  
+  - `Join-Domain.ps1`  
+  - `New-VMFromTemplate.ps1`  
+  - `Configure-VMNetwork.ps1`  
+  - `Set-VMStaticIP.ps1`  
+  - `Set-RDSConfiguration.ps1`  
+  - ...and more  
+
+Everything is structured for reusability and easy tweaking.
+
+---
+
+## Who Is This For?
+
+This project is ideal for:
+
+-  IT pros testing RDS, AD, and GPO scenarios  
+-  Admins learning PowerShell and infrastructure automation  
+-  Instructors building classroom labs  
+-  Certification students practicing real-world setups  
+
+---
+
+## Watch the Walkthrough
+
+I cover the full process in my video, from ISO to fully automated lab setup.
+
+👉 **[Watch here](https://youtu.be/WaNzzhy1Qoc)**
 
 {% youtube "https://youtu.be/WaNzzhy1Qoc" %}
 
-# Key Features:
+---
 
-- **VM Creation from Templates:** Utilize pre-configured VHDX templates to rapidly deploy new VMs.
-- **Network Configuration:** Automatically configure network settings, including static IPs, DNS, and gateway settings.
-- **Domain Controller Setup:** Easily set up and configure a domain controller within your Hyper-V environment.
-- **Remote Desktop Services (RDS) Configuration:** Seamlessly configure RDS settings, perfect for virtual desktop infrastructure (VDI) setups.
-- **Dynamic VM Renaming:** Automatically rename VMs to match your configuration files, ensuring consistent naming conventions.
-- **Wait for VM Readiness:** The project intelligently waits for VMs to become fully accessible before proceeding with further configurations, reducing downtime and errors.
+## Customize and Extend
 
-## Configuration Made Simple:
+Since it’s 100% PowerShell, the project is easy to expand:
 
-At the heart of the project is a JSON configuration file, which allows for easy customization and scalability. Define your VM names, IP addresses, domain settings, and more, all in one centralized file.
+- Add GPO baseline automation   
+- Modify the Unattend.xml for software installs  
+- Extend the RDS config
 
-## Easy to Use:
+Have an idea? Fork the repo and share your setup!
 
-Designed with simplicity in mind, the project's scripts are easy to run and can be executed in any PowerShell environment. Whether you're a PowerShell expert or a beginner, you'll find the setup process straightforward.
+---
 
-## Testing:
+## Final Thoughts
 
-The project encourages testing in a controlled environment before deployment.
+PowerShell isn’t just for fixing problems—it’s for **scaling your skills**. This project makes it easy to go from ISO to enterprise-style RDS lab in a fraction of the time.
 
-## Open Source and Community-Driven:
+Whether you're learning, testing, or just geeking out:  
+**Automate the boring stuff—then tweak it for fun.**
 
-This project is open-source, and contributions are welcome. It's a community-driven initiative aimed at continuous improvement and adaptation to new challenges and use cases.
+Stay efficient, stay curious,  
+**Marc @ Mylemans Online**
 
-# Conclusion:
-
-The Hyper-V Automation Project represents a significant step forward in managing Hyper-V environments. By automating routine tasks, it not only saves time but also enhances the reliability and consistency of your virtual machine setups. I invite you to try it out, contribute, and join us in making Hyper-V management easier and more efficient than ever.
-
-
-Check out the project on [GitHub](https://github.com/marcmylemans/HomeLab) and join our growing community of contributors and users! And don't forget to read my previous post on [My New Home Lab Journey](https://mylemans.online/posts/NewHomeLab/) to get started with the essential prerequisites for this project.
