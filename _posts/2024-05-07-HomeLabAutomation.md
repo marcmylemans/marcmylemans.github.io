@@ -19,6 +19,17 @@ In this blog post, I’ll walk you through the complete process, combining two c
 
 ## Step 1: Creating the VHDX Template from ISO
 
+### Windows Server Evaluation Download Links
+
+**Server 2019:**
+[Windows Server 2019 | Microsoft Evaluation Center](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019)
+
+**Server 2022:**
+[Windows Server 2022 | Microsoft Evaluation Center](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2022)
+
+**Server 2025:**
+[Windows Server 2025 | Microsoft Evaluation Center](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2025)
+
 Before we can automate the lab deployment, we need a Windows Server template disk image. That’s where the `TemplateBuilder/main.ps1` script comes in.
 
 It uses the excellent [Convert-WindowsImage](https://github.com/x0nn/Convert-WindowsImage) PowerShell module to:
