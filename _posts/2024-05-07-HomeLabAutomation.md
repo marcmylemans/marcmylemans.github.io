@@ -46,7 +46,7 @@ Once this runs, you’ve got a pre-configured VHDX ready to be cloned into multi
 
 ---
 
-## Step 2: Deploying the RDS Lab with `rds_lab.ps1`
+## Step 2: Deploying the RDS Lab
 
 Now that we have our base image, the real magic begins.
 
