@@ -13,7 +13,7 @@ Setting up a Remote Desktop Services (RDS) lab doesn't need to take hours of man
 In this blog post, I’ll walk you through the complete process, combining two core automation scripts:
 
 1. **Template Builder** – Converts a Windows Server ISO into a fully-prepped VHDX using Unattended setup.
-2. **RDS Lab Deployer** – Spins up VMs, creates a domain, joins servers, and configures RDS—all from a JSON config.
+2. **Remote Desktop Services** – Spins up VMs, creates a domain, joins servers, and configures RDS—all from a JSON config.
 
 ---
 
@@ -24,7 +24,7 @@ Before we can automate the lab deployment, we need a Windows Server template dis
 It uses the excellent [Convert-WindowsImage](https://github.com/x0nn/Convert-WindowsImage) PowerShell module to:
 
 - Extract a chosen Windows edition from an ISO  
-- Apply an **Unattend.xml** file for automatic setup, a sample file is included or you can generate an answer file on [Windows Answer File Generator](https://www.windowsafg.com/).
+- Apply an **Unattend.xml** file for automatic setup. A sample file is included `TemplateBuilder/unattend.xml`, or you can generate an answer file on the [Windows Answer File Generator](https://www.windowsafg.com/).
 - Output a bootable VHDX, ready for Hyper-V deployment  
 
 ### PowerShell Snippet
@@ -55,6 +55,7 @@ Edit the `Remote Desktop Services/config.json` file to set up your environment. 
 - RDS setup details.
 - VM template paths.
 - Network configurations.
+- Change the AdminPassword to the same password as the `TemplateBuilder/unattend.xml`.
 
 Example:
 ```json
