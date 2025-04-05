@@ -40,7 +40,7 @@ I ordered some **black filament** for the actual rackmounts—should arrive soon
 To slice my prints, I’m using **OrcaSlicer**, a free and powerful slicer favored by the 3D printing community.
 
 ### Step-by-step:
-1. **Download and run the installer** from the official OrcaSlicer website. It’s a quick and easy setup.
+1. **Download and run the installer** from the [official OrcaSlicer website](https://github.com/SoftFever/OrcaSlicer/releases/latest). It’s a quick and easy setup.
 2. Upon first launch, a **setup wizard** appears to guide you through the basics.
 3. Search and select **“K1 Max”** from the printer list.
 4. OrcaSlicer will **automatically preload Creality filament profiles**, so common materials like PLA, PETG, and ABS are ready to go.
