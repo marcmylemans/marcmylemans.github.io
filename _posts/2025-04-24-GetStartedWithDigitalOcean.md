@@ -2,7 +2,7 @@
 image: https://mylemans.online/assets/img/posts/7c4285c92df0.png
 layout: post
 title: "How to Get Started with DigitalOcean (and Get $200 Free Credit!)"
-date: 2024-04-24
+date: 2025-04-24
 categories: [Cloud Hosting, Digital Ocean]
 ---
 
