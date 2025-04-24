@@ -50,17 +50,105 @@ That's it! Your server will be ready in less than a minute.
 
 ---
 
-## Step 3: Secure & Configure (Optional)
+## Step 3: Secure & Configure Your Droplet
 
-For better security and performance, it’s a good idea to:
+To keep your server secure and performing well, follow these steps right after creating your droplet:
 
-- Enable the firewall
-- Update your packages
-- Set up SSH keys
-- Install and configure a web server (Apache/Nginx)
-- Use Let’s Encrypt for free SSL
+### Connect via SSH
 
-If you need help setting this up, [check out my Fiverr gig](https://www.fiverr.com/s/jjX10jG) — I’ll handle it for you.
+```bash
+ssh root@your_droplet_ip
+```
+
+> Replace `your_droplet_ip` with the actual IP address of your droplet.
+
+---
+
+### Update Your Packages
+
+```bash
+apt update && apt upgrade -y
+```
+
+---
+
+### Configure the Firewall
+
+Enable UFW (Uncomplicated Firewall) and allow only essential services:
+
+```bash
+ufw allow OpenSSH
+ufw enable
+ufw status
+```
+
+#### (Optional) Also allow web traffic (if you plan to host web services)
+
+```bash
+ufw allow 80/tcp
+ufw allow 443/tcp
+```
+
+---
+
+### Install and Enable Fail2Ban
+
+Step 1: Install Fail2Ban
+
+```bash
+apt install fail2ban -y
+```
+
+Step 2: Create a local configuration file:
+
+```bash
+cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+```
+Edit the **jail.local** file:
+
+```bash
+nano /etc/fail2ban/jail.local
+```
+
+Ensure the following lines are present and uncommented:
+
+```
+[sshd]
+enabled = true
+port = ssh
+logpath = %(sshd_log)s
+maxretry = 5
+```
+
+Step 3: Start and Enable Fail2Ban
+
+```bash
+systemctl enable fail2ban
+systemctl start fail2ban
+```
+
+Fail2Ban helps protect against brute-force attacks by banning IPs with too many failed login attempts.
+
+To unban an IP address:
+
+```bash
+fail2ban-client set sshd unbanip <IP_ADDRESS>
+```
+
+---
+
+### Install Docker & Docker Compose (Optional) 
+
+```bash
+apt install docker.io docker-compose -y
+systemctl enable docker
+systemctl start docker
+```
+
+---
+
+If you'd like me to set this up for you, [check out my Fiverr gig](https://www.fiverr.com/share/XYZ) — I’ll handle everything so you can focus on building your project.
+
 
 ---
 
