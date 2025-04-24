@@ -166,6 +166,6 @@ If you'd like me to set this up for you, [check out my Fiverr gig](https://www.f
 
 DigitalOcean is a fantastic platform to learn, build, and deploy. And with the free $200 credit, you’ve got **zero risk** to get started.
 
-👉 [![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=e03b740d65fb&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)  
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=e03b740d65fb&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)  
 Let me know if you need help — I’d be happy to assist!
 
