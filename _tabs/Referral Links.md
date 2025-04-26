@@ -48,15 +48,18 @@ Hetzner Online is a trusted hosting provider known for its:
 
 Opt for Hetzner Online for reliable and affordable hosting.
 
-#### **Amazon**
+#### **vidIQ**
 
-[Shop on Amazon](https://www.amazon.com.be/b?_encoding=UTF8&tag=mylemansonlin-21&linkCode=ur2&linkId=f955fcfec8081ca9499b900731540004&camp=247&creative=1211&node=27156257031)
+[Boost Your YouTube Growth with vidIQ](https://vidiq.com/mylemansonline)
 
-Amazon is the world's largest online marketplace, offering a vast array of products and services. By shopping through our Amazon referral link, you can access an unparalleled selection of items, from electronics and books to fashion and home goods.
+vidIQ helps YouTube creators optimize and grow their channels by offering:
 
-When you make a purchase through our Amazon referral link, you not only enjoy the convenience of Amazon's shopping experience but also support our website. Your support allows us to continue providing valuable content and resources.
+- Insightful analytics
+- SEO optimization tools
+- Keyword research
+- Competitive analysis
 
-So, why not explore Amazon's extensive offerings while helping our website thrive? Click our referral link and start shopping today! Your support is greatly appreciated.
+Enhance your YouTube channel growth and visibility with vidIQ.
 
 ### How Referral Links Work
 
