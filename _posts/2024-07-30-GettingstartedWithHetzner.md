@@ -34,7 +34,7 @@ Enter your **First name** and **Last name** (title is optional).
 ## 4. Add Billing Details
 Enter your **address** and **phone number**, then select a **currency (EUR or USD)** and add a payment method.  
 
-![Billing details](steps-hetzner___30_07_25_10_24/step-4.png)
+![Billing details](https://mylemans.online/assets/img/steps-hetzner___30_07_25_10_24/step-4.png)
 ![Select currency and payment](https://mylemans.online/assets/img/steps-hetzner___30_07_25_10_24/step-5.png)
 
 ---
