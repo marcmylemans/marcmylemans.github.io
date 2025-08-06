@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/f658d7acce07.png
+image: https://mylemans.online/assets/img/posts/fdf42da4b243.png
 layout: post
 title: "Upgrading from Proxmox VE 8 to 9"
 description: "Step-by-step walkthrough of upgrading a 3-node Proxmox cluster from version 8.4 to 9"
