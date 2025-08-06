@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/377b6ef21ca5.png
+image: https://mylemans.online/assets/img/posts/fdf42da4b243.png
 layout: post
 title: "Upgrading Ceph from Reef to Squid (Proxmox 8.4 to 9)"
 description: A detailed, step-by-step guide to upgrading Ceph from Reef (18.2+) to Squid (19.2+) in a Proxmox VE 8 environment.
