@@ -1,8 +1,8 @@
 ---
 image: https://mylemans.online/assets/img/posts/Default.jpg
 layout: post
-title: "Upgrading from Proxmox VE 8 to 9 (with Ceph Reef to Squid)"
-description: "Step-by-step walkthrough of upgrading a 3-node Proxmox cluster from version 8.4 to 9, including Ceph Reef to Squid."
+title: "Upgrading from Proxmox VE 8 to 9"
+description: "Step-by-step walkthrough of upgrading a 3-node Proxmox cluster from version 8.4 to 9"
 date: 2025-08-06
 categories: [Proxmox, Upgrade 8 to 9]
 tags: [Proxmox, Homelab, Ceph, Upgrade, Cluster]
@@ -19,21 +19,23 @@ This guide is based on the official Proxmox upgrade documentation:
 ## System Overview
 
 - **Proxmox Version:** 8.4 (before upgrade)
-- **Ceph Version:** Reef (18.2.2) [Upgrading Ceph from Reef to Squid (Proxmox 8.4 to 9)](https://mylemans.online/posts/Ceph-Upgrade-Reef-to-Squid/)
+- **Ceph Version:** Reef (18.2.2)
 - **Cluster Nodes:** 3
 - **Storage:** Ceph cluster
 
 ---
 
-## Step 1: Upgrade Ceph from Reef to Squid
+## Step 1: (Optional) Upgrade Ceph from Reef to Squid
 
-Before you upgrade Proxmox itself, make sure your **Ceph version is compatible** with Proxmox 9.
+If you're running a **Ceph cluster**, it's important to upgrade Ceph **before** upgrading Proxmox to ensure compatibility.
 
-I followed the [Ceph Reef to Squid upgrade guide](https://pve.proxmox.com/wiki/Ceph_Reef_to_Squid) and ensured all OSDs, MONs, and MGRs were healthy before proceeding.
+We’ve written a detailed guide specifically for this process:  
+[How to upgrade Ceph from Reef to Squid](https://mylemans.online/posts/Ceph-Upgrade-Reef-to-Squid/)
 
-> **Important**: Always verify cluster health with `ceph status` before continuing to the next step.
+If you're **not using Ceph**, or just running a single-node setup without distributed storage, you can skip this step.
 
----
+> **Important**: If you do use Ceph, always verify cluster health with `ceph status` before proceeding.
+
 
 ## Step 2: Upgrade All Proxmox Packages
 
