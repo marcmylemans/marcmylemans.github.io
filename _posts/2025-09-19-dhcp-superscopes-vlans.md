@@ -9,32 +9,36 @@ categories: [Networking, DHCP]
 ---
 
 ## TL;DR
-A flat **/24** network for *everything* (servers, printers, switches, APs, clients, phones, IoT, cameras, …) finally ran out of steam.  
+
+A flat **/24** network for *everything* (servers, printers, switches, APs, clients, phones, IoT, cameras, …) finally ran out of steam.
+
 **Immediate relief:** we added **two temporary /24 scopes** in a **superscope** on Windows Server DHCP and put an **extra alias** on the firewall LAN plus rules for inter-LAN and internet.  
+
 **Long-term fix:** split the network into **VLANs** (Infra, Office, BYOD, Guest Wi-Fi). To keep the temporary scopes from choking during shift changes, we added an **auto-clean** script that removes only **BAD_ADDRESS/Declined** leases when utilization exceeds a threshold.
 
 ---
 
 ## The problem
-The client was suffering from **network congestion** and **DHCP scope exhaustion** on a classic **255.255.255.0 (/24)**. With the company’s growth, a single flat LAN for **servers/printers/switches/access points/clients/smartphones/IoT/cameras** is no longer realistic. Result: full scopes, BAD_ADDRESS entries, random connectivity issues.
+
+The client was suffering from **network congestion** and **DHCP scope exhaustion** on a classic **255.255.255.0 (/24)**. With the company’s growth, a single flat LAN for **servers/printers/switches/accesspoints/clients/smartphones/IoT/cameras** is no longer realistic. The result was full scopes, BAD_ADDRESS entries and random connectivity issues.
 
 ---
 
 ## Immediate stabilization (same day)
+
 1. **Windows Server DHCP superscope**  
-   We created **two additional /24 scopes** and grouped them in a **superscope** to temporarily expand available addresses. These two ranges can later be re-used for VLANs.
+   We created **two additional /24 scopes** and grouped them in a **superscope** to temporarily expand available addresses, these two ranges can later be re-used for VLANs.
 
 2. **Firewall alias + rules**  
    We added an **extra alias IP** on the **LAN interface** and updated rules to:
    - allow **internet access** from the new subnets,
    - permit **LAN-to-LAN** access from the new subnets back to the original /24 (where needed).
 
-This bought us breathing room without touching the existing reservations on the original subnet.
+This bought us breathing room without touching the existing DHCP reservations on the original subnet.
 
 ---
 
-## The real solution: segment with VLANs
-To make capacity, performance, and security match reality, we’re moving to VLANs:
+## The real solution: segmenting the network with VLANs
 
 - **Infra VLAN** — switches & access points (frees a big chunk of the /24).
 - **Office VLAN** — servers, printers, wired clients.
@@ -43,16 +47,18 @@ To make capacity, performance, and security match reality, we’re moving to VLA
   - **BYOD** → separate VLAN  
   - **Guest** → internet-only VLAN
 
-Because there’s a mix of printers, cameras, IoT, etc., we’ll first **analyze the network**, then **upgrade/configure** gear to be VLAN-aware (switching, routing, DHCP helpers, SSID-to-VLAN mapping).
+Because there’s a mix of printers, cameras, IoT, etc., we’ll first **analyze the network**, then **upgrade/configure** gear to be VLAN-aware (switches, Accesspoints, ...).
 
 ---
 
 ## Keeping the temporary scopes healthy
-Shift work + long lease times can still congest the **temporary** scopes. As a safety net, we deploy an **automatic cleanup** that removes only **BAD_ADDRESS/Declined** leases when a scope goes above **80%** utilization. It leaves the **original scope** untouched to avoid impacting reservations.
+
+The workshift changes + long lease times can still congest the **temporary** scopes. As a safety net, we deploy an **automatic cleanup** that removes only **BAD_ADDRESS/Declined** leases when a scope goes above **80%** utilization. It leaves the **original scope** untouched to avoid impacting reservations.
 
 ### PowerShell: auto-clean BAD_ADDRESS/Declined leases
+
 Save as `Clean-BadDhcpLeases.ps1` and run via a Scheduled Task (e.g., every 10 minutes).  
-Replace the example scope IDs with your two temporary /24s (e.g., `10.10.17.0` and `10.10.18.0`).
+Replace the example scope IDs with your two temporary /24s (e.g., `10.10.10.0` and `10.10.20.0`).
 
 ```powershell
 <#
@@ -71,7 +77,7 @@ param(
   [string]$DhcpServer = 'localhost',
 
   # The scopes to auto-clean when utilization crosses the threshold (enter the 2 subnets you want to clean)
-  [IPAddress[]]$ScopeIdsToAutoClean = @('10.10.17.0','10.10.18.0'),
+  [IPAddress[]]$ScopeIdsToAutoClean = @('10.10.10.0','10.10.20.0'),
 
   # Utilization trigger (percentage 0-100)
   [int]$Threshold = 80,
@@ -176,7 +182,7 @@ catch {
 ```
 
 **What the script does (short):**
-- Watches the **two temporary scopes** you specify.  
+- Watches the **two temporary scopes**.  
 - When a scope is **≥ 80%** utilized, it **removes only BAD_ADDRESS/Declined** leases in that scope.  
 - `-CleanAll` optionally purges BAD/Declined across **all scopes** once.  
 - It never touches the **original scope** unless you include it in `ScopeIdsToAutoClean`.
@@ -184,13 +190,13 @@ catch {
 **Suggested schedule:**
 Run every 10 minutes as a Scheduled Task:
 ```text
-powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File "C:\Tools\Clean-BadDhcpLeases.ps1" -DhcpServer "DHCP-SERVER" -ScopeIdsToAutoClean 10.10.17.0,10.10.18.0 -Threshold 80
+powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -File "C:\Tools\Clean-BadDhcpLeases.ps1" -DhcpServer "DHCP-SERVER" -ScopeIdsToAutoClean 10.10.10.0,10.10.20.0 -Threshold 80
 ```
 
 ---
 
 ## Next steps
-1. **Inventory & readiness**: confirm all switches/APs/firewall support VLANs, DHCP relay/helpers, and SSID-to-VLAN mapping.  
+1. **Inventory & readiness**: confirm all switches/APs/firewall support VLANs.  
 2. **Plan addressing**: per-VLAN CIDR, DHCP scopes, reservations, and options.  
 3. **Migrate in waves**: move Infra first (switches/APs), then Office devices, then Wi-Fi SSIDs (Office/BYOD/Guest).  
 4. **Tighten rules**: firewall inter-VLAN permissions (Office ↔ Infra, Guest → internet-only, BYOD limited).  
