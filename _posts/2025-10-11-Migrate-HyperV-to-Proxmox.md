@@ -63,8 +63,9 @@ qemu-img convert -f vhdx -O qcow2 -o preallocation=off ./Win10test.vhdx /var/lib
 2. System:
    - Machine: **q35**
    - BIOS: **OVMF (UEFI)** for Gen2 or **SeaBIOS** for Gen1
+   - Deselect EFI disk and TPM .
 3. Delete the default disk → click **Import Disk**.
-4. Select your `.qcow2` image, change **Bus/Device** to **SCSI**.
+4. Select your `.qcow2` image.
 
 Once done, start your VM and enjoy your new Proxmox environment!
 
