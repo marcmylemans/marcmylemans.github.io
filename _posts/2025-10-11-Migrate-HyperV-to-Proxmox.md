@@ -42,7 +42,7 @@ qemu-img.exe convert -f vhdx -O qcow2 "C:\path\to\VM.vhdx" "C:\path\to\VM-conver
 In powershell or Terminal you have to append .\ to any file.
 
 ```powershell
-qemu-img.exe convert -f vhdx -O qcow2 "C:\path\to\VM.vhdx" "C:\path\to\VM-converted.qcow2"
+.\qemu-img.exe convert -f vhdx -O qcow2 "C:\path\to\VM.vhdx" "C:\path\to\VM-converted.qcow2"
 ```
 
 **Linux example:**
