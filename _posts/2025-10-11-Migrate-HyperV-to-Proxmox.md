@@ -10,6 +10,8 @@ description: "Step-by-step tutorial on migrating a Hyper-V virtual machine to Pr
 
 If you’re moving your home lab or production workloads from **Hyper-V** to **Proxmox**, this guide walks you through the entire migration process, including installing drivers, exporting, converting, and importing your virtual machine.
 
+{% youtube "https://youtu.be/nYLgYg2zPHc" %}
+
 ---
 
 ## Step 1 — Prepare the VM
