@@ -4,7 +4,7 @@ title: "How to Migrate a Hyper-V VM to Proxmox (Step-by-Step Guide)"
 date: 2025-10-11
 categories: [Homelab, Virtualization]
 tags: [Proxmox, Hyper-V, Migration, qemu-img, VirtIO]
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: https://mylemans.online/assets/img/posts/Migrate-HyperV-to-Proxmox.png
 description: "Step-by-step tutorial on migrating a Hyper-V virtual machine to Proxmox using qemu-img and VirtIO drivers."
 ---
 
