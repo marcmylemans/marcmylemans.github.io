@@ -14,20 +14,19 @@ If you’re moving your home lab or production workloads from **Hyper-V** to **P
 
 ---
 
-## Step 1 — Prepare the VM
+## 1. Prepare the VM
 
 1. Inside your Hyper-V VM, install the latest stable **VirtIO drivers**:
    [Download VirtIO ISO](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso)
 
 2. Mount the ISO, install all drivers, then shut down the VM.
 
-3. Export the VM from Hyper-V:
-   - Open Hyper-V Manager → right-click the VM → **Export**
-   - Choose a destination folder.
+3. Export the VM from Hyper-V, Open Hyper-V Manager. Right-click the VM and choose **Export**
+
 
 ---
 
-## Step 2 — Convert the Disk
+## 2. Convert the Disk
 
 Use **qemu-img** to convert your `.vhdx` disk to `.qcow2`.
 
@@ -55,7 +54,7 @@ qemu-img convert -f vhdx -O qcow2 -o preallocation=off ./Win10test.vhdx /var/lib
 
 ---
 
-## Step 3 — Share the Converted Disk
+## 3. Share the Converted Disk
 
 1. On the Hyper-V host, share the folder containing the converted file.
 2. In Proxmox, go to:
@@ -65,7 +64,7 @@ qemu-img convert -f vhdx -O qcow2 -o preallocation=off ./Win10test.vhdx /var/lib
 
 ---
 
-## Step 4 — Create and Import the VM in Proxmox
+## 4. Create and Import the VM in Proxmox
 
 1. Create a new VM → choose “Do not use any media”.
 2. System:
@@ -76,22 +75,5 @@ qemu-img convert -f vhdx -O qcow2 -o preallocation=off ./Win10test.vhdx /var/lib
 4. Select your `.qcow2` image.
 
 Once done, start your VM and enjoy your new Proxmox environment!
-
----
-
-## Summary
-
-- Install VirtIO drivers  
-- Export VM  
-- Convert VHDX → QCOW2  
-- Mount SMB share  
-- Import & boot in Proxmox
-
----
-
-### Related Video
-
-Watch the full tutorial on YouTube:  
-[https://youtube.com/@MylemansOnline](https://youtube.com/@MylemansOnline)
 
 ---
