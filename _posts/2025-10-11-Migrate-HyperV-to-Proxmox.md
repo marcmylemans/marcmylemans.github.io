@@ -63,13 +63,12 @@ Move your converted .qcow2 files to the **Import** folderthat Proxmox has create
 
 ## 4. Create and Import the VM in Proxmox
 
-1. Create a new VM → choose “Do not use any media”.
-2. System:
-   - Machine: **q35**
-   - BIOS: **OVMF (UEFI)** for Gen2 or **SeaBIOS** for Gen1
-   - Deselect EFI disk and TPM .
-3. Delete the default disk → click **Import Disk**.
-4. Select your `.qcow2` image.
+Create a new VM → choose “Do not use any media”. 
+On the System tab choose, Machine: **q35**, BIOS: **OVMF (UEFI)** for Gen2 or **SeaBIOS** for Gen1 and deselect EFI disk and TPM .
+Delete the default disk, click **Import Disk** and select your `.qcow2` image.
+
+>Do not start your VM, depending on your networkspeed the import progress can take some time!
+{: .prompt-info }
 
 Once done, start your VM and enjoy your new Proxmox environment!
 
