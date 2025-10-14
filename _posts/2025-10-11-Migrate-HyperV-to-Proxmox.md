@@ -30,33 +30,34 @@ If you’re moving your home lab or production workloads from **Hyper-V** to **P
 
 Use [qemu-img](https://cloudbase.it/qemu-img-windows/) to convert your `.vhdx` disk to `.qcow2`.
 
-Run from Command Prompt:
+Open an elevated admin prompt!
+
+from Command Prompt:
 
 ```bash
 qemu-img.exe convert -f vhdx -O qcow2 "C:\path\to\VM.vhdx" "C:\path\to\VM-converted.qcow2"
 ```
-
-In powershell or Terminal you have to append .\ to any file.
+or Powershell:
 
 ```powershell
 .\qemu-img.exe convert -f vhdx -O qcow2 "C:\path\to\VM.vhdx" "C:\path\to\VM-converted.qcow2"
 ```
 
-**Linux example:**
-
-```bash
-qemu-img convert -f vhdx -O qcow2 -o preallocation=off ./Win10test.vhdx /var/lib/vz/images/101/Win10-converted.qcow2
-```
+> In powershell or Terminal you have to append .\ to any file you want to execute.
+{: .prompt-info }
 
 ---
 
 ## 3. Share the Converted Disk
 
-1. On the Hyper-V host, share the folder containing the converted file.
-2. In Proxmox, go to:
-   - **Datacenter → Storage → Add → SMB/CIFS**
-   - Enter your Hyper-V server IP, credentials, and share name.
-   - Under **Content**, select **Import**.
+On the Hyper-V host, share the folder containing the converted file.
+In Proxmox, go to Datacenter → Storage → Add → SMB/CIFS. Enter your Hyper-V server IP, credentials, and share name. 
+Under Content, select Import, Proxmox will create a new folder Import on your network share after saving.
+
+Move your converted .qcow2 files to the **Import** folderthat Proxmox has created on your shared folder.
+
+> make sure you have no whitespaces in the filenames or they will not be visible inside Proxmox.
+{: .prompt-info }
 
 ---
 
