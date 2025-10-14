@@ -46,7 +46,9 @@ or Powershell:
 ## 3. Share the Converted Disk
 
 On the Hyper-V host, share the folder containing the converted file.
-In Proxmox, go to Datacenter → Storage → Add → SMB/CIFS. Enter your Hyper-V server IP, credentials, and share name. 
+
+In Proxmox, go to Datacenter, Storage. Choose Add, SMB/CIFS and enter your Hyper-V server IP, credentials and share name.
+
 Under Content, select Import, Proxmox will create a new folder Import on your network share after saving.
 
 Move your converted .qcow2 files to the **Import** folderthat Proxmox has created on your shared folder.
@@ -58,8 +60,10 @@ Move your converted .qcow2 files to the **Import** folderthat Proxmox has create
 
 ## 4. Create and Import the VM in Proxmox
 
-Create a new VM → choose “Do not use any media”. 
-On the System tab choose, Machine: **q35**, BIOS: **OVMF (UEFI)** for Gen2 or **SeaBIOS** for Gen1 and deselect EFI disk and TPM .
+Create a new VM, choose “Do not use any media”.
+
+On the System tab choose, Machine: **q35**, BIOS: **OVMF (UEFI)** for Gen2 or **SeaBIOS** for Gen1 and deselect EFI disk and TPM.
+
 Delete the default disk, click **Import Disk** and select your `.qcow2` image.
 
 >Do not start your VM, depending on your networkspeed the import progress can take some time!
