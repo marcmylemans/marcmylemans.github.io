@@ -28,11 +28,7 @@ If you’re moving your home lab or production workloads from **Hyper-V** to **P
 
 ## 2. Convert the Disk
 
-Use **qemu-img** to convert your `.vhdx` disk to `.qcow2`.
-
-**Windows download:**
-- [https://cloudbase.it/qemu-img-windows/](https://cloudbase.it/qemu-img-windows/)
-- Direct ZIP: [qemu-img-win-x64-2_3_0.zip](https://cloudbase.it/downloads/qemu-img-win-x64-2_3_0.zip)
+Use [qemu-img](https://cloudbase.it/qemu-img-windows/) to convert your `.vhdx` disk to `.qcow2`.
 
 Run from Command Prompt:
 
