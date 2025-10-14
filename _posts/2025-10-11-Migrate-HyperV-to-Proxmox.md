@@ -16,7 +16,9 @@ If you’re moving your home lab or production workloads from **Hyper-V** to **P
 
 ## 1. Prepare the VM
 
-Inside your Hyper-V VM, install the latest stable [VirtIO drivers](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso), mount the ISO, install all drivers and shut down the VM. Export the VM from Hyper-V, Open Hyper-V Manager. Right-click the VM and choose **Export**
+Inside your Hyper-V VM, install the latest stable [VirtIO drivers](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso), mount the ISO, install all drivers and shut down the VM. 
+
+Export the VM from Hyper-V, Open Hyper-V Manager. Right-click the VM and choose **Export**
 
 
 ---
