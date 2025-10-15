@@ -106,8 +106,6 @@ Your PBS will now appear as available storage in Proxmox VE.
 
 ---
 
-## Wrap-Up
-
 You’ve now got a **fully functioning Proxmox Backup Server** protecting your homelab.  
 With deduplication, compression, and easy integration into Proxmox VE, it’s one of the best open-source backup solutions available.
 
@@ -116,5 +114,3 @@ For the video walkthrough, check out my YouTube channel:
 
 ---
 
-**Next steps:**  
-In a future video, we’ll cover advanced topics like **offsite replication, ZFS tuning, and encryption**.
