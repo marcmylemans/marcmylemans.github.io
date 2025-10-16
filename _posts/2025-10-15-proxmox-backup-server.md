@@ -8,6 +8,8 @@ image: https://mylemans.online/assets/img/posts/2025-10-15-proxmox-backup-server
 description: "Learn what Proxmox Backup Server is, why it’s essential for any Proxmox environment, and how to install and configure it step-by-step in your home lab."
 ---
 
+{% youtube "https://youtu.be/cKpjZizyLTo/" %}
+
 # Introduction
 
 If you’re running Proxmox VE, backups are not optional, they’re essential.  
@@ -74,21 +76,52 @@ If you use ZFS, ensure your pool is created and mounted first.
 
 ---
 
-## Step 3: Connect Proxmox VE 9 to PBS
+### Optional: Initialize Extra Disks Using ZFS
+
+If your server has **multiple disks**, you can initialize and group them directly from the PBS web interface:
+
+1. Go to **Administration → Disks**  
+2. Open the **ZFS** tab  
+3. Click **Create: ZFS**  
+4. Give your ZFS pool a **Name**  
+5. Select the disks you want to include  
+6. Choose your **RAID level** (e.g., Mirror, RAIDZ1, RAIDZ2)  
+7. Keep **“Add as datastore”** selected to automatically add it as a PBS datastore  
+8. Click **Create**
+
+This creates and mounts your new ZFS pool — ready for backups, no CLI required.
+
+---
+
+## Step 3: Create a Dedicated Backup User
+
+Instead of connecting your Proxmox VE host using `root@pam`, it’s best practice to create a **dedicated PBS backup user**.
+
+1. In the PBS web interface, go to **Administration → Access Control → Users → Add**  
+2. Enter a username such as `pbs`  
+3. Set a strong password  
+4. Then go to **Administration → Access Control → Permissions → Add**  
+5. Assign the `DatastoreBackup` role to this user for your datastore (e.g., `main-store`)  
+
+This ensures your Proxmox nodes can authenticate safely without giving them full administrative rights.
+
+---
+
+## Step 4: Connect Proxmox VE 9 to PBS
 
 1. On your Proxmox VE node, navigate to:  
    `Datacenter → Storage → Add → Proxmox Backup Server`  
 2. Enter:
    - Server address  
    - Datastore name  
-   - User credentials (`root@pam`)  
+   - **User credentials** (`pbs@pbs`) instead of root  
 3. Click **Fingerprint → Verify**, then **Add**
 
 Your PBS will now appear as available storage in Proxmox VE.
 
 ---
 
-## Step 4: Schedule Backups
+## Step 5: Schedule Backups
 
 1. Go to **Datacenter → Backup → Add**  
 2. Select your VMs and PBS storage  
@@ -97,20 +130,11 @@ Your PBS will now appear as available storage in Proxmox VE.
 
 ---
 
-## Step 5: Test Restores
-
-1. Go to **Datacenter → Backup**  
-2. Select a backup and click **Restore**  
-3. Choose your node and storage target  
-4. Start the restore process and confirm your VM boots correctly  
-
----
-
 You’ve now got a **fully functioning Proxmox Backup Server** protecting your homelab.  
 With deduplication, compression, and easy integration into Proxmox VE, it’s one of the best open-source backup solutions available.
 
 For the video walkthrough, check out my YouTube channel:  
-👉 [Mylemans Online on YouTube](https://youtube.com/@MylemansOnline)
+[Mylemans Online on YouTube](https://youtube.com/@MylemansOnline)
 
 ---
 
