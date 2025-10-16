@@ -84,7 +84,7 @@ After installation:
 ## Watch the Video!
 
 This post is based on our full walkthrough on YouTube:  
-We show the full setup, LXC container installation, and features in action.
+We show the full setup, and features in action.
 
 ## Got Feedback?
 
