@@ -32,7 +32,7 @@ And the best part? It’s open-source and lightweight — installable as a VM, L
 ## Installation Options
 
 ### Option 1: Install via ISO (Recommended)
-1. Download the official PDM ISO from [Proxmox](https://enterprise.proxmox.com/iso/)
+1. Download the official PDM ISO from Proxmox
 2. Create a new VM on your Proxmox VE host
 3. Mount the ISO and install PDM like a regular OS
 4. Access via `https://your-ip:8443`
