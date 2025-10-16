@@ -8,6 +8,7 @@ image: https://mylemans.online/assets/img/posts/proxmox-datacenter-manager-beta.
 description: "A deep dive into Proxmox Datacenter Manager 0.9 Beta — central management for multiple Proxmox VE clusters, perfect for homelab users."
 ---
 
+{% youtube "https://youtu.be/ccqvrVduWz8" %}
 
 If you're managing more than one Proxmox VE node in your homelab, things just got a whole lot easier. The release of **Proxmox Datacenter Manager (PDM) 0.9 Beta** brings a centralized dashboard, multi-cluster control, and a fresh UI designed for modern infrastructure management.
 
