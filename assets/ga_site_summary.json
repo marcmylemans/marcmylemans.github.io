@@ -1,0 +1,85 @@
+{
+  "generated_at": "2025-10-23T21:02:55.051373+00:00Z",
+  "period": {
+    "start": "2025-09-25",
+    "end": "2025-10-22"
+  },
+  "kpis": {
+    "active_users": 2819.0,
+    "new_users": 2739.0,
+    "avg_engagement_seconds_per_active_user": 42.38311457963817,
+    "event_count": 16422.0
+  },
+  "top_pages": [
+    {
+      "title": "Mylemans Online, Tech Tips, Trends & Tutorials",
+      "views": 606,
+      "active_users": 326,
+      "events": 1944,
+      "bounce_rate": 0.5328083989501312
+    },
+    {
+      "title": "A Step-by-Step Guide - Setting Up Remote Desktop Services With FS Logix And Single Sign On! | Mylemans Online, Tech Tips, Trends & Tutorials",
+      "views": 488,
+      "active_users": 257,
+      "events": 1583,
+      "bounce_rate": 0.6066176470588235
+    },
+    {
+      "title": "Upgrading from Proxmox VE 8 to 9 | Mylemans Online, Tech Tips, Trends & Tutorials",
+      "views": 216,
+      "active_users": 145,
+      "events": 759,
+      "bounce_rate": 0.5772357723577236
+    },
+    {
+      "title": "Setting Up Active Directory on Windows Server 2022: A Step-by-Step Guide | Mylemans Online, Tech Tips, Trends & Tutorials",
+      "views": 209,
+      "active_users": 175,
+      "events": 685,
+      "bounce_rate": 0.7351598173515982
+    },
+    {
+      "title": "Simplifying MFA Setup for Remote Desktop Gateway with Microsoft Entra ID | Mylemans Online, Tech Tips, Trends & Tutorials",
+      "views": 209,
+      "active_users": 114,
+      "events": 649,
+      "bounce_rate": 0.5211267605633803
+    },
+    {
+      "title": "A Step-by-Step Guide - Installing and Configuring Office on RemoteAPP/Desktop Services | Mylemans Online, Tech Tips, Trends & Tutorials",
+      "views": 177,
+      "active_users": 112,
+      "events": 534,
+      "bounce_rate": 0.4425287356321839
+    },
+    {
+      "title": "How to Migrate a Hyper-V VM to Proxmox (Step-by-Step Guide) | Mylemans Online, Tech Tips, Trends & Tutorials",
+      "views": 150,
+      "active_users": 116,
+      "events": 528,
+      "bounce_rate": 0.4225352112676056
+    },
+    {
+      "title": "Automatic Domain Join with Microsoft Deployment Toolkit! | Mylemans Online, Tech Tips, Trends & Tutorials",
+      "views": 121,
+      "active_users": 87,
+      "events": 437,
+      "bounce_rate": 0.3684210526315789
+    },
+    {
+      "title": "Allow (Print) Driver installation (Non Admins) | Mylemans Online, Tech Tips, Trends & Tutorials",
+      "views": 119,
+      "active_users": 95,
+      "events": 479,
+      "bounce_rate": 0.5448275862068965
+    },
+    {
+      "title": "Step-by-Step Guide - Connecting Local Active Directory to Microsoft Entra ID | Mylemans Online, Tech Tips, Trends & Tutorials",
+      "views": 112,
+      "active_users": 85,
+      "events": 411,
+      "bounce_rate": 0.5039370078740157
+    }
+  ]
+}
