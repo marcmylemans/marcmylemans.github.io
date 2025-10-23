@@ -80,7 +80,7 @@ I’m open to **honest, long-term collaborations** that align with my audience�
 <script defer>
 async function loadGA(){
   try{
-    const res = await fetch('/assets/data/ga-site.json?v=' + Date.now(), {cache:'no-store'});
+    const res = await fetch('https://mylemans.online/assets/data/ga-site.json?v=' + Date.now(), {cache:'no-store'});
     const j = await res.json();
     const k = j.kpis || {};
     const p = j.period ? ` (${j.period.start} → ${j.period.end})` : '';
