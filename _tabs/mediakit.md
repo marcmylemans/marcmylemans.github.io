@@ -23,18 +23,6 @@ My goal is to make complex tech **accessible, fun, and hands-on** for enthusiast
 
 ---
 
-## 📊 Channel Overview
-
-| Metric | Current | Source |
-|---------|----------|--------|
-| **Subscribers** | <span id="yt-subs">Loading...</span> | YouTube API |
-| **Monthly Views** | <span id="yt-views">Loading...</span> | YouTube API |
-| **Watch Time (hours)** | <span id="yt-watch">Loading...</span> | YouTube API |
-| **Top Audience** | 25–44 y/o, tech-savvy men (EU & US) | Analytics |
-| **Main Topics** | Homelab • Proxmox • Windows Server • Automation |
-
----
-
 ## 🧰 Collaboration Opportunities
 
 I’m open to **honest, long-term collaborations** that align with my audience’s interests.
@@ -80,17 +68,43 @@ I’m open to **honest, long-term collaborations** that align with my audience�
 </div>
 
 ---
+<table>
+  <tr><th>Website users (period)</th><td id="ga-users">—</td></tr>
+  <tr><th>New users</th><td id="ga-new">—</td></tr>
+  <tr><th>Avg. engagement / active user</th><td id="ga-eng">—</td></tr>
+  <tr><th>Events</th><td id="ga-events">—</td></tr>
+</table>
 
-<script>
-async function loadYouTubeStats() {
-  const channelId = "UC1y0Dtbzss2I3mm45xPMm1Q"; // replace with your channel ID
-  const apiKey = "AIzaSyAnBMaJPMo2xftoApMPWlt0D3PFWG2JLus";
-  const response = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${channelId}&key=${apiKey}`);
-  const data = await response.json();
-  const stats = data.items[0].statistics;
-  document.getElementById("yt-subs").innerText = Number(stats.subscriberCount).toLocaleString();
-  document.getElementById("yt-views").innerText = Number(stats.viewCount).toLocaleString();
-  document.getElementById("yt-watch").innerText = "—"; // optional: custom estimate
+<ul id="ga-top-pages"></ul>
+
+<script defer>
+async function loadGA(){
+  try{
+    const res = await fetch('/assets/data/ga-site.json?v=' + Date.now(), {cache:'no-store'});
+    const j = await res.json();
+    const k = j.kpis || {};
+    const p = j.period ? ` (${j.period.start} → ${j.period.end})` : '';
+    const fmt = n => (n==null||n==='') ? '—' : Number(n).toLocaleString();
+    document.getElementById('ga-users').textContent = fmt(k.active_users) + p;
+    document.getElementById('ga-new').textContent   = fmt(k.new_users);
+    // format seconds to mm:ss
+    const s = Number(k.avg_engagement_seconds_per_active_user||0);
+    const mm = Math.floor(s/60), ss = Math.round(s%60).toString().padStart(2,'0');
+    document.getElementById('ga-eng').textContent   = s ? `${mm}:${ss}` : '—';
+    document.getElementById('ga-events').textContent= fmt(k.event_count);
+
+    const ul = document.getElementById('ga-top-pages');
+    (j.top_pages||[]).forEach(row=>{
+      const li = document.createElement('li');
+      const parts = [];
+      if (row.title) parts.push(row.title);
+      if (row.views!=null) parts.push(`${row.views.toLocaleString()} views`);
+      if (row.active_users!=null) parts.push(`${row.active_users.toLocaleString()} users`);
+      li.textContent = parts.join(' — ');
+      ul.appendChild(li);
+    });
+  }catch(e){ console.error('GA load error', e); }
 }
-loadYouTubeStats();
+document.addEventListener('DOMContentLoaded', loadGA);
 </script>
+
