@@ -61,7 +61,7 @@ vidIQ helps YouTube creators optimize and grow their channels by offering:
 
 Enhance your YouTube channel growth and visibility with vidIQ.
 
-#### ***Invoiced Ninja**
+#### **Invoiced Ninja**
 
 I’ve been using [Invoice Ninja](https://app.invoicing.co/#/register?rc=b70ktripusujoiw6tubuawexdda7hxlr) to manage my own billing — it’s clean, fast, and great for freelancers or small businesses.  
 If you’re looking for an easy invoicing tool, give it a try using my link — it helps support **Mylemans Online** at no extra cost to you.
