@@ -75,6 +75,14 @@ Now that Proxmox is ready, let's build our virtual router.
     -   Once booted, assign `net0` as WAN and `net1` as LAN.
 3.  **Passthrough the laptop's Wi-Fi adapter** so OpenWRT can use it as
     an additional WAN link.
+4.  Install required packages in the OpenWRT VM:
+    ``` bash
+    opkg update
+    opkg install kmod-iwlwifi iwlwifi-firmware-iwl7265d wireless-tools wpad-basic
+    ```
+    > You can find out your Wi-Fi module and drivers in the Troubleshooting Wi-Fi Passthrough steps.
+    {: .prompt-tip }
+    
 
 ------------------------------------------------------------------------
 
@@ -126,13 +134,22 @@ and can be safely **assigned to your OpenWRT VM** as a **PCI device**.
 Once booted again, OpenWRT should detect the interface (e.g. `wlan0`).
 You can then connect it to your local or public Wi-Fi network as the WAN
 interface
-and leave your virtual LAN (`vmbr1`) for all Proxmox VMs and containers.
 
 ------------------------------------------------------------------------
 
-**At this point:**\
-- OpenWRT is installed and reachable from the LAN bridge.
-- The laptop's Wi-Fi adapter is successfully passed through.
-- You can browse the web from any VM connected to the LAN bridge.
+## Step 3 -- Build the Internal Network
 
-------------------------------------------------------------------------
+1.  Use only vmbr0 as your main bridge, it handles both WAN and LAN (via VLAN tags).
+2.  Create a VLAN 999 sub-interface on the host:
+    ``` bash
+    auto enp0s31f6.999
+    iface enp0s31f6.999 inet static
+        address 192.168.99.10/24
+        vlan-raw-device enp0s31f6
+    ```
+    This gives your Proxmox host direct access to the OpenWRT LAN.
+
+3.  In the OpenWRT VM:
+    -  WAN NIC → attached to vmbr0 (untagged, DHCP from your upstream)
+    -  LAN NIC → attached to vmbr0 with VLAN tag 999
+4   Any additional VMs can join the LAN by attaching to vmbr0 and setting VLAN tag 999 in their network settings.
