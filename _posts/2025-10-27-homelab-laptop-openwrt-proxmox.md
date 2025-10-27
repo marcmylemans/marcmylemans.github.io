@@ -5,7 +5,7 @@ layout: post
 date: 2025-10-27
 categories: ["Proxmox", "Homelab"]
 tags: [Proxmox, OpenWRT, Homelab, Networking, Laptop]
-image: https://mylemans.online/assets/img/posts/proxmox-datacenter-manager-beta.png
+image: https://mylemans.online/assets/img/posts/Default.jpg
 ---
 
 You don’t need a server rack or expensive hardware to start a homelab.  
@@ -38,13 +38,14 @@ With a single laptop, you can build a **complete, portable lab** running **Proxm
    update-grub
    ```
  4.  Edit /etc/modules and ensure these lines exist:
-
-    ```bash
+   
+   ```bash
     vfio
     vfio_iommu_type1
     vfio_pci
     vfio_virqfd
-    ```
+   ```
+    
 5.  Install a simple desktop for local control:
 
     ``` bash
@@ -52,8 +53,8 @@ With a single laptop, you can build a **complete, portable lab** running **Proxm
     adduser yourusername
     systemctl start lightdm
     ```
-6.  Log in and open Chromium → `https://127.0.0.1:8006`\
-    Your laptop now acts as both **host** and **management station**.
+    
+6.  Log in and open in Chromium `https://127.0.0.1:8006`, your laptop now acts as both **host** and **management station**.
 
 ------------------------------------------------------------------------
 
