@@ -58,7 +58,7 @@ With a single laptop, you can build a **complete, portable lab** running **Proxm
 
 ------------------------------------------------------------------------
 
-## Step 2 -- Create the OpenWRT VM
+## Step 2 - Create the OpenWRT VM
 
 Now that Proxmox is ready, let's build our virtual router.
 
@@ -137,7 +137,7 @@ interface
 
 ------------------------------------------------------------------------
 
-## Step 3 -- Build the Internal Network
+## Step 3 - Build the Internal Network
 
 1.  Use only vmbr0 as your main bridge, it handles both WAN and LAN (via VLAN tags).
 2.  Create a VLAN 999 sub-interface on the host:
@@ -153,3 +153,44 @@ interface
     -  WAN NIC → attached to vmbr0 (untagged, DHCP from your upstream)
     -  LAN NIC → attached to vmbr0 with VLAN tag 999
 4   Any additional VMs can join the LAN by attaching to vmbr0 and setting VLAN tag 999 in their network settings.
+
+------------------------------------------------------------------------
+
+## Step 4 — Add Multi-WAN Failover (Optimized)
+
+Inside OpenWRT, configure:
+
+1.  WAN → the wired NIC (attached to vmbr0, untagged, DHCP from upstream).
+2.  WWAN → the Wi-Fi interface (station mode, connects to another network).
+3.  Install the failover manager:
+    ``` bash
+    opkg update && opkg install mwan3 luci-app-mwan3
+    ```
+
+4.  Edit /etc/config/mwan3 (or use LuCI → Network → Load Balancing) to prioritize Ethernet and use Wi-Fi as backup:
+    ``` bash
+    config member 'wan_main'
+        option interface 'wan'
+        option metric '1'
+    
+    config member 'wwan_backup'
+        option interface 'wwan'
+        option metric '2'
+    
+    config policy 'failover'
+        list use_member 'wan_main'
+        list use_member 'wwan_backup'
+    
+    config rule 'default_rule'
+        option dest_ip '0.0.0.0/0'
+        option use_policy 'failover'
+    ``` 
+
+5.  Enable and start the service:
+    ``` bash
+    /etc/init.d/mwan3 enable
+    /etc/init.d/mwan3 restart
+    ``` 
+
+6.  Test failover:
+Unplug the Ethernet cable and the traffic should automatically switch to Wi-Fi. Plug it back in and the routes revert to wired WAN (higher priority).
