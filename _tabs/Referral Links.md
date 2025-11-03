@@ -22,6 +22,14 @@ YouTube is a fantastic platform for content creators, and you can support us by 
 
 By doing these simple actions, you can show your support and help our channel grow. We appreciate your engagement!
 
+#### **Hostinger**
+
+Looking for reliable and affordable web hosting?  
+I personally use **Hostinger** for several of my projects, it’s fast, simple to manage and great value for money.  
+
+[Sign up with my referral link](https://hostinger.com?REFERRALCODE=BACMARCMYTZG) to support my work and get a discount on your first plan!
+
+
 #### **DigitalOcean**
 
 [Sign Up with DigitalOcean](https://www.digitalocean.com/?refcode=e03b740d65fb&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
