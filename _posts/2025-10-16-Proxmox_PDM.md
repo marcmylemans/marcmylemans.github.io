@@ -5,7 +5,7 @@ date: 2025-10-16
 categories: ["Proxmox", "Homelab"]
 tags: ["Proxmox VE", "Datacenter Manager", "PDM", "Cluster Management", "Beta"]
 image: https://mylemans.online/assets/img/posts/proxmox-datacenter-manager-beta.png
-description: "A deep dive into Proxmox Datacenter Manager 0.9 Beta — central management for multiple Proxmox VE clusters, perfect for homelab users."
+description: "A deep dive into Proxmox Datacenter Manager 0.9 Beta, central management for multiple Proxmox VE clusters, perfect for homelab users."
 ---
 
 {% youtube "https://youtu.be/ccqvrVduWz8" %}
@@ -14,7 +14,7 @@ If you're managing more than one Proxmox VE node in your homelab, things just go
 
 ## What Is Proxmox Datacenter Manager?
 
-PDM is a central management platform that connects to your existing Proxmox VE installations and displays a unified dashboard. It’s not a replacement — it works *with* your Proxmox nodes and clusters to make management easier.
+PDM is a central management platform that connects to your existing Proxmox VE installations and displays a unified dashboard. It’s not a replacement, it works *with* your Proxmox nodes and clusters to make management easier.
 
 Key features:
 - Unified dashboard for all nodes and clusters
@@ -28,7 +28,7 @@ Key features:
 
 Homelabbers often run multiple Proxmox nodes — old mini PCs, tower servers, or NUCs. Until now, managing each meant separate logins and GUIs. With PDM, you manage it all in one place.
 
-And the best part? It’s open-source and lightweight — installable as a VM, LXC container, or on bare metal.
+And the best part? It’s open-source and lightweight and installable as a VM, LXC container, or on bare metal.
 
 ## Installation Options
 
