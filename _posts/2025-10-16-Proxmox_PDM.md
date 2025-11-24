@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Proxmox Datacenter Manager 0.9 Beta – A Game Changer for Homelab Users"
+title: "Proxmox Datacenter Manager 0.9 Beta, A Game Changer for Homelab Users"
 date: 2025-10-16
 categories: ["Proxmox", "Homelab"]
 tags: ["Proxmox VE", "Datacenter Manager", "PDM", "Cluster Management", "Beta"]
@@ -26,7 +26,7 @@ Key features:
 
 ## Why It’s Ideal for Homelab Users
 
-Homelabbers often run multiple Proxmox nodes — old mini PCs, tower servers, or NUCs. Until now, managing each meant separate logins and GUIs. With PDM, you manage it all in one place.
+Homelabbers often run multiple Proxmox nodes on old mini PCs, tower servers, or NUCs. Until now, managing each meant separate logins and GUIs. With PDM, you manage it all in one place.
 
 And the best part? It’s open-source and lightweight and installable as a VM, LXC container, or on bare metal.
 
