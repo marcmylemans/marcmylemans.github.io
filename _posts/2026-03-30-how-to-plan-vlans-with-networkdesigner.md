@@ -76,19 +76,6 @@ With the plan confirmed, you have three export options:
 
 There's also a **CLI Preview** - a modal that shows you the vendor-specific commands to configure your switches based on the plan. Check this before you start typing on the actual hardware.
 
-## Taking the Plan Into Unifi
-
-If you're using Ubiquiti Unifi for switching and routing (a common choice for homelabs), you'll use your exported plan to:
-
-1. Create each VLAN in the Unifi Network application
-2. Assign port profiles to match (access or trunk per port)
-3. Configure the routing interfaces with the gateway addresses from your plan
-4. Set up firewall rules between VLANs (especially to isolate guest from everything else)
-
-For a detailed walkthrough of setting up Unifi in your environment, check out the post on [Installing Unifi with Docker](/posts/installingunifidockerletsencrypt/).
-
-If you need a refresher on VLAN fundamentals before diving into configuration, [Understanding VLANs](/posts/understandingvlans/) covers the concepts. For how traffic moves between VLANs, [Routing and NAT](/posts/routingandnat/) fills in the gaps.
-
 ## Why I Built It This Way
 
 The `10.x.0.0/16` model is opinionated by design. A tool that lets you do anything also lets you make every mistake. By constraining to one /16 per site, the tool eliminates a whole category of problems:
