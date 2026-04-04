@@ -41,7 +41,7 @@ By accessing "Master Hyper-V" during its Early Access stage, you can choose to g
 
 Don't miss out on this opportunity to master Hyper-V and elevate your virtualization skills. Download your copy of "Master Hyper-V" today on Ko-fi and start your journey towards virtualization excellence!
 
-[Get It Now on Ko-fi](https://ko-fi.com/s/4dd04dba14)
+[Get It Now on Ko-fi](https://ko-fi.com/s/725d3eb6d0)
 
 Thank you for your support!
 
