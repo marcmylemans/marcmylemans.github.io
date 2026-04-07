@@ -79,7 +79,7 @@ For anyone who values a smooth desktop experience, this matters. Once you get us
 
 One of the nicest parts of this setup is how clean the laptop connection becomes.
 
-The iDock B10 supports **up to 100W charging over USB-C**, so I can connect the laptop and power it through the same connection. That means less clutter, fewer chargers on the desk, and less friction when docking and undocking. :contentReference[oaicite:1]{index=1}
+The iDock B10 supports **up to 100W charging over USB-C**, so I can connect the laptop and power it through the same connection. That means less clutter, fewer chargers on the desk, and less friction when docking and undocking.
 
 In daily use, that makes a real difference. I can sit down, connect the laptop, press one button, and get to work.
 
@@ -87,7 +87,7 @@ In daily use, that makes a real difference. I can sit down, connect the laptop, 
 
 This was a major selling point for me.
 
-The iDock B10 supports **10Gbps USB**, which is far more reassuring than relying on a basic USB switcher for demanding accessories. AV Access specifically markets the B10 around high-speed USB connectivity for fast transfers and high-bandwidth peripherals. :contentReference[oaicite:2]{index=2}
+The iDock B10 supports **10Gbps USB**, which is far more reassuring than relying on a basic USB switcher for demanding accessories. AV Access specifically markets the B10 around high-speed USB connectivity for fast transfers and high-bandwidth peripherals.
 
 That means my **4K webcam** can operate without feeling like the weak link in the chain. My keyboard and mouse are easy, of course, but the real benefit is knowing that more demanding devices are not being squeezed through a low-end switch.
 
@@ -95,7 +95,7 @@ That means my **4K webcam** can operate without feeling like the weak link in th
 
 The whole point of a KVM is convenience, and this is where the iDock B10 delivers.
 
-I can switch using the **button on the unit** or use the **remote puck**, which is even better for everyday use. AV Access also highlights button and wired remote switching as core B10 features. :contentReference[oaicite:3]{index=3}
+I can switch using the **button on the unit** or use the **remote puck**, which is even better for everyday use. AV Access also highlights button and wired remote switching as core B10 features.
 
 That sounds like a small thing until you live with it. Not having to reach behind a monitor, move cables, or juggle separate switches is exactly the kind of quality-of-life improvement that makes a desk setup feel finished.
 
@@ -104,7 +104,7 @@ That sounds like a small thing until you live with it. Not having to reach behin
 
 Another feature that deserves more attention is the built-in **Ethernet port**.
 
-The iDock B10 includes **1G Ethernet** and AV Access says it can serve both connected computers simultaneously. :contentReference[oaicite:4]{index=4}
+The iDock B10 includes **1G Ethernet** and AV Access says it can serve both connected computers simultaneously.
 
 That is a smart addition because networking is often overlooked in these kinds of setups. In my case, it means both hosts can benefit from the same wired network connection while I switch between them. That keeps the desk cleaner and avoids one more thing to manually reconfigure.
 
@@ -132,7 +132,7 @@ That last point is important. Before this, my setup depended on stacking partial
 
 This is an important distinction.
 
-If you are mainly using a **MacBook**, AV Access recommends the **iDock M10** instead. The official product page positions it specifically as a KVM docking station for **MacBook**, with dual-display support, **100W charging**, and **10Gbps USB**. :contentReference[oaicite:5]{index=5}
+If you are mainly using a **MacBook**, AV Access recommends the **iDock M10** instead. The official product page positions it specifically as a KVM docking station for **MacBook**, with dual-display support, **100W charging**, and **10Gbps USB**.
 
 That makes sense because macOS and MacBook display support can be more nuanced than a standard Windows desktop or laptop setup. A product designed around MacBook workflows is often the safer choice if Apple hardware is your main machine.
 
@@ -142,7 +142,7 @@ So while I think the **iDock B10** is a great fit for my own desktop-plus-laptop
 
 If two monitors are not enough, AV Access also offers the **iDock B23**.
 
-The B23 is positioned as a **triple-monitor KVM docking station** for one desktop and one laptop, with **100W PD** and support for high resolutions and refresh rates. :contentReference[oaicite:6]{index=6}
+The B23 is positioned as a **triple-monitor KVM docking station** for one desktop and one laptop, with **100W PD** and support for high resolutions and refresh rates.
 
 That makes it the natural step up for users who want to go even further with a bigger workstation. If your workflow includes dashboards, development tools, editing timelines, chat windows, browser stacks, or monitoring panels across several screens, the B23 is the model worth looking at.
 
