@@ -111,7 +111,7 @@ The customer feels: "Sometimes it just hangs for a moment." We measure: "Three y
 
 The cleanup itself is fast. The interesting part is realising what to look for, because a single demoted DC tends to leave traces in three places at once.
 
-In **DNS Manager** on the surviving DC: any NS records pointing at the ghost server in `mercurius.local`, any glue A records under `_msdcs.<domain>`, and any leftovers in the reverse lookup zones (`16.10.10.in-addr.arpa` and friends). All gone.
+In **DNS Manager** on the surviving DC: any NS records pointing at the ghost server in `contoso.local`, any glue A records under `_msdcs.<domain>`, and any leftovers in the reverse lookup zones (`16.10.10.in-addr.arpa` and friends). All gone.
 
 In **Active Directory Sites and Services**: walk to `Sites > Default-First-Site-Name > Servers` and see whether the orphaned DC still has its server object plus an `NTDS Settings` child. If yes, remove the NTDS Settings first, then the server object.
 
