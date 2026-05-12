@@ -4,7 +4,6 @@ layout: post
 title: "Three Years of SMB Pain From a Single Phantom DNS Record"
 description: "A real case from the field, anonymised, on how one forgotten DNS record quietly tortured a production environment for years before anyone connected the dots."
 date: 2026-05-12
-categories: [Category 1, Category 2, Category 3]
 ---
 
 
