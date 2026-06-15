@@ -4,7 +4,7 @@ description: "A real-world look at the AV Access iDock B10 for dual-monitor desk
 date: 2026-04-07 09:00:00 +0200
 categories: [Desk Setup, Reviews, Productivity]
 tags: [idock b10, av access, kvm switch, dual monitor, usb-c dock, desk setup, jekyll, chirpy]
-image: https://mylemans.online/assets/img/posts/43b86a272612.png
+image: https://mylemans.online/assets/img/posts/Default.jpg
 ---
 
 If you use both a desktop PC and a laptop on the same desk, you already know how messy things can get. One machine might be better for gaming or heavy local workloads. The other might be your work laptop. In theory, that sounds flexible. In practice, it often means too many cables, too many compromises, and way too much unplugging.
