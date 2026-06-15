@@ -3,7 +3,7 @@ title: "Home Server: 5 Things to Do First"
 description: "You installed Proxmox, now what? The five first steps that take a home server from installed to solid: fixed IP, no root, snapshots, updates, docs."
 categories: [Homelab, Proxmox]
 tags: [proxmox, homelab, tutorial, security, youtube]
-image: https://mylemans.online/assets/img/posts/home-server-now-what/cover.png
+image: https://mylemans.online/assets/img/posts/43b86a272612.png
 ---
 
 The install finished, the dashboard loaded, and now you're staring at a powerful machine with no idea what to do next. That's the moment nobody makes a video about, and it's exactly where good homelabs quietly go wrong.
