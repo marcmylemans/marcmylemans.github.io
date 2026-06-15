@@ -1,13 +1,10 @@
-\---
-
+---
 title: "Home Server: 5 Things to Do First"
 description: "You installed Proxmox, now what? The five first steps that take a home server from installed to solid: fixed IP, no root, snapshots, updates, docs."
-categories: \[Homelab, Proxmox]
-tags: \[proxmox, homelab, tutorial, security, youtube]
+categories: [Homelab, Proxmox]
+tags: [proxmox, homelab, tutorial, security, youtube]
 date: 2026-06-15 14:30:00 +0200
-image:
-path: /assets/img/posts/home-server-now-what/cover.png
-alt: A Proxmox VE dashboard running on a small home server, freshly installed.
+image: https://mylemans.online/assets/img/posts/home-server-now-what/cover.png
 ---
 
 The install finished, the dashboard loaded, and now you're staring at a powerful machine with no idea what to do next. That's the moment nobody makes a video about, and it's exactly where good homelabs quietly go wrong.
@@ -25,7 +22,7 @@ By default, your home network hands out addresses like seats at a busy restauran
 
 The fix is to reserve its spot. The technical name is a *DHCP reservation* (or a static lease), but the idea is simple: you tell your router "this machine always gets this address." You do it once, in your router, by tying the server's network card to a fixed address.
 
-`\[SCREENSHOT: the router's DHCP reservation page, the server's MAC tied to a fixed IP, address field highlighted]`
+
 
 Pin it once and everything else you do gets easier, because the server never moves again.
 
@@ -40,7 +37,7 @@ Think of it like the master key to a building. You don't carry the master key ar
 
 Create a dedicated admin user, then test it the honest way: log in as the new user and try an admin action *before* granting the rights. It should be refused. Good, that proves the account is limited. Then grant the proper permission and try again, and it works.
 
-`\[SCREENSHOT: the new user being denied an admin action, then the same action succeeding after the role is granted]`
+
 
 That refused-then-allowed moment is the whole point: you now work as a limited user by default, which is exactly how it should be.
 
@@ -55,7 +52,7 @@ Here are two genuinely useful roles to build:
 * **VM operator:** can manage the virtual machines that already exist (start, stop, change settings, take snapshots) but **cannot create new ones** and **cannot touch the storage layer**. In Proxmox terms, the privilege that controls "can create a VM" is `VM.Allocate`. Leave it out and they can drive the cars but not build new ones. Give no `Datastore.\*` privileges and the storage layer stays invisible to them.
 * **Full admin:** can create VMs (`VM.Allocate` included) and manage storage (`Datastore.Allocate`, `Datastore.AllocateSpace`, `Datastore.Audit`). Proxmox ships a built-in `PVEAdmin` role that already covers this, so you may not even build it by hand. `\[VERIFY: current Proxmox role/privilege names]`
 
-`\[SCREENSHOT: the custom VM-operator role in Proxmox, the privilege checklist with VM.Allocate and Datastore.\* deliberately unchecked]`
+
 
 Then you wire it up: create a group per job, assign the role to the *group* at a *path* (a path is just where the permission applies, scope it to everything or to a single resource pool), and drop your user into the group. From then on, managing who-can-do-what is just managing group membership. That's how it's done in a real shop, and you just set it up at home.
 
@@ -63,7 +60,7 @@ Then you wire it up: create a group per job, assign the role to the *group* at a
 
 A snapshot is a save point, exactly like in a game: a moment you can jump back to if you break something. Proxmox makes one in a couple of clicks.
 
-`\[SCREENSHOT: taking a VM snapshot in Proxmox, the snapshot list with a fresh "clean-install" entry]`
+
 
 The reason to do it *now* and not "someday" is that you're about to experiment. You'll install things, break things, and learn. A snapshot turns every one of those mistakes into a five-second undo instead of a full reinstall. Take one now, and take one before anything risky.
 
@@ -71,7 +68,7 @@ The reason to do it *now* and not "someday" is that you're about to experiment. 
 
 The boring one that matters most. Your server needs updates for the same reason your phone does: the holes attackers use are the ones nobody patched. The command matters less than the habit. Updating isn't a one-time thing you did once; it's a small, regular check you start on day one.
 
-`\[SCREENSHOT: the Proxmox update process running in the shell]`
+
 
 > On a fresh Proxmox install without a subscription, the enterprise update repository will throw an error until you switch to the no-subscription repository. That's the most common "why won't it update" wall beginners hit. `\[VERIFY: current Proxmox repo names and update commands]`
 {: .prompt-warning }
@@ -84,7 +81,7 @@ Here's the failure mode I've watched happen a hundred times: you build something
 
 So keep a boring little note: the server's address, the admin account, where your snapshots are, what you've installed and why. A plain text file beats nothing. A small self-hosted documentation tool is even better, and it happens to be a great first thing to actually self-host, which is exactly where the next video goes.
 
-`\[SCREENSHOT: a simple documentation note for the server, address and account and snapshot location filled in]`
+
 
 That note is what turns a one-off weekend project into a system you own and can maintain. Not a fancy tool. A note.
 
@@ -118,25 +115,3 @@ Prefer to watch? The full walkthrough is on **Mylemans Online**. The video is ou
 
 > Want to do this properly, in order, with the reasoning behind each step? The free, hands-on \*\*Virtualization path on Mylemans Labs\*\* walks you through it from a fresh install to a server you can actually rely on. \[Start the path here.](https://labs.mylemans.online)
 {: .prompt-info }
-
-\---
-
-<!--
-INTERNAL LINKS (placed in body):
-- Existing cornerstone: Build Your First Home Server (intro) — the prerequisite post
-- Virtualization Labs path (CTA, .prompt-info)
-- Companion video (recap) — members-then-public handled: public 2026-06-29
-
-RELEASE CADENCE:
-- Day 0 = 2026-06-22 (this blog public + video members-only). front-matter date set.
-- Day +7 = 2026-06-29 (video public). On that day: swap the recap video line/link to the
-  public video URL and add `last\_modified\_at: 2026-06-29`.
-
-\[VERIFY] before publish: Proxmox network UI path, role/privilege names (VM.Allocate, Datastore.\*),
-no-subscription repo names + update commands. Replace \[SCREENSHOT] placeholders with real captures.
-
-HORMOZI PASS: title 36 chars, intent-matched ("proxmox first steps" / "what to do after installing").
-Answer-first TL;DR up top. One idea per H2. Skipped-step covered (enterprise-repo wall, IP clash,
-VM.Allocate distinction). FAQ for PAA. One CTA (Virtualization path) alone in its .prompt-info box;
-all other links live higher in the body. No em dashes. First-person Marc.
-
