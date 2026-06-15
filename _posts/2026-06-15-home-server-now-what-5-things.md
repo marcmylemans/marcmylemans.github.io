@@ -115,3 +115,6 @@ Prefer to watch? The full walkthrough is on **Mylemans Online**. The video is ou
 
 > Want to do this properly, in order, with the reasoning behind each step? The free, hands-on \*\*Virtualization path on Mylemans Labs\*\* walks you through it from a fresh install to a server you can actually rely on. \[Start the path here.](https://labs.mylemans.online)
 {: .prompt-info }
+
+---
+*Prefer to watch? This guide accompanies my video walkthrough. For the full build and more homelab tutorials, check out [Mylemans Online on YouTube](https://www.youtube.com/@MylemansOnline).*
