@@ -25,7 +25,7 @@ The fix is to reserve its spot. The technical name is a *DHCP reservation* (or a
 
 Pin it once and everything else you do gets easier, because the server never moves again.
 
-> Avoid setting a static IP \*inside\* Proxmox that overlaps your router's automatic range. If the router later hands that same address to another device, you get an address clash and one of them drops off the network. Reserve it in the router, or set it statically in Proxmox \*\*and\*\* exclude it from the router's range. Don't do half of each. `\[VERIFY: current Proxmox network UI path]`
+> Avoid setting a static IP \*inside\* Proxmox that overlaps your router's automatic range. If the router later hands that same address to another device, you get an address clash and one of them drops off the network. Reserve it in the router, or set it statically in Proxmox \*\*and\*\* exclude it from the router's range. Don't do half of each.
 {: .prompt-warning }
 
 ## 2\. Stop logging in as root
@@ -49,7 +49,7 @@ Instead of handing permissions to each person one by one, you create *roles*. Th
 Here are two genuinely useful roles to build:
 
 * **VM operator:** can manage the virtual machines that already exist (start, stop, change settings, take snapshots) but **cannot create new ones** and **cannot touch the storage layer**. In Proxmox terms, the privilege that controls "can create a VM" is `VM.Allocate`. Leave it out and they can drive the cars but not build new ones. Give no `Datastore.\*` privileges and the storage layer stays invisible to them.
-* **Full admin:** can create VMs (`VM.Allocate` included) and manage storage (`Datastore.Allocate`, `Datastore.AllocateSpace`, `Datastore.Audit`). Proxmox ships a built-in `PVEAdmin` role that already covers this, so you may not even build it by hand. `\[VERIFY: current Proxmox role/privilege names]`
+* **Full admin:** can create VMs (`VM.Allocate` included) and manage storage (`Datastore.Allocate`, `Datastore.AllocateSpace`, `Datastore.Audit`). Proxmox ships a built-in `PVEAdmin` role that already covers this, so you may not even build it by hand.
 
 
 
@@ -69,7 +69,7 @@ The boring one that matters most. Your server needs updates for the same reason 
 
 
 
-> On a fresh Proxmox install without a subscription, the enterprise update repository will throw an error until you switch to the no-subscription repository. That's the most common "why won't it update" wall beginners hit. `\[VERIFY: current Proxmox repo names and update commands]`
+> On a fresh Proxmox install without a subscription, the enterprise update repository will throw an error until you switch to the no-subscription repository. That's the most common "why won't it update" wall beginners hit.
 {: .prompt-warning }
 
 ## 6\. Write down what you did (the one everyone skips)
@@ -96,11 +96,11 @@ For a solo homelab it's not strictly required, but it's a good habit and it's fr
 
 ### What's the difference between VM.Allocate and the other VM permissions in Proxmox?
 
-`VM.Allocate` is the privilege that lets a user *create* (or remove) virtual machines. The other `VM.\*` privileges, like config, power management and snapshots, only let a user manage VMs that already exist. So a role with the config privileges but without `VM.Allocate` can run and tweak existing VMs but can't create new ones. `\[VERIFY: current Proxmox privilege names]`
+`VM.Allocate` is the privilege that lets a user *create* (or remove) virtual machines. The other `VM.\*` privileges, like config, power management and snapshots, only let a user manage VMs that already exist. So a role with the config privileges but without `VM.Allocate` can run and tweak existing VMs but can't create new ones.
 
 ### Why does my fresh Proxmox install fail to update?
 
-Most likely it's still pointed at the enterprise repository, which needs a paid subscription. Switching to the no-subscription repository fixes it for home use. This is the single most common "it won't update" issue on a new install. `\[VERIFY: current repo configuration steps]`
+Most likely it's still pointed at the enterprise repository, which needs a paid subscription. Switching to the no-subscription repository fixes it for home use. This is the single most common "it won't update" issue on a new install.
 
 ### What's the best way to document a home server?
 
