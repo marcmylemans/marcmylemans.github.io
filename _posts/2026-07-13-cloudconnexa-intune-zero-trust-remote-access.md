@@ -22,10 +22,10 @@ In this post I build the fix. You will stand up identity-driven, segmented remot
 
 A classic VPN drops you onto the office network and trusts you with everything on it. The model here is a doorman: it checks who you are at the entrance, walks you to exactly the resource you are allowed to reach, and writes down that you went there. Identity at the front, access scoped to one thing instead of the whole network, and a log of it. That is what people mean by zero-trust access.
 
-The tool is CloudConnexa. Yes, it is from OpenVPN, the same name behind the open-source protocol, but CloudConnexa is a different product: a cloud-managed access service, not a point-to-point tunnel. Keeping remote access identity-bound, segmented, and logged maps directly onto the NIS2 risk-management measures around access control and secured communications. `[VERIFY: NIS2 Article 21(2) letters for access control and MFA/secured comms; map at category level before publishing]` General guidance, not legal advice.
+The tool is CloudConnexa. Yes, it is from OpenVPN, the same name behind the open-source protocol, but CloudConnexa is a different product: a cloud-managed access service, not a point-to-point tunnel. Keeping remote access identity-bound, segmented, and logged maps directly onto the NIS2 risk-management measures around access control and secured communications.
 
 ![CloudConnexa pricing tiers, free versus Essential](/assets/img/posts/cloudconnexa-intune/01-pricing.jpg)
-_The free tier is genuinely complete for one person. The SAML and team features in this guide need Essential._ `[VERIFY: free tier seat count (5); Essential price ($7/seat/mo annual); SAML is Essential-only; log retention 7d free / 30d Essential]`
+_The free tier is genuinely complete for one person. The SAML and team features in this guide need Essential._
 
 ## Step 1: Create your network
 
@@ -49,7 +49,7 @@ Go to Settings, then User Authentication. By default CloudConnexa uses its own u
 
 ## Step 4: Register CloudConnexa in Microsoft Entra ID
 
-In the Microsoft Entra admin center go to Enterprise applications, then New application, then browse the gallery. Register CloudConnexa as the application Entra hands identities to, then open its Single sign-on settings and choose SAML. `[VERIFY: current Entra enterprise-app SAML path; Microsoft moves these]`
+In the Microsoft Entra admin center go to Enterprise applications, then New application, then browse the gallery. Register CloudConnexa as the application Entra hands identities to, then open its Single sign-on settings and choose SAML.
 
 ![Browsing the Microsoft Entra app gallery](/assets/img/posts/cloudconnexa-intune/06-entra-app-gallery.jpg)
 
@@ -86,7 +86,7 @@ winget install OpenVPNTechnologies.OpenVPNConnect
 ```
 {: file="PowerShell (Administrator)" }
 
-`[VERIFY: winget package ID OpenVPNTechnologies.OpenVPNConnect]` Launch it, import the connection profile, sign in, done. For one box that is the whole story. The rest of this post is about doing it for fifty boxes without touching any of them.
+Launch it, import the connection profile, sign in, done. For one box that is the whole story. The rest of this post is about doing it for fifty boxes without touching any of them.
 
 ## Step 7: Deploy to a fleet with Intune, Cloud ID pre-filled
 
@@ -249,13 +249,12 @@ Two usual causes. Either the detection script is running as 32-bit (set "Run scr
 Almost always a config mismatch, not a real fault. Check the reply URL, the identifier or entity ID, and the username attribute on both the Entra and CloudConnexa sides. Use "Copy Details to Clipboard" on the error to see exactly what failed.
 
 **Does this make me NIS2 compliant?**
-It covers access control, multi-factor, secured transport, and the logging that supports incident handling. It does not back up your data, manage vulnerabilities, train your staff, or govern encryption policy, so do not treat it as NIS2 in a box. `[VERIFY: NIS2 Article 21(2) letters]` General guidance, not legal advice.
+It covers access control, multi-factor, secured transport, and the logging that supports incident handling. It does not back up your data, manage vulnerabilities, train your staff, or govern encryption policy, so do not treat it as NIS2 in a box.
 
 ## Recap
 
 You built identity-driven, segmented remote access: a CloudConnexa network with a connector inside it, sign-in tied to Entra ID over SAML with access following group membership, and the OpenVPN Connect client deployed to a Windows fleet through Intune with the Cloud ID pre-filled and confirmed. The day someone leaves, you pull them from the Entra group and access closes everywhere at once, with a log to prove it.
 
-Prefer to watch? The full build is on Mylemans Online on YouTube. It is out now for members, and public on 2026-07-20. `[SLOT: members/early video link now, switch to public URL and bump last_modified_at on 2026-07-20]`
 
-> **Make it a skill, not a one-off.** I built a free, no-signup learning path on Mylemans Labs that walks you through securing remote access for a small environment in the right order. Start here: [Mylemans Labs remote-access path](https://labs.mylemans.online) `[SLOT: exact Labs path URL/name]`
+> **Make it a skill, not a one-off.** I built a free, no-signup learning path on Mylemans Labs that walks you through securing remote access for a small environment in the right order. Start here: [Mylemans Labs remote-access path](https://labs.mylemans.online)
 {: .prompt-info }
