@@ -3,7 +3,7 @@ title: "CloudConnexa + Intune: Zero-Trust Remote Access"
 description: "Build identity-driven remote access with CloudConnexa, wire SAML to Entra ID, then deploy OpenVPN Connect through Intune with the Cloud ID pre-filled."
 categories: [Security, Networking]
 tags: [cloudconnexa, openvpn, zero-trust, intune, entra-id, saml, nis2, tutorial, youtube]
-date: 2026-07-13 09:00:00 +0200
+date: 2026-07-17 09:00:00 +0200
 image:
   path: /assets/img/posts/cloudconnexa-intune/13-network-topology.jpg
   alt: CloudConnexa network topology showing the connector, network, and connected devices
