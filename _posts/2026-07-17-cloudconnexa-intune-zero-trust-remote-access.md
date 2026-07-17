@@ -5,7 +5,7 @@ categories: [Security, Networking]
 tags: [cloudconnexa, openvpn, zero-trust, intune, entra-id, saml, nis2, tutorial, youtube]
 date: 2026-07-17 09:00:00 +0200
 image:
-  path: /assets/img/posts/cloudconnexa-intune/13-network-topology.jpg
+  path: /assets/img/posts/cloudconnexa-intune/og-card.png
   alt: CloudConnexa network topology showing the connector, network, and connected devices
 ---
 
