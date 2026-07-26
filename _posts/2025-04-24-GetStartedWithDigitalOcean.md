@@ -1,80 +1,66 @@
 ---
-image: https://mylemans.online/assets/img/posts/7c4285c92df0.png
-layout: post
-title: "How to Get Started with DigitalOcean (and Get $200 Free Credit!)"
-date: 2025-04-24
-categories: [Cloud Hosting, Digital Ocean]
+title: "DigitalOcean VPS Setup (and $200 in Free Credit)"
+description: "Create your first DigitalOcean droplet, harden it with UFW and Fail2Ban, and get it ready for Docker. Includes $200 in credit for 60 days."
+date: 2025-04-24 09:00:00 +0200
+categories: [Cloud Hosting, DigitalOcean]
+tags: [digitalocean, vps, ubuntu, selfhosting, tutorial]
+image:
+  path: /assets/img/posts/7c4285c92df0.png
+  alt: "The DigitalOcean droplet creation screen"
 ---
 
-# How to Get Started with DigitalOcean (and Get $200 Free Credit!)
+Renting a server sounds like something you need a budget approval for. It isn't. The smallest DigitalOcean droplet costs about the price of a coffee per month, and with my referral link you get $200 of credit to spend over 60 days, so your first two months of experimenting cost you nothing.
 
-Are you ready to launch your own VPS, website, or app but don’t want to break the bank?  
-**DigitalOcean** is one of the easiest and most affordable cloud platforms to get started with — and with my referral link, you’ll receive **$200 in free credits** to use over 60 days!
+By the end of this post you'll have an Ubuntu server running on a public IP, locked down properly, and ready for whatever you want to self-host on it. I'll walk through the account, the droplet, the hardening that people skip, and the one firewall command that locks you out of your own server if you run it in the wrong order.
 
-Whether you're a developer, freelancer, or just curious about hosting your server, here's a step-by-step guide to get going.
+> **The short version:** sign up with the referral link, create an Ubuntu droplet with an SSH key (not a password), connect, update, allow OpenSSH in UFW *before* enabling UFW, install Fail2Ban, then install Docker. Ten minutes of work, and the box is yours.
+{: .prompt-tip }
 
----
+## Claim the $200 credit first
 
-## Claim Your Free Credit
-
-Use this link to sign up and get started with $200 in credit:
+Sign up through this link and the credit gets applied automatically:
 
 👉 **[Sign up to DigitalOcean here](https://m.do.co/c/e03b740d65fb)**
 
-Or use the badge below:
-
 [![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=e03b740d65fb&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
 
----
+You verify your email and add a payment method (card or PayPal) so they can filter out abuse. Nothing is charged upfront, and the $200 sits in the account as credit you burn through first. It expires after 60 days, so it pays to start the clock on a weekend when you actually have time to play.
 
-## Step 1: Create Your DigitalOcean Account
+That link is a referral link. If you use it, I get credit too. That's the only string attached, and the rest of this guide works the same without it.
 
-1. Click the referral link above and register for a free account.
-2. You'll be asked to verify your email and add a payment method (credit card or PayPal) to prevent abuse — **you won’t be charged upfront**.
-3. Once verified, your **$200 in credits** will be automatically applied.
+## Create your first droplet
 
----
+A droplet is DigitalOcean's name for a VPS. From the Droplets tab, click Create Droplet and work down the form:
 
-## Step 2: Create Your First Droplet (VPS)
+1. **OS:** Ubuntu LTS. Everything below assumes Ubuntu, and so does most documentation you'll find later.
+2. **Region:** pick the data center closest to you or your users. Amsterdam or Frankfurt if you're in Belgium.
+3. **Size:** the cheapest shared-CPU plan is fine to start. You can resize the CPU and RAM later without rebuilding, so don't overthink it.
+4. **Authentication:** choose **SSH key**, not password. Paste your public key, or generate one first with `ssh-keygen -t ed25519` on your own machine.
+5. **Hostname:** something you'll recognise in three months.
 
-A "Droplet" is what DigitalOcean calls its VPS instances. To create one:
+Click create and the machine is up in under a minute.
 
-1. Go to the **Droplets** tab and click **Create Droplet**.
-2. Choose your OS (Ubuntu is great for most users).
-3. Select a data center close to your audience.
-4. Pick a plan (start with the $5/month plan — it's free with your credits!).
-5. Set up authentication (SSH key or password).
-6. Click **Create Droplet**.
 
-That's it! Your server will be ready in less than a minute.
+> Choosing password authentication here is the single most common regret. A public IP gets hit with automated SSH login attempts within minutes of coming online, and a password is the only thing standing between those bots and your box. An SSH key removes that problem entirely instead of managing it.
+{: .prompt-warning }
 
----
-
-## Step 3: Secure & Configure Your Droplet
-
-To keep your server secure and performing well, follow these steps right after creating your droplet:
-
-### Connect via SSH
+## Connect and update
 
 ```bash
 ssh root@your_droplet_ip
 ```
 
-> Replace `your_droplet_ip` with the actual IP address of your droplet.
-
----
-
-### Update Your Packages
+Swap `your_droplet_ip` for the address shown in the control panel. First thing after connecting, take the pending updates:
 
 ```bash
 apt update && apt upgrade -y
 ```
 
----
+A freshly created image is almost never fully patched. This is thirty seconds of work that closes whatever was fixed between the image being built and you clicking create.
 
-### Configure the Firewall
+## Set up the firewall (in this exact order)
 
-Enable UFW (Uncomplicated Firewall) and allow only essential services:
+UFW is Ubuntu's friendly front end to iptables. The order matters more than the commands:
 
 ```bash
 ufw allow OpenSSH
@@ -82,90 +68,116 @@ ufw enable
 ufw status
 ```
 
-#### (Optional) Also allow web traffic (if you plan to host web services)
+If you plan to serve websites, open HTTP and HTTPS as well:
 
 ```bash
 ufw allow 80/tcp
 ufw allow 443/tcp
 ```
 
----
 
-### Install and Enable Fail2Ban
+### The mistake that locks you out
 
-Step 1: Install Fail2Ban
+Run `ufw enable` before `ufw allow OpenSSH` and the default deny policy kills your own SSH session. You're not hacked and nothing is broken; you've just firewalled yourself off a machine you can only reach over the network.
+
+
+It's recoverable, because DigitalOcean gives you a browser-based console that bypasses SSH entirely. Open the droplet, click Console, log in there, and run `ufw allow OpenSSH`. Worth knowing that console exists before you need it, which is generally the moment you'd rather not be reading documentation.
+
+## Add Fail2Ban
+
+Fail2Ban watches the authentication log and temporarily bans IP addresses that keep failing to log in. With key-only SSH you're already in good shape, but it cuts the noise and it's five minutes of work.
 
 ```bash
 apt install fail2ban -y
-```
-
-Step 2: Create a local configuration file:
-
-```bash
 cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
-```
-Edit the **jail.local** file:
-
-```bash
 nano /etc/fail2ban/jail.local
 ```
 
-Ensure the following lines are present and uncommented:
+Never edit `jail.conf` directly. Package updates overwrite it and quietly take your configuration with them; `jail.local` survives.
+
+In `jail.local`, make sure the SSH jail is enabled:
 
 ```
 [sshd]
 enabled = true
 port = ssh
-logpath = %(sshd_log)s
 maxretry = 5
 ```
 
-Step 3: Start and Enable Fail2Ban
+Then start it:
 
 ```bash
-systemctl enable fail2ban
-systemctl start fail2ban
+systemctl enable --now fail2ban
 ```
 
-Fail2Ban helps protect against brute-force attacks by banning IPs with too many failed login attempts.
+### The step most guides skip
 
-To unban an IP address:
+On recent Ubuntu releases there is no `/var/log/auth.log` by default, because logging moved to the systemd journal and rsyslog isn't installed. Copy an old guide that points the jail at a log file and Fail2Ban either refuses to start or sits there banning nobody, which is worse, because you think you're protected.
+
+The fix is to tell it where the logs actually live:
+
+```
+[sshd]
+enabled = true
+port = ssh
+backend = systemd
+maxretry = 5
+```
+
+
+### The pro check
+
+Don't assume. Verify all three:
 
 ```bash
-fail2ban-client set sshd unbanip <IP_ADDRESS>
+ufw status verbose
+fail2ban-client status sshd
+ss -tulpn
 ```
 
----
+The first confirms the firewall is active and only opens what you meant to open. The second should report the sshd jail as running with a filter and a count of failed attempts (which will already be climbing). The third shows every port currently listening, which is the honest answer to "what have I actually exposed?"
 
-### Install Docker & Docker Compose (Optional) 
+And before you close your terminal, open a second one and connect again. A working SSH session is not proof that a new session can still be established.
 
-```bash
-apt install docker.io docker-compose -y
-systemctl enable docker
-systemctl start docker
-```
+## Now put Docker on it
 
----
+The old version of this post ended with a couple of `apt install` lines for Docker. That advice has aged badly: the distro packages give you a lagging Docker version and the deprecated standalone `docker-compose` v1, not the current compose plugin.
 
-If you'd like me to set this up for you, [check out my Fiverr gig](https://www.fiverr.com/share/XYZ) — I’ll handle everything so you can focus on building your project.
+So I split it out and rewrote it properly, including installing from Docker's own repository and getting a real application running rather than just a daemon:
 
+**[Self-Host Your First App in 15 Minutes with Docker Compose](https://blog.mylemans.online/posts/self-host-first-app-docker-compose/)**
 
----
+Everything in that guide works exactly the same on this droplet as it does on hardware at home. The compose file doesn't change at all. What changes is the environment around it: you're now on a public IP, which is precisely why the hardening above comes first.
 
-## What Can You Do with DigitalOcean?
+## What people actually run on these
 
-- Host websites and blogs (WordPress, static sites)
-- Run your own VPN or cloud storage
-- Deploy web apps or APIs
-- Set up developer environments
-- Much more!
+A single small droplet comfortably handles a static site or blog, a personal VPN or WireGuard endpoint, a Git server, an uptime monitor, a small API, or a handful of self-hosted web apps behind one reverse proxy. Where it starts to hurt is anything memory-hungry: databases under real load, media transcoding, or a dozen containers that each want half a gig of RAM.
 
----
+> Want the hardening and the Docker setup done for you rather than done by you? I take on this kind of work directly.
+{: .prompt-info }
 
-## Final Thoughts
+## FAQ
 
-DigitalOcean is a fantastic platform to learn, build, and deploy. And with the free $200 credit, you’ve got **zero risk** to get started.
+**Do I need a credit card to get the $200 credit?**
+Yes, a card or PayPal, purely as an anti-abuse check. You aren't charged while credit remains, but do set a billing alert so the transition from free to paid isn't a surprise.
 
-[![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=e03b740d65fb&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)  
-Let me know if you need help — I’d be happy to assist!
+**What happens when the 60 days or the $200 runs out?**
+Whichever comes first ends the free ride, and billing switches to your payment method at normal rates. Destroy any droplets you were only using to experiment; a powered-off droplet still bills you, because the disk is still reserved. Destroying it is the only thing that stops the meter.
 
+**How big a droplet do I need for Docker?**
+The smallest shared-CPU plan runs a few light containers fine. Add RAM before CPU, since memory is what you run out of first with containers. Resizing RAM and CPU is reversible; resizing the disk is not, so grow that one carefully.
+
+**Should I keep using root, or make a normal user?**
+Make a normal user with sudo and disable root SSH login. Root over SSH works and every quick tutorial uses it, but it means one compromised key equals total control, with no audit trail of who did what.
+
+**Is a VPS better than self-hosting at home?**
+Different trade-offs. A VPS gives you a static public IP, real uptime, and no traffic through your home connection. Home hardware gives you more resources for the money and keeps your data physically yours. Plenty of people run both and connect them with a tunnel.
+
+## Recap
+
+You now have a patched Ubuntu server on a public IP, a firewall that only opens what you chose, Fail2Ban actually running rather than merely installed, and a verified way back in if something goes wrong. That's a genuine foundation, and it took about ten minutes. Everything else you self-host from here sits on top of it.
+
+Prefer to watch? The walkthrough of the Docker Compose side of this lives on **[Mylemans Online on YouTube](https://www.youtube.com/@MylemansOnline)**.
+
+> Ready to build on it? The self-hosting path on **[Mylemans Labs](https://labs.mylemans.online/)** takes you from this droplet to a full stack, step by step, and it's free.
+{: .prompt-info }
