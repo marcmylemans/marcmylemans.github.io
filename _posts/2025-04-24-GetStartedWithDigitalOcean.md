@@ -58,21 +58,90 @@ apt update && apt upgrade -y
 
 A freshly created image is almost never fully patched. This is thirty seconds of work that closes whatever was fixed between the image being built and you clicking create.
 
+## Get off root
+
+Root has no limits and no audit trail. Every command you fat-finger executes at full privilege, and every tutorial you paste from the internet does too. A normal account with sudo gives you the same power with a deliberate pause in front of it, and a log of when you used it.
+
+Create the account and put it in the `sudo` group:
+
+```bash
+adduser marc
+usermod -aG sudo marc
+```
+
+`adduser` prompts for a password. Set a real one and store it in your password manager. You won't type it to log in (that stays key-based), you'll type it for sudo, which is exactly the pause you want.
+
+Now give the new account your SSH key. The tidiest way is to copy root's `.ssh` directory across with ownership fixed in one go:
+
+```bash
+rsync --archive --chown=marc:marc ~/.ssh /home/marc
+```
+
+That works because DigitalOcean already installed your public key into root's `authorized_keys` when the droplet was built.
+
+### Test it before you change anything else
+
+Leave your root session open. Open a **second** terminal and connect as the new user:
+
+```bash
+ssh marc@your_droplet_ip
+sudo whoami
+```
+
+You want a login with no password prompt, and `sudo whoami` answering `root` after you enter the user password. If either fails, fix it now while you still have a working root session to fix it from.
+
+
+### Close the door behind you
+
+With the new account proven, stop accepting root logins and passwords over SSH. Edit `/etc/ssh/sshd_config`:
+
+```bash
+sudo nano /etc/ssh/sshd_config
+```
+
+Set these three:
+
+```
+PermitRootLogin no
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+```
+
+Check the config parses before you restart anything:
+
+```bash
+sudo sshd -t
+```
+
+Silence means it's valid. Then apply it:
+
+```bash
+sudo systemctl restart ssh
+```
+
+On recent Ubuntu releases SSH is socket-activated, so restarting the service alone may not pick up a changed port or listen address; restart `ssh.socket` as well if you touched either `[VERIFY: socket activation behaviour on the current LTS]`.
+
+> Here's the part that catches people. Cloud images ship drop-in files in `/etc/ssh/sshd_config.d/`, typically a `50-cloud-init.conf` that sets `PasswordAuthentication yes`. Those drop-ins are included at the *top* of the main config, and in sshd the first occurrence of a setting wins. So you edit `sshd_config`, restart, and password logins are still happily accepted. Check with `sudo sshd -T | grep -Ei 'permitrootlogin|passwordauthentication'`, which prints the settings actually in effect, and if they disagree with your edits, fix the drop-in file instead.
+{: .prompt-warning }
+
+
+From here on, log in as your normal user and prefix admin commands with `sudo`. The rest of this guide assumes you are.
+
 ## Set up the firewall (in this exact order)
 
 UFW is Ubuntu's friendly front end to iptables. The order matters more than the commands:
 
 ```bash
-ufw allow OpenSSH
-ufw enable
-ufw status
+sudo ufw allow OpenSSH
+sudo ufw enable
+sudo ufw status
 ```
 
 If you plan to serve websites, open HTTP and HTTPS as well:
 
 ```bash
-ufw allow 80/tcp
-ufw allow 443/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
 ```
 
 
@@ -81,7 +150,8 @@ ufw allow 443/tcp
 Run `ufw enable` before `ufw allow OpenSSH` and the default deny policy kills your own SSH session. You're not hacked and nothing is broken; you've just firewalled yourself off a machine you can only reach over the network.
 
 
-It's recoverable, because DigitalOcean gives you a browser-based console that bypasses SSH entirely. Open the droplet, click Console, log in there, and run `ufw allow OpenSSH`. Worth knowing that console exists before you need it, which is generally the moment you'd rather not be reading documentation.
+It's recoverable, because DigitalOcean gives you a browser-based console that bypasses SSH entirely. Open the droplet, click Console, log in there, and run `sudo ufw allow OpenSSH`. Worth knowing that console exists before you need it, which is generally the moment you'd rather not be reading documentation.
+
 
 ## Add Fail2Ban
 
