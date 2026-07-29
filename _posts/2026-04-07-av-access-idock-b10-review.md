@@ -3,7 +3,7 @@ title: "AV Access iDock B10 Review: A Smart KVM Upgrade for Switching Between De
 description: "A real-world look at the AV Access iDock B10 for dual-monitor desktop and laptop setups, with 120Hz support, 10Gbps USB, 100W charging, and clean one-button switching."
 date: 2026-04-07 09:00:00 +0200
 categories: [Desk Setup, Reviews, Productivity]
-tags: [idock b10, av access, kvm switch, dual monitor, usb-c dock, desk setup, jekyll, chirpy]
+tags: [idock b10, av access, kvm switch, dual monitor, usb-c dock, desk setup]
 image: https://mylemans.online/assets/img/posts/Default.jpg
 ---
 
