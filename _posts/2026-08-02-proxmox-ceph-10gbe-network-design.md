@@ -5,7 +5,7 @@ categories: [Homelab, Proxmox]
 tags: [proxmox, ceph, homelab, networking, vlan, tutorial, youtube]
 date: 2026-08-02 09:00:00 +0200
 image:
-  path: /assets/img/posts/proxmox-ceph-cluster/ceph-health-ok.png
+  path: /assets/img/posts/Default.jpg
   alt: Proxmox VE Ceph dashboard showing a healthy 3-node cluster with all placement groups active and clean
 ---
 
