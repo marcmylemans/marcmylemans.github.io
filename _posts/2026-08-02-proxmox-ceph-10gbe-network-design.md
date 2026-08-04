@@ -267,7 +267,6 @@ Two behaviours to accept rather than fight:
 
 For Windows guests on RBD, use VirtIO SCSI single with writeback cache enabled. It matters more to how the guest feels than anything you do on the network side.
 
-`[SCREENSHOT NEEDED: Ceph dashboard at HEALTH_OK after shrinking pg_num. Also use this as the OG card image in the front matter.]`
 
 ## FAQ
 
