@@ -299,7 +299,7 @@ Almost everything that went wrong for me was ordering, not configuration. Get ev
 
 I am covering the dedicated Proxmox Backup Server for this cluster in a follow-up, since that deserves its own post rather than a footnote here.
 
-Prefer to watch? The full build is on Mylemans Online. `[CONFIRM: Day 0 members link; the video goes public on 2026-09-14, update this line and bump last_modified_at then]`
+Prefer to watch? Join me on [Mylemans Online](https://www.youtube.com/@mylemansonline).
 
 > Networking is the part of a homelab that quietly decides how well everything else works, and it is the part most guides skip past. The **IT Foundations path on Mylemans Labs** builds that layer properly: VLANs, subnetting, and switching, hands-on, before you need them at 1am. Start it at [labs.mylemans.online](https://labs.mylemans.online).
 {: .prompt-info }
