@@ -16,7 +16,6 @@ If your media library and your family's photo backups live on the same box you b
 > **Disclosure:** Fygo gave me a licence and five one-year keys for a giveaway, and they are tagged as a brand partner on the video. All the hardware in this build is my own. They didn't review this post or the video before release.
 {: .prompt-warning }
 
-The video is out now: [Your First Home Server Should Be A NAS Here's Why | FygoOS Beginner's Guide (2026)](https://youtu.be/NsZ3zYUDY9Y).
 
 ## Keep play and reliability on separate boxes
 
