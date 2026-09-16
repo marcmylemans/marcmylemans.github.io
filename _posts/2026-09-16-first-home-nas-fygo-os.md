@@ -1,12 +1,11 @@
 ---
 title: "Build Your First Home NAS With Fygo OS (Real Hardware)"
 description: "I built a home NAS from recycled parts and Fygo OS: the hardware, the four jobs it has to do, the permission gotcha that hides your media, and what the free tier allows."
-date: 2026-09-16 18:00:00 +0200
+date: 2026-09-16
 categories: [Homelab, Storage]
 tags: [fygo os, nas, homelab, zfs, youtube]
 image:
   path: /assets/img/posts/Default.jpg
-  alt: "Top-down view of a CWWK mini ITX NAS build with four WD Red drives running Fygo OS"
 ---
 
 If your media library and your family's photo backups live on the same box you break for fun on a Friday night, they will go down with it eventually. Your first home server should be a boring, dedicated NAS that just keeps working, and your experiments belong somewhere else. In this post I walk through the NAS I built from mostly recycled parts, the four jobs it actually has to do, how I tested the OS in a VM before touching hardware, and the one setting that makes your media folder look empty on day one.
