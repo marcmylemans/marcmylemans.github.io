@@ -34,9 +34,11 @@ Before I spent anything, I ran Fygo OS in a virtual machine with a handful of sm
 3. Install, build a pool, create a share and connect to it from your own PC.
 4. Pull a virtual disk out of a running pool and watch how the OS reports it.
 
-`[SCREENSHOT: Fygo OS running in the VM with the virtual disks listed]`
+![Fygo OS boot screen in a VM showing the ASCII banner, hostname and access URL](/assets/img/posts/first-home-nas-fygo-os/08-vm-first-boot.jpg)
 
 That last step is the one most people skip. Watching the degraded warning appear in a VM costs nothing and tells you exactly what you'll see on the day a real drive dies.
+
+![Fygo OS Storage page showing a degraded volume with the Hard Drive Missing dialog](/assets/img/posts/first-home-nas-fygo-os/13-vm-degraded-volume.jpg)
 
 If you've never built a VM before and it refuses to start, check that hardware virtualization (Intel VT-x or AMD-V) is enabled in your BIOS. That's the setting that stops most first attempts.
 
@@ -48,13 +50,13 @@ Everything in this build is chosen around these four jobs. If a feature doesn't 
 
 The NAS serves your movies and shows to TVs, phones and laptops around the house. The hard part is transcoding: when a 4K file needs to play on a device that can only handle 1080p, something has to convert it on the fly. Doing that on the CPU alone brings a low-power chip to its knees. An Intel iGPU with Quick Sync does it in hardware and barely raises the CPU load.
 
-`[SCREENSHOT: 4K to 1080p stream playing, CPU load shown low with hardware transcoding active]`
+![Four 4K video streams playing in parallel with Resource Manager showing CPU at 8 percent and temperature at 46 degrees](/assets/img/posts/first-home-nas-fygo-os/05-payoff-4k-transcodes-cpu.jpg)
 
 ### 2. Private photo management
 
 Phones back up automatically to the NAS, and face recognition and search run on the box itself. Nothing goes to a third-party data centre. For a lot of households this is the feature that justifies the whole project, because it replaces a paid cloud photo subscription.
 
-`[SCREENSHOT: photo library with face grouping / search result]`
+![Fygo Photos app showing Smart Categories with automatic grouping into palace, plaza, park, fountain, and church](/assets/img/posts/first-home-nas-fygo-os/07-smart-photo-categories.jpg)
 
 ### 3. File sharing across Windows and Mac
 
@@ -96,21 +98,23 @@ The OS goes on its own small SSD. Give the installer a dedicated drive so it doe
 
 A small NAS draws very little, so wattage is almost never the problem. SATA power connectors are. Count the drives you plan to run (including the ones you'll add later) and check how many SATA power plugs the PSU actually has, and in what layout, before you buy it.
 
-`[SCREENSHOT: PSU cable set laid out with SATA power plugs counted]`
-
 ## Setting up Fygo OS
 
 The setup flow explains its choices in plain language. When it asks about the file system, it tells you why ZFS is worth it (it checksums your data and can repair silent corruption when it has redundancy) without drowning you in jargon. For a beginner that matters: you understand what you picked instead of clicking next.
 
-`[SCREENSHOT: file system choice screen with the ZFS explanation]`
+![Fygo OS Create Volume screen showing file system options: ext4 (high initially, strong stability), Btrfs (weaker stability), and ZFS (snapshots, compression, self-healing)](/assets/img/posts/first-home-nas-fygo-os/03-filesystem-choice.jpg)
 
-From there it's the usual order: create the pool, create shares, create users, install the apps you want.
+From there it's the usual order: create the pool, create shares, create users, install the apps you want. When the setup asks about SSD cache, you're deciding between L2ARC (read cache) and SLOG (write cache). For most homes, read cache is the useful one.
+
+![Fygo OS Create SSD Cache dialog showing cache mode options: L2ARC for read caching and SLOG for write caching](/assets/img/posts/first-home-nas-fygo-os/04-ssd-cache-config.jpg)
+
+The AI settings are where hardware acceleration gets toggled on. Once enabled on your specific iGPU, the photos app can process your library for face recognition and smart categories without maxing the CPU.
+
+![Fygo OS AI settings page showing hardware acceleration enabled on Intel UHD Graphics 620 with face recognition models installed](/assets/img/posts/first-home-nas-fygo-os/06-hardware-accel-intel-uhd.jpg)
 
 ## The gotcha: your media folder looks empty
 
 This is the one that will catch you. You point the media app at your movies folder, the scan finishes and the library shows nothing.
-
-`[SCREENSHOT: empty media library after the first scan]`
 
 Nothing is broken. The media app runs under its own isolated service account, which is good security practice: if the app is ever compromised, it can't read everything on the NAS. The catch is that this account has no rights to your media folder until you give them.
 
@@ -121,9 +125,9 @@ The fix:
 3. Give it **read** access (it doesn't need write).
 4. Rescan the library.
 
-`[SCREENSHOT: permission dialog with the app account granted read access]`
+After that, the library loads with cover art and metadata. The App Store has Fygo TV pre-installed for streaming, plus AI Photo, File Snapshot for backups, and a long list of community apps.
 
-`[SCREENSHOT: the payoff, full library with posters loaded]`
+![Fygo App Center showing official and community applications: Fygo TV (home cinema), AI Photo (private face search), Fygo Sync, File Snapshot, and community apps like Jellyfin, Komga, and Syncthing](/assets/img/posts/first-home-nas-fygo-os/10-app-center.jpg)
 
 ## Licensing: what the free tier gets you
 
