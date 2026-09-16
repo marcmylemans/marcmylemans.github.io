@@ -1,5 +1,5 @@
 ---
-title: "Build Your First Home NAS With Fygo OS (Real Hardware)"
+title: "Build Your First Home NAS With Fygo OS"
 description: "I built a home NAS from recycled parts and Fygo OS: the hardware, the four jobs it has to do, the permission gotcha that hides your media, and what the free tier allows."
 date: 2026-09-16
 categories: [Homelab, Storage]
