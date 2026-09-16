@@ -167,3 +167,6 @@ Most often the media app's service account has no permission on the folder. Give
 {: .prompt-info }
 
 Prefer to watch? The full build is in [the video](https://youtu.be/NsZ3zYUDY9Y), and there's more homelab and IT content over on Mylemans Online on YouTube.
+
+
+{% youtube "https://youtu.be/NsZ3zYUDY9Y" %}
