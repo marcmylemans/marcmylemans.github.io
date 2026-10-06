@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/sTIjM9f8e1Q.jpg
+image: /assets/img/posts/sTIjM9f8e1Q.jpg
 layout: post
 categories: [Windows, Server 2022]
 tags: [server 2022, printer, gpo, non-admin, driver installation, group policy, tutorial, youtube]

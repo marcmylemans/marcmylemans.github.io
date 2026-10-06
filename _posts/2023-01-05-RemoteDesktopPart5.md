@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/i87spvTzR6w.jpg
+image: /assets/img/posts/i87spvTzR6w.jpg
 layout: post
 categories: [Windows, Server 2022]
 tags: [server 2022, rdp, remote desktop services, rds, web client, html5, browser, tutorial, youtube, part5]

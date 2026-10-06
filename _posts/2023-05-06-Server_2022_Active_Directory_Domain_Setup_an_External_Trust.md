@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/4EiisQEA1Fk.jpg
+image: /assets/img/posts/4EiisQEA1Fk.jpg
 layout: post
 categories: [Windows, Server 2022]
 tags: [server 2022, activedirectory, trust]

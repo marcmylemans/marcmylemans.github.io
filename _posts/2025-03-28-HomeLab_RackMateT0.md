@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/rackmate-front.jpg
+image: /assets/img/posts/rackmate-front.jpg
 layout: post
 title: "DeskPi Rackmate T0 Review – My HP Mini PC Cluster in a 10\" Rack"
 date: 2025-03-28
@@ -29,7 +29,7 @@ The packaging is layered, and everything is well protected. Here’s what you ge
 - 1U front filler panel and bottom plate  
 - 1U Hidden shelf (under the toolset!)
 
-![Unboxing Contents](https://mylemans.online/assets/img/posts/rackmate-unboxing.png)
+![Unboxing Contents](/assets/img/posts/rackmate-unboxing.png)
 
 ---
 
@@ -44,7 +44,7 @@ While assembling the rack, I shared my homelab story—starting from a single de
 - Running: Proxmox for virtualization, Ceph for shared storage  
 - Connected via 2.5GbE switch
 
-![HP ProDesk Cluster](https://mylemans.online/assets/img/posts/prodesk-stack.jpg)
+![HP ProDesk Cluster](/assets/img/posts/prodesk-stack.jpg)
 
 ---
 
@@ -54,7 +54,7 @@ I added a 10-inch PDU to the bottom of the rack. There’s a gap underneath—pe
 
 Also installed the included shelf and demoed the blank panel. All parts mount directly to the front rails—no cage nuts required.
 
-![Mounted PDU](https://mylemans.online/assets/img/posts/rackmate-pdu.png)
+![Mounted PDU](/assets/img/posts/rackmate-pdu.png)
 
 ---
 
@@ -64,15 +64,15 @@ Here are a few shots of the completed build:
 
 - **Inside:** power and network neatly managed
 
-![Inside Rack](https://mylemans.online/assets/img/posts/rackmate-inside.jpg)  
+![Inside Rack](/assets/img/posts/rackmate-inside.jpg)  
 
 - **Front view:** super minimal—switch is hidden
 
-![Front View](https://mylemans.online/assets/img/posts/rackmate-front.jpg)  
+![Front View](/assets/img/posts/rackmate-front.jpg)  
 
 - **Now:** Rack mounted in the Kallax
 
-![Kallax Hack](https://mylemans.online/assets/img/posts/kallax-hack.jpg)
+![Kallax Hack](/assets/img/posts/kallax-hack.jpg)
 
 
 ---

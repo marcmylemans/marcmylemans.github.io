@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Hyper-V-Chapter4.PNG
+image: /assets/img/posts/Hyper-V-Chapter4.PNG
 layout: post
 title: "Storage in Hyper-V - Managing Virtual Hard Disks (VHDs)"
 date: 2024-06-10
@@ -13,7 +13,7 @@ tags: [hyper-v, windows server, virtual hard disk, vhd, storage, virtualization,
 
 Welcome back to our **Hyper-V series**! In **Chapter 4**, we’ll dive into **storage in Hyper-V** and everything you need to know about **Virtual Hard Disks (VHDs)**. We’ll cover the different types of VHDs, how to create and manage them, and some best practices for configuring and optimizing storage in your Hyper-V environment.
 
-If you missed the earlier chapters, check them out here: [Chapter 1: Introduction to Hyper-V](https://mylemans.online/posts/Hyper-V-Chapter1/), [Chapter 2: Setting Up Your First VM](https://mylemans.online/posts/Hyper-V-Chapter2/), and [Chapter 3: Networking in Hyper-V](https://mylemans.online/posts/Hyper-V-Chapter3/).
+If you missed the earlier chapters, check them out here: [Chapter 1: Introduction to Hyper-V](/posts/Hyper-V-Chapter1/), [Chapter 2: Setting Up Your First VM](/posts/Hyper-V-Chapter2/), and [Chapter 3: Networking in Hyper-V](/posts/Hyper-V-Chapter3/).
 
 ---
 
@@ -158,4 +158,4 @@ That’s it for **Chapter 4: Storage in Hyper-V**! Now you know how to create, a
 
 If you found this post and video helpful, don’t forget to **like, share, and subscribe** for more tutorials. Stay tuned for **Chapter 5**, where we’ll explore advanced features like **Live Migration, Hyper-V Replica, and more**!
 
-**Next Up:** [Chapter 5: Advanced Hyper-V Features](https://mylemans.online/posts/Hyper-V-Chapter5/)
+**Next Up:** [Chapter 5: Advanced Hyper-V Features](/posts/Hyper-V-Chapter5/)

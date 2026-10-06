@@ -1,6 +1,6 @@
 ---
 date: 2022-12-30 09:00:00
-image: https://mylemans.online/assets/img/posts/PIu7nZ1jMOQ.jpg
+image: /assets/img/posts/PIu7nZ1jMOQ.jpg
 layout: post
 categories: [Azure, Intune]
 tags: [server 2022, azure, intune, hybrid, applications, policies, tutorial, youtube]

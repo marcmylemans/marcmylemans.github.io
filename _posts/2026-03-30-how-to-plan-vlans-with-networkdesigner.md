@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: /assets/img/posts/Default.jpg
 layout: post
 title: "How to Plan VLANs for a New Network Site Using Network Designer"
 description: "A practical walkthrough of using networkdesigner.app to plan VLANs and subnets for a new network site"

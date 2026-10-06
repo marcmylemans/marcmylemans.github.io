@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/RB4Z7Zrhsx4.jpg
+image: /assets/img/posts/RB4Z7Zrhsx4.jpg
 layout: post
 title: Remote Desktop Services, Virtual Desktop Infrastructure!
 categories: [Windows Server]

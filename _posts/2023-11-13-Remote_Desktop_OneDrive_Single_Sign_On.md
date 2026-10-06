@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/GFqTZh6xxb4.jpg
+image: /assets/img/posts/GFqTZh6xxb4.jpg
 layout: post
 categories: [Windows Server 2022]
 tags: [server 2022, rdp, onedrive, sso]

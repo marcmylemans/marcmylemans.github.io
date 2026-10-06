@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/f7zkhO7FJJA.jpg
+image: /assets/img/posts/f7zkhO7FJJA.jpg
 layout: post
 title: Installing Sophos XG in Hyper-V!
 ---

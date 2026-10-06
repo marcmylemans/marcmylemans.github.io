@@ -5,7 +5,7 @@ layout: post
 date: 2025-10-27
 categories: ["Proxmox", "Homelab"]
 tags: [Proxmox, OpenWRT, Homelab, Networking, Laptop]
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: /assets/img/posts/Default.jpg
 ---
 
 You don’t need a server rack or expensive hardware to start a homelab.  

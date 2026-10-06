@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/bJML_P-Ir_0.jpg
+image: /assets/img/posts/bJML_P-Ir_0.jpg
 layout: post
 categories: [Azure, Intune]
 tags: [azure, intune, company branding, azure ad, tutorial, youtube]

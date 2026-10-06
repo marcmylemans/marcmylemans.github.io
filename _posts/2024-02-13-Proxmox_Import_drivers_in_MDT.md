@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/xhRHTdSN9kY.jpg
+image: /assets/img/posts/xhRHTdSN9kY.jpg
 layout: post
 categories: [HomeLab, Hardware]
 tags: [proxmox, homeserversetup, techguide, virtualization, mdt, bsod, driver compatibility, deployment server]
@@ -8,7 +8,7 @@ title: My Home Lab Adventure - Solving the BSOD Mystery with Proxmox and MDT
 
 Hey friends!
 
-I recently embarked on a thrilling journey to build my very own home lab, diving into the world of virtual machines with Proxmox. It's been quite the ride, full of learning and, well, a few unexpected bumps along the way. One of the challenges that had me scratching my head was a series of pesky Blue Screens of Death (BSODs) during installations. Talk about a tech enthusiast's nightmare, right? [Read about my journey here.](https://mylemans.online/posts/NewHomeLab/)
+I recently embarked on a thrilling journey to build my very own home lab, diving into the world of virtual machines with Proxmox. It's been quite the ride, full of learning and, well, a few unexpected bumps along the way. One of the challenges that had me scratching my head was a series of pesky Blue Screens of Death (BSODs) during installations. Talk about a tech enthusiast's nightmare, right? [Read about my journey here.](/posts/NewHomeLab/)
 
 
 ## Finding My Way Through the Tech Maze
@@ -21,9 +21,9 @@ Inspired by a fantastic guide on Deployment Research, I created a video tutorial
 
 Before diving into the driver fallback strategy and tackling those BSODs, you might want to ensure your Microsoft Deployment Server is up and running smoothly. If you're just starting out or need a refresher on setting up and customizing your deployment server, I've got you covered. Follow these guides to get started:
 
-- [Setting Up a Microsoft Deployment Server!](https://mylemans.online/posts/MDTPart1/)
-- [Customizing the Microsoft Deployment Server!](https://mylemans.online/posts/MDTPart2/)
-- [Adding Drivers to the Microsoft Deployment Server!](https://mylemans.online/posts/MDTPart3/)
+- [Setting Up a Microsoft Deployment Server!](/posts/MDTPart1/)
+- [Customizing the Microsoft Deployment Server!](/posts/MDTPart2/)
+- [Adding Drivers to the Microsoft Deployment Server!](/posts/MDTPart3/)
 
 These guides are designed to walk you through the entire process, from initial setup to driver management, ensuring you have a solid foundation for your deployment projects. Whether you're tackling a home lab setup like mine or managing deployments in a professional setting, these resources will help pave the way for a smoother deployment process.
 

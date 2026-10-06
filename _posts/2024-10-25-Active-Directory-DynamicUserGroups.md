@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/3ee97659683e.png
+image: /assets/img/posts/3ee97659683e.png
 layout: post
 title: "Dynamic User Language Switching in Active Directory Using PowerShell"
 date: 2024-10-25
@@ -23,8 +23,8 @@ Ready to simplify your admin life? Let’s break it down.
 
 Before we jump into the fun part, here’s what you’ll need:
 
-- **Active Directory Environment**: A working AD setup with user accounts. If you haven’t set up Active Directory yet, check out our previous post, [Setting Up Active Directory on Windows Server 2022: A Step-by-Step Guide](https://mylemans.online/posts/SettingUpActiveDirectoryServer2022/).
-- **Group Policy Management**: Three GPOs tailored to French (FR), English (EN), and Dutch (NL) language settings. For an introduction to Group Policies, including templates, preferences, and best practices, refer to our post on [Group Policy, Templates, Preferences, Loopback Policy, and Best Practices](https://mylemans.online/posts/GroupPolicyBestPracticesServer2022/).
+- **Active Directory Environment**: A working AD setup with user accounts. If you haven’t set up Active Directory yet, check out our previous post, [Setting Up Active Directory on Windows Server 2022: A Step-by-Step Guide](/posts/SettingUpActiveDirectoryServer2022/).
+- **Group Policy Management**: Three GPOs tailored to French (FR), English (EN), and Dutch (NL) language settings. For an introduction to Group Policies, including templates, preferences, and best practices, refer to our post on [Group Policy, Templates, Preferences, Loopback Policy, and Best Practices](/posts/GroupPolicyBestPracticesServer2022/).
 - **Security Groups**: You’ll need three security groups, each corresponding to a language policy:
   - `User Policy Language FR`
   - `User Policy Language EN`

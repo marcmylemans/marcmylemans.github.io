@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: /assets/img/posts/Default.jpg
 layout: post
 title: "Support Our Hyper-V Guide: Get Early Access"
 tags: [support, hyper-v, guide, early access]
@@ -45,5 +45,5 @@ Don't miss out on this opportunity to master Hyper-V and elevate your virtualiza
 
 Thank you for your support!
 
-![Support Us](https://mylemans.online/assets/img/posts/2579fd954c63.png)
+![Support Us](/assets/img/posts/2579fd954c63.png)
 

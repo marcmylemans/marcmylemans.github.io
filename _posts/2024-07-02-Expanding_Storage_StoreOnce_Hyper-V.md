@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: /assets/img/posts/Default.jpg
 layout: post
 title: "Expanding Storage with StoreOnce Virtual Appliance in Hyper-V"
 date: 2024-07-02

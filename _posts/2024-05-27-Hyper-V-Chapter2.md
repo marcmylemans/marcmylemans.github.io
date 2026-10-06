@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Hyper-V-Chapter2.PNG
+image: /assets/img/posts/Hyper-V-Chapter2.PNG
 layout: post
 title: "Setting Up Your First Virtual Machine in Hyper-V"
 date: 2024-05-27
@@ -13,7 +13,7 @@ tags: [hyper-v, windows server, virtual machine, virtualization, microsoft]
 
 Welcome back to our **Hyper-V series**! In **Chapter 2**, we’re diving into one of the most exciting parts of Hyper-V: **Setting up your first virtual machine**. By the end of this post and video, you’ll have your very first **virtual machine (VM)** up and running in Hyper-V, complete with an operating system installed and configured.
 
-If you're following along, make sure Hyper-V is enabled on your system. If you missed the first chapter, check it out here: [Introduction to Hyper-V](https://mylemans.online/posts/Hyper-V-Chapter1/).
+If you're following along, make sure Hyper-V is enabled on your system. If you missed the first chapter, check it out here: [Introduction to Hyper-V](/posts/Hyper-V-Chapter1/).
 
 ---
 
@@ -61,7 +61,7 @@ Let’s walk through how to create a VM using **Hyper-V Manager**.
 #### 9. **Complete the Wizard:**
    - Review your settings and click **Finish**.
 
-**![Create VM Wizard](https://mylemans.online/assets/img/Hyper-V-Guide/Chapter-2/Chapter-2-2-3.png)**
+**![Create VM Wizard](/assets/img/Hyper-V-Guide/Chapter-2/Chapter-2-2-3.png)**
 
 ---
 
@@ -117,4 +117,4 @@ Congratulations! You’ve just set up your very first virtual machine in Hyper-V
 
 If you found this post and video helpful, please don’t forget to **like, share, and subscribe** to our channel for more tutorials. Stay tuned for **Chapter 3**, where we’ll dive into networking in Hyper-V!
 
-**Next Up:** [Chapter 3: Networking in Hyper-V](https://mylemans.online/posts/Hyper-V-Chapter3/)
+**Next Up:** [Chapter 3: Networking in Hyper-V](/posts/Hyper-V-Chapter3/)

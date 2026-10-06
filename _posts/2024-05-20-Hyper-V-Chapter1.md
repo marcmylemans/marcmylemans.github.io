@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Hyper-V-Chapter01.PNG
+image: /assets/img/posts/Hyper-V-Chapter01.PNG
 layout: post
 title: "Introduction to Hyper-V - What It Is and Why You Should Use It"
 date: 2024-05-20
@@ -73,7 +73,7 @@ Enabling Hyper-V is straightforward, and here’s how you do it:
 3. Scroll down, check the box for **Hyper-V**, and click **OK**.
 4. Restart your computer to complete the process.
 
-**![Enable Hyper-V](https://mylemans.online/assets/img/Hyper-V-Guide/Chapter-01/Chapter-01-1-5-1.png)**
+**![Enable Hyper-V](/assets/img/Hyper-V-Guide/Chapter-01/Chapter-01-1-5-1.png)**
 
 Once your system reboots, you’ll be able to open **Hyper-V Manager** and start creating virtual machines.
 
@@ -88,7 +88,7 @@ For Windows Server users, enabling Hyper-V is a bit different:
 3. Follow the wizard to install the **Hyper-V** role.
 4. Restart your server after the installation is complete.
 
-**![Enable Hyper-V on Server](https://mylemans.online/assets/img/Hyper-V-Guide/Chapter-01/Chapter-01-1-5.png)**
+**![Enable Hyper-V on Server](/assets/img/Hyper-V-Guide/Chapter-01/Chapter-01-1-5.png)**
 
 ---
 
@@ -121,4 +121,4 @@ That’s it for **Chapter 1: Introduction to Hyper-V**! You should now have a go
 
 If you found this post and video helpful, don’t forget to **like, share, and subscribe** to our channel for more tutorials. Stay tuned for the next part in our series, and feel free to drop any questions or comments below.
 
-**Next Up:** [Chapter 2: Setting Up Your First Virtual Machine](https://mylemans.online/posts/Hyper-V-Chapter2/)
+**Next Up:** [Chapter 2: Setting Up Your First Virtual Machine](/posts/Hyper-V-Chapter2/)

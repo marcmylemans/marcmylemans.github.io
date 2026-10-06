@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/h_-DWfkqx7A.jpg
+image: /assets/img/posts/h_-DWfkqx7A.jpg
 layout: post
 title: Quality Of Service (QoS) With Sophos XG!
 ---

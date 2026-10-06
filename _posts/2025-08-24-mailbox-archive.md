@@ -6,7 +6,7 @@ date: 2025-08-24
 author: "Marc Mylemans"
 tags: [Microsoft 365, Exchange Online, PowerShell, Email Management, Business Premium]
 categories: [Microsoft 365, Exchange]
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: /assets/img/posts/Default.jpg
 ---
 
 # **How I Discovered Hidden Growth in Mailbox Archives**

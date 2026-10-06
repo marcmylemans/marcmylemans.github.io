@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/iF88CwweAko.jpg
+image: /assets/img/posts/iF88CwweAko.jpg
 layout: post
 categories: [HomeLab, Hardware]
 tags: [proxmox, homeserversetup, techguide, virtualization, server setup, homelab, installation]

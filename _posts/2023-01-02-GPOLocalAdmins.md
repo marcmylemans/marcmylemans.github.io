@@ -1,6 +1,6 @@
 ---
 date: 2023-01-02 10:00:00
-image: https://mylemans.online/assets/img/posts/FrRasK5DQiY.jpg
+image: /assets/img/posts/FrRasK5DQiY.jpg
 layout: post
 categories: [Windows, Server 2022]
 tags: [server 2022, ad, gpo, local admins, group policy, admin, tutorial, youtube]
@@ -18,11 +18,11 @@ In the second part we will be using the Managed By field in Active directory to 
 
 Screenshots + Ldap Query's
 
-![Assign users](https://mylemans.online/assets/primaryuserlocaladmin/primaryuserlocaladmin_assign.jpg)
+![Assign users](/assets/primaryuserlocaladmin/primaryuserlocaladmin_assign.jpg)
 
-![Item Level targeting](https://mylemans.online/assets/primaryuserlocaladmin/primaryuserlocaladmin_itemlvltargeting.jpg)
+![Item Level targeting](/assets/primaryuserlocaladmin/primaryuserlocaladmin_itemlvltargeting.jpg)
 
-![LDAP Query](https://mylemans.online/assets/primaryuserlocaladmin/primaryuserlocaladmin_itemlvltargeting.jpg)
+![LDAP Query](/assets/primaryuserlocaladmin/primaryuserlocaladmin_itemlvltargeting.jpg)
 
 1st LDAP Query:
 

@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/615a419091ee.png
+image: /assets/img/posts/615a419091ee.png
 layout: post
 title: "Step-by-Step Guide - Connecting Local Active Directory to Microsoft Entra ID"
 date: 2024-11-12
@@ -156,7 +156,7 @@ Windows Registry Editor Version 5.00
 For enhanced integration, consider using Cloud Sync with Cloud Kerberos Trust. This additional setup allows for seamless authentication across environments.
 
 You can follow my detailed guide on setting up Cloud Kerberos Trust here:
-[Windows Hello for Business - Cloud Kerberos trust deployment](https://mylemans.online/posts/WHFB_CloudKerberosTrustDeployment/)
+[Windows Hello for Business - Cloud Kerberos trust deployment](/posts/WHFB_CloudKerberosTrustDeployment/)
 
 ## Final Recap
 

@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: /assets/img/posts/Default.jpg
 layout: post
 categories: [Community, Discord]
 tags: [discord, ko-fi, community, donate, support-the-community, volunteer]

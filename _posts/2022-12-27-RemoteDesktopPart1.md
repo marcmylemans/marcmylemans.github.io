@@ -1,6 +1,6 @@
 ---
 date: 2022-12-27 09:00:00
-image: https://mylemans.online/assets/img/posts/bkTFagCdycc.jpg
+image: /assets/img/posts/bkTFagCdycc.jpg
 layout: post
 categories: [Windows, Server 2022]
 tags: [server 2022, rdp, remote desktop services, rds, tutorial, youtube, part1]
@@ -13,7 +13,7 @@ title: Server 2022 - Remote Desktop Services - Part 1
 
 ---
 
-**Update:** We've recently created a comprehensive guide that consolidates all the steps needed to set up Remote Desktop Services (RDS) in **Windows Server 2022**. This new post provides a detailed, step-by-step walkthrough. Check it out here: [A Step-by-Step Guide - Setting Up Remote Desktop Services With FS Logix And Single Sign On!](https://mylemans.online/posts/Remote-Desktop-Services-Part1/).
+**Update:** We've recently created a comprehensive guide that consolidates all the steps needed to set up Remote Desktop Services (RDS) in **Windows Server 2022**. This new post provides a detailed, step-by-step walkthrough. Check it out here: [A Step-by-Step Guide - Setting Up Remote Desktop Services With FS Logix And Single Sign On!](/posts/Remote-Desktop-Services-Part1/).
 
 ---
 
@@ -63,6 +63,6 @@ Remote Desktop Services in Windows Server 2022 offers several key benefits:
 
 ### **Concluding Thoughts**
 
-This tutorial marks the beginning of your journey toward setting up a fully functional RDS environment in Windows Server 2022. If you’re ready for more in-depth configurations, including Group Policy settings, FSLogix for profile management, and Single Sign-On (SSO), make sure to check out our full guide: [A Step-by-Step Guide - Setting Up Remote Desktop Services With FS Logix And Single Sign On!](https://mylemans.online/posts/Remote-Desktop-Services-Part1/).
+This tutorial marks the beginning of your journey toward setting up a fully functional RDS environment in Windows Server 2022. If you’re ready for more in-depth configurations, including Group Policy settings, FSLogix for profile management, and Single Sign-On (SSO), make sure to check out our full guide: [A Step-by-Step Guide - Setting Up Remote Desktop Services With FS Logix And Single Sign On!](/posts/Remote-Desktop-Services-Part1/).
 
 Feel free to share your feedback and experiences with this setup. Your insights help us create better content and support the RDS community. Stay tuned for more parts in this series as we dive deeper into optimizing your RDS environment!

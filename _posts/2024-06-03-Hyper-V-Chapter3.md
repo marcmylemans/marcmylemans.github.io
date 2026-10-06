@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Hyper-V-Chapter3.PNG
+image: /assets/img/posts/Hyper-V-Chapter3.PNG
 layout: post
 title: "Networking in Hyper-V - Virtual Switches and Network Configuration"
 date: 2024-06-03
@@ -13,7 +13,7 @@ tags: [hyper-v, windows server, networking, virtual machines, virtual switches, 
 
 Welcome back to our **Hyper-V series**! In **Chapter 3**, we’re diving into an essential part of virtualization: **Networking in Hyper-V**. We’ll cover the basics of virtual networking, the different types of virtual switches, how to create them, and how to connect your virtual machines (VMs) to a network.
 
-If you’ve been following along, you should already have a VM created from **Chapter 2**. If you missed it, check out the guide here: [Setting Up Your First Virtual Machine](https://mylemans.online/posts/Hyper-V-Chapter2/).
+If you’ve been following along, you should already have a VM created from **Chapter 2**. If you missed it, check out the guide here: [Setting Up Your First Virtual Machine](/posts/Hyper-V-Chapter2/).
 
 ---
 
@@ -135,4 +135,4 @@ That wraps up **Chapter 3: Networking in Hyper-V**! You now have a solid underst
 
 If you found this post and video helpful, don’t forget to **like, share, and subscribe** for more tutorials. Drop any questions or thoughts in the comments below—we’d love to hear from you!
 
-**Next Up:** [Chapter 4: Storage in Hyper-V](https://mylemans.online/posts/Hyper-V-Chapter4/)
+**Next Up:** [Chapter 4: Storage in Hyper-V](/posts/Hyper-V-Chapter4/)

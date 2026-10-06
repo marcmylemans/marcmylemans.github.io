@@ -1,6 +1,6 @@
 ---
 layout: post
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: /assets/img/posts/Default.jpg
 title: "When a /24 Is Too Small: DHCP Congestion, Quick Relief with Superscopes, and the Real Fix (VLANs)"
 date: 2025-09-19 
 description: We hit DHCP congestion on a flat /24. Here’s how we stabilized the network with temporary superscopes and a cleanup script—then redesigned with VLANs for the long term.

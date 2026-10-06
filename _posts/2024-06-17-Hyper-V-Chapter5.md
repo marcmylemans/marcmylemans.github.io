@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Hyper-V-Chapter5.PNG
+image: /assets/img/posts/Hyper-V-Chapter5.PNG
 layout: post
 title: "Advanced Hyper-V Features - Live Migration, Hyper-V Replica, and More"
 date: 2024-06-17
@@ -13,7 +13,7 @@ tags: [hyper-v, windows server, live migration, hyper-v replica, nested virtuali
 
 Welcome back to our **Hyper-V series**! In **Chapter 5**, we’re diving into some of the **advanced features** that make Hyper-V a powerful virtualization platform. We’ll explore features like **Live Migration**, **Hyper-V Replica**, **Nested Virtualization**, **Shielded VMs**, and more. These tools can take your virtualization game to the next level by improving performance, increasing security, and enabling disaster recovery.
 
-If you missed the earlier chapters, check them out here: [Chapter 1: Introduction to Hyper-V](https://mylemans.online/posts/Hyper-V-Chapter1/), [Chapter 2: Setting Up Your First VM](https://mylemans.online/posts/Hyper-V-Chapter2/), [Chapter 3: Networking in Hyper-V](https://mylemans.online/posts/Hyper-V-Chapter3/), and [Chapter 4: Storage in Hyper-V](https://mylemans.online/posts/Hyper-V-Chapter4/).
+If you missed the earlier chapters, check them out here: [Chapter 1: Introduction to Hyper-V](/posts/Hyper-V-Chapter1/), [Chapter 2: Setting Up Your First VM](/posts/Hyper-V-Chapter2/), [Chapter 3: Networking in Hyper-V](/posts/Hyper-V-Chapter3/), and [Chapter 4: Storage in Hyper-V](/posts/Hyper-V-Chapter4/).
 
 ---
 
@@ -95,4 +95,4 @@ That’s it for Chapter 5: Advanced Hyper-V Features! These features—Live Migr
 
 If you found this post and video helpful, don’t forget to like, share, and subscribe for more tutorials. Stay tuned for Chapter 6, where we’ll cover backup and recovery strategies for your Hyper-V environment.
 
-**Next Up:** [Chapter 6: Backup and Recovery in Hyper-V](https://mylemans.online/posts/Hyper-V-Chapter6/)
+**Next Up:** [Chapter 6: Backup and Recovery in Hyper-V](/posts/Hyper-V-Chapter6/)

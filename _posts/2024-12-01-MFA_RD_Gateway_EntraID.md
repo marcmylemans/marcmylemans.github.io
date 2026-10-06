@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: /assets/img/posts/Default.jpg
 layout: post
 title: "Simplifying MFA Setup for Remote Desktop Gateway with Microsoft Entra ID"
 date: 2024-12-01
@@ -31,8 +31,8 @@ Here’s what you’ll achieve by the end of this guide:
 
 Before diving in, make sure you have:
 
-1. **An RD Gateway Server:** [Installed and operational](https://mylemans.online/posts/Remote-Desktop-Services-Part1/).  
-2. **Microsoft Entra ID:** [With user accounts synced](https://mylemans.online/posts/EntraID_Cloud_Sync_SSO/).  
+1. **An RD Gateway Server:** [Installed and operational](/posts/Remote-Desktop-Services-Part1/).  
+2. **Microsoft Entra ID:** [With user accounts synced](/posts/EntraID_Cloud_Sync_SSO/).  
 3. **Microsoft Entra P1 or P2 License:** Required for MFA functionality.  
 4. **NPS Role:** Installed on a domain member server or controller.  
 5. **Administrator Access:** To configure server settings and Microsoft Entra ID.  
@@ -47,7 +47,7 @@ Before diving in, make sure you have:
 3. Check **Network Policy and Access Services**, then complete the wizard.  
 
 ### 2. Sync Users with Microsoft Entra ID  
-Please make sure your on-premises Active Directory users are synced with [Microsoft Entra ID](https://mylemans.online/posts/EntraID_Cloud_Sync_SSO/). This allows seamless integration of existing accounts.  
+Please make sure your on-premises Active Directory users are synced with [Microsoft Entra ID](/posts/EntraID_Cloud_Sync_SSO/). This allows seamless integration of existing accounts.  
 
 ---
 

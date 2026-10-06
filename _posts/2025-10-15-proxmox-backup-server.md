@@ -4,7 +4,7 @@ title: "Proxmox Backup Server – Installation and Configuration"
 date: 2025-10-15
 categories: [Homelab, Backup]
 tags: [Proxmox, Backup, PBS, Virtualization, Homelab]
-image: https://mylemans.online/assets/img/posts/2025-10-15-proxmox-backup-server-installation.png
+image: /assets/img/posts/2025-10-15-proxmox-backup-server-installation.png
 description: "Learn what Proxmox Backup Server is, why it’s essential for any Proxmox environment, and how to install and configure it step-by-step in your home lab."
 ---
 

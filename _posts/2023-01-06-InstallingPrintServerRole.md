@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/XQL3ma7Otg8.jpg
+image: /assets/img/posts/XQL3ma7Otg8.jpg
 layout: post
 categories: [Windows, Server 2022]
 tags: [server 2022, printserver, group policy, printer deployment, tutorial, youtube]

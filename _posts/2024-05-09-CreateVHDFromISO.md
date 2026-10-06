@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: /assets/img/posts/Default.jpg
 layout: post
 title: "Automating Hyper-V VHD(X) Creation from a Windows ISO"
 categories: Scripts Powershell

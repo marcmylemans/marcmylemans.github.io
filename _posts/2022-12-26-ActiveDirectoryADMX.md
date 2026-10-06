@@ -1,6 +1,6 @@
 ---
 date: 2022-12-26 09:00:00
-image: https://mylemans.online/assets/img/posts/xbX_n8ysGrI.jpg
+image: /assets/img/posts/xbX_n8ysGrI.jpg
 layout: post
 categories: [Windows, Server 2022]
 tags: [server 2022, admx, group policy, gpo, active directory, software installation, tutorial, youtube]

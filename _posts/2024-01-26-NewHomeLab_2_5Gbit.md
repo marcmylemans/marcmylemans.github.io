@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: /assets/img/posts/Default.jpg
 layout: post
 categories: [HomeLab Hardware]
 tags: [hardware, network, homelab, server, virtualization, deployment, windows server, networking]
@@ -10,7 +10,7 @@ title: My New Home Lab Journey - The 2.5 Gbit Network Upgrade
 
 # Enhancing Connectivity - The 2.5 Gbit Network Upgrade
 
-As [My New Home Lab](https://mylemans.online/posts/NewHomeLab/) evolves, I'm thrilled to share the latest advancement: the transition to a **2.5 Gbit network**. This upgrade marks a significant leap in networking capabilities, aligning perfectly with my future plans for high-performance tasks.
+As [My New Home Lab](/posts/NewHomeLab/) evolves, I'm thrilled to share the latest advancement: the transition to a **2.5 Gbit network**. This upgrade marks a significant leap in networking capabilities, aligning perfectly with my future plans for high-performance tasks.
 
 ## The Need for Speed: Why 2.5 Gbit?
 

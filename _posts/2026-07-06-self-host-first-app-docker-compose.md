@@ -4,7 +4,7 @@ description: "Host your first app on your own hardware with one Compose file and
 categories: [Homelab, Docker]
 tags: [docker, docker-compose, self-hosting, homelab, tutorial, youtube]
 date: 2026-07-06
-image: https://mylemans.online/assets/img/posts/self-host-first-app/og-card.jpg
+image: /assets/img/posts/self-host-first-app/og-card.jpg
 ---
 
 Every app you rent is a subscription you'll pay forever. Somebody else hosts it, somebody else controls it, and the invoice never stops. In this guide you'll self-host your first app on your own hardware, using one text file and one command, even if you've never touched a container. By the end, you'll type an address into your browser and your own app will load from your own server. We'll cover what Docker Compose actually is, the five concepts that let you read almost any Compose file, and the two failure states that stop most beginners cold.
@@ -112,13 +112,13 @@ docker compose up -d
 
 Docker pulls the image, creates the container, and starts it in the background (`-d` for detached). One file, one command. That is the entire deployment.
 
-![SCREENSHOT: terminal output of docker compose up -d, "Pulled" and "Started" lines annotated](https://mylemans.online/assets/img/posts/self-host-first-app/01-docker-compose-up.png)
+![SCREENSHOT: terminal output of docker compose up -d, "Pulled" and "Started" lines annotated](/assets/img/posts/self-host-first-app/01-docker-compose-up.png)
 
 ## Access it (this is the moment)
 
 Open a browser on any device in your house and go to `http://your-server-ip:port`, using the *left* port number from your Compose file. Find the server's IP with `ip a` on the machine itself.
 
-![SCREENSHOT: the app loaded in a browser at the local server address, the payoff shot](https://mylemans.online/assets/img/posts/self-host-first-app/02-app-loaded-local.png)
+![SCREENSHOT: the app loaded in a browser at the local server address, the payoff shot](/assets/img/posts/self-host-first-app/02-app-loaded-local.png)
 
 
 That is a real application, running on a server you control, from a ten-line text file. No subscription. No account on someone else's cloud. Yours.
@@ -131,7 +131,7 @@ If you only follow happy-path guides, one of these two walls will get you. Here'
 
 You run `docker compose up -d` and get a wall of red about `/var/run/docker.sock`. This is the single most common first-day failure, and it's not broken: your user just isn't allowed to talk to Docker yet.
 
-![SCREENSHOT: the permission denied error in the terminal, failure state](https://mylemans.online/assets/img/posts/self-host-first-app/03-permission-denied.png)
+![SCREENSHOT: the permission denied error in the terminal, failure state](/assets/img/posts/self-host-first-app/03-permission-denied.png)
 
 
 [The fix](https://docs.docker.com/engine/install/linux-postinstall/) is one command and one logout:

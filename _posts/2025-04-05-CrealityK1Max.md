@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/e0bdc2df4167.jpg
+image: /assets/img/posts/e0bdc2df4167.jpg
 layout: post
 title: "Setting Up the Creality K1 Max with OrcaSlicer"
 date: 2025-04-05
@@ -61,10 +61,10 @@ You can follow along right here:
 
 ### ORCA Slicer - Setup Screens (Captured on 05-04-2025)
 
-![Step 1](https://mylemans.online/assets/img/posts/steps-orca_slicer___05_04_2025/step-1.png)
-![Step 3](https://mylemans.online/assets/img/posts/steps-orca_slicer___05_04_2025/step-18.png)
-![Step 4](https://mylemans.online/assets/img/posts/steps-orca_slicer___05_04_2025/step-19.png)
-![Step 5](https://mylemans.online/assets/img/posts/steps-orca_slicer___05_04_2025/step-35.png)
+![Step 1](/assets/img/posts/steps-orca_slicer___05_04_2025/step-1.png)
+![Step 3](/assets/img/posts/steps-orca_slicer___05_04_2025/step-18.png)
+![Step 4](/assets/img/posts/steps-orca_slicer___05_04_2025/step-19.png)
+![Step 5](/assets/img/posts/steps-orca_slicer___05_04_2025/step-35.png)
 
 
 ## 🔍 Finding 3D Models

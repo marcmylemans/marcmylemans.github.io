@@ -1,6 +1,6 @@
 ---
 date: 2024-01-27
-image: https://mylemans.online/assets/img/posts/9c4l5CIV6Qw.jpg
+image: /assets/img/posts/9c4l5CIV6Qw.jpg
 layout: post
 categories: [Windows Server]
 tags: [server, windows server 2022, rdp, webclient, file transfer, remote desktop, virtual drive, remote access, tech tutorial]
@@ -27,7 +27,7 @@ When it comes to downloading, there's a small yet important step to remember. Al
 
 ### Comprehensive Guide
 
-For those interested in setting up the Remote Desktop web client, I recommend this detailed guide: [Setting Up Remote Desktop Web Client](https://mylemans.online/posts/RemoteDesktopPart5/). It's a fantastic resource that complements what we've covered today.
+For those interested in setting up the Remote Desktop web client, I recommend this detailed guide: [Setting Up Remote Desktop Web Client](/posts/RemoteDesktopPart5/). It's a fantastic resource that complements what we've covered today.
 
 ### Conclusion
 

@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/ltcvhYTvhl4.jpg
+image: /assets/img/posts/ltcvhYTvhl4.jpg
 layout: post
 categories: [Azure, Intune]
 tags: [azure, universal print, printer, print management, tutorial, youtube]

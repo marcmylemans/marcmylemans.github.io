@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/BVYyfv8v4xQ.jpg
+image: /assets/img/posts/BVYyfv8v4xQ.jpg
 layout: post
 categories: [Windows, Server 2022]
 tags: [server 2022, activedirectory, codetwo]

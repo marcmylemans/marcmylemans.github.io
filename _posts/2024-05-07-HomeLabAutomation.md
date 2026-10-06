@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/6wGd47lPLmU.png
+image: /assets/img/posts/6wGd47lPLmU.png
 layout: post
 categories: [HomeLab, Automation]
 tags: [automation, powershell, scripting, network, homelab, virtualization, hyper-v, infrastructure, IT management]

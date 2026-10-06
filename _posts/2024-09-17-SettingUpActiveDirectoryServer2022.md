@@ -1,6 +1,6 @@
 ---
 date: 2024-09-17 17:00:00
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: /assets/img/posts/Default.jpg
 layout: post
 title: "Setting Up Active Directory on Windows Server 2022: A Step-by-Step Guide"
 categories: [Active Directory, Step by Step Guide]

@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/hdwa0Wq1XTI.jpg
+image: /assets/img/posts/hdwa0Wq1XTI.jpg
 layout: post
 title: Server 2022 - Remote Desktop Services - Part 6 Remote App
 categories: [Windows, Server 2022]
@@ -12,7 +12,7 @@ tags: [server 2022, rdp, remote desktop services, rds, remoteapp, tutorial, yout
 
 ---
 
-**Update:** We’ve created a comprehensive guide that covers everything you need to know about setting up Remote Desktop Services, including the deployment of **RemoteApp**. You can find the latest step-by-step guide here: [A Step-by-Step Guide - Installing and Configuring Office on RemoteAPP/Desktop Services](https://mylemans.online/posts/Remote-Desktop-Services-Part2/).
+**Update:** We’ve created a comprehensive guide that covers everything you need to know about setting up Remote Desktop Services, including the deployment of **RemoteApp**. You can find the latest step-by-step guide here: [A Step-by-Step Guide - Installing and Configuring Office on RemoteAPP/Desktop Services](/posts/Remote-Desktop-Services-Part2/).
 
 ---
 
@@ -61,7 +61,7 @@ If you've missed any previous parts of this series, be sure to check them out to
 
 Adding a **Remote App Server** expands the capabilities of your RDS environment, offering a more versatile and efficient way to manage applications. This tutorial will guide you through setting up this advanced feature, improving both network functionality and the user experience.
 
-For a more detailed guide on deploying RemoteApp, make sure to check out our updated post: [A Step-by-Step Guide - Installing and Configuring Office on RemoteAPP/Desktop Services](https://mylemans.online/posts/Remote-Desktop-Services-Part2/).
+For a more detailed guide on deploying RemoteApp, make sure to check out our updated post: [A Step-by-Step Guide - Installing and Configuring Office on RemoteAPP/Desktop Services](/posts/Remote-Desktop-Services-Part2/).
 
 We’d love to hear about your experiences in setting up and using RemoteApp in your RDS environment. Feel free to share your questions or insights in the comments section. Your feedback helps us tailor content and provide better support to the community.
 

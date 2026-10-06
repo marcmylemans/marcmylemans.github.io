@@ -1,6 +1,6 @@
 ---
 date: 2022-12-31 09:00:00
-image: https://mylemans.online/assets/img/posts/G-5se77LRyU.jpg
+image: /assets/img/posts/G-5se77LRyU.jpg
 layout: post
 categories: [Windows, Server 2022]
 tags: [server 2022, rdp, remote desktop services, rds, group policy, tutorial, youtube, part2]
@@ -13,7 +13,7 @@ title: Server 2022 - Remote Desktop Services - Part 2
 
 ---
 
-**Update:** We’ve created a more detailed guide that consolidates everything you need to know about configuring **Remote Desktop Services (RDS)**, including the use of **Group Policy** and advanced configurations. Be sure to check out the latest step-by-step guide here: [A Step-by-Step Guide - Setting Up Remote Desktop Services With FS Logix And Single Sign On!](https://mylemans.online/posts/Remote-Desktop-Services-Part1/).
+**Update:** We’ve created a more detailed guide that consolidates everything you need to know about configuring **Remote Desktop Services (RDS)**, including the use of **Group Policy** and advanced configurations. Be sure to check out the latest step-by-step guide here: [A Step-by-Step Guide - Setting Up Remote Desktop Services With FS Logix And Single Sign On!](/posts/Remote-Desktop-Services-Part1/).
 
 ---
 
@@ -52,7 +52,7 @@ This first part covers the setup of core RDS components such as the Broker, Host
 
 As you move forward in configuring and optimizing your **Remote Desktop Services** environment, using **Group Policy** will play a key role in delivering a seamless and secure experience for your users.
 
-For more advanced configurations, including FSLogix profile management and Single Sign-On (SSO), check out our comprehensive guide: [A Step-by-Step Guide - Setting Up Remote Desktop Services With FS Logix And Single Sign On!](https://mylemans.online/posts/Remote-Desktop-Services-Part1/).
+For more advanced configurations, including FSLogix profile management and Single Sign-On (SSO), check out our comprehensive guide: [A Step-by-Step Guide - Setting Up Remote Desktop Services With FS Logix And Single Sign On!](/posts/Remote-Desktop-Services-Part1/).
 
 We’d love to hear about your experiences with these Group Policy settings. Feel free to share your insights or any challenges you encountered in the comments below—your feedback helps us create more tailored and helpful content for the community.
 

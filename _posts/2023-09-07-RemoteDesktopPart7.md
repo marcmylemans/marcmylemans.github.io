@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/b5WL7PgEmaY.jpg
+image: /assets/img/posts/b5WL7PgEmaY.jpg
 layout: post
 categories: [Windows, Server]
 tags: [server 2022, rdp, remote desktop services, rds, mfa, azure mfa, tutorial, youtube, part7]

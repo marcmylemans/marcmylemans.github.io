@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/SJksgjmPsmY.jpg
+image: /assets/img/posts/SJksgjmPsmY.jpg
 layout: post
 title: Creating Firewall Rules in Sophos XG!
 ---

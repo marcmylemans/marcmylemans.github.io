@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/fdf42da4b243.png
+image: /assets/img/posts/fdf42da4b243.png
 layout: post
 title: "Upgrading from Proxmox VE 8 to 9"
 description: "Step-by-step walkthrough of upgrading a 3-node Proxmox cluster from version 8.4 to 9"
@@ -30,7 +30,7 @@ This guide is based on the official Proxmox upgrade documentation:
 If you're running a **Ceph cluster**, it's important to upgrade Ceph **before** upgrading Proxmox to ensure compatibility.
 
 We’ve written a detailed guide specifically for this process:  
-[How to upgrade Ceph from Reef to Squid](https://mylemans.online/posts/Ceph-Upgrade-Reef-to-Squid/)
+[How to upgrade Ceph from Reef to Squid](/posts/Ceph-Upgrade-Reef-to-Squid/)
 
 If you're **not using Ceph**, or just running a single-node setup without distributed storage, you can skip this step.
 

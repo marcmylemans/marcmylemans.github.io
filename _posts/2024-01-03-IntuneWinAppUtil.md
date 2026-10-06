@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: /assets/img/posts/Default.jpg
 layout: post
 categories: [Azure Intune]
 tags: [entraid, azuread, intune, intunewinapputil]

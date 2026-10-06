@@ -1,6 +1,6 @@
 ---
 date: 2022-12-24 09:00:00
-image: https://mylemans.online/assets/img/posts/FDcCoxioSp8.jpg
+image: /assets/img/posts/FDcCoxioSp8.jpg
 layout: post
 categories: [Windows, Windows 11]
 tags: [windows 11, rdp, bugfix, register, remote desktop, tutorial, youtube]

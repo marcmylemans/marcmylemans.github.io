@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/TcTFFKfjLTQ.jpg
+image: /assets/img/posts/TcTFFKfjLTQ.jpg
 layout: post
 categories: [Windows, Server 2022]
 tags: [server 2022, printserver, point and print, trusted printserver, group policy, printer management, tutorial, youtube]

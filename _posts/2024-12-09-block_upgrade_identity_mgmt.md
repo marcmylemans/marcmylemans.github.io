@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: /assets/img/posts/Default.jpg
 layout: post
 title: How to Resolve Identity Management for UNIX Upgrade Blocks on Windows Server
 date: 2024-12-09

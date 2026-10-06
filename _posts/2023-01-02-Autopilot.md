@@ -1,6 +1,6 @@
 ---
 date: 2023-01-02 09:00:00
-image: https://mylemans.online/assets/img/posts/Jp_kmppB_Fk.jpg
+image: /assets/img/posts/Jp_kmppB_Fk.jpg
 layout: post
 categories: [Azure, Intune]
 tags: [server 2022, azure, hybrid, autopilot, intune, active directory, tutorial, youtube]

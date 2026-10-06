@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: /assets/img/posts/Default.jpg
 layout: post
 title: "Efficient Intune Autopilot Setup: PowerShell Automation for Hardware Hashes and Device Management!"
 categories: [Scripts, Powershell]

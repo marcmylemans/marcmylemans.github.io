@@ -1,6 +1,6 @@
 ---
 date: 2023-01-03 09:00:00
-image: https://mylemans.online/assets/img/posts/dRf8k7loXQ0.jpg
+image: /assets/img/posts/dRf8k7loXQ0.jpg
 layout: post
 categories: [Windows, Server 2022]
 tags: [server 2022, rdp, remote desktop services, rds, fslogix, tutorial, youtube, part3]
@@ -13,7 +13,7 @@ title: Remote Desktop Services - FSLogix
 
 ---
 
-**Update:** We’ve recently created a comprehensive guide that covers everything you need to know about setting up **FSLogix**, along with other essential **Remote Desktop Services (RDS)** configurations. You can check out the detailed guide here: [A Step-by-Step Guide - Setting Up Remote Desktop Services With FS Logix And Single Sign On!](https://mylemans.online/posts/Remote-Desktop-Services-Part1/).
+**Update:** We’ve recently created a comprehensive guide that covers everything you need to know about setting up **FSLogix**, along with other essential **Remote Desktop Services (RDS)** configurations. You can check out the detailed guide here: [A Step-by-Step Guide - Setting Up Remote Desktop Services With FS Logix And Single Sign On!](/posts/Remote-Desktop-Services-Part1/).
 
 ---
 
@@ -60,7 +60,7 @@ Integrating **FSLogix** into your RDS setup offers several major benefits:
 
 Adding **FSLogix** to your RDS environment is a smart move for anyone looking to improve efficiency and scalability in their setup. By centralizing user data and optimizing profile management, FSLogix makes your remote desktop environment smoother and faster.
 
-For a more detailed guide that covers these topics and more, be sure to check out our comprehensive post: [A Step-by-Step Guide - Setting Up Remote Desktop Services With FS Logix And Single Sign On!](https://mylemans.online/posts/Remote-Desktop-Services-Part1/).
+For a more detailed guide that covers these topics and more, be sure to check out our comprehensive post: [A Step-by-Step Guide - Setting Up Remote Desktop Services With FS Logix And Single Sign On!](/posts/Remote-Desktop-Services-Part1/).
 
 We’d love to hear how FSLogix has worked for you in your RDS setup. Share your insights, questions, or any challenges you’ve encountered in the comments below. Your feedback helps us continue improving our content for the broader RDS community.
 

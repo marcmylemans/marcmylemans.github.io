@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Hyper-V-Chapter6.PNG
+image: /assets/img/posts/Hyper-V-Chapter6.PNG
 layout: post
 title: "Backup and Recovery in Hyper-V - Strategies and Best Practices"
 date: 2024-06-24
@@ -13,7 +13,7 @@ tags: [hyper-v, windows server, backup, recovery, disaster recovery, virtualizat
 
 Welcome back to our **Hyper-V series**! In **Chapter 6**, we’ll be diving into a critical topic for any virtualization environment: **Backup and Recovery** in Hyper-V. Ensuring your virtual machines (VMs) are properly backed up and that you have a reliable recovery plan in place is essential for **business continuity** and **data protection**.
 
-If you missed the previous chapters, be sure to check them out: [Chapter 1: Introduction to Hyper-V](https://mylemans.online/posts/Hyper-V-Chapter1/), [Chapter 2: Setting Up Your First VM](https://mylemans.online/posts/Hyper-V-Chapter2/), [Chapter 3: Networking in Hyper-V](https://mylemans.online/posts/Hyper-V-Chapter3/), [Chapter 4: Storage in Hyper-V](https://mylemans.online/posts/Hyper-V-Chapter4/), and [Chapter 5: Advanced Hyper-V Features](https://mylemans.online/posts/Hyper-V-Chapter5/).
+If you missed the previous chapters, be sure to check them out: [Chapter 1: Introduction to Hyper-V](/posts/Hyper-V-Chapter1/), [Chapter 2: Setting Up Your First VM](/posts/Hyper-V-Chapter2/), [Chapter 3: Networking in Hyper-V](/posts/Hyper-V-Chapter3/), [Chapter 4: Storage in Hyper-V](/posts/Hyper-V-Chapter4/), and [Chapter 5: Advanced Hyper-V Features](/posts/Hyper-V-Chapter5/).
 
 ---
 

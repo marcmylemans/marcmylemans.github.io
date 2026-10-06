@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: /assets/img/posts/Default.jpg
 layout: post
 title: "Three Years of SMB Pain From a Single Phantom DNS Record"
 date: 2026-05-12

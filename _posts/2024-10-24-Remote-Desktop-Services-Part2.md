@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/a803d385944d.png
+image: /assets/img/posts/a803d385944d.png
 layout: post
 title: "A Step-by-Step Guide - Installing and Configuring Office on RemoteAPP/Desktop Services"
 date: 2024-10-24
@@ -17,10 +17,10 @@ Hey there! Welcome to our follow-up guide on Remote Desktop Services (RDS). If y
 
 ## Prerequisites
 
-Before we get started, make sure you’ve got a working Remote Desktop Services environment. If not, no worries! We’ve got you covered with our [Step-by-Step RDS Guide](https://mylemans.online/posts/Remote-Desktop-Services-Part1/).
+Before we get started, make sure you’ve got a working Remote Desktop Services environment. If not, no worries! We’ve got you covered with our [Step-by-Step RDS Guide](/posts/Remote-Desktop-Services-Part1/).
 
 ### What you need:
-- **Group Policy Knowledge**: You’ll need a basic understanding of Group Policy. If you need a quick refresher, check out our [Group Policy Best Practices guide](https://mylemans.online/posts/GroupPolicyBestPracticesServer2022/).
+- **Group Policy Knowledge**: You’ll need a basic understanding of Group Policy. If you need a quick refresher, check out our [Group Policy Best Practices guide](/posts/GroupPolicyBestPracticesServer2022/).
 - **(Optional)**: An extra virtual machine (VM) for deploying Remote Apps. I like to call mine **RDS2**.
 
 ---
@@ -77,7 +77,7 @@ Time to unlock the real power of Group Policy and ADMX files! This step will hel
 
 You can grab the latest ADMX files for Office [here](https://www.microsoft.com). Copy these files to your central store or a local folder on your server.
 
-Need a refresher on setting up a central store? Check out our [Group Policy Best Practices guide](https://mylemans.online/posts/GroupPolicyBestPracticesServer2022/).
+Need a refresher on setting up a central store? Check out our [Group Policy Best Practices guide](/posts/GroupPolicyBestPracticesServer2022/).
 
 ### Step 2: Configure Policies for Office
 

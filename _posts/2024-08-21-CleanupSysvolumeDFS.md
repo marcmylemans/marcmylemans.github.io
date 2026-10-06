@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: /assets/img/posts/Default.jpg
 layout: post
 title: "Reclaiming Storage by Cleaning Up DFS Cache and Conflict/Deleted Files"
 date: 2024-07-02
@@ -17,7 +17,7 @@ To help others reclaim this lost storage, here's a streamlined guide on how to c
 
 In my case, I needed to lower the **Conflict and Deleted Quota** first. Here is a screenshot within the **DFS Management Interface**. Right-click the member, select properties, and go to the **Advanced Tab**:
 
-![DFS Member - Advanced Properties Tab](https://mylemans.online/assets/img/posts/250a7165.png)
+![DFS Member - Advanced Properties Tab](/assets/img/posts/250a7165.png)
 
 ### Using WMI for a Quick Cleanup
 
@@ -33,7 +33,7 @@ Instead of going through the more disruptive process of lowering the quota and r
 WMIC.EXE /namespace:\\root\microsoftdfs path dfsrreplicatedfolderconfig get replicatedfolderguid,replicatedfoldername
 ```
 
-![GUID of the replicated folder](https://mylemans.online/assets/img/posts/4dea6d33ea22.png)
+![GUID of the replicated folder](/assets/img/posts/4dea6d33ea22.png)
 
   
 Clean the ConflictAndDeleted Folder
@@ -47,7 +47,7 @@ This process will empty the **ConflictAndDeleted** folder, and the ConflictAndDe
 
 Example:
 
-![Clean the ConflictAndDeleted Folder](https://mylemans.online/assets/img/posts/d01419abf6f4.png)
+![Clean the ConflictAndDeleted Folder](/assets/img/posts/d01419abf6f4.png)
 
 ```
 WMIC.EXE /namespace:\\root\microsoftdfs path dfsrreplicatedfolderinfo where "replicatedfolderguid='08D61A29-D8C0-4559-BF43-FAC137DAD46C'" call cleanupconflictdirectory

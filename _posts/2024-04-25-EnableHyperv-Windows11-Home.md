@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/a7OFMzM6HRY.jpg
+image: /assets/img/posts/a7OFMzM6HRY.jpg
 layout: post
 categories: [Windows, Windows 11]
 tags: [hyper-v, virtualisation, windows 10 home, windows 11 home]
@@ -80,7 +80,7 @@ For more detailed instructions on enabling Hyper-V using the script and other vi
 After enabling Hyper-V and setting up your environment, you might be interested in taking it a step further by creating Hyper-V templates, which can significantly streamline the management of multiple virtual machines. 
 If you're ready to dive into creating Hyper-V templates, you can follow my detailed guide on this topic. This guide will walk you through the process of setting up server templates, which can be a great way to get familiar with more complex Hyper-V functionalities.
 
-You can find the guide here: [Creating Hyper-V Virtual Machine Templates](https://mylemans.online/posts/Server2022-Hyper-V-VirtualMachineTemplates/).
+You can watch the full walkthrough here: [Creating Hyper-V Virtual Machine Templates (video)](https://www.youtube.com/watch?v=14-tJsdW7LU).
 
 This guide is designed to help you understand the steps involved in creating a template, from preparing the virtual machine to converting it into a template, which you can then use to deploy new servers quickly and efficiently.
 

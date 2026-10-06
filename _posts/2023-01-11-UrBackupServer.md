@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/ig6by0vgpyQ.jpg
+image: /assets/img/posts/ig6by0vgpyQ.jpg
 layout: post
 categories: [Open Source Software, UrBackup Server]
 tags: [server 2022, gpo, windows 11, urbackup, backup, tutorial, youtube]

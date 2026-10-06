@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/lEVq0h2qNvQ.jpg
+image: /assets/img/posts/lEVq0h2qNvQ.jpg
 layout: post
 categories: [EntraID, Laps]
 tags: [entraid, azuread, intune, laps]

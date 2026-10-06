@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/4wO82is6y40.jpg
+image: /assets/img/posts/4wO82is6y40.jpg
 layout: post
 categories: [Windows, Server 2022]
 tags: [server 2022, rdp, remote desktop services, rds, office 365, shared licensing, tutorial, youtube, part4]
@@ -12,7 +12,7 @@ title: Installing Office 365 on a Remote Desktop Host!
 
 ---
 
-**Update:** We've created a more comprehensive guide that not only covers **Office 365 installation** on Remote Desktop Services but also includes detailed configurations for **Group Policy** and the **Office Deployment Tool (ODT)**. You can find the latest guide here: [A Step-by-Step Guide - Installing and Configuring Office on RemoteAPP/Desktop Services](https://mylemans.online/posts/Remote-Desktop-Services-Part2/).
+**Update:** We've created a more comprehensive guide that not only covers **Office 365 installation** on Remote Desktop Services but also includes detailed configurations for **Group Policy** and the **Office Deployment Tool (ODT)**. You can find the latest guide here: [A Step-by-Step Guide - Installing and Configuring Office on RemoteAPP/Desktop Services](/posts/Remote-Desktop-Services-Part2/).
 
 ---
 
@@ -51,7 +51,7 @@ If you've missed the earlier parts of this series, check them out here:
 
 Installing Office 365 with shared licensing on a Remote Desktop Host is a key step in maximizing the potential of your RDS environment. This setup ensures that your users have seamless access to essential productivity tools in a cost-effective and efficient manner.
 
-For more detailed steps and the latest configurations, be sure to check out our new post: [A Step-by-Step Guide - Installing and Configuring Office on RemoteAPP/Desktop Services](https://mylemans.online/posts/Remote-Desktop-Services-Part2/).
+For more detailed steps and the latest configurations, be sure to check out our new post: [A Step-by-Step Guide - Installing and Configuring Office on RemoteAPP/Desktop Services](/posts/Remote-Desktop-Services-Part2/).
 
 We look forward to hearing about your experiences, insights, or challenges after following this tutorial. Your feedback helps us improve our content and support the broader RDS community.
 

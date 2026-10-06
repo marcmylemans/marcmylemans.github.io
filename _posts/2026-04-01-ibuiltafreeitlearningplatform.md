@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: /assets/img/posts/Default.jpg
 layout: post
 title: "I Built a Free IT Learning Platform: Structured Paths for Sysadmins & Homelab Enthusiasts"
 description: "Introducing Mylemans Labs: free, structured IT learning paths covering networking, PowerShell, Proxmox, Active Directory, Microsoft 365, Docker, and more. No fluff, no paywalls."

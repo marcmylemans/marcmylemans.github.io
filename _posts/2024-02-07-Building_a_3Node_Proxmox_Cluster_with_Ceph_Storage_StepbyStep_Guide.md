@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/oQHi8IYxY-0.jpg
+image: /assets/img/posts/oQHi8IYxY-0.jpg
 layout: post
 categories: [HomeLab, Hardware]
 tags: [proxmox, homeserversetup, techguide, virtualization, ceph, cluster setup, high availability, infrastructure]

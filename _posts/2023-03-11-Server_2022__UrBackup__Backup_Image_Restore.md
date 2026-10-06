@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/ICxtXohdmG4.jpg
+image: /assets/img/posts/ICxtXohdmG4.jpg
 layout: post
 title: UrBackup - Backup Image Restore
 categories: [Open Source Software, UrBackup Server]

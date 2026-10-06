@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: /assets/img/posts/Default.jpg
 layout: post
 categories: [HomeLab Hardware]
 tags: [hardware, network, homelab, server, virtualization, hyper-v, deployment, windows server]
@@ -29,9 +29,9 @@ One of the most remarkable aspects of these Mini PCs is their **low power consum
 
 Setting up the software was a crucial part of this journey. I followed a comprehensive guide to import the drivers into my Microsoft Deployment Toolkit (MDT) server. Here's how I did it:
 
-- **Step 1**: [Driver Import Guide Part 1](https://mylemans.online/posts/MDTPart1/)
-- **Step 2**: [Driver Import Guide Part 2](https://mylemans.online/posts/MDTPart2/)
-- **Step 3**: [Driver Import Guide Part 3](https://mylemans.online/posts/MDTPart3/)
+- **Step 1**: [Driver Import Guide Part 1](/posts/MDTPart1/)
+- **Step 2**: [Driver Import Guide Part 2](/posts/MDTPart2/)
+- **Step 3**: [Driver Import Guide Part 3](/posts/MDTPart3/)
 
 Following these steps, I performed a clean installation using MDT, which streamlined the process and made it highly efficient.
 
@@ -41,11 +41,11 @@ An essential part of my lab is the software infrastructure. I have installed **S
 
 ### Installing Hyper-V
 
-I followed a detailed guide to install the Hyper-V role on Server 2019. The process is thoroughly documented here: [Installing Hyper-V Role on Server 2019](https://mylemans.online/posts/Server2022-Installing-Hyper-V-Role/). This guide made the installation process straightforward and hassle-free.
+I followed a detailed guide to install the Hyper-V role on Server 2019. The process is thoroughly documented here: [Installing Hyper-V Role on Server 2019](/posts/Server2022-Installing-Hyper-V-Role/). This guide made the installation process straightforward and hassle-free.
 
 ### Creating a VM Template
 
-To streamline the creation of new virtual machines, I've set up a VM template. This template serves as a blueprint for quickly deploying new VMs without having to configure each one from scratch. You can find the detailed process I followed here: [Creating Hyper-V VM Templates](https://mylemans.online/posts/Server2022-Hyper-V-VirtualMachineTemplates/). This approach saves a significant amount of time and ensures consistency across various VM deployments.
+To streamline the creation of new virtual machines, I've set up a VM template. This template serves as a blueprint for quickly deploying new VMs without having to configure each one from scratch. You can watch the process I followed here: [Creating Hyper-V VM Templates (video)](https://www.youtube.com/watch?v=14-tJsdW7LU). This approach saves a significant amount of time and ensures consistency across various VM deployments.
 
 ## Network Configuration: The Backbone of Connectivity
 

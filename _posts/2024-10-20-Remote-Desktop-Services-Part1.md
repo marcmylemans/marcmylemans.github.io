@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/3c6960198dfa.png
+image: /assets/img/posts/3c6960198dfa.png
 layout: post
 title: "A Step-by-Step Guide - Setting Up Remote Desktop Services With FS Logix And Single Sign On!"
 date: 2024-10-20

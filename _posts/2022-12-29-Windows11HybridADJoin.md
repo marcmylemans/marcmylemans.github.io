@@ -1,6 +1,6 @@
 ---
 date: 2022-12-29 09:00:00
-image: https://mylemans.online/assets/img/posts/HpDysxGxwR8.jpg
+image: /assets/img/posts/HpDysxGxwR8.jpg
 layout: post
 categories: [Windows, Windows 11]
 tags: [windows 11, server 2022, azure, hybrid join, active directory, tutorial, youtube]

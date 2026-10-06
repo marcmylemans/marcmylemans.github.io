@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/ZoUU6xA2UOs.jpg
+image: /assets/img/posts/ZoUU6xA2UOs.jpg
 layout: post
 title: Sophos XG Configure SSL VPN
 ---

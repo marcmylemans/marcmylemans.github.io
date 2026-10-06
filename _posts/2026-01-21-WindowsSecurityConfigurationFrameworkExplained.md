@@ -1,7 +1,7 @@
 ---
 title: "Windows Security Configuration Framework Explained"
 description: "Microsoft’s official way to harden Windows using supported security baselines and tools."
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: /assets/img/posts/Default.jpg
 date: 2026-01-21
 categories: [Windows, Security]
 tags: [windows-security, security-baseline, microsoft-security, group-policy, active-directory, lgpo, policy-analyzer, windows-server]

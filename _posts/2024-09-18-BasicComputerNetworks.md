@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/d4bf1c3ac3fb.png
+image: /assets/img/posts/d4bf1c3ac3fb.png
 layout: post
 title: "The Basics of Computer Networks: How Computers Talk to Each Other"
 date: 2024-09-18 17:00:00

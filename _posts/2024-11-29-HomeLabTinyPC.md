@@ -1,5 +1,5 @@
 ---
-image: https://mylemans.online/assets/img/posts/Default.jpg
+image: /assets/img/posts/Default.jpg
 layout: post
 title: "How to Build a Quiet and Powerful Home Lab in a Tiny PC"
 date: 2024-11-29
