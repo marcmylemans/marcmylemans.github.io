@@ -50,6 +50,7 @@ jobs:
         id: ctx
         env:
           GH_TOKEN: ${{ github.token }}
+          DISCUSSION: ${{ inputs.discussion_number }}
           COMMENT_ID: ${{ inputs.comment_node_id }}
         run: python3 .github/comment-triage/gather.py
 
