@@ -1,0 +1,32 @@
+# New giscus comment -> start the triage run.
+#
+# giscus stores the comments of mylemans.online as Discussions in this repo
+# (category "Announcements", one discussion per post, titled "posts/<slug>/").
+# claude-code-action can't run on discussion events, so this small job only
+# filters and then starts "Comment triage" (workflow_dispatch) for the comment.
+name: Comment intake
+
+on:
+  discussion_comment:
+    types: [created]
+
+permissions:
+  actions: write
+
+jobs:
+  dispatch:
+    # Only the giscus category, and never for my own replies or bots.
+    if: >
+      github.event.discussion.category.name == 'Announcements' &&
+      github.event.comment.author_association != 'OWNER' &&
+      github.event.comment.user.type != 'Bot'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start comment triage
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DISCUSSION: ${{ github.event.discussion.number }}
+          COMMENT: ${{ github.event.comment.node_id }}
+        run: |
+          gh workflow run comment-triage.yml --repo "$GITHUB_REPOSITORY" --ref "${{ github.event.repository.default_branch }}" \
+            -f discussion_number="$DISCUSSION" -f comment_node_id="$COMMENT"

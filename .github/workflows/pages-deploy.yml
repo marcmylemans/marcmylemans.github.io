@@ -8,6 +8,9 @@ on:
       - .gitignore
       - README.md
       - LICENSE
+      # Comment-triage automation, not part of the old blog build
+      - .github/workflows/comment-*.yml
+      - .github/comment-triage/**
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
